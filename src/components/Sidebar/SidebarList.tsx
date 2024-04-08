@@ -1,4 +1,3 @@
-import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link, useLocation } from 'react-router-dom';
 import { Box, Hidden, Typography } from '@mui/material';
@@ -31,7 +30,7 @@ const navLinks = [
   },
 ]
 
-const Sidebar = () => {
+const SidebarList = () => {
   const { pathname } = useLocation();
   return (
     <Box sx={{
@@ -40,7 +39,7 @@ const Sidebar = () => {
       padding: 2,
       borderRadius: 2, 
       flexDirection: {
-        lg: "column"
+        xs: "column",
       },
       alignItems: "center",
       justifyContent: "space-between",
@@ -52,7 +51,7 @@ const Sidebar = () => {
         display: "flex",
         gap: 5,
         flexDirection: {
-          lg: "column"
+          xs: "column"
         },
         alignItems: "center",
         width: "100%"
@@ -65,7 +64,7 @@ const Sidebar = () => {
               },
               display: "flex",
               flexDirection: {
-                lg: "column"
+                xs: "column"
               }
             }}>
             {navLinks.map((item) => (
@@ -102,4 +101,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default SidebarList
