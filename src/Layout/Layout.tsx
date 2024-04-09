@@ -1,7 +1,10 @@
 import { Box } from "@mui/material";
-import { ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import SidebarList from "../components/Sidebar/SidebarList";
 import SidebarProduct from "../components/Sidebar/SidebarProduct";
+import Header from "../components/Header_Footer/Header";
+import Footer from "../components/Header_Footer/Footer";
+
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,27 +12,31 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box
-      sx={{
-        backgroundColor: "#fff",
-        display: "flex",
-        flexDirection: {
-          // xs: "column",
-          lg: "row",
-        },
-        color: "#000",
-        padding: 1,
-        overflowY: "hidden",
-        gap: 3,
-      }}
-    >
-      <Box>
-        <SidebarList />
-        <SidebarProduct />
+    <Fragment>
+      <Box
+        sx={{
+          backgroundColor: "#fff",
+          display: "flex",
+          flexDirection: {
+            // xs: "column",
+            lg: "row",
+          },
+          color: "#000",
+          padding: 1,
+          overflowY: "hidden",
+          gap: 3,
+        }}
+      >
+        <Box>
+          <SidebarList />
+          <SidebarProduct />
+        </Box>
+        <Box sx={{ width: "100%" }}>{children}</Box>
       </Box>
-      <Box sx={{ width: "100%" }}>{children}</Box>
-    </Box>
-    // testttttt
+      <Header />
+      <hr />
+      <Footer />
+    </Fragment>
   );
 };
 
