@@ -178,3 +178,14 @@ export const CategoriesCardList = styled.ul``;
 export const CategoriesCardItem = styled.li`
   display: flex;
 `;
+
+export const UserInput = styled.input`
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #888;
+    background-color: #fff;
+    border: 1px solid #ddd;
+`  

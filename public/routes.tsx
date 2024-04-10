@@ -14,6 +14,8 @@ import Electronics from "../src/pages/Categories/Electronics";
 import Televisions from "../src/pages/Categories/Televisions";
 import JBLSpeakers from "../src/pages/Categories/JBLSpeakers";
 import Smartphones from "../src/pages/Categories/Smartphones";
+import Login from "../src/components/Account/LogIn";
+import SignUp from "../src/components/Account/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -84,6 +86,16 @@ export const router = createBrowserRouter([
   {
     path: "/home/JBLSpeakers",
     element: <JBLSpeakers/>,
+    errorElement: <Error />
+  },
+  {
+    path: "/login",
+    element: <Login/>,
+    errorElement: <Error />
+  },
+  {
+    path: "/signup",
+    element: <SignUp/>,
     errorElement: <Error />
   },
 ]);
