@@ -27,7 +27,7 @@ const Layout = ({children} : LayoutProps) => {
 
         </Box>
         <Box sx={{ width:"100%"}}>{children}</Box>
-        
+        {/* coment */}
     </Box>
   )
 }
