@@ -38,10 +38,10 @@ interface ProductsSaleProps {
     count: number;
   };
 }
-const BestSellerProduct = () => {
+const NewArrivalProduct = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
-  console.log(productSales);
+  //   console.log(productSales);
   const handleChangeGridRow = () => {
     setGridProduct(false);
   };
@@ -62,6 +62,25 @@ const BestSellerProduct = () => {
 
     fetchData();
   }, []);
+  const [counterNextPageMax, setCounterNextPageMax] = useState<number>(10);
+  const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
+  console.log(`max:${counterNextPageMax}},min:${counterNextPageMin}`);
+  const handleChangeNextPage = () => {
+    setCounterNextPageMax((pre) => pre + 10);
+    setCounterNextPageMin((pre) => pre + 10);
+  };
+  const handleChangePreviousPage = () => {
+    // not done
+    console.log(productSales?.length);
+    if (productSales?.length)
+      setCounterNextPageMax((prevCount) => {
+        return prevCount > 10 ? prevCount - 10 : prevCount;
+      });
+
+    setCounterNextPageMin((prevCount) =>
+      prevCount !== 0 ? prevCount - 10 : prevCount
+    );
+  };
   return (
     <Fragment>
       <Grid container spacing={1} width="900px" margin="auto" className="mb-2">
@@ -111,40 +130,50 @@ const BestSellerProduct = () => {
         {gridProduct ? (
           <Fragment>
             {productSales &&
-              productSales.map((product) => (
-                <Grid item xs={3} key={product.id} className="">
-                  <ListProductRowContainer>
-                    <ListProductRow>
-                      {" "}
-                      <ImgProductSaleRow
-                        src={product.image}
-                        className="  "
-                        alt=""
-                      />
-                      <p
-                        className="text-muted my-1"
-                        style={{ fontSize: "12px" }}
-                      >
-                        Name Product
-                      </p>
-                      <p>
-                        <strong>$</strong>
-                        {product.price}
-                      </p>
-                      <ButtonProductSaleRow>View details</ButtonProductSaleRow>
-                      <IconEyeCenter>
-                        <RemoveRedEyeIcon className=" bg-light rounded" />
-                      </IconEyeCenter>
-                      <IconTopRowLeft>
-                        <strong>New</strong>
-                      </IconTopRowLeft>
-                      <IconTopRowRight>
-                        <strong>On Sale!</strong>
-                      </IconTopRowRight>
-                    </ListProductRow>
-                  </ListProductRowContainer>
-                </Grid>
-              ))}
+              productSales.map((product, index) => {
+                if (index <= counterNextPageMax && index > counterNextPageMin) {
+                  return (
+                    <Grid item xs={3} key={product.id} className="">
+                      <ListProductRowContainer>
+                        <ListProductRow>
+                          {" "}
+                          <ImgProductSaleRow
+                            src={product.image}
+                            className="  "
+                            alt=""
+                          />
+                          <p
+                            className="text-muted my-1"
+                            style={{ fontSize: "12px" }}
+                          >
+                            Name Product
+                          </p>
+                          <p>
+                            <strong>$</strong>
+                            {product.price}
+                          </p>
+                          <ButtonProductSaleRow>
+                            View details
+                          </ButtonProductSaleRow>
+                          <IconEyeCenter>
+                            <RemoveRedEyeIcon className=" bg-light rounded" />
+                          </IconEyeCenter>
+                          <IconTopRowLeft>
+                            <strong>New</strong>
+                          </IconTopRowLeft>
+                          <IconTopRowRight>
+                            <strong>On Sale!</strong>
+                          </IconTopRowRight>
+                        </ListProductRow>
+                      </ListProductRowContainer>
+                    </Grid>
+                  );
+                }
+              })}
+            <Grid item xs={12} textAlign="right">
+              <button onClick={handleChangePreviousPage}>Previous Page</button>
+              <button onClick={handleChangeNextPage}>Next Page</button>
+            </Grid>
           </Fragment>
         ) : (
           <Fragment>
@@ -182,4 +211,4 @@ const BestSellerProduct = () => {
   );
 };
 
-export default BestSellerProduct;
+export default NewArrivalProduct;

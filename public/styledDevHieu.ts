@@ -41,6 +41,9 @@ export const IconTopRowLeft = styled.div`
   width: 48px;
   height: 48px;
   cursor: pointer;
+  &:hover {
+    color: blue;
+  }
 
   ${ListProductRow}: hover & {
     animation: ${hideIcon} 0.25s ease-in-out;
@@ -57,6 +60,9 @@ export const IconTopRowRight = styled.div`
   width: 48px;
   height: 48px;
   cursor: pointer;
+  &:hover {
+    color: blue;
+  }
 
   ${ListProductRow}: hover & {
     animation: ${hideIcon} 0.25s ease-in-out;
@@ -73,6 +79,9 @@ export const IconEyeCenter = styled.div`
   width: 48px;
   height: 48px;
   cursor: pointer;
+  &:hover {
+    color: blue;
+  }
 
   ${ListProductRow}: hover & {
     animation: ${hideIconEye} 0.25s ease-in-out;
@@ -105,9 +114,87 @@ export const ButtonProductSaleRow = styled.button`
   visibility: hidden;
   bottom: -50px;
   border: none;
+  &:hover {
+    color: blue;
+  }
+
   ${ListProductRow}:hover & {
     bottom: -5px;
     animation: ${hideButtonProductRow} 0.25s ease-in-out;
     visibility: visible;
+  }
+`;
+export const ImgProductSaleColumn = styled.img`
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-positon: center;
+`;
+export const ListProductColumn = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  position: relative;
+`;
+const fadeIn = keyframes`
+from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+export const IconEyeColumn = styled.div`
+  display: none;
+  position: absolute;
+  top: 35%;
+  right: 40%;
+  cursor: pointer;
+  &:hover {
+    color: blue;
+  }
+
+  ${ListProductColumn}:hover & {
+    display: inline-block;
+    animation: ${fadeIn} 0.6s ease-in-out;
+  }
+`;
+export const IconBottomColumnRight = styled.p`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
+  &:hover {
+    color: blue;
+  }
+
+  ${ListProductColumn}:hover & {
+    display: inline-block;
+    animation: ${fadeIn} 0.6s ease-in-out;
+  }
+`;
+export const IconTopColumnRight = styled.p`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
+  &:hover {
+    color: blue;
+  }
+
+  ${ListProductColumn}:hover & {
+    display: inline-block;
+    animation: ${fadeIn} 0.6s ease-in-out;
+  }
+`;
+export const ListProductColumnContainer = styled.div`
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.2);
   }
 `;
