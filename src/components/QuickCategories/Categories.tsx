@@ -1,49 +1,56 @@
-import { Box, Typography } from '@mui/material'
-import axios from 'axios';
-import { useEffect, useState } from 'react'
-import { Product } from "../../../public/type"
-
+import {
+  Carousel,
+  CarouselHeading,
+  CarouselHeadingText,
+  CarouselItem,
+  CarouselItemBox,
+  CarouselItemDescription,
+  CarouselItemImage,
+  CarouselItemName,
+} from "../../../public/styled";
+import ShopCategories1 from "../../assets/image/shop-categories-1.jpg";
+import ShopCategories2 from "../../assets/image/shop-categories-2.jpg";
+import ShopCategories3 from "../../assets/image/shop-categories-3.jpg";
+import ShopCategories4 from "../../assets/image/shop-categories-4.jpg";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const Categories = () => {
-    const [content, setContent ] = useState<Product[]>([])
-
-    useEffect(() => {
-        axios.get('https://fakestoreapi.com/products')
-        .then (res => {setContent(res.data.slice(0,4))})
-        .catch (err => console.log("fetching error", err))
-    }, []);
   return (
-    <Box>
-        <Typography>SHOP BY CATEGORIES</Typography>
-        <Box sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            margin: "auto",
-        }}>
-            {content.map((item, index) => (
-                <Box
-                key={index}
-                height={200}
-                width={200}
-                my={4}
-                display="flex"
-                alignItems="center"
-                gap={4}
-                p={2}
-                sx={{
-                  borderRight: index !== content.length - 1 ? '2px solid grey' : 'none',
-                  ...(index === content.length - 1 && { border: 'none' })
-                }}>
-                    <div>
-                            <Typography variant="h6">{item.title}</Typography>
-                            <Typography variant="body1">{item.description}</Typography>
-                    </div>
+    <Carousel>
+      <CarouselHeading>
+        <CarouselHeadingText style={{ padding: "5px 0" }}>
+          SHOP BY CATEGORIES
+        </CarouselHeadingText>
+      </CarouselHeading>
+      <CarouselItemBox>
+        <CarouselItem>
+          <CarouselItemImage src={ShopCategories1}></CarouselItemImage>
+          <CarouselItemDescription>
+            <CarouselItemName href="/home/electronics">
+              ELECTRONICS
+            </CarouselItemName>
+            <StarBorderIcon />
+          </CarouselItemDescription>
+        </CarouselItem>
+        <CarouselItem>
+          <CarouselItemImage src={ShopCategories2}></CarouselItemImage>
+          <CarouselItemDescription>
+            <CarouselItemName href="/home/electronics">
+              ELECTRONICS
+            </CarouselItemName>
+          </CarouselItemDescription>
+        </CarouselItem>
+        <CarouselItem>
+          <CarouselItemImage src={ShopCategories3}></CarouselItemImage>
+          <CarouselItemDescription></CarouselItemDescription>
+        </CarouselItem>
+        <CarouselItem>
+          <CarouselItemImage src={ShopCategories4}></CarouselItemImage>
+          <CarouselItemDescription></CarouselItemDescription>
+        </CarouselItem>
+      </CarouselItemBox>
+    </Carousel>
+  );
+};
 
-                </Box>
-            ))}
-        </Box>
-    </Box>
-  )
-}
-
-export default Categories
+export default Categories;
