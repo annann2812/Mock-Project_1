@@ -4,7 +4,7 @@ import Error from "../src/pages/Error/Error"
 import Blog from "../src/pages/Blog/Blog"
 import Store from "../src/pages/Store/Store"
 import BestSellers from "../src/pages/BestSellers/BestSellers"
-import Contact from "../src/pages/Contact/Contact"
+// import Contact from "../src/pages/Contact/Contact"
 import Sitemap from "../src/pages/Sitemap/Sitemap"
 import NewArrival from "../src/pages/NewArrival/NewArrival"
 import About from "../src/pages/About/About"
@@ -14,6 +14,8 @@ import Electronics from "../src/pages/Categories/Electronics";
 import Televisions from "../src/pages/Categories/Televisions";
 import JBLSpeakers from "../src/pages/Categories/JBLSpeakers";
 import Smartphones from "../src/pages/Categories/Smartphones";
+import LogIn from "../src/components/Account/LogIn";
+import SignUp from "../src/components/Account/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -36,11 +38,11 @@ export const router = createBrowserRouter([
     element: <BestSellers />,
     errorElement: <Error />
   },
-  {
-    path: "/contacts",
-    element: <Contact />,
-    errorElement: <Error />
-  },
+  // {
+  //   path: "/contacts",
+  //   element: <Contact />,
+  //   errorElement: <Error />
+  // },
   {
     path: "/sitemap",
     element: <Sitemap />,
@@ -84,6 +86,16 @@ export const router = createBrowserRouter([
   {
     path: "/home/JBLSpeakers",
     element: <JBLSpeakers/>,
+    errorElement: <Error />
+  },
+  {
+    path: "/login",
+    element: <LogIn />,
+    errorElement: <Error />
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
     errorElement: <Error />
   },
 ]);

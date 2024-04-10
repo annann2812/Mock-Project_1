@@ -16,3 +16,14 @@ export interface Product {
     description: string;
 }
 
+export interface FormValues {
+    username: string;
+    email: string;
+    password: string;
+}
+
+export interface ContactForm {
+    subject: string;
+    email: string;
+    message: string;
+}

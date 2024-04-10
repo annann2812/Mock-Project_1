@@ -12,6 +12,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment>
+      <Header />
       <Box
         sx={{
           backgroundColor: "#fff",
@@ -32,8 +33,6 @@ const Layout = ({ children }: LayoutProps) => {
         </Box>
         <Box sx={{ width: "100%" }}>{children}</Box>
       </Box>
-      <Header />
-      <hr />
       <Footer />
     </Fragment>
   );

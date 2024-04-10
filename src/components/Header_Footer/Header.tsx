@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import EuroIcon from "@mui/icons-material/Euro";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [currency, setCurrency] = React.useState("");
@@ -100,8 +101,12 @@ const Header = () => {
                 label="account"
                 onChange={handleChangeAccount}
               >
-                <MenuItem value="login">Login</MenuItem>
-                <MenuItem value="signin">Sign In</MenuItem>
+                <MenuItem value="login">
+                  <Link to="/login">Log In</Link>
+                </MenuItem>
+                <MenuItem value="signin">
+                  <Link to="/signup">Sign Up</Link>
+                </MenuItem>
               </Select>
             </FormControl>
           </div>

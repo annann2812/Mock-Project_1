@@ -63,3 +63,13 @@ export const PrimaryButton = styled(Link)`
     font-weight: 400;
     text-align: center;
 `
+export const UserInput = styled.input`
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #888;
+    background-color: #fff;
+    border: 1px solid #ddd;
+`  
