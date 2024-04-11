@@ -39,7 +39,7 @@ function CreditCardForm1() {
         style={{
           display: "grid",
           //   placeItems: "center",
-          minHeight: "100vh",
+          // minHeight: "100vh",
           padding: "20px",
           boxSizing: "border-box",
         }}

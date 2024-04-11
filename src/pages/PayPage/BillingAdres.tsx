@@ -1,4 +1,5 @@
 import {
+  Button,
   Checkbox,
   Container,
   FormControl,
@@ -6,6 +7,7 @@ import {
   FormGroup,
   Grid,
   ImageListItem,
+  Link,
   Radio,
   RadioGroup,
   Typography,
@@ -15,11 +17,22 @@ import React from "react";
 const BillingAdres = () => {
   // handle save address change
   return (
-    <Container maxWidth="sm">
+    <Container
+      maxWidth="sm"
+      sx={{
+        ddisplay: "grid",
+        padding: "20px",
+        boxSizing: "border-box",
+
+        p: 2,
+      }}
+    >
       <form
         style={{
           display: "grid",
-
+          //   placeItems: "center",
+          // minHeight: "100vh",
+          padding: "20px",
           boxSizing: "border-box",
         }}
       >
@@ -55,13 +68,9 @@ const BillingAdres = () => {
               >
                 <RadioGroup name="radio-buttons-group">
                   <FormControlLabel
-                    value="female"
+                    value="sameaddress"
                     control={<Radio />}
-                    label={
-                      <ImageListItem>
-                        <img srcSet="" src="" alt="Image Paypal" />
-                      </ImageListItem>
-                    }
+                    label="Same as shipping address"
                   />
                 </RadioGroup>
               </Grid>
@@ -74,18 +83,43 @@ const BillingAdres = () => {
               >
                 <RadioGroup name="radio-buttons-group">
                   <FormControlLabel
-                    value="male"
+                    value="different"
                     control={<Radio />}
-                    label={
-                      <ImageListItem style={{ marginRight: "15rem" }}>
-                        <img srcSet="" src="" alt="Image Paypal" />
-                      </ImageListItem>
-                    }
+                    label="Use a different billing addrest"
                   />
                 </RadioGroup>
               </Grid>
             </Grid>
           </FormControl>
+        </Grid>
+      </form>
+      <form
+        style={{
+          display: "grid",
+
+          padding: "20px",
+          boxSizing: "border-box",
+        }}
+      >
+        <Grid item xs={12}>
+          <Typography variant="caption">
+            <Link href="#" underline="hover">
+              {"< Return to Page"}
+            </Link>
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          justifyContent="center"
+          style={{
+            marginTop: 5,
+            marginBottom: 20,
+          }}
+        >
+          <Button variant="contained" disableElevation fullWidth>
+            Pay Now
+          </Button>
         </Grid>
       </form>
     </Container>

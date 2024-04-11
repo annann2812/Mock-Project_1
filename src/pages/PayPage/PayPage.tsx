@@ -4,7 +4,6 @@ import CreditCardForm from "./CreditCardForm";
 
 import BillingAdres from "./BillingAdres";
 import { Container, Grid, Typography } from "@mui/material";
-import { Form } from "formik";
 
 const PayPage = () => {
   return (
@@ -74,9 +73,11 @@ const PayPage = () => {
           </table>
         </div>
         <hr />
+        <CreditCardForm />
+        <BillingAdres />
       </div>
-      <CreditCardForm />
-      <BillingAdres />
+      {/* <CreditCardForm />
+      <BillingAdres /> */}
     </Fragment>
   );
 };
