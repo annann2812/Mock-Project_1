@@ -12,10 +12,16 @@ import NativeSelect from "@mui/material/NativeSelect";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import {
   ButtonProductSaleRow,
+  IconBottomColumnRight,
   IconEyeCenter,
+  IconEyeColumn,
+  IconTopColumnRight,
   IconTopRowLeft,
   IconTopRowRight,
+  ImgProductSaleColumn,
   ImgProductSaleRow,
+  ListProductColumn,
+  ListProductColumnContainer,
   ListProductRow,
   ListProductRowContainer,
 } from "../../../public/styledDevHieu";
@@ -145,43 +151,28 @@ const BestSellerProduct = () => {
             {productSales &&
               productSales.map((product) => (
                 <Grid item xs={7} key={product.id} className="">
-                  <div className="d-flex flex-row align-items-center text-center position-relative">
-                    {" "}
-                    <img
-                      src={product.image}
-                      className=" mr-2 "
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        objectFit: "contain",
-                        objectPosition: "center",
-                      }}
-                      alt=""
-                    />
-                    <div className="">
-                      <p className="text-muted" style={{ fontSize: "12px" }}>
-                        name product
-                      </p>
-                      <p>${product.price}</p>
-                      <Button>View details</Button>
-                    </div>
-                    <RemoveRedEyeIcon
-                      className="position-absolute bg-light rounded"
-                      style={{ top: "35%", right: "40%" }}
-                    />
-                    <p
-                      className="position-absolute"
-                      style={{ bottom: "0", right: "0" }}
-                    >
-                      New
-                    </p>
-                    <p
-                      className="position-absolute"
-                      style={{ top: "0", right: "0" }}
-                    >
-                      On Sale!
-                    </p>
-                  </div>
+                  <ListProductColumnContainer>
+                    <ListProductColumn>
+                      {" "}
+                      <ImgProductSaleColumn
+                        src={product.image}
+                        className=" mr-2 "
+                        alt=""
+                      />
+                      <div className="">
+                        <p className="text-muted" style={{ fontSize: "12px" }}>
+                          name product
+                        </p>
+                        <p>${product.price}</p>
+                        <Button>View details</Button>
+                      </div>
+                      <IconEyeColumn>
+                        <RemoveRedEyeIcon className="bg-light rounded" />
+                      </IconEyeColumn>
+                      <IconBottomColumnRight>New</IconBottomColumnRight>
+                      <IconTopColumnRight>On Sale!</IconTopColumnRight>
+                    </ListProductColumn>
+                  </ListProductColumnContainer>
                 </Grid>
               ))}
           </Fragment>
