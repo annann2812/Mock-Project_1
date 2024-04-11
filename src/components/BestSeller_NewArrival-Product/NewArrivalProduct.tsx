@@ -10,7 +10,10 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import {
+  ButtonNewArrivalProduct,
   ButtonProductSaleRow,
   IconBottomColumnRight,
   IconEyeCenter,
@@ -66,16 +69,19 @@ const NewArrivalProduct = () => {
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
   console.log(`max:${counterNextPageMax}},min:${counterNextPageMin}`);
   const handleChangeNextPage = () => {
-    setCounterNextPageMax((pre) => pre + 10);
-    setCounterNextPageMin((pre) => pre + 10);
+    if (productSales?.length && counterNextPageMax >= productSales?.length) {
+      console.log("dones");
+      setCounterNextPageMax(productSales?.length);
+      setCounterNextPageMin(productSales?.length - 10);
+    } else {
+      setCounterNextPageMax((pre) => pre + 10);
+      setCounterNextPageMin((pre) => pre + 10);
+    }
   };
   const handleChangePreviousPage = () => {
-    // not done
-    console.log(productSales?.length);
-    if (productSales?.length)
-      setCounterNextPageMax((prevCount) => {
-        return prevCount > 10 ? prevCount - 10 : prevCount;
-      });
+    setCounterNextPageMax((prevCount) => {
+      return prevCount > 10 ? prevCount - 10 : prevCount;
+    });
 
     setCounterNextPageMin((prevCount) =>
       prevCount !== 0 ? prevCount - 10 : prevCount
@@ -131,7 +137,10 @@ const NewArrivalProduct = () => {
           <Fragment>
             {productSales &&
               productSales.map((product, index) => {
-                if (index <= counterNextPageMax && index > counterNextPageMin) {
+                if (
+                  (index <= counterNextPageMax && index > counterNextPageMin) ||
+                  (index < counterNextPageMax && index >= counterNextPageMin)
+                ) {
                   return (
                     <Grid item xs={3} key={product.id} className="">
                       <ListProductRowContainer>
@@ -171,39 +180,61 @@ const NewArrivalProduct = () => {
                 }
               })}
             <Grid item xs={12} textAlign="right">
-              <button onClick={handleChangePreviousPage}>Previous Page</button>
-              <button onClick={handleChangeNextPage}>Next Page</button>
+              <ButtonNewArrivalProduct onClick={handleChangePreviousPage}>
+                <ChevronLeftIcon />
+              </ButtonNewArrivalProduct>
+              <ButtonNewArrivalProduct onClick={handleChangeNextPage}>
+                <ChevronRightIcon />
+              </ButtonNewArrivalProduct>
             </Grid>
           </Fragment>
         ) : (
           <Fragment>
             {productSales &&
-              productSales.map((product) => (
-                <Grid item xs={7} key={product.id} className="">
-                  <ListProductColumnContainer>
-                    <ListProductColumn>
-                      {" "}
-                      <ImgProductSaleColumn
-                        src={product.image}
-                        className=" mr-2 "
-                        alt=""
-                      />
-                      <div className="">
-                        <p className="text-muted" style={{ fontSize: "12px" }}>
-                          name product
-                        </p>
-                        <p>${product.price}</p>
-                        <Button>View details</Button>
-                      </div>
-                      <IconEyeColumn>
-                        <RemoveRedEyeIcon className="bg-light rounded" />
-                      </IconEyeColumn>
-                      <IconBottomColumnRight>New</IconBottomColumnRight>
-                      <IconTopColumnRight>On Sale!</IconTopColumnRight>
-                    </ListProductColumn>
-                  </ListProductColumnContainer>
-                </Grid>
-              ))}
+              productSales.map((product, index) => {
+                if (
+                  (index <= counterNextPageMax && index > counterNextPageMin) ||
+                  (index < counterNextPageMax && index >= counterNextPageMin)
+                ) {
+                  return (
+                    <Grid item xs={7} key={product.id} className="">
+                      <ListProductColumnContainer>
+                        <ListProductColumn>
+                          {" "}
+                          <ImgProductSaleColumn
+                            src={product.image}
+                            className=" mr-2 "
+                            alt=""
+                          />
+                          <div className="">
+                            <p
+                              className="text-muted"
+                              style={{ fontSize: "12px" }}
+                            >
+                              name product
+                            </p>
+                            <p>${product.price}</p>
+                            <Button>View details</Button>
+                          </div>
+                          <IconEyeColumn>
+                            <RemoveRedEyeIcon className="bg-light rounded" />
+                          </IconEyeColumn>
+                          <IconBottomColumnRight>New</IconBottomColumnRight>
+                          <IconTopColumnRight>On Sale!</IconTopColumnRight>
+                        </ListProductColumn>
+                      </ListProductColumnContainer>
+                    </Grid>
+                  );
+                }
+              })}
+            <Grid item xs={12} textAlign="right">
+              <ButtonNewArrivalProduct onClick={handleChangePreviousPage}>
+                Previous Page
+              </ButtonNewArrivalProduct>
+              <ButtonNewArrivalProduct onClick={handleChangeNextPage}>
+                Next Page
+              </ButtonNewArrivalProduct>
+            </Grid>
           </Fragment>
         )}
       </Grid>

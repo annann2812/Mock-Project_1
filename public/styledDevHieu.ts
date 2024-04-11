@@ -96,7 +96,7 @@ export const ImgProductSaleRow = styled.img`
   object-fit: contain;
   object-position: center;
   ${ListProductRow}:hover & {
-    filter: blur(5px);
+    filter: blur(2px);
   }
 `;
 export const hideButtonProductRow = keyframes`
@@ -196,5 +196,16 @@ export const ListProductColumnContainer = styled.div`
   transition: all 0.3s ease-in-out;
   &:hover {
     box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.2);
+  }
+`;
+export const ButtonNewArrivalProduct = styled.button`
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ffffcc;
+  color: black;
+  font-weight: bold;
+  &:hover {
+    background-color: #ffcc99;
   }
 `;
