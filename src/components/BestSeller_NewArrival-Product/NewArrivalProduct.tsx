@@ -238,7 +238,6 @@ const NewArrivalProduct = () => {
           </Fragment>
         )}
       </Grid>
-      <h5>hieu day</h5>
     </Fragment>
   );
 };
