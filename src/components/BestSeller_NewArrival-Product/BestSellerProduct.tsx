@@ -41,7 +41,7 @@ interface ProductsSaleProps {
 const BestSellerProduct = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
-  console.log(productSales);
+  // console.log(productSales);
   const handleChangeGridRow = () => {
     setGridProduct(false);
   };
