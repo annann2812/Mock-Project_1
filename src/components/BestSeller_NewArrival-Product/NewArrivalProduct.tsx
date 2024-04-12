@@ -28,6 +28,7 @@ import {
   ListProductRow,
   ListProductRowContainer,
 } from "../../../public/styledDevHieu";
+import { Product } from "../../assets/Data/Product";
 
 interface ProductsSaleProps {
   id: number;
@@ -44,7 +45,6 @@ interface ProductsSaleProps {
 const NewArrivalProduct = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
-  //   console.log(productSales);
   const handleChangeGridRow = () => {
     setGridProduct(false);
   };
@@ -67,10 +67,9 @@ const NewArrivalProduct = () => {
   }, []);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(10);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
-  console.log(`max:${counterNextPageMax}},min:${counterNextPageMin}`);
+  // console.log(`max:${counterNextPageMax}},min:${counterNextPageMin}`);
   const handleChangeNextPage = () => {
     if (productSales?.length && counterNextPageMax >= productSales?.length) {
-      console.log("dones");
       setCounterNextPageMax(productSales?.length);
       setCounterNextPageMin(productSales?.length - 10);
     } else {
@@ -82,7 +81,6 @@ const NewArrivalProduct = () => {
     setCounterNextPageMax((prevCount) => {
       return prevCount > 10 ? prevCount - 10 : prevCount;
     });
-
     setCounterNextPageMin((prevCount) =>
       prevCount !== 0 ? prevCount - 10 : prevCount
     );
@@ -229,10 +227,10 @@ const NewArrivalProduct = () => {
               })}
             <Grid item xs={12} textAlign="right">
               <ButtonNewArrivalProduct onClick={handleChangePreviousPage}>
-                Previous Page
+                <ChevronLeftIcon />
               </ButtonNewArrivalProduct>
               <ButtonNewArrivalProduct onClick={handleChangeNextPage}>
-                Next Page
+                <ChevronRightIcon />
               </ButtonNewArrivalProduct>
             </Grid>
           </Fragment>
