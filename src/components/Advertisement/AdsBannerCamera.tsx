@@ -1,19 +1,26 @@
-import { AdsButton, AdsDetail, AdsImage, AdsInfoBanner, Advertisement } from "../../../public/styled"
-import AdsImg4 from "../../assets/image/sub-banner-home-2.jpeg"
+import { Link } from "react-router-dom";
+import { Fragment } from "react";
+import AdsImg4 from "../../assets/image/sub-banner-home-2.jpeg";
+
 const AdsBannerCamera = () => {
   return (
-    <Advertisement>
-        <AdsDetail>
-            <AdsImage src={AdsImg4}></AdsImage>
-            <AdsInfoBanner>
-              <span>asdfghjk</span>
-              <span>asdfghjk</span>
-              <AdsButton to = "/best-sellers">SHOP NOW</AdsButton>
-            </AdsInfoBanner>
-        </AdsDetail>
+    <Fragment>
+      <div className="w-fit text-center">
+        <div className="relative overflow-hidden block">
+          <img src={AdsImg4} alt="" className="align-middle" />
+          <div className="absolute right-5 top-[10px] text-right z-10 text-black flex flex-col">
+            <span>abcabc</span>
+            <Link
+              to={"/best-sellers"}
+              className="hover:no-underline text-black border-[1px] border-black bg-white rounded-[10px] p-2 block w-fit text-center m-auto"
+            >
+              SHOP NOW
+            </Link>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
 
-    </Advertisement>
-  )
-}
-
-export default AdsBannerCamera
+export default AdsBannerCamera;

@@ -1,29 +1,40 @@
 export interface Blog {
-    title: string;
-    imageUrl: string;
-    body: string;
-    writer: string;
-    datePosted: string;
+  title: string;
+  imageUrl: string;
+  body: string;
+  writer: string;
+  datePosted: string;
 }
 
 export interface Product {
-    // productId: string;
-    // productName: string;
-    // description: string;
-    // price: number;
-    // imageUrl: string;
-    title: string;
-    description: string;
+  // productId: string;
+  // productName: string;
+  // description: string;
+  // price: number;
+  // imageUrl: string;
+  title: string;
+  description: string;
 }
 
 export interface FormValues {
-    username: string;
-    email: string;
-    password: string;
+  username: string;
+  email: string;
+  password: string;
 }
 
 export interface ContactForm {
-    subject: string;
-    email: string;
-    message: string;
+  subject: string;
+  email: string;
+  message: string;
+}
+
+export interface CarouselProps {
+  images: string[];
+  title: string;
+  buttons: any[];
+  itemNames: string[];
+  prices: number[];
+  redirectButtons: any[];
+  redirectLinks: any[];
+  moveItem: () => void;
 }

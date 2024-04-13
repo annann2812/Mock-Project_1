@@ -1,107 +1,52 @@
-import {
-  Carousel,
-  CarouselButton,
-  CarouselHeading,
-  CarouselHeadingText,
-  CarouselItem,
-  CarouselItemBox,
-  CarouselItemDescription,
-  CarouselItemImage,
-  CarouselItemName,
-  CarouselSmallButtonContainer,
-} from "../../../public/styled";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import BestSeller1 from "../../assets/image/best-seller-1.jpg";
 import BestSeller2 from "../../assets/image/best-seller-2.jpg";
 import BestSeller3 from "../../assets/image/best-seller-3.jpg";
-import { Typography } from "@mui/material";
+import CarouselDefault from "./Carousel";
 
 const BestSellerItem = () => {
+  const bestSellerInfo = {
+    images: [
+      `${BestSeller1}`,
+      `${BestSeller2}`,
+      `${BestSeller3}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+    ],
+    title: "Best Seller Item",
+    buttons: [<ChevronLeftIcon />, <ChevronRightIcon />],
+    itemNames: [
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+    ],
+    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9],
+    redirectButtons: [],
+    redirectLinks: [],
+    moveItem: () => {
+      console.log("Hey");
+    },
+  };
   return (
-    <Carousel>
-      <CarouselHeading>
-        <CarouselHeadingText>BEST SELLER ITEM</CarouselHeadingText>
-        <CarouselSmallButtonContainer>
-          <CarouselButton>
-            <ChevronLeftIcon />
-          </CarouselButton>
-          <CarouselButton>
-            <ChevronRightIcon />
-          </CarouselButton>
-        </CarouselSmallButtonContainer>
-      </CarouselHeading>
-      <CarouselItemBox>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller1}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">Tarundecf Beseking</CarouselItemName>
-            <Typography variant="body1">$12.90</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller2}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">Cum Sociis Natoque</CarouselItemName>
-            <Typography variant="body1">$28.72</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-      </CarouselItemBox>
-    </Carousel>
+    <CarouselDefault
+      images={bestSellerInfo.images}
+      buttons={bestSellerInfo.buttons}
+      itemNames={bestSellerInfo.itemNames}
+      moveItem={bestSellerInfo.moveItem}
+      prices={bestSellerInfo.prices}
+      redirectButtons={bestSellerInfo.redirectButtons}
+      redirectLinks={bestSellerInfo.redirectLinks}
+      title={bestSellerInfo.title}
+    />
   );
 };
 

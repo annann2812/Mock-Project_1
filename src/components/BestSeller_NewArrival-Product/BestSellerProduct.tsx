@@ -118,7 +118,7 @@ const BestSellerProduct = () => {
                       {" "}
                       <ImgProductSaleRow
                         src={product.image}
-                        className="  "
+                        className=""
                         alt=""
                       />
                       <p
