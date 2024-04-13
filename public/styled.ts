@@ -1,3 +1,4 @@
+import { Field } from "formik";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -180,12 +181,66 @@ export const CategoriesCardItem = styled.li`
 `;
 
 export const UserInput = styled.input`
-    display: block;
-    width: 100%;
-    padding: 10px 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    color: #888;
-    background-color: #fff;
-    border: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #888;
+  background-color: #fff;
+  border: 1px solid #ddd;
 `  
+export const BackgroundLogin = styled.div`
+  background-color: #76885B;
+  background: linear-gradient(to right, #e2e2e2, #76885B)
+`
+export const LoginForm = styled.div`
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+`
+export const FormInput = styled(Field)`
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+`
+export const FormButton = styled.button`
+  background-color: #76885B;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+`
+export const FormIcon = styled.a`
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: #76885B;
+  margin: 0 10px;
+`
+export const FormText = styled.a `
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+`
+export const NavBg = styled.div`
+  background-color: #76885B
+`

@@ -4,7 +4,6 @@ import Watches from "../../components/Advertisement/Watches";
 import AdsBannerPC from "../../components/Advertisement/AdsBannerPC";
 import AdsBannerCamera from "../../components/Advertisement/AdsBannerCamera";
 import Categories from "../../components/QuickCategories/Categories";
-import Filter from "../../components/FilterSearch/Filter";
 import BestSellerItem from "../../components/Carousel/BestSellerItem";
 import TrendingProduct from "../../components/Carousel/TrendingProduct";
 import SpecialProduct from "../../components/Carousel/SpecialProduct";
@@ -14,7 +13,7 @@ import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
 const Home = () => {
   return (
     <Layout>
-      <Filter />
+      {/* <Filter /> */}
       <Headphone />
       <BestSellerItem />
       <Watches />

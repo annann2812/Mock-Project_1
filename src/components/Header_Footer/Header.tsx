@@ -8,6 +8,8 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import EuroIcon from "@mui/icons-material/Euro";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/image/LOOP-logo (2).png"
 
 const Header = () => {
   const [currency, setCurrency] = React.useState("");
@@ -37,7 +39,7 @@ const Header = () => {
           </p>
           <div className="right-nav d-flex flex-row justify-content-between">
             <FormControl
-              sx={{ m: 1, minWidth: 120, fontSize: "12px" }}
+              sx={{ m: 1, minWidth: 120, fontSize: "12px" , fontFamily: "Poppins"}}
               size="small"
             >
               <InputLabel id="demo1-select-small-label">Curency</InputLabel>
@@ -101,7 +103,12 @@ const Header = () => {
                 label="account"
                 onChange={handleChangeAccount}
               >
-                <MenuItem value="signin">Sign In</MenuItem>
+                <MenuItem value="signin">
+                  <Link to = "/login">Log In</Link>
+                </MenuItem>
+                <MenuItem value="signin">
+                  <Link to = "/signup">Sign Up</Link>
+                </MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -191,8 +198,8 @@ const Header = () => {
       >
         <div className="Logo">
           <img
-            style={{ height: "35px" }}
-            src="https://prestashop.templatemela.com/PRS08/PRS080183/img/demo-store-logo-1526022580.jpg"
+            style={{ height: "100px" }}
+            src={Logo}
             alt=""
           />
         </div>
