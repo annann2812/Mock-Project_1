@@ -1,5 +1,7 @@
 import Grid from "@mui/material/Grid";
 import React, { Fragment } from "react";
+import Logo from "../../assets/image/LOOP-logo (2).png"
+
 
 const Footer = () => {
   return (
@@ -231,8 +233,8 @@ const Footer = () => {
             </div>
             <div className="img-logo mr-5">
               <img
-                style={{ height: "35px" }}
-                src="https://prestashop.templatemela.com/PRS08/PRS080183/img/demo-store-logo-1526022580.jpg"
+                style={{ height: "100px" }}
+                src={Logo}
                 alt=""
               />
             </div>

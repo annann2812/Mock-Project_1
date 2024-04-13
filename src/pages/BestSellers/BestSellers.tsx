@@ -1,8 +1,12 @@
 import React from 'react'
+import BestSellerProduct from '../../components/BestSeller_NewArrival-Product/BestSellerProduct'
+import Layout from '../../Layout/Layout'
 
 const BestSellers = () => {
   return (
-    <div>BestSellers</div>
+    <Layout>
+      <BestSellerProduct/>
+    </Layout>
   )
 }
 
