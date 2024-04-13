@@ -1,5 +1,5 @@
 {
-  "name": "mock-project-fpt_1",
+  "name": "mock-project-fpt-1",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "styled-components": "^6.1.8",
+    "ts-node": "^10.9.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {

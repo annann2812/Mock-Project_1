@@ -13,10 +13,12 @@ import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
 const Home = () => {
   return (
     <Layout>
-      {/* <Filter /> */}
-      <Headphone />
-      <BestSellerItem />
-      <Watches />
+<!--       <Filter /> -->
+      <div className="flex gap-2 mt-4">
+        <Headphone />
+        <BestSellerItem />
+        <Watches />
+      </div>
       <TrendingProduct />
       <AdsBannerPC />
       <AdsBannerCamera />
