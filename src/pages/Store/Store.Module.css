@@ -1,0 +1,116 @@
+.wrap-container {
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+
+  }
+  
+  .img-section {
+    width: 30%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .img-section img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .heading-section {
+    text-align: left;
+    margin-bottom: 1rem;
+    width: 30%;
+    overflow-wrap: break-word;
+  }
+  
+  .heading-section h3 {
+    font-size: 1rem;
+    color: #343a40;
+    margin: 0;
+  }
+  
+  .heading-section p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow: hidden;
+    margin: 0;
+    
+  }
+  
+  .time-list {
+    border-left: 1px solid #6c757d;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 30%;
+    padding-left: 1rem;
+  }
+  
+  .time-list p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.1rem;
+    text-align: justify;
+  }
+  .heading {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+  }
+  @media only screen and (max-width: 768px) {
+    .wrap-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 1rem;
+    }
+    .wrap-container h3 {
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 0.7rem;
+    }
+    .wrap-container p {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.7rem;
+      }
+        
+    
+  
+    .img-section {
+      display: none;
+    }
+  
+    /* .img-section img {
+      width: 100%;
+      height: auto;
+    } */
+  
+    .heading-section {
+      width: 100%;
+      padding: 0.2rem
+    }
+  
+    .time-list {
+      width: 100%;
+      display: flex;
+      /* flex-wrap: wrap; */
+      border-left: none;
+    }
+  
+    .time-list p {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.2rem;
+    }
+  }
