@@ -37,7 +37,7 @@ const sizeProduct = [
     label: "M>",
   },
   {
-    value: "L",
+    value: "xL",
     label: "XL",
   },
 ];
