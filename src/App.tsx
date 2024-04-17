@@ -13,6 +13,7 @@ import BestSellers from "./pages/BestSellers/BestSellers";
 import NewArrival from "./pages/NewArrival/NewArrival";
 import BlogPage from "./pages/Blog/Blog";
 
+
 const App = () => {
   return (
     <Fragment>

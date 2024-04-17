@@ -1,116 +1,37 @@
-import {
-  Carousel,
-  CarouselButton,
-  CarouselHeading,
-  CarouselHeadingText,
-  CarouselItem,
-  CarouselItemBox,
-  CarouselItemDate,
-  CarouselItemDescription,
-  CarouselItemImage,
-  CarouselItemName,
-  CarouselSmallButtonContainer,
-} from "../../../public/styled";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import BestSeller1 from "../../assets/image/best-seller-1.jpg";
-import BestSeller2 from "../../assets/image/best-seller-2.jpg";
-import BestSeller3 from "../../assets/image/best-seller-3.jpg";
-import { Typography } from "@mui/material";
+import Blog1 from "../../assets/image/blog-1.png";
+import Blog2 from "../../assets/image/blog-2.png";
+import Blog3 from "../../assets/image/blog-3.png";
+import Blog4 from "../../assets/image/blog-4.png";
+import CarouselDefault from "./Carousel";
 
 const LastestBlog = () => {
+  const lastestBlogInfo = {
+    images: [`${Blog1}`, `${Blog2}`, `${Blog3}`, `${Blog4}`],
+    title: "Lastest Blogs",
+    itemNames: [],
+    prices: [12.9, 12.9, 28.72, 12.9],
+    redirectButtons: [],
+    redirectLinks: [],
+    blogDescriptions: [
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+    ],
+    id: 5,
+  };
   return (
-    <Carousel>
-      <CarouselHeading>
-        <CarouselHeadingText>BEST SELLER ITEM</CarouselHeadingText>
-        <CarouselSmallButtonContainer>
-          <CarouselButton>
-            <ChevronLeftIcon />
-          </CarouselButton>
-          <CarouselButton>
-            <ChevronRightIcon />
-          </CarouselButton>
-        </CarouselSmallButtonContainer>
-      </CarouselHeading>
-      <CarouselItemBox>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller1}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">Tarundecf Beseking</CarouselItemName>
-            <Typography variant="body1">$12.90</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller2}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">Cum Sociis Natoque</CarouselItemName>
-            <Typography variant="body1">$28.72</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemDate>09.04.2024</CarouselItemDate>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-      </CarouselItemBox>
-    </Carousel>
+    <CarouselDefault
+      images={lastestBlogInfo.images}
+      itemNames={lastestBlogInfo.itemNames}
+      prices={lastestBlogInfo.prices}
+      redirectButtons={lastestBlogInfo.redirectButtons}
+      redirectLinks={lastestBlogInfo.redirectLinks}
+      title={lastestBlogInfo.title}
+      id={lastestBlogInfo.id}
+      blogDescription={lastestBlogInfo.blogDescriptions}
+      isNewArrive={false}
+    />
   );
 };
 

@@ -1,120 +1,49 @@
-import {
-  Carousel,
-  CarouselButton,
-  CarouselHeading,
-  CarouselHeadingText,
-  CarouselItem,
-  CarouselItemBox,
-  CarouselItemDescription,
-  CarouselItemImage,
-  CarouselItemName,
-  CarouselLargeButtonContainer,
-  CarouselRedictButton,
-  CarouselSideButtonContainer,
-  CarouselSmallButtonContainer,
-} from "../../../public/styled";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { Typography } from "@mui/material";
 import BestSeller1 from "../../assets/image/best-seller-1.jpg";
 import BestSeller2 from "../../assets/image/best-seller-2.jpg";
 import BestSeller3 from "../../assets/image/best-seller-3.jpg";
+import CarouselDefault from "./Carousel";
 
 const TrendingProduct = () => {
+  const trendingProductInfo = {
+    images: [
+      `${BestSeller1}`,
+      `${BestSeller2}`,
+      `${BestSeller3}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+      `${BestSeller2}`,
+    ],
+    title: "Trending Products",
+    itemNames: [
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+    ],
+    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9],
+    redirectButtons: ["POPULAR ITEM", "NEW ARRIVAL"],
+    redirectLinks: ["/best-sellers", "/new-arrivals"],
+    blogDescriptions: [],
+    id: 2,
+  };
   return (
-    <Carousel>
-      <CarouselHeading>
-        <CarouselHeadingText>TRENDING PRODUCTS</CarouselHeadingText>
-        <CarouselSideButtonContainer>
-          <CarouselLargeButtonContainer>
-            <CarouselRedictButton to={"/best-sellers"}>
-              POPULAR ITEMS
-            </CarouselRedictButton>
-            <CarouselRedictButton to={"/new-arrivals"}>
-              NEW ARRIVALS
-            </CarouselRedictButton>
-            <CarouselSmallButtonContainer>
-              <CarouselButton>
-                <ChevronLeftIcon />
-              </CarouselButton>
-              <CarouselButton>
-                <ChevronRightIcon />
-              </CarouselButton>
-            </CarouselSmallButtonContainer>
-          </CarouselLargeButtonContainer>
-        </CarouselSideButtonContainer>
-      </CarouselHeading>
-      <CarouselItemBox>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller1}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">Tarundecf Beseking</CarouselItemName>
-            <Typography variant="body1">$12.90</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller2}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">Cum Sociis Natoque</CarouselItemName>
-            <Typography variant="body1">$28.72</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-        <CarouselItem>
-          <CarouselItemImage src={BestSeller3}></CarouselItemImage>
-          <CarouselItemDescription>
-            <CarouselItemName href="/">
-              Suspendisse Massa Nulla
-            </CarouselItemName>
-            <Typography variant="body1">$29.00</Typography>
-          </CarouselItemDescription>
-        </CarouselItem>
-      </CarouselItemBox>
-    </Carousel>
+    <CarouselDefault
+      images={trendingProductInfo.images}
+      itemNames={trendingProductInfo.itemNames}
+      prices={trendingProductInfo.prices}
+      redirectButtons={trendingProductInfo.redirectButtons}
+      redirectLinks={trendingProductInfo.redirectLinks}
+      title={trendingProductInfo.title}
+      id={trendingProductInfo.id}
+      blogDescription={trendingProductInfo.blogDescriptions}
+      isNewArrive={false}
+    />
   );
 };
 

@@ -12,15 +12,19 @@ import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
 
 const Home = () => {
   return (
-    <div className="px-4">
-      <div className="flex gap-2 mt-4">
+
+    <Layout>
+      <Filter />
+      <div className="flex gap-6 justify-between my-4 w-full items-center">
         <Headphone />
         <BestSellerItem />
         <Watches />
       </div>
       <TrendingProduct />
-      <AdsBannerPC />
-      <AdsBannerCamera />
+      <div className="flex gap-8 mb-4 w-full">
+        <AdsBannerPC />
+        <AdsBannerCamera />
+      </div>
       <CategoriesProduct />
       <Categories />
       <SpecialProduct />

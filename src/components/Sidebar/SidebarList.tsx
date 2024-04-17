@@ -70,7 +70,7 @@ const SidebarList = () => {
 
   return (
     <Fragment>
-      <div className="flex bg-white border-[2px] border-[#ccc] flex-col rounded-md items-center justify-between min-w-[300px]">
+      <div className="flex bg-white border-[2px] border-[#ccc] flex-col rounded-md items-center justify-between mr-14">
         <div className="p-3 bg-blue-400 w-full h-full rounded-t-[4px] mb-[1px] text-center text-white">
           <p>SHOP BY CATEGORY</p>
         </div>
@@ -78,7 +78,7 @@ const SidebarList = () => {
           {navLinks.map((navLink, index) => (
             <div
               key={index}
-              className={`flex justify-between relative w-full px-3  cursor-pointer ${
+              className={`flex justify-between relative w-full px-3 py-1 cursor-pointer ${
                 index !== navLinks.length - 1 && `border-b-[1px] border-[#ccc]`
               }`}
               onMouseEnter={() => atMouseEnter(index)}
@@ -87,7 +87,10 @@ const SidebarList = () => {
             >
               <div className="flex gap-2 py-2 items-center items-middle">
                 <ArrowForwardIcon sx={{ height: "12px", width: "12px" }} />
-                <Link to={navLink.link} className="hover:no-underline">
+                <Link
+                  to={navLink.link}
+                  className="hover:no-underline text-black"
+                >
                   {navLink.name}
                 </Link>
               </div>
@@ -114,7 +117,7 @@ const SidebarList = () => {
                         <Link
                           to={`/`}
                           key={index}
-                          className="block py-1 hover:no-underline"
+                          className="block py-1 hover:no-underline text-black text-nowrap"
                         >
                           {list}
                         </Link>
