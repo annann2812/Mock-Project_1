@@ -105,7 +105,7 @@ const Header = () => {
                 </MenuItem>
               </Select>
             </FormControl>
-            {/* render data user log in or function login-signup */}
+            {/* render data user log in or function login-signup  */}
             {!storedValue ? (
               <FormControl
                 sx={{ m: 1, minWidth: 120, fontSize: "12px" }}
