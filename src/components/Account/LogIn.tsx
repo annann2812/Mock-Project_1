@@ -140,12 +140,12 @@ const Login: React.FC = () => {
                         <FormText className="small text-muted" href="#!">
                           Forgot password?
                         </FormText>
-                        <p
-                          className="mt-3 pb-lg-2"
-                        >
-                          Don't have an account?{" "}
-                          <br />
-                          <Link to="/signup" style={{ color: "#76885B", fontWeight: "bold" }}>
+                        <p className="mt-3 pb-lg-2">
+                          Don't have an account? <br />
+                          <Link
+                            to="/signup"
+                            style={{ color: "#76885B", fontWeight: "bold" }}
+                          >
                             Sign Up
                           </Link>
                         </p>

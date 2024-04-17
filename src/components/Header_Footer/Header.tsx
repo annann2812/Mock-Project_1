@@ -9,7 +9,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import EuroIcon from "@mui/icons-material/Euro";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/image/LOOP-logo (2).png"
+import Logo from "../../assets/image/LOOP-logo (2).png";
 
 const Header = () => {
   const [currency, setCurrency] = React.useState("");
@@ -39,7 +39,12 @@ const Header = () => {
           </p>
           <div className="right-nav d-flex flex-row justify-content-between">
             <FormControl
-              sx={{ m: 1, minWidth: 120, fontSize: "12px" , fontFamily: "Poppins"}}
+              sx={{
+                m: 1,
+                minWidth: 120,
+                fontSize: "12px",
+                fontFamily: "Poppins",
+              }}
               size="small"
             >
               <InputLabel id="demo1-select-small-label">Curency</InputLabel>
@@ -104,10 +109,10 @@ const Header = () => {
                 onChange={handleChangeAccount}
               >
                 <MenuItem value="signin">
-                  <Link to = "/login">Log In</Link>
+                  <Link to="/login">Log In</Link>
                 </MenuItem>
                 <MenuItem value="signin">
-                  <Link to = "/signup">Sign Up</Link>
+                  <Link to="/signup">Sign Up</Link>
                 </MenuItem>
               </Select>
             </FormControl>
@@ -197,11 +202,7 @@ const Header = () => {
         style={{ width: "90%" }}
       >
         <div className="Logo">
-          <img
-            style={{ height: "100px" }}
-            src={Logo}
-            alt=""
-          />
+          <img style={{ height: "100px" }} src={Logo} alt="" />
         </div>
         <div className="Logo d-flex flex-row ">
           <div className="d-flex flex-row pr-5 border align-items-center ">
