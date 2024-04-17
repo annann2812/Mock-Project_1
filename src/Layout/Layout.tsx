@@ -4,7 +4,6 @@ import SidebarList from "../components/Sidebar/SidebarList";
 import SidebarProduct from "../components/Sidebar/SidebarProduct";
 import Header from "../components/Header_Footer/Header";
 import Footer from "../components/Header_Footer/Footer";
-import BestSellerProduct from "../components/BestSeller_NewArrival-Product/BestSellerProduct";
 import NewArrivalProduct from "../components/BestSeller_NewArrival-Product/NewArrivalProduct";
 import NavBar from "../components/NavBar/NavBar";
 

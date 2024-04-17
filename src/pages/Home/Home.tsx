@@ -12,8 +12,7 @@ import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
 
 const Home = () => {
   return (
-    <Layout>
-<!--       <Filter /> -->
+    <div className="px-4">
       <div className="flex gap-2 mt-4">
         <Headphone />
         <BestSellerItem />
@@ -26,7 +25,7 @@ const Home = () => {
       <Categories />
       <SpecialProduct />
       <LastestBlog />
-    </Layout>
+    </div>
   );
 };
 

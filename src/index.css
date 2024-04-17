@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@import "../src/components/Header_Footer/Header.css";
+
+/* @import "../src/components/Header_Footer/Header.css"; */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -18,16 +16,13 @@
 
 body {
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 .pay-ìnomation{
   background-color: red;
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 a:hover {
