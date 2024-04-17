@@ -12,6 +12,7 @@ import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
 
 const Home = () => {
   return (
+
     <Layout>
       <Filter />
       <div className="flex gap-6 justify-between my-4 w-full items-center">
@@ -28,7 +29,7 @@ const Home = () => {
       <Categories />
       <SpecialProduct />
       <LastestBlog />
-    </Layout>
+    </div>
   );
 };
 

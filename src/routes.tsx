@@ -1,22 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../src/pages/Home/Home";
-import Error from "../src/pages/Error/Error";
-import Blog from "../src/pages/Blog/Blog";
-import Store from "../src/pages/Store/Store";
-import BestSellers from "../src/pages/BestSellers/BestSellers";
-import Contact from "../src/pages/Contact/Contact";
-import Sitemap from "../src/pages/Sitemap/Sitemap";
-import NewArrival from "../src/pages/NewArrival/NewArrival";
-import About from "../src/pages/About/About";
-import Delivery from "../src/pages/Delivery/Delivery";
-import Cameras from "../src/pages/Categories/Cameras";
-import Electronics from "../src/pages/Categories/Electronics";
-import Televisions from "../src/pages/Categories/Televisions";
-import JBLSpeakers from "../src/pages/Categories/JBLSpeakers";
-import Smartphones from "../src/pages/Categories/Smartphones";
-import Login from "../src/components/Account/LogIn";
-import SignUp from "../src/components/Account/SignUp";
-import Cart from "../src/pages/Cart/Cart";
+import Home from "./pages/Home/Home";
+import Error from "./pages/Error/Error";
+import Blog from "./pages/Blog/Blog";
+import Store from "./pages/Store/Store";
+import BestSellers from "./pages/BestSellers/BestSellers";
+import Contact from "./pages/Contact/Contact";
+import Sitemap from "./pages/Sitemap/Sitemap";
+import NewArrival from "./pages/NewArrival/NewArrival";
+import About from "./pages/About/About";
+import Delivery from "./pages/Delivery/Delivery";
+import Cameras from "./pages/Categories/Cameras";
+import Electronics from "./pages/Categories/Electronics";
+import Televisions from "./pages/Categories/Televisions";
+import JBLSpeakers from "./pages/Categories/JBLSpeakers";
+import Smartphones from "./pages/Categories/Smartphones";
+import Login from "./components/Account/LogIn";
+import SignUp from "./components/Account/SignUp";
+import Cart from "./pages/Cart/Cart";
 
 export const router = createBrowserRouter([
   {
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/contacts",
+    path: "/contact",
     element: <Contact />,
     errorElement: <Error />,
   },

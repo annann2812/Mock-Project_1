@@ -64,49 +64,6 @@ const BestSellerProduct = () => {
   }, []);
   return (
     <Fragment>
-      <Grid container spacing={1} width="900px" margin="auto" className="mb-2">
-        <Grid item xs={6} className="d-flex flex-row align-items-center">
-          <Button onClick={handleChangeGridColumns}>
-            <GridViewIcon />
-          </Button>
-          <Button onClick={handleChangeGridRow}>
-            <ViewStreamIcon />
-          </Button>
-          <Typography>There Are 10 Products.</Typography>
-        </Grid>
-        <Grid item xs={3}>
-          <Box sx={{ minWidth: 120 }}>
-            <FormControl fullWidth>
-              <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                Age
-              </InputLabel>
-              <NativeSelect
-                defaultValue={31}
-                inputProps={{
-                  name: "age",
-                  id: "uncontrolled-native",
-                }}
-              >
-                <option value={1} className="text-muted">
-                  Sales, highest to lowest
-                </option>
-                <option value={2} className="text-muted">
-                  Name, A to Z
-                </option>
-                <option value={3} className="text-muted">
-                  Name, Z to A
-                </option>
-                <option value={4} className="text-muted">
-                  Price, low to high
-                </option>
-                <option value={5} className="text-muted">
-                  Price, high to low
-                </option>
-              </NativeSelect>
-            </FormControl>
-          </Box>
-        </Grid>
-      </Grid>
       <Grid container spacing={5} width="900px" margin="auto">
         {gridProduct ? (
           <Fragment>
