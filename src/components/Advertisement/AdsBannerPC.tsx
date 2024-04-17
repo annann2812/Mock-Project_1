@@ -5,9 +5,9 @@ import AdsImg3 from "../../assets/image/sub-banner-home-1.jpeg";
 const AdsBannerPC = () => {
   return (
     <Fragment>
-      <div className="w-fit text-center">
+      <div className="w-1/2 text-center shadow-xl">
         <div className="relative overflow-hidden block">
-          <img src={AdsImg3} alt="" className="align-middle" />
+          <img src={AdsImg3} alt="/" className="w-full" />
           <div className="absolute right-5 top-[10px] text-right z-10 text-black flex flex-col">
             <span>abcabc</span>
             <Link

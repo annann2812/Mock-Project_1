@@ -31,12 +31,13 @@ export interface ContactForm {
 export interface CarouselProps {
   images: string[];
   title: string;
-  buttons: any[];
   itemNames: string[];
   prices: number[];
-  redirectButtons: any[];
-  redirectLinks: any[];
-  moveItem: () => void;
+  redirectButtons: string[];
+  redirectLinks: string[];
+  blogDescription: string[];
+  id: number;
+  isNewArrive: boolean;
 }
 
 export interface ProductsSaleProps {

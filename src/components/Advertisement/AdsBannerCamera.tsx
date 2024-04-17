@@ -5,9 +5,9 @@ import AdsImg4 from "../../assets/image/sub-banner-home-2.jpeg";
 const AdsBannerCamera = () => {
   return (
     <Fragment>
-      <div className="w-fit text-center">
+      <div className="w-1/2 text-center shadow-xl">
         <div className="relative overflow-hidden block">
-          <img src={AdsImg4} alt="" className="align-middle" />
+          <img src={AdsImg4} className="w-full" alt="/" />
           <div className="absolute right-5 top-[10px] text-right z-10 text-black flex flex-col">
             <span>abcabc</span>
             <Link
