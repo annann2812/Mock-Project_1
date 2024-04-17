@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/image/LOOP-logo (2).png";
 
 const Header = () => {
+  const storedValue = window.sessionStorage.getItem("username");
+  console.log("Retrieved value:", storedValue);
   const [currency, setCurrency] = React.useState("");
   const handleChangeCurrency = (event: SelectChangeEvent) => {
     setCurrency(event.target.value);
@@ -23,6 +25,13 @@ const Header = () => {
   const [account, setAccount] = React.useState("");
   const handleChangeAccount = (event: SelectChangeEvent) => {
     setAccount(event.target.value);
+  };
+  const handleLogOut = () => {
+    const isConfirm = confirm("Do you want to log out?");
+    if (isConfirm) {
+      window.sessionStorage.clear();
+      window.location.reload();
+    }
   };
 
   return (
@@ -96,26 +105,34 @@ const Header = () => {
                 </MenuItem>
               </Select>
             </FormControl>
-            <FormControl
-              sx={{ m: 1, minWidth: 120, fontSize: "12px" }}
-              size="small"
-            >
-              <InputLabel id="demo1-select-small-label">Account</InputLabel>
-              <Select
-                labelId="demo1-select-small-label"
-                id="demo1-select-small"
-                value={account}
-                label="account"
-                onChange={handleChangeAccount}
+            {/* render data user log in or function login-signup */}
+            {!storedValue ? (
+              <FormControl
+                sx={{ m: 1, minWidth: 120, fontSize: "12px" }}
+                size="small"
               >
-                <MenuItem value="signin">
-                  <Link to="/login">Log In</Link>
-                </MenuItem>
-                <MenuItem value="signin">
-                  <Link to="/signup">Sign Up</Link>
-                </MenuItem>
-              </Select>
-            </FormControl>
+                <InputLabel id="demo1-select-small-label">Account</InputLabel>
+                <Select
+                  labelId="demo1-select-small-label"
+                  id="demo1-select-small"
+                  value={account}
+                  label="account"
+                  onChange={handleChangeAccount}
+                >
+                  <MenuItem value="signin">
+                    <Link to="/login">Log In</Link>
+                  </MenuItem>
+                  <MenuItem value="signin">
+                    <Link to="/signup">Sign Up</Link>
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            ) : (
+              <Fragment>
+                <h2>Hello,{storedValue}</h2>
+                <button onClick={handleLogOut}>log out</button>
+              </Fragment>
+            )}
           </div>
         </div>
         {/*  */}
