@@ -1,71 +1,47 @@
-import { Box, Typography } from "@mui/material";
-import { ImgCard, ImgCardDetail, PrimaryButton } from "../../../public/styled";
 import ImgProduct1 from "../../assets/image/new-product-1.jpeg";
+import CarouselDefault from "../Carousel/Carousel";
 
 const SidebarProduct = () => {
+  const sidebarInfo = {
+    images: [
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+      `${ImgProduct1}`,
+    ],
+    title: "New Product",
+    itemNames: [
+      "Lorem ipsum dolor1",
+      "Lorem ipsum dolor2",
+      "Lorem ipsum dolor3",
+      "Lorem ipsum dolor4",
+      "Lorem ipsum dolor5",
+      "Lorem ipsum dolor6",
+      "Lorem ipsum dolor7",
+      "Lorem ipsum dolor8",
+    ],
+    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9],
+    redirectButtons: [],
+    redirectLinks: [],
+    blogDescriptions: [],
+    id: 7,
+  };
   return (
-    <Box
-      borderRadius={2}
-      sx={{
-        border: "1px solid #ccc",
-        paddingBottom: "12px",
-        margin: "18px 0",
-        display: {
-          // xs: "none",
-          // lg: "block"
-        },
-      }}
-    >
-      <Typography
-        variant="body1"
-        sx={{
-          borderBottom: "1px solid #ccc",
-          padding: "12px",
-          backgroundColor: "#FAFAFA",
-          borderRadius: "16px 16px 0 0 ",
-        }}
-      >
-        NEW PRODUCTS
-      </Typography>
-      <Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <ImgCard src={ImgProduct1} />
-          <ImgCardDetail>
-            <Typography variant="caption" sx={{ color: "darkgray" }}>
-              name
-            </Typography>
-            <Typography variant="body1">price</Typography>
-          </ImgCardDetail>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <ImgCard src={ImgProduct1} />
-          <ImgCardDetail>
-            <Typography variant="caption" sx={{ color: "darkgray" }}>
-              name
-            </Typography>
-            <Typography variant="body1">price</Typography>
-          </ImgCardDetail>
-        </Box>
-        <Box
-          sx={{
-            textAlign: "center",
-            margin: "10px 0",
-          }}
-        >
-          <PrimaryButton to="/new-arrivals">All new product</PrimaryButton>
-        </Box>
-      </Box>
-    </Box>
+    <CarouselDefault
+      images={sidebarInfo.images}
+      itemNames={sidebarInfo.itemNames}
+      prices={sidebarInfo.prices}
+      redirectButtons={sidebarInfo.redirectButtons}
+      redirectLinks={sidebarInfo.redirectLinks}
+      title={sidebarInfo.title}
+      id={sidebarInfo.id}
+      blogDescription={sidebarInfo.blogDescriptions}
+      isNewArrive={true}
+    />
   );
 };
 
