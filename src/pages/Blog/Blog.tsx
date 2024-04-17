@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Blog } from '../../../public/type'
 import axios from 'axios';
 import Layout from '../../Layout/Layout';
+import React from 'react';
 
 const BlogPage = () => {
   const [ blogs, setBlogs ] = useState<Blog[]>([]);
@@ -14,7 +15,7 @@ const BlogPage = () => {
   }, [])
 
   return (
-    <Layout>
+    <div>
       {/* {blogs.map((item, index) => (
         <Box key={index}>
           <Typography variant='h6'>{item.title}</Typography>
@@ -48,7 +49,7 @@ const BlogPage = () => {
           ))}
         </div>
       </section>
-    </Layout>
+    </div>
   )
 }
 

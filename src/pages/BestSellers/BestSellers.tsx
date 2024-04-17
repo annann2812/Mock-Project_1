@@ -61,6 +61,10 @@ const BestSellers: React.FC = () => {
     throw new Error("Function not implemented.");
   }
 
+  function setMobileFiltersOpen(arg0: boolean): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div>
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

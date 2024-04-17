@@ -9,7 +9,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import EuroIcon from "@mui/icons-material/Euro";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/image/LOOP-logo (2).png"
+// import Logo from "../../assets/image/"
 
 const Header = () => {
   const [currency, setCurrency] = React.useState("");
@@ -199,7 +199,7 @@ const Header = () => {
         <div className="Logo">
           <img
             style={{ height: "100px" }}
-            src={Logo}
+            // src={}
             alt=""
           />
         </div>

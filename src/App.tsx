@@ -12,6 +12,7 @@ import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import NewArrival from "./pages/NewArrival/NewArrival";
 import BlogPage from "./pages/Blog/Blog";
+import React from "react";
 
 
 const App = () => {

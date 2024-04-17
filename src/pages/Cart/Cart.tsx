@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "../../Layout/Layout";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import React from "react";
 
 const Cart: React.FC = () => {
   const [data, setData] = useState<[] | null>(null);

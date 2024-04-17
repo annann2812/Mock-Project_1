@@ -17,6 +17,7 @@ import Smartphones from "./pages/Categories/Smartphones";
 import Login from "./components/Account/LogIn";
 import SignUp from "./components/Account/SignUp";
 import Cart from "./pages/Cart/Cart";
+import React from "react";
 
 export const router = createBrowserRouter([
   {

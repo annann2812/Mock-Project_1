@@ -9,12 +9,13 @@ import TrendingProduct from "../../components/Carousel/TrendingProduct";
 import SpecialProduct from "../../components/Carousel/SpecialProduct";
 import LastestBlog from "../../components/Carousel/LastestBlog";
 import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
+import React from "react";
 
 const Home = () => {
   return (
 
     <Layout>
-      <Filter />
+      {/* <Filter />  */}
       <div className="flex gap-6 justify-between my-4 w-full items-center">
         <Headphone />
         <BestSellerItem />
@@ -29,7 +30,7 @@ const Home = () => {
       <Categories />
       <SpecialProduct />
       <LastestBlog />
-    </div>
+    </Layout>
   );
 };
 
