@@ -5,10 +5,13 @@ import { router } from "../../routes";
 
 const NavBar = () => {
   return (
-    <header className="text-gray-600 body-font">
-      <div className="text-light mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center bg-[#76885B]">
+    <header className="text-gray-600 body-font bg-[#76885B]">
+      <div
+        className="text-light mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center "
+        style={{ width: "90%" }}
+      >
         <a className="flex title-font font-medium items-center text-gray-900 md:mb-0">
-          <span className="ml-3 text-2xl fw-500 text-light">byLoop.</span>
+          <span className=" text-2xl fw-500 text-light">byLoop.</span>
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link to="/" className="mr-3 hover:text-gray-900">

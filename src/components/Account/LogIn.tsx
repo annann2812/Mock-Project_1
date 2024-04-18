@@ -80,7 +80,11 @@ const Login: React.FC = () => {
                           Sign into your account
                         </h3>
                         <div className="social-icons my-3">
-                          <FormIcon href="#" className="icon">
+                          <FormIcon
+                            href="#"
+                            className="icon"
+                            onClick={() => navigate("/logingg")}
+                          >
                             <i className="fa-brands fa-google-plus-g"></i>
                           </FormIcon>
                           <FormIcon href="#" className="icon">

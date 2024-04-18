@@ -852,20 +852,13 @@
       ]
     }
   ],
-  "users": [
+  "users": [  
     {
-      "email": "hieutran290611@gmail.com",
-      "password": "$2a$10$W8UQNPzGR0bwb9z6b1Y8Z.3muuh4PZVC3L7uix1GDKPCoZARlJBUS",
-      "username": "quaduahau",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$62eYlr2XebKad2v54l2Js.WaL5jY5UhxKVO.djrGJ15ULYf37Ij..",
+      "username": "admin",
       "confirmPassword": "12341234",
-      "id": 1
-    },
-    {
-      "email": "hieutran290611@gmail.com111",
-      "password": "$2a$10$0CSTpZz4Q20n53SaBqI22eRQMQS0bDcXYGhMYR57.6AkenYMlhOZG",
-      "username": "quaduahau111",
-      "confirmPassword": "12345678",
-      "id": 2
+      "id": 5
     }
   ],
   "blog": [

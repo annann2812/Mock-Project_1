@@ -10,8 +10,6 @@ import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import NewArrival from "./pages/NewArrival/NewArrival";
 import BlogPage from "./pages/Blog/Blog";
-import Login from "./components/Account/LogIn";
-import SignUp from "./components/Account/SignUp";
 
 const App = () => {
   return (
@@ -19,7 +17,7 @@ const App = () => {
       <Header />
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
