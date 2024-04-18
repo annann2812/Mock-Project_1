@@ -1,18 +1,17 @@
 import {
   Button,
-  Checkbox,
   Container,
   FormControl,
   FormControlLabel,
   FormGroup,
   Grid,
-  ImageListItem,
-  Link,
   Radio,
   RadioGroup,
   Typography,
 } from "@mui/material";
 import React from "react";
+import { NavLink } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const BillingAdres = () => {
   // handle save address change
@@ -53,7 +52,6 @@ const BillingAdres = () => {
             maxWidth: "100%",
             border: "1px solid",
             margin: "3px",
-            padding: "3px",
           }}
         >
           <FormControl>
@@ -102,10 +100,11 @@ const BillingAdres = () => {
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="caption">
-            <Link href="#" underline="hover">
-              {"< Return to Page"}
-            </Link>
+          <Typography variant="subtitle1" padding="5px">
+            <NavLink to="./Home">
+              {" "}
+              <ArrowBackIosIcon fontSize="small" /> Back to shop{" "}
+            </NavLink>
           </Typography>
         </Grid>
         <Grid
