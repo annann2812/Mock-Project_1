@@ -1,11 +1,41 @@
 import React, { Fragment, useState } from "react";
 import "tailwindcss/tailwind.css";
 import CreditCardForm from "./CreditCardForm";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import BillingAdres from "./BillingAdres";
-import { Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
 const PayPage = () => {
+  function createData(title: string, derection: string, button: string) {
+    return { title, derection, button };
+  }
+  const rows = [
+    createData("Contact", "Name", "Change"),
+    createData(" ", "Mail", " "),
+    createData(
+      "Snip to ",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, porro.",
+      "Change"
+    ),
+    createData(
+      "Method ",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, porro.",
+      "Free"
+    ),
+  ];
   return (
     <Fragment>
       <Container maxWidth="sm">
@@ -26,58 +56,88 @@ const PayPage = () => {
               <img src="" alt="11" style={{ display: "inline" }} />
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="caption">
-                All transactions are secure and end crypted
-              </Typography>
+              <Grid container alignItems="center" spacing={1}>
+                <Grid item>
+                  <Typography variant="body1">
+                    <Link to="\Home" style={{ color: "green" }}>
+                      Home
+                    </Link>
+                    <ArrowForwardIosIcon fontSize="small" />
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">
+                    <Link to="\Page" style={{ color: "green" }}>
+                      Page
+                    </Link>{" "}
+                    <ArrowForwardIosIcon fontSize="small" />
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">
+                    <Link to="\Home" style={{ color: "green" }}>
+                      Shipping
+                    </Link>{" "}
+                    <ArrowForwardIosIcon fontSize="small" />
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">Payment</Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </form>
       </Container>
-      <div className="payment-wrap">
-        <div className="contact-infomation  ">
-          <table className="table-auto w-full mx-auto">
-            <p>
-              <strong>Contact Infomation</strong>
-            </p>
-            <tbody>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Contact</td>
-                <td className="p-4 w-1/3">Name & Email</td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Change
-                  </button>
-                </td>
-              </tr>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Snip to</td>
-                <td className="p-4 w-1/3">Address</td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Change
-                  </button>
-                </td>
-              </tr>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Method</td>
-                <td className="p-4 w-1/3">
-                  <strong>Economy</strong>(sadasdsads)
-                </td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Free
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr />
-        <CreditCardForm />
-        <BillingAdres />
-      </div>
-      {/* <CreditCardForm />
-      <BillingAdres /> */}
+      <Container maxWidth="sm">
+        <TableContainer
+          style={{
+            display: "grid",
+
+            boxSizing: "border-box",
+            width: "100%",
+            margin: "3px",
+            padding: "3px 3px 3px 20px",
+          }}
+        >
+          <Typography variant="h6"> Contact information</Typography>
+          <Table style={{ border: "1px solid #CCC" }}>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.title}
+                  sx={{
+                    "&:first-child td, &:first-child th": { border: 0 },
+                  }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.title}
+                  </TableCell>
+                  <TableCell
+                    align="left"
+                    // sx={{
+                    //   "&:second-child, &:second-child": {
+                    //     alignItems: "flex-start",
+                    //     justifyContent: "flex-start",
+                    //   },
+                    // }}
+                  >
+                    {row.derection}
+                  </TableCell>
+                  <TableCell align="left">
+                    <Button style={{ justifyContent: "left" }}>
+                      {row.button}
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
+
+      <CreditCardForm />
+      <BillingAdres />
     </Fragment>
   );
 };
