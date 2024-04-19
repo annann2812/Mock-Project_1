@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormValues } from "../../../public/type";
 import {
   BackgroundLogin,
@@ -11,15 +11,13 @@ import {
   FormText,
   LoginForm,
 } from "../../../public/styled";
+import { User } from "../../../projectLogin/src/interface/user";
+import instance from "../../../projectLogin/src/service";
 
 const initialValues: FormValues = {
   username: "",
   email: "",
   password: "",
-};
-
-const onSubmit = (values: FormValues) => {
-  alert("Your Form is Submitted");
 };
 
 const validationSchema = Yup.object({
@@ -33,6 +31,21 @@ const validationSchema = Yup.object({
 });
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
+  const onSubmit = (user: User) => {
+    (async () => {
+      const { data } = await instance.post(`/login`, user);
+      if (data.user) {
+        sessionStorage.setItem("accessToken", data.accessToken);
+        sessionStorage.setItem("username", data.user.username);
+        const isConfirm = confirm("Login successfully switch home page ?");
+        if (isConfirm) {
+          navigate("/");
+        }
+      }
+    })();
+  };
+
   return (
     <Fragment>
       <BackgroundLogin className="py-3 vh-100">
@@ -67,7 +80,11 @@ const Login: React.FC = () => {
                           Sign into your account
                         </h3>
                         <div className="social-icons my-3">
-                          <FormIcon href="#" className="icon">
+                          <FormIcon
+                            href="#"
+                            className="icon"
+                            onClick={() => navigate("/logingg")}
+                          >
                             <i className="fa-brands fa-google-plus-g"></i>
                           </FormIcon>
                           <FormIcon href="#" className="icon">

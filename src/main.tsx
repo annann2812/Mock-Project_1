@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Account/LogIn.tsx";
 
 import SignUp from "./components/Account/SignUp.tsx";
+import LoginWithGG from "./components/Account/LoginWithGG.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Route index element={<App />}></Route>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/logingg" element={<LoginWithGG />} />
     </Routes>
   </BrowserRouter>
   // </React.StrictMode>,

@@ -1,7 +1,6 @@
 import { Fragment, ReactNode } from "react";
 import SidebarList from "../components/Sidebar/SidebarList";
 import SidebarProduct from "../components/Sidebar/SidebarProduct";
-import Footer from "../components/Header_Footer/Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -21,7 +20,6 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="max-w-full p-3 overflow-hidden xl:w-[1280px] mx-auto">
         {children}
       </div>
-      <Footer />
     </Fragment>
   );
 };
