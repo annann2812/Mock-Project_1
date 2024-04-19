@@ -8,9 +8,9 @@
       "size": "s",
       "branch": "Adidas",
       "price": 25,
-      "discount":{
-        "is_discount":true,
-        "price_discount":"20%"
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
       },
       "images_list": [
         "../src/assets/image/best-seller-1.jpg",
@@ -19,17 +19,24 @@
         "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
         "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
       ],
-      "best_seller":true,
-      "new-arriver":true
+      "best_seller": true,
+      "new-arriver": true
     }
   ],
-  "users": [  
+  "users": [
     {
       "email": "admin@gmail.com",
       "password": "$2a$10$62eYlr2XebKad2v54l2Js.WaL5jY5UhxKVO.djrGJ15ULYf37Ij..",
       "username": "admin",
       "confirmPassword": "12341234",
       "id": 5
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$vqbF44nPcxYSGjPWpCEXa.5TrilZ1BYjWSsqPcSPYejc2E7w43eOq",
+      "username": "admin2",
+      "confirmPassword": "12341234",
+      "id": 6
     }
   ],
   "blog": [
