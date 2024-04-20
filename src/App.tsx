@@ -10,8 +10,22 @@ import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import NewArrival from "./pages/NewArrival/NewArrival";
 import BlogPage from "./pages/Blog/Blog";
+import { useEffect } from "react";
+import instance from "../projectLogin/src/service";
 
 const App = () => {
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/products");
+      console.log(data);
+    })();
+  }, []);
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/blog");
+      console.log(data);
+    })();
+  }, []);
   return (
     <Fragment>
       <Header />
