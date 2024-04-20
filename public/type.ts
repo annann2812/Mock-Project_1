@@ -20,6 +20,7 @@ export interface FormValues {
   username: string;
   email: string;
   password: string;
+  confirmPassword: string;
 }
 
 export interface ContactForm {
@@ -41,14 +42,14 @@ export interface CarouselProps {
 }
 
 export interface ProductsSaleProps {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: {
-      rate: number;
-      count: number;
-    };
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }

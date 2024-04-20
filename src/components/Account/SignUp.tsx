@@ -18,6 +18,7 @@ const initialValues: FormValues = {
   username: "",
   email: "",
   password: "",
+  confirmPassword: "",
 };
 
 const validationSchema = Yup.object({
@@ -28,6 +29,9 @@ const validationSchema = Yup.object({
   password: Yup.string()
     .min(8, "Password is too short - should be 8 chars minimum.")
     .required("Password is Required"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), undefined], "Passwords must match") // Check if confirm password matches password
+    .required("Confirm Password is required"),
 });
 
 const SignUp = () => {
