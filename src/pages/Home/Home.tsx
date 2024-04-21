@@ -12,13 +12,13 @@ import React, { Fragment } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
 import Hero from "../../components/Carousel/HeroSlider";
+import Header from "../../components/Header_Footer/Header";
 
 const Home = () => {
   return (
-
     <Fragment>
-      <NavBar/>
-      <Hero/>
+      <NavBar />
+      <Hero />
       <div className="container px-5">
         {/* <Filter />  */}
         <div className="flex gap-6 justify-between my-4 w-full items-center">
@@ -36,7 +36,7 @@ const Home = () => {
         <SpecialProduct />
         <LastestBlog />
       </div>
-      <Footer/>
+      <Footer />
     </Fragment>
   );
 };
