@@ -8,6 +8,7 @@ import TrendingProduct from "../../components/Carousel/TrendingProduct";
 import SpecialProduct from "../../components/Carousel/SpecialProduct";
 import LastestBlog from "../../components/Carousel/LastestBlog";
 import CategoriesProduct from "../../components/Carousel/CategoriesProduct";
+<<<<<<< HEAD
 import React, { Fragment } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
@@ -38,6 +39,29 @@ const Home = () => {
       </div>
       <Footer/>
     </Fragment>
+=======
+import Filter from "../../components/Filter/Filter";
+
+const Home = () => {
+  return (
+    <Layout>
+      <Filter />
+      <div className="flex gap-6 justify-between my-4 w-full items-center">
+        <Headphone />
+        <BestSellerItem />
+        <Watches />
+      </div>
+      <TrendingProduct />
+      <div className="flex gap-8 mb-4 w-full">
+        <AdsBannerPC />
+        <AdsBannerCamera />
+      </div>
+      <CategoriesProduct />
+      <Categories />
+      <SpecialProduct />
+      <LastestBlog />
+    </Layout>
+>>>>>>> refs/remotes/origin/develop
   );
 };
 
