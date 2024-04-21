@@ -27,7 +27,7 @@ const Cart: React.FC = () => {
   useEffect(() => {
     // Calculate total amount
     let price = 0;
-    products.forEach((item) => {
+    products.forEach((item: Product) => {
       price += item.price * (item.quantity || 1);
     });
     setTotalAmt(price);
@@ -89,11 +89,14 @@ const Cart: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                {products.map((product) => (
-                  <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
+                {products.map((product: Product) => (
+                  <div
+                    key={product.id}
+                    className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200"
+                  >
                     <div className="w-full md:max-w-[126px]">
                       <img
-                        src={product.image}
+                        src={product.images_list[1]}
                         alt="perfume bottle image"
                         className="mx-auto"
                       />
@@ -105,7 +108,7 @@ const Cart: React.FC = () => {
                             {product.name}
                           </h6>
                           <h6 className="font-normal text-base leading-7 text-gray-500">
-                            {product.category}
+                            {product.decription}
                           </h6>
                           <h6 className="font-semibold text-base leading-7 text-[#76885B]">
                             $ {product.price}
@@ -115,7 +118,9 @@ const Cart: React.FC = () => {
                       <div className="flex items-center max-[400px]:justify-center h-full max-md:mt-3">
                         <div className="flex items-center w-full">
                           <button
-                            onClick={() => handleDecrement(product.id)}
+                            onClick={() => {
+                              handleDecrement(product.id);
+                            }}
                             className="group rounded-l-full px-3 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
                           >
                             <AiOutlineMinus className="w-[20px] h-[20px]" />

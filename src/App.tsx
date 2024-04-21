@@ -15,12 +15,26 @@ import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./Redux/store";
+import { setBlogs, setProductList } from "./Redux/ProductSlice";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/products");
+      dispatch(setProductList(data));
+    })();
+    (async () => {
+      const { data } = await instance.get("/blog");
+      dispatch(setBlogs(data));
+    })();
+  }, []);
+
   return (
     <Fragment>
-      <Newsletter/>
-      <SpecialCase/>
+      <Newsletter />
+      <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
