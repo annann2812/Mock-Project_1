@@ -2,6 +2,8 @@ import * as React from "react";
 import { Fragment } from "react";
 
 import MenuItem from "@mui/material/MenuItem";
+// import Logo from "../../assets/image/"
+import logo from "../../assets/image/LOOP-logo (2).png"
 
 import Logo from "../../assets/image/LOOP-logo (2).png";
 
@@ -185,6 +187,54 @@ const Header = () => {
         </div>
       </div>
       {/*  */}
+      <div
+        className="nav-bar  m-auto d-flex flex-row justify-content-between align-items-center py-3"
+        style={{ width: "90%" }}
+      >
+        <div className="Logo">
+          <img
+            style={{ height: "100px" }}
+            src={logo}
+            alt=""
+          />
+        </div>
+        <div className="Logo d-flex flex-row ">
+          <div className="d-flex flex-row pr-5 border align-items-center ">
+            <img
+              className="mr-2 pr-2 border"
+              // style={{ height: "70px" }}
+              style={{
+                objectFit: "contain",
+                objectPosition: "center",
+                height: "70px",
+              }}
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTLM9ocMWlwnfx_ZNNxNJY0NzIRzBqml4Kshm0S3yguu7FmP38M"
+              alt=""
+            />
+            <div>
+              <h6>GRAB OFFER!!!</h6>
+              <p>headphones available in 30% off</p>
+            </div>
+          </div>
+          <div className="d-flex flex-row pr-5 border align-items-center ml-5 ">
+            <img
+              className="mr-2 pr-2 border"
+              // style={{ height: "70px" }}
+              style={{
+                objectFit: "contain",
+                objectPosition: "center",
+                height: "70px",
+              }}
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTLM9ocMWlwnfx_ZNNxNJY0NzIRzBqml4Kshm0S3yguu7FmP38M"
+              alt=""
+            />
+            <div>
+              <h6>GRAB OFFER!!!</h6>
+              <p>headphones available in 30% off</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };

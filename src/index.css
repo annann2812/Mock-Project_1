@@ -13,6 +13,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -29,3 +31,19 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  background-color: #ccc; /* White background */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+  padding: 8px 0; /* Padding */
+  min-width: 120px; /* Minimum width */
+}
+
+
