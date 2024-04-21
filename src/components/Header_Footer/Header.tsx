@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 import MenuItem from "@mui/material/MenuItem";
 // import Logo from "../../assets/image/"
-import logo from "../../assets/image/LOOP-logo (2).png"
+import logo from "../../assets/image/LOOP-logo (2).png";
 
 import Logo from "../../assets/image/LOOP-logo (2).png";
 
@@ -192,11 +192,7 @@ const Header = () => {
         style={{ width: "90%" }}
       >
         <div className="Logo">
-          <img
-            style={{ height: "100px" }}
-            src={logo}
-            alt=""
-          />
+          <img style={{ height: "100px" }} src={logo} alt="" />
         </div>
         <div className="Logo d-flex flex-row ">
           <div className="d-flex flex-row pr-5 border align-items-center ">

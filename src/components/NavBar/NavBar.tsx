@@ -1,16 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logoLoop from "../../assets/image/LOOP-logo (2).png";
-import {
-  FaSearch,
-  FaUserAlt,
-} from "react-icons/fa";
+import { FaSearch, FaUserAlt } from "react-icons/fa";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import "../../index.css";
 
 const NavBar = () => {
+  const renderAccount = () => {
+    const storedValueAcc = window.sessionStorage.getItem("username");
+    const storedValueGG = window.sessionStorage.getItem("usernameGG");
+
+    if (storedValueAcc) {
+      return `Hi, ${storedValueAcc}`;
+    } else if (storedValueGG) {
+      return `Hi, ${storedValueGG}`;
+    }
+  };
   const products = useSelector((state: RootState) => state.loopStore.products);
   return (
     <header className="bg-[#EFECEC] body-font">
@@ -39,9 +46,12 @@ const NavBar = () => {
           </Link>
         </nav>
         <div className="text-[24px] font-semibold text-[#76885B] flex flex-wrap items-center text-base justify-between">
-          <Link to="/login">
-            <FaUserAlt />
-          </Link>
+          {renderAccount() || (
+            <Link to="/login">
+              {" "}
+              <FaUserAlt />
+            </Link>
+          )}
           <Link to="/" className="ml-4 mr-2">
             <FaSearch />
           </Link>
