@@ -8,9 +8,12 @@ const Headphone = () => {
     <Fragment>
       <div className="max-w-[15%] text-center">
         <div className="relative overflow-hidden block">
-          <img src={AdsImg1} alt="" />
+          <img
+            src="https://m.media-amazon.com/images/I/61SfkBer7jL._AC_SY395_.jpg"
+            alt=""
+          />
           <div className="absolute left-0 right-0 bottom-6 text-center z-10 text-white flex flex-col">
-            <span>abcabc</span>
+            <span>Chunky Sneakers</span>
             <Link
               to={"/best-sellers"}
               className="hover:no-underline text-black border-[1px] border-black bg-white rounded-[10px] p-2 block w-fit text-center m-auto"

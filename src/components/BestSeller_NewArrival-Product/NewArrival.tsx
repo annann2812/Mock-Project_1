@@ -13,6 +13,8 @@ import Grid from "@mui/material/Grid";
 import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true },
@@ -20,7 +22,8 @@ const sortOptions = [
 ];
 
 const NewArrival: React.FC<Product> = (props) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(6);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
@@ -265,7 +268,7 @@ const NewArrival: React.FC<Product> = (props) => {
                   {gridProduct ? (
                     <Fragment>
                       {products &&
-                        products.map((product, index) => {
+                        products.map((product: Product, index: number) => {
                           if (
                             (index <= counterNextPageMax &&
                               index > counterNextPageMin) ||
@@ -273,30 +276,32 @@ const NewArrival: React.FC<Product> = (props) => {
                               index >= counterNextPageMin)
                           ) {
                             return (
-                              <Link
-                                to={`/products/${product.id}`}
-                                key={product.id}
-                                className="lg:w-1/3 md:w-1/2 p-3 w-full hover:border border-[#76885B] mb-4 cursor-pointer rounded-3xl"
-                              >
-                                <a className="capitialize block capitalize relative h-48 rounded overflow-hidden">
-                                  <img
-                                    alt={product.name}
-                                    className="object-contain object-center w-full h-full block"
-                                    src={product.image}
-                                  />
-                                </a>
-                                <div className="mt-4">
-                                  <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">
-                                    {product.category}
-                                  </h3>
-                                  <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
-                                    {product.name}
-                                  </h2>
-                                  <p className="mt-1 text-md font-semibold">
-                                    $ {product.price}
-                                  </p>
-                                </div>
-                              </Link>
+                              !product.new_arriver && (
+                                <Link
+                                  to={`/products/${product.id}`}
+                                  key={product.id}
+                                  className="lg:w-1/3 md:w-1/2 p-3 w-full hover:border border-[#76885B] mb-4 cursor-pointer rounded-3xl"
+                                >
+                                  <a className="capitialize block capitalize relative h-48 rounded overflow-hidden">
+                                    <img
+                                      alt={product.name}
+                                      className="object-contain object-center w-full h-full block"
+                                      src={product.images_list[0]}
+                                    />
+                                  </a>
+                                  <div className="mt-4">
+                                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">
+                                      {product.decription}
+                                    </h3>
+                                    <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                      {product.name}
+                                    </h2>
+                                    <p className="mt-1 text-md font-semibold">
+                                      $ {product.price}
+                                    </p>
+                                  </div>
+                                </Link>
+                              )
                             );
                           }
                         })}
@@ -318,15 +323,15 @@ const NewArrival: React.FC<Product> = (props) => {
                     </Fragment>
                   ) : (
                     <Fragment>
-                      {products &&
-                        products.map((product, index) => {
-                          if (
-                            (index <= counterNextPageMax &&
-                              index > counterNextPageMin) ||
-                            (index < counterNextPageMax &&
-                              index >= counterNextPageMin)
-                          ) {
-                            return (
+                      {products.map((product, index) => {
+                        if (
+                          (index <= counterNextPageMax &&
+                            index > counterNextPageMin) ||
+                          (index < counterNextPageMax &&
+                            index >= counterNextPageMin)
+                        ) {
+                          return (
+                            !product.new_arriver && (
                               <section className="text-gray-600 body-font overflow-hidden">
                                 <div className="container px-5 py-10 mx-auto border-b border-gray-200">
                                   <div className="-my-8 divide-y-2 divide-gray-100">
@@ -335,28 +340,31 @@ const NewArrival: React.FC<Product> = (props) => {
                                         <img
                                           alt={product.name}
                                           className="object-contain w-[200px] object-center block"
-                                          src={product.image}
+                                          src={product.images_list[0]}
                                         />
                                       </a>
                                       <div className="md:flex-grow">
                                         <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
-                                          {product.category}
+                                          {product.decription}
                                         </h5>
                                         <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
                                           {product.name}
                                         </h5>
                                         <p className="text-md font-medium text-gray-900 title-font mb-2">
-                                          {product.description.length > 90
-                                            ? product.description.substring(
+                                          {product.decription.length > 90
+                                            ? product.decription.substring(
                                                 0,
                                                 50
                                               ) + "..."
-                                            : product.description}
+                                            : product.decription}
                                         </p>
                                         <p className="text-xl font-medium text-[#76885B] leading-relaxed">
                                           $ {product.price}
                                         </p>
-                                        <Link to = {`/products/${product.id}`} className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded">
+                                        <Link
+                                          to={`/products/${product.id}`}
+                                          className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                                        >
                                           View Details
                                         </Link>
                                       </div>
@@ -364,9 +372,10 @@ const NewArrival: React.FC<Product> = (props) => {
                                   </div>
                                 </div>
                               </section>
-                            );
-                          }
-                        })}
+                            )
+                          );
+                        }
+                      })}
                       <Grid item xs={12} textAlign="right">
                         <button
                           className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"

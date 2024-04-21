@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../../public/type";
 import axios from "axios";
 import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
 
 const BlogPage = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const { products, blogs } = useSelector(
+    (state: RootState) => state.loopStore
+  );
+  console.log(blogs);
   const [page, setPage] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -46,7 +51,7 @@ const BlogPage = () => {
               <div key={index} className="p-4 md:w-full">
                 <div className="border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row">
                   <div className="w-full sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full text-[#76885B] flex-shrink-0">
-                      <img src="https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg" alt="" />
+                    <img src={item.imgUrl} alt="" />
                   </div>
                   <div className="flex-grow">
                     <h2 className="text-gray-900 text-lg title-font font-medium mb-3">

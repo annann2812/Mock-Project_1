@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Running Shoes",
-      "decription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "S",
       "branch": "Adidas",
@@ -24,7 +24,7 @@
     {
       "id": 2,
       "name": "Casual Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "Nike",
@@ -45,7 +45,7 @@
     {
       "id": 3,
       "name": "High-Top Basketball Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "L",
       "branch": "Vans",
@@ -66,7 +66,7 @@
     {
       "id": 4,
       "name": "Slip-On Loafers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "XL",
       "branch": "Lining",
@@ -87,7 +87,7 @@
     {
       "id": 5,
       "name": "Hiking Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "S",
       "branch": "Adidas",
@@ -108,7 +108,7 @@
     {
       "id": 6,
       "name": "Skate Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "M",
       "branch": "Nike",
@@ -129,7 +129,7 @@
     {
       "id": 7,
       "name": "Formal Oxfords",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Vans",
@@ -150,7 +150,7 @@
     {
       "id": 8,
       "name": "Beach Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "XL",
       "branch": "Lining",
@@ -171,7 +171,7 @@
     {
       "id": 9,
       "name": "Training Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "M",
       "branch": "Nike",
@@ -192,7 +192,7 @@
     {
       "id": 10,
       "name": "Chelsea Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Vans",
@@ -213,7 +213,7 @@
     {
       "id": 11,
       "name": "Ankle Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "XL",
       "branch": "Lining",
@@ -234,7 +234,7 @@
     {
       "id": 12,
       "name": "Moccasin Slippers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Adidas",
@@ -255,7 +255,7 @@
     {
       "id": 13,
       "name": "Flip Flops",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "S",
       "branch": "Adidas",
@@ -276,7 +276,7 @@
     {
       "id": 14,
       "name": "Espadrilles",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "M",
       "branch": "Nike",
@@ -297,7 +297,7 @@
     {
       "id": 15,
       "name": "Boat Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Vans",
@@ -318,7 +318,7 @@
     {
       "id": 16,
       "name": "Combat Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "XL",
       "branch": "Lining",
@@ -339,7 +339,7 @@
     {
       "id": 17,
       "name": "Derby Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "nike",
@@ -360,7 +360,7 @@
     {
       "id": 18,
       "name": "Golf Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "XL",
       "branch": "Nike",
@@ -381,7 +381,7 @@
     {
       "id": 19,
       "name": "Ballet Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "S",
       "branch": "Vans",
@@ -403,7 +403,7 @@
     {
       "id": 20,
       "name": "Espadrille Wedges",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "Lining",
@@ -424,7 +424,7 @@
     {
       "id": 21,
       "name": "Rain Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Adidas",
@@ -445,7 +445,7 @@
     {
       "id": 22,
       "name": "Snow Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Nike",
@@ -466,7 +466,7 @@
     {
       "id": 23,
       "name": "Heeled Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "M",
       "branch": "Vans",
@@ -488,7 +488,7 @@
     {
       "id": 24,
       "name": "Platform Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "S",
       "branch": "Lining",
@@ -509,7 +509,7 @@
     {
       "id": 25,
       "name": "Chukka Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Nike",
@@ -530,7 +530,7 @@
     {
       "id": 26,
       "name": "Driving Moccasins",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "XL",
       "branch": "Vans",
@@ -552,7 +552,7 @@
     {
       "id": 27,
       "name": "Mary Jane Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "M",
       "branch": "Lining",
@@ -573,7 +573,7 @@
     {
       "id": 28,
       "name": "T-Strap Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Adidas",
@@ -594,7 +594,7 @@
     {
       "id": 29,
       "name": "Clog Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "XL",
       "branch": "Adidas",
@@ -615,7 +615,7 @@
     {
       "id": 30,
       "name": "Slide Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "L",
       "branch": "Nike",
@@ -636,7 +636,7 @@
     {
       "id": 31,
       "name": "Peep Toe Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Vans",
@@ -657,7 +657,7 @@
     {
       "id": 32,
       "name": "Suede Loafers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Lining",
@@ -678,7 +678,7 @@
     {
       "id": 33,
       "name": "Slipper Socks",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "S",
       "branch": "Adidas",
@@ -699,7 +699,7 @@
     {
       "id": 34,
       "name": "Slingback Pumps",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "M",
       "branch": "Nike",
@@ -720,7 +720,7 @@
     {
       "id": 35,
       "name": "Lace-Up Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Vans",
@@ -741,7 +741,7 @@
     {
       "id": 36,
       "name": "Monk Strap Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "XL",
       "branch": "Lining",
@@ -762,7 +762,7 @@
     {
       "id": 37,
       "name": "Penny Loafers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Adidas",
@@ -783,7 +783,7 @@
     {
       "id": 38,
       "name": "Wedge Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "M",
       "branch": "Nike",
@@ -804,7 +804,7 @@
     {
       "id": 39,
       "name": "Gladiator Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Vans",
@@ -825,7 +825,7 @@
     {
       "id": 40,
       "name": "Knee-High Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "XL",
       "branch": "Lining",
@@ -846,7 +846,7 @@
     {
       "id": 41,
       "name": "Peep Toe Pumps",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "M",
       "branch": "Nike",
@@ -867,7 +867,7 @@
     {
       "id": 42,
       "name": "Combat Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "L",
       "branch": "Vans",
@@ -888,7 +888,7 @@
     {
       "id": 43,
       "name": "Stiletto Heels",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "XL",
       "branch": "Lining",
@@ -909,7 +909,7 @@
     {
       "id": 44,
       "name": "Ballet Pumps",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "S",
       "branch": "Adidas",
@@ -930,7 +930,7 @@
     {
       "id": 45,
       "name": "Pointed Toe Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "S",
       "branch": "Adidas",
@@ -951,7 +951,7 @@
     {
       "id": 46,
       "name": "Riding Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "Nike",
@@ -972,7 +972,7 @@
     {
       "id": 47,
       "name": "Studded Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "L",
       "branch": "Vans",
@@ -993,7 +993,7 @@
     {
       "id": 48,
       "name": "Chelsea Rain Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "XL",
       "branch": "Lining",
@@ -1014,7 +1014,7 @@
     {
       "id": 49,
       "name": "Suede Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "Adidas",
@@ -1035,7 +1035,7 @@
     {
       "id": 50,
       "name": "Open Toe Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "XL",
       "branch": "Lining",
@@ -1056,7 +1056,7 @@
     {
       "id": 51,
       "name": "Chunky Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "S",
       "branch": "Nike",
@@ -1077,7 +1077,7 @@
     {
       "id": 52,
       "name": "Chelsea Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "red",
       "size": "M",
       "branch": "Vans",
@@ -1098,7 +1098,7 @@
     {
       "id": 53,
       "name": "Wingtip Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Adidas",
@@ -1119,7 +1119,7 @@
     {
       "id": 54,
       "name": "Woven Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "L",
       "branch": "Lining",
@@ -1140,7 +1140,7 @@
     {
       "id": 55,
       "name": "Slip-On Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "M",
       "branch": "Nike",
@@ -1161,7 +1161,7 @@
     {
       "id": 56,
       "name": "Bow Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "blue",
       "size": "S",
       "branch": "Adidas",
@@ -1182,7 +1182,7 @@
     {
       "id": 57,
       "name": "Slipper Shoes",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Lining",
@@ -1203,7 +1203,7 @@
     {
       "id": 58,
       "name": "Loafer Mules",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "XL",
       "branch": "Lining",
@@ -1224,7 +1224,7 @@
     {
       "id": 59,
       "name": "Platform Boots",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "M",
       "branch": "Nike",
@@ -1245,7 +1245,7 @@
     {
       "id": 60,
       "name": "Metallic Sneakers",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Vans",
@@ -1266,7 +1266,7 @@
     {
       "id": 61,
       "name": "Suede Sandals",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "XL",
       "branch": "Lining",
@@ -1289,7 +1289,7 @@
     {
       "id": 62,
       "name": "Strappy Heels",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "pink",
       "size": "L",
       "branch": "Adidas",
@@ -1312,7 +1312,7 @@
     {
       "id": 63,
       "name": "Embellished Flats",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "S",
       "branch": "Adidas",
@@ -1334,7 +1334,7 @@
     {
       "id": 64,
       "name": "Leopard Print Booties",
-      "decription": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates, sit alias sequi nobis impedit porro temporibus. Recusandae similique ullam sequi, nisi placeat ex ratione consectetur iste veritatis iure culpa.",
+      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "color": "white",
       "size": "L",
       "branch": "Vans",
