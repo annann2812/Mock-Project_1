@@ -13,7 +13,6 @@ import "../../index.css";
 const NavBar = () => {
   const products = useSelector((state: RootState) => state.loopStore.products);
   return (
-<<<<<<< HEAD
     <header className="bg-[#EFECEC] body-font">
       <div className="mx-auto relative flex flex-wrap px-5 py-3 flex-col md:flex-row items-center border border-b-[#76885B]">
         <Link
@@ -24,18 +23,6 @@ const NavBar = () => {
         </Link>
         <nav className="text-[16px] font-medium text-[#76885B] md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link to="/" className="mr-5 hover:text-[#FC6736]">
-=======
-    <header className="text-gray-600 body-font bg-[#76885B]">
-      <div
-        className="text-light mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center "
-        style={{ width: "90%" }}
-      >
-        <a className="flex title-font font-medium items-center text-gray-900 md:mb-0">
-          <span className=" text-2xl fw-500 text-light">byLoop.</span>
-        </a>
-        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <Link to="/" className="mr-3 hover:text-gray-900">
->>>>>>> refs/remotes/origin/develop
             Home
           </Link>
           <Link to="/best-sellers" className="mr-5 hover:text-[#FC6736]">

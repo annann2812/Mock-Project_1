@@ -2,16 +2,8 @@ import * as React from "react";
 import { Fragment } from "react";
 
 import MenuItem from "@mui/material/MenuItem";
-<<<<<<< HEAD
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import EuroIcon from "@mui/icons-material/Euro";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import { Link } from "react-router-dom";
 // import Logo from "../../assets/image/"
 import logo from "../../assets/image/LOOP-logo (2).png"
-=======
->>>>>>> refs/remotes/origin/develop
 
 import Logo from "../../assets/image/LOOP-logo (2).png";
 
@@ -195,7 +187,6 @@ const Header = () => {
         </div>
       </div>
       {/*  */}
-<<<<<<< HEAD
       <div
         className="nav-bar  m-auto d-flex flex-row justify-content-between align-items-center py-3"
         style={{ width: "90%" }}
@@ -244,8 +235,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> refs/remotes/origin/develop
     </Fragment>
   );
 };
