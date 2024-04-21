@@ -43,7 +43,6 @@ export interface CarouselProps {
 }
 
 export interface ProductsSaleProps {
-<<<<<<< HEAD
     id: number;
     title: string;
     price: number;
@@ -51,16 +50,4 @@ export interface ProductsSaleProps {
     category: string;
     image: string;
     quantity?: number;
-=======
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
->>>>>>> refs/remotes/origin/develop
 }
