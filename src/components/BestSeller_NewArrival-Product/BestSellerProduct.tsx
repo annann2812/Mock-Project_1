@@ -25,19 +25,9 @@ import {
   ListProductRow,
   ListProductRowContainer,
 } from "../../../public/styledDevHieu";
+import { ProductsSaleProps } from "../../../public/type";
+import AppService from "../../ApiServices/AppService";
 
-interface ProductsSaleProps {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-}
 const BestSellerProduct = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
@@ -51,10 +41,8 @@ const BestSellerProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<ProductsSaleProps[]>(
-          "https://fakestoreapi.com/products"
-        );
-        setProductSales(response.data);
+        const response = await AppService.getProducts();
+        setProductSales(response);
       } catch (error) {
         console.log(error);
       }

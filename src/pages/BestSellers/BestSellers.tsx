@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
 import BestSellerProduct from "../../components/BestSeller_NewArrival-Product/BestSellerProduct";
-import Layout from "../../Layout/Layout";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {

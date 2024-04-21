@@ -1,4 +1,5 @@
 export interface Blog {
+  postId: number;
   title: string;
   imageUrl: string;
   body: string;
@@ -47,8 +48,5 @@ export interface ProductsSaleProps {
     description: string;
     category: string;
     image: string;
-    rating: {
-      rate: number;
-      count: number;
-    };
+    quantity?: number;
 }
