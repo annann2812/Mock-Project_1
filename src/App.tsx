@@ -6,6 +6,8 @@ import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import BlogPage from "./pages/Blog/Blog";
+import { useEffect } from "react";
+import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
 import SpecialCase from "./components/SpecialCase";

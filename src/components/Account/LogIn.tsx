@@ -16,8 +16,9 @@ import instance from "../../../projectLogin/src/service";
 
 const initialValues: FormValues = {
   username: "",
-  email: "",
   password: "",
+  email: "",
+  confirmPassword: "",
 };
 
 const validationSchema = Yup.object({
@@ -34,14 +35,18 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const onSubmit = (user: User) => {
     (async () => {
-      const { data } = await instance.post(`/login`, user);
-      if (data.user) {
-        sessionStorage.setItem("accessToken", data.accessToken);
-        sessionStorage.setItem("username", data.user.username);
-        const isConfirm = confirm("Login successfully switch home page ?");
-        if (isConfirm) {
-          navigate("/");
+      try {
+        const { data } = await instance.post(`/login`, user);
+        if (data.user) {
+          sessionStorage.setItem("accessToken", data.accessToken);
+          sessionStorage.setItem("username", data.user.username);
+          const isConfirm = confirm("Login successfully switch home page ?");
+          if (isConfirm) {
+            navigate("/");
+          }
         }
+      } catch (error) {
+        alert("Please enter correct email, username and password.");
       }
     })();
   };
