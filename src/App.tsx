@@ -14,18 +14,6 @@ import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
 
 const App = () => {
-  useEffect(() => {
-    (async () => {
-      const { data } = await instance.get("/products");
-      console.log(data);
-    })();
-  }, []);
-  useEffect(() => {
-    (async () => {
-      const { data } = await instance.get("/blog");
-      console.log(data);
-    })();
-  }, []);
   return (
     <Fragment>
       <Header />
