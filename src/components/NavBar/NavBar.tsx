@@ -21,7 +21,10 @@ const NavBar = () => {
   const products = useSelector((state: RootState) => state.loopStore.products);
   return (
     <header className="bg-[#EFECEC] body-font">
-      <div className="mx-auto relative flex flex-wrap px-5 py-3 flex-col md:flex-row items-center border border-b-[#76885B]">
+      <div
+        id="navTop"
+        className="mx-auto relative flex flex-wrap px-5 py-3 flex-col md:flex-row items-center border border-b-[#76885B]"
+      >
         <Link
           to="/"
           className="flex title-font font-medium items-center text-gray-900 md:mb-0"
