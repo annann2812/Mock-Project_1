@@ -6,17 +6,22 @@ import CarouselDefault from "./Carousel";
 
 const LastestBlog = () => {
   const lastestBlogInfo = {
-    images: [`${Blog1}`, `${Blog2}`, `${Blog3}`, `${Blog4}`],
+    images: [
+      "https://m.media-amazon.com/images/I/71ABbKDy8+L._AC_SX395_.jpg",
+      "https://m.media-amazon.com/images/I/51T5UfUe5nL._AC_SY395_.jpg",
+      "https://m.media-amazon.com/images/I/81eOPVSz+lL._AC_SX395_.jpg",
+      "https://m.media-amazon.com/images/I/71C4sYiscYL._AC_SY395_.jpg",
+    ],
     title: "Lastest Blogs",
     itemNames: [],
     prices: [12.9, 12.9, 28.72, 12.9],
     redirectButtons: [],
     redirectLinks: [],
     blogDescriptions: [
-      "Lorem ipsum dolor",
-      "Lorem ipsum dolor",
-      "Lorem ipsum dolor",
-      "Lorem ipsum dolor",
+      "Open Toe Booties",
+      "Studded Sandals",
+      "Suede Booties",
+      "Chelsea Rain Boots",
     ],
     id: 5,
   };

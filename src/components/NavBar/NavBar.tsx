@@ -8,7 +8,18 @@ import { RootState } from "../../Redux/store";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Navbar() {
+
+const NavBar = () => {
+  const renderAccount = () => {
+    const storedValueAcc = window.sessionStorage.getItem("username");
+    const storedValueGG = window.sessionStorage.getItem("usernameGG");
+
+    if (storedValueAcc) {
+      return `Hi, ${storedValueAcc}`;
+    } else if (storedValueGG) {
+      return `Hi, ${storedValueGG}`;
+    }
+  };
   const products = useSelector((state: RootState) => state.loopStore.products);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isListOpen, setIsListOpen] = useState(false);

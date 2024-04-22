@@ -6,6 +6,8 @@ import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import BlogPage from "./pages/Blog/Blog";
+import { useEffect } from "react";
+import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
 import SpecialCase from "./components/SpecialCase";
@@ -14,8 +16,22 @@ import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./Redux/store";
+import { setBlogs, setProductList } from "./Redux/ProductSlice";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/products");
+      dispatch(setProductList(data));
+    })();
+    (async () => {
+      const { data } = await instance.get("/blog");
+      dispatch(setBlogs(data));
+    })();
+  }, []);
+
   return (
     <Fragment>
       {/* <Newsletter/> */}

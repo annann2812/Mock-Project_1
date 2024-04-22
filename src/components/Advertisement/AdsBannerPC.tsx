@@ -7,9 +7,13 @@ const AdsBannerPC = () => {
     <Fragment>
       <div className="w-1/2 text-center shadow-xl">
         <div className="relative overflow-hidden block">
-          <img src={saleOffer} alt="/" className="w-full" />
+          <img
+            src="https://m.media-amazon.com/images/I/71hIhrcYztL._AC_SX395_.jpg"
+            alt="/"
+            className="w-full"
+          />
           <div className="absolute right-5 top-[10px] text-right z-10 text-black flex flex-col">
-            <span>abcabc</span>
+            <span>Chelsea Sneakers</span>
             <Link
               to={"/best-sellers"}
               className="hover:no-underline text-black border-[1px] border-black bg-white rounded-[10px] p-2 block w-fit text-center m-auto"

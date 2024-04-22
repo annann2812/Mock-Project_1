@@ -13,7 +13,9 @@ import Grid from "@mui/material/Grid";
 import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
-import { useSelector } from "react-redux";
+
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true },
@@ -21,7 +23,8 @@ const sortOptions = [
 ];
 
 const NewArrival: React.FC<Product> = (props) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(6);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
@@ -266,7 +269,7 @@ const NewArrival: React.FC<Product> = (props) => {
                   {gridProduct ? (
                     <Fragment>
                       {products &&
-                        products.map((product, index) => {
+                        products.map((product: Product, index: number) => {
                           if (
                             (index <= counterNextPageMax &&
                               index > counterNextPageMin) ||
@@ -319,15 +322,15 @@ const NewArrival: React.FC<Product> = (props) => {
                     </Fragment>
                   ) : (
                     <Fragment>
-                      {products &&
-                        products.map((product, index) => {
-                          if (
-                            (index <= counterNextPageMax &&
-                              index > counterNextPageMin) ||
-                            (index < counterNextPageMax &&
-                              index >= counterNextPageMin)
-                          ) {
-                            return (
+                      {products.map((product, index) => {
+                        if (
+                          (index <= counterNextPageMax &&
+                            index > counterNextPageMin) ||
+                          (index < counterNextPageMax &&
+                            index >= counterNextPageMin)
+                        ) {
+                          return (
+                            !product.new_arriver && (
                               <section className="text-gray-600 body-font overflow-hidden">
                                 <div className="container px-5 py-10 mx-auto border-b border-gray-200">
                                   <div className="-my-8 divide-y-2 divide-gray-100">
@@ -336,23 +339,23 @@ const NewArrival: React.FC<Product> = (props) => {
                                         <img
                                           alt={product.name}
                                           className="object-contain w-[200px] object-center block"
-                                          src={product.image}
+                                          src={product.images_list[0]}
                                         />
                                       </a>
                                       <div className="md:flex-grow">
                                         <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
-                                          {product.category}
+                                          {product.decription}
                                         </h5>
                                         <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
                                           {product.name}
                                         </h5>
                                         <p className="text-md font-medium text-gray-900 title-font mb-2">
-                                          {product.description.length > 90
-                                            ? product.description.substring(
+                                          {product.decription.length > 90
+                                            ? product.decription.substring(
                                                 0,
                                                 50
                                               ) + "..."
-                                            : product.description}
+                                            : product.decription}
                                         </p>
                                         <p className="text-xl font-medium text-[#76885B] leading-relaxed">
                                           $ {product.price}
@@ -368,9 +371,10 @@ const NewArrival: React.FC<Product> = (props) => {
                                   </div>
                                 </div>
                               </section>
-                            );
-                          }
-                        })}
+                            )
+                          );
+                        }
+                      })}
                       <Grid item xs={12} textAlign="right">
                         <button
                           className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
