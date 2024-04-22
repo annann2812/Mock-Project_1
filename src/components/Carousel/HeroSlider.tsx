@@ -1,4 +1,3 @@
-// App.tsx
 import React from 'react';
 import SliderHero from './CarouselForHero';
 import Hero1 from "../../assets/image/HeroSlider_1.jpeg"
