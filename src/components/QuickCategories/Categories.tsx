@@ -27,18 +27,15 @@ const Categories = () => {
     ],
   };
   return (
-    <div className="text-black flex-1 rounded-md border-2 border-[#ebebeb] overflow-hidden max-w-full mb-4">
-      <div className="carousel-heading py-3 px-4 flex items-center justify-between bg-[#fafafa] rounded-t-md text-sm md:text-base">
+    <div className="text-white flex-1 rounded-md border-2 border-secondary-01 overflow-hidden max-w-full mb-4">
+      <div className="carousel-heading py-3 px-4 flex items-center justify-between bg-primary-01 rounded-t-md text-sm md:text-base">
         <p className="font-bold tracking-wider uppercase">SHOP BY CATEGORIES</p>
       </div>
-      <div className="flex justify-between p-3">
+      <div className="flex justify-between p-3 flex-wrap">
         {Array.from({ length: categoriesInfo.image.length }, (_, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-2 ${
-              index !== categoriesInfo.image.length - 1 &&
-              "border-[#ccc] border-r-[1px]"
-            }`}
+            className={`border-secondary-01 flex flex-col mb-4 lg:mb-0 w-1/2 lg:w-1/4 gap-2 [&:nth-child(2n+1)]:border-r-[1px] lg:[&:not(:nth-last-child(-n+1))]:border-r-[1px]`}
           >
             <img src={categoriesInfo.image[index]} alt="" className="block" />
             <Link to="/" className="text-center text-black hover:text-black">
@@ -46,7 +43,10 @@ const Categories = () => {
             </Link>
             {categoriesInfo.categories[index].map((item, index) => (
               <div key={index} className={`px-4  ${index === 0 && "mt-2"}`}>
-                <Link to="/" className="flex gap-3 text-black items-center">
+                <Link
+                  to="/"
+                  className="flex gap-3 text-black items-center hover:text-primary-02"
+                >
                   <span>
                     <StarIcon className="w-[20px] h-[20px]" />
                   </span>
@@ -54,45 +54,10 @@ const Categories = () => {
                 </Link>
               </div>
             ))}
-            <div></div>
           </div>
         ))}
       </div>
     </div>
-    // <Carousel>
-    //   <CarouselHeading>
-    //     <CarouselHeadingText style={{ padding: "5px 0" }}>
-    //       SHOP BY CATEGORIES
-    //     </CarouselHeadingText>
-    //   </CarouselHeading>
-    //   <CarouselItemBox>
-    //     <CarouselItem>
-    //       <CarouselItemImage src={ShopCategories1}></CarouselItemImage>
-    //       <CarouselItemDescription>
-    //         <CarouselItemName href="/home/electronics">
-    //           ELECTRONICS
-    //         </CarouselItemName>
-    //         <StarBorderIcon />
-    //       </CarouselItemDescription>
-    //     </CarouselItem>
-    //     <CarouselItem>
-    //       <CarouselItemImage src={ShopCategories2}></CarouselItemImage>
-    //       <CarouselItemDescription>
-    //         <CarouselItemName href="/home/electronics">
-    //           ELECTRONICS
-    //         </CarouselItemName>
-    //       </CarouselItemDescription>
-    //     </CarouselItem>
-    //     <CarouselItem>
-    //       <CarouselItemImage src={ShopCategories3}></CarouselItemImage>
-    //       <CarouselItemDescription></CarouselItemDescription>
-    //     </CarouselItem>
-    //     <CarouselItem>
-    //       <CarouselItemImage src={ShopCategories4}></CarouselItemImage>
-    //       <CarouselItemDescription></CarouselItemDescription>
-    //     </CarouselItem>
-    //   </CarouselItemBox>
-    // </Carousel>
   );
 };
 

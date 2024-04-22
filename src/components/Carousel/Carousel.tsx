@@ -30,7 +30,13 @@ const CarouselDefault = ({
           setSlidesPerView(2);
         }
       } else if (title === "New Product") {
-        setSlidesPerView(5);
+        if (windowWidth > 1024) {
+          setSlidesPerView(5);
+        } else if (windowWidth > 768) {
+          setSlidesPerView(4);
+        } else {
+          setSlidesPerView(3);
+        }
       } else {
         if (windowWidth > 1200) {
           setSlidesPerView(5);
@@ -53,19 +59,21 @@ const CarouselDefault = ({
 
   return (
     <div
-      className={`text-black flex-1 rounded-md border-2 border-[#ebebeb] overflow-hidden max-w-full ${
-        title !== "Best Seller Item" && "mb-4"
+      className={`text-white flex-1 rounded-md border-2 border-secondary-01 overflow-hidden max-w-full  ${
+        title !== "Best Seller Item" && "mb-8"
       }`}
     >
-      <div className="carousel-heading py-3 px-8 flex items-center justify-between bg-[#fafafa] rounded-t-md text-sm md:text-base">
-        <div className="font-bold tracking-wider uppercase">{title}</div>
+      <div className="carousel-heading py-3 px-8 flex items-center justify-between bg-primary-01 rounded-t-[4px] text-sm md:text-base">
+        <div className="font-bold tracking-wider uppercase text-white">
+          {title}
+        </div>
         <div className="flex items-center">
           {redirectButtons &&
             redirectButtons.map((item, index) => (
               <div key={index} className="relative">
                 <Link
                   to={redirectLinks[index]}
-                  className="text-xs lg:text-sm no-underline tracking-wider text-black py-0 px-4 md:px-8 relative flex items-center after:block after:absolute after:w-[1px] after:h-[80%] after:my-[auto] after:right-0 after:top-0 after:bottom-0 after:bg-black"
+                  className="text-xs lg:text-sm no-underline tracking-wider hover:text-primary-02 py-0 px-4 md:px-8 relative flex items-center after:block after:absolute after:w-[1px] after:h-[15px] after:my-[auto] after:right-0 after:top-0 after:bottom-0 after:bg-white"
                 >
                   {item}
                 </Link>
@@ -74,7 +82,7 @@ const CarouselDefault = ({
           <div className="flex gap-2 ml-4 md:ml-8">
             <button
               id={`prev-btn-${id}`}
-              className={`w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] flex items-center justify-center border-2 border-[#ebebeb] rounded-md hover:bg-blue-400 hover:text-white disabled:hover:bg-transparent disabled:text-gray-300 transition-all ${
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500 ${
                 isNewArrive && "hidden"
               }`}
             >
@@ -82,7 +90,7 @@ const CarouselDefault = ({
             </button>
             <button
               id={`next-btn-${id}`}
-              className={`w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] flex items-center justify-center border-2 border-[#ebebeb] rounded-md hover:bg-blue-400 hover:text-white disabled:hover:bg-transparent disabled:text-gray-300 transition-all ${
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 hover:text-white disabled:hover:bg-transparent text-white disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500 ${
                 isNewArrive && "hidden"
               }`}
             >
@@ -104,28 +112,37 @@ const CarouselDefault = ({
             : false
         }
         pagination={{ enabled: true, dynamicBullets: true }}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 2500 }}
         modules={
           !isNewArrive ? [Navigation, Pagination] : [Autoplay, Pagination]
         }
         className="p-3"
       >
         {Array.from({ length: images.length }, (_, index) => (
-          <SwiperSlide key={index} className="p-3 flex flex-col">
-            <img
-              src={images[index]}
-              alt={title[index]}
-              className={`object-cover ${title === "LASTEST BLOGS" && "h-60"}`}
-            />
-            <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1">
-              <Link
-                to="/"
-                className="hover:no-underline text-sm text-black hover:text-[#6284ce]"
-              >
-                {itemNames[index]}
-              </Link>
-              <p>${prices[index]}</p>
-              <p>{blogDescription[index]}</p>
+          <SwiperSlide key={index} className={`p-3 flex flex-col`}>
+            <div
+              className={`${
+                title !== "New Product" &&
+                title !== "Best Seller Item" &&
+                title !== "Lastest Blogs" &&
+                ""
+              }`}
+            >
+              <img
+                src={images[index]}
+                alt={title[index]}
+                className={`object-contain w-full h-full`}
+              />
+              <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
+                <Link
+                  to="/"
+                  className="hover:no-underline text-sm text-black hover:text-primary-02"
+                >
+                  {itemNames[index]}
+                </Link>
+                <p>${prices[index]}</p>
+                <p>{blogDescription[index]}</p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
