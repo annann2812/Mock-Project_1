@@ -13,6 +13,7 @@ import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
+import ButtonScroll from "./components/ButtonScroll";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <ButtonScroll/>
     </Fragment>
   );
 };

@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
-import SearchProduct from "./Search";
 
 function Navbar() {
   const products = useSelector((state: RootState) => state.loopStore.products);
@@ -74,7 +73,7 @@ function Navbar() {
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
-                    Sign out
+                    Log out
                   </a>
                 </li>
               </ul>
@@ -95,7 +94,7 @@ function Navbar() {
                   id="search-navbar"
                   className="block w-full py-3 px-7 ml-2 ps-10 outline-none text-sm text-gray-900 rounded-lg"
                   placeholder="Search..."
-                  // onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => e.stopPropagation()}
                 />
               </div>
             )}
@@ -198,3 +197,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
