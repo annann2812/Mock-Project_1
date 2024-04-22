@@ -1,12 +1,10 @@
-import { Route, RouterProvider, Routes } from "react-router-dom";
-import { Fragment } from "react/jsx-runtime";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import BlogPage from "./pages/Blog/Blog";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
@@ -18,6 +16,7 @@ import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
+import { useDispatch } from "react-redux";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
 const App = () => {
   const dispatch = useDispatch();
@@ -35,7 +34,7 @@ const App = () => {
   return (
     <Fragment>
       {/* <Newsletter/> */}
-      <SpecialCase/>
+      <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
@@ -49,7 +48,7 @@ const App = () => {
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <ButtonScroll/>
+      <ButtonScroll />
     </Fragment>
   );
 };
