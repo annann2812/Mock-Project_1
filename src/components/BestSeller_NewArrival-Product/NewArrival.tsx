@@ -287,7 +287,7 @@ const NewArrival: React.FC<Product> = (props) => {
                                   />
                                 </a>
                                 <div className="mt-4">
-                                  <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                  <h2 className="capitalize text-gray-500 capitalize title-font text-lg font-medium">
                                     {product.name}
                                   </h2>
                                   <p className="mt-1 text-md my-2 font-semibold">
