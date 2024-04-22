@@ -10,6 +10,7 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import LayoutChange from "../../components/ProductBanner/LayoutChange";
+import Navbar from "../../components/NavBar/NavBar";
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true },
@@ -66,6 +67,7 @@ const BestSellers: React.FC = () => {
 
   return (
     <div>
+      <Navbar/>
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-12">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">

@@ -17,7 +17,7 @@ import Newsletter from "./components/Newsletter/Newsletter";
 const App = () => {
   return (
     <Fragment>
-      <Newsletter/>
+      {/* <Newsletter/> */}
       <SpecialCase/>
       <Routes>
         <Route index path="/" element={<Home />} />

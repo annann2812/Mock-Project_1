@@ -32,18 +32,16 @@ a:hover {
   text-decoration: none;
 }
 
-
-.user-dropdown {
+.search-input {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 10px); /* Position below the navbar with some space */
   left: 0;
-  z-index: 50;
-  background-color: #ccc; /* White background */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
-  padding: 8px 0; /* Padding */
-  min-width: 120px; /* Minimum width */
+  width: 100%; /* Full width */
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 999; /* Ensure it's above other content */
 }
 
 
