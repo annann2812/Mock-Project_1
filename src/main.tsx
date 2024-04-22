@@ -6,7 +6,10 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import SignUp from "./components/Account/SignUp.tsx";
+import LoginWithGG from "./components/Account/LoginWithGG.tsx";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   // <React.StrictMode>
   <Provider store={store}>
   <BrowserRouter>
@@ -15,4 +18,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
   </Provider>
   // </React.StrictMode>,
-)
+);

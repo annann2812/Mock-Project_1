@@ -1,0 +1,1490 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Running Shoes",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 299,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 2,
+      "name": "Casual Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "Nike",
+      "price": 299,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 3,
+      "name": "High-Top Basketball Shoes",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "L",
+      "branch": "Vans",
+      "price": 189,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 4,
+      "name": "Slip-On Loafers",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 5,
+      "name": "Hiking Boots",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 209,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 6,
+      "name": "Skate Shoes",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "M",
+      "branch": "Nike",
+      "price": 399,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 7,
+      "name": "Formal Oxfords",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Vans",
+      "price": 189,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 8,
+      "name": "Beach Sandals",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 9,
+      "name": "Training Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "M",
+      "branch": "Nike",
+      "price": 499,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 10,
+      "name": "Chelsea Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Vans",
+      "price": 389,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": false
+    },
+    {
+      "id": 11,
+      "name": "Ankle Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 269,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 12,
+      "name": "Moccasin Slippers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 409,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 13,
+      "name": "Flip Flops",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 219,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 14,
+      "name": "Espadrilles",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "M",
+      "branch": "Nike",
+      "price": 139,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 15,
+      "name": "Boat Shoes",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Vans",
+      "price": 190,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 16,
+      "name": "Combat Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 160,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 17,
+      "name": "Derby Shoes",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "nike",
+      "price": 239,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 18,
+      "name": "Golf Shoes",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "XL",
+      "branch": "Nike",
+      "price": 599,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 19,
+      "name": "Ballet Flats",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "S",
+      "branch": "Vans",
+      "price": 89,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 20,
+      "name": "Espadrille Wedges",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "Lining",
+      "price": 129,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": false
+    },
+    {
+      "id": 21,
+      "name": "Rain Boots",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Adidas",
+      "price": 209,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 22,
+      "name": "Snow Boots",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Nike",
+      "price": 499,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 23,
+      "name": "Heeled Booties",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "M",
+      "branch": "Vans",
+      "price": 89,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 24,
+      "name": "Platform Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "S",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 25,
+      "name": "Chukka Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Nike",
+      "price": 499,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 26,
+      "name": "Driving Moccasins",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "XL",
+      "branch": "Vans",
+      "price": 489,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 27,
+      "name": "Mary Jane Flats",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "M",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 28,
+      "name": "T-Strap Sandals",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Adidas",
+      "price": 209,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 29,
+      "name": "Clog Sandals",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "XL",
+      "branch": "Adidas",
+      "price": 319,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 30,
+      "name": "Slide Sandals",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "L",
+      "branch": "Nike",
+      "price": 239,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": false,
+      "new-arriver": true
+    },
+    {
+      "id": 31,
+      "name": "Peep Toe Booties",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Vans",
+      "price": 90,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 32,
+      "name": "Suede Loafers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Lining",
+      "price": 100,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 33,
+      "name": "Slipper Socks",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 299,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 34,
+      "name": "Slingback Pumps",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "M",
+      "branch": "Nike",
+      "price": 299,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 35,
+      "name": "Lace-Up Booties",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Vans",
+      "price": 189,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 36,
+      "name": "Monk Strap Shoes",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 37,
+      "name": "Penny Loafers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 209,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 38,
+      "name": "Wedge Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "M",
+      "branch": "Nike",
+      "price": 399,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 39,
+      "name": "Gladiator Sandals",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Vans",
+      "price": 189,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 40,
+      "name": "Knee-High Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 41,
+      "name": "Peep Toe Pumps",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "M",
+      "branch": "Nike",
+      "price": 499,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 42,
+      "name": "Combat Booties",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "L",
+      "branch": "Vans",
+      "price": 389,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 43,
+      "name": "Stiletto Heels",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 269,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 44,
+      "name": "Ballet Pumps",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 409,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 45,
+      "name": "Pointed Toe Flats",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 219,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 46,
+      "name": "Riding Boots",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "Nike",
+      "price": 139,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 47,
+      "name": "Studded Sandals",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "L",
+      "branch": "Vans",
+      "price": 190,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 48,
+      "name": "Chelsea Rain Boots",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 160,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 49,
+      "name": "Suede Booties",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "Adidas",
+      "price": 239,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 50,
+      "name": "Open Toe Booties",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 599,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 51,
+      "name": "Chunky Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "S",
+      "branch": "Nike",
+      "price": 89,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 52,
+      "name": "Chelsea Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "red",
+      "size": "M",
+      "branch": "Vans",
+      "price": 129,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 53,
+      "name": "Wingtip Shoes",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Adidas",
+      "price": 209,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 54,
+      "name": "Woven Flats",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "L",
+      "branch": "Lining",
+      "price": 499,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 55,
+      "name": "Slip-On Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "M",
+      "branch": "Nike",
+      "price": 89,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 56,
+      "name": "Bow Flats",
+      "decription": "B01ENA48S2",
+      "color": "blue",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 57,
+      "name": "Slipper Shoes",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Lining",
+      "price": 499,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 58,
+      "name": "Loafer Mules",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 489,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 59,
+      "name": "Platform Boots",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "M",
+      "branch": "Nike",
+      "price": 169,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 60,
+      "name": "Metallic Sneakers",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Vans",
+      "price": 209,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 61,
+      "name": "Suede Sandals",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "XL",
+      "branch": "Lining",
+      "price": 319,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 62,
+      "name": "Strappy Heels",
+      "decription": "B01ENA48S2",
+      "color": "pink",
+      "size": "L",
+      "branch": "Adidas",
+      "price": 239,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 63,
+      "name": "Embellished Flats",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "S",
+      "branch": "Adidas",
+      "price": 90,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    },
+    {
+      "id": 64,
+      "name": "Leopard Print Booties",
+      "decription": "B01ENA48S2",
+      "color": "white",
+      "size": "L",
+      "branch": "Vans",
+      "price": 100,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "../src/assets/image/best-seller-1.jpg",
+        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
+        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
+        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
+        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
+      ],
+      "best_seller": true,
+      "new-arriver": true
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$62eYlr2XebKad2v54l2Js.WaL5jY5UhxKVO.djrGJ15ULYf37Ij..",
+      "username": "admin",
+      "confirmPassword": "12341234",
+      "id": 5
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$vqbF44nPcxYSGjPWpCEXa.5TrilZ1BYjWSsqPcSPYejc2E7w43eOq",
+      "username": "admin2",
+      "confirmPassword": "12341234",
+      "id": 6
+    }
+  ],
+  "blog": [
+    {
+      "postId": 1,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "postId": 2,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "et ea vero quia laudantium autem",
+      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    },
+    {
+      "postId": 3,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+      "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+    },
+    {
+      "postId": 4,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "ullam ut quidem id aut vel consequuntur",
+      "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+    },
+    {
+      "postId": 5,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "non est facere",
+      "body": "molestias id nostrum\nexcepturi molestiae dolore omnis repellendus quaerat saepe\nconsectetur iste quaerat tenetur asperiores accusamus ex ut\nnam quidem est ducimus sunt debitis saepe"
+    },
+    {
+      "postId": 6,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "soluta aliquam aperiam consequatur illo quis voluptas",
+      "body": "sunt dolores aut doloribus\ndolore doloribus voluptates tempora et\ndoloremque et quo\ncum asperiores sit consectetur dolorem"
+    },
+    {
+      "postId": 7,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "voluptatem laborum magni",
+      "body": "sunt repellendus quae\nest asperiores aut deleniti esse accusamus repellendus quia aut\nquia dolorem unde\neum tempora esse dolore"
+    },
+    {
+      "postId": 8,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "labore in ex et explicabo corporis aut quas",
+      "body": "ex quod dolorem ea eum iure qui provident amet\nquia qui facere excepturi et repudiandae\nasperiores molestias provident\nminus incidunt vero fugit rerum sint sunt excepturi provident"
+    },
+    {
+      "postId": 9,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "ad iusto omnis odit dolor voluptatibus",
+      "body": "minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis"
+    },
+    {
+      "postId": 10,
+      "imgUrl": "https://prestashop.templatemela.com/PRS08/PRS080183/img/psblog/b/9/930_600/b-1.jpg",
+      "title": "at nam consequatur ea labore ea harum",
+      "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    }
+  ]
+}

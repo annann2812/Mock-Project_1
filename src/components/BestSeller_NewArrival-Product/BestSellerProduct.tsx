@@ -27,6 +27,7 @@ import {
 } from "../../../public/styledDevHieu";
 import { ProductsSaleProps } from "../../../public/type";
 import AppService from "../../ApiServices/AppService";
+import Navbar from "../NavBar/NavBar";
 
 const BestSellerProduct = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);

@@ -1,6 +1,7 @@
 import { Route, RouterProvider, Routes } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
 import Home from "./pages/Home/Home";
+
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
@@ -12,14 +13,15 @@ import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
+import ButtonScroll from "./components/ButtonScroll";
 
 const App = () => {
   return (
     <Fragment>
-      <Newsletter/>
+      {/* <Newsletter/> */}
       <SpecialCase/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
@@ -31,6 +33,7 @@ const App = () => {
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <ButtonScroll/>
     </Fragment>
   );
 };

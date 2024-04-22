@@ -131,10 +131,7 @@ const ProductCard: React.FC<Product> = () => {
     <Fragment>
       <NavBar />
       <div className="flex gap-3 px-5 py-12">
-        <div className="w-1/4 ">
-          <SidebarList />
-        </div>
-        <section className="w-3/4 text-gray-600 body-font overflow-hidden">
+        <section className="w-full text-gray-600 body-font overflow-hidden">
           <div className="container mx-auto">
             <div className="lg:w-4/5 w-full mx-auto flex">
               <div className="w-[50%]">
