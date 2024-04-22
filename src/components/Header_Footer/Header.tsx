@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 import MenuItem from "@mui/material/MenuItem";
 // import Logo from "../../assets/image/"
-import logo from "../../assets/image/LOOP-logo (2).png";
+import logo from "../../assets/image/LOOP-logo (2).png"
 
 import Logo from "../../assets/image/LOOP-logo (2).png";
 

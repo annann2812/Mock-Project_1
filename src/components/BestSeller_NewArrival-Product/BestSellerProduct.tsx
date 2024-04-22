@@ -27,6 +27,8 @@ import {
 } from "../../../public/styledDevHieu";
 import { ProductsSaleProps } from "../../../public/type";
 import AppService from "../../ApiServices/AppService";
+import Navbar from "../NavBar/NavBar";
+
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { Product } from "../../ApiServices/types";

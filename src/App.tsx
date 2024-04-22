@@ -15,6 +15,7 @@ import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
+import ButtonScroll from "./components/ButtonScroll";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
@@ -33,8 +34,8 @@ const App = () => {
 
   return (
     <Fragment>
-      <Newsletter />
-      <SpecialCase />
+      {/* <Newsletter/> */}
+      <SpecialCase/>
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <ButtonScroll/>
     </Fragment>
   );
 };

@@ -13,6 +13,7 @@ import Grid from "@mui/material/Grid";
 import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
+
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 
@@ -133,8 +134,8 @@ const NewArrival: React.FC<Product> = (props) => {
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-          Best Sellers
+        <h1 className="text-4xl text-[#76885B] font-bold tracking-tight">
+          New Arrivals
         </h1>
 
         <div className="flex items-center">
@@ -276,32 +277,30 @@ const NewArrival: React.FC<Product> = (props) => {
                               index >= counterNextPageMin)
                           ) {
                             return (
-                              !product.new_arriver && (
-                                <Link
-                                  to={`/products/${product.id}`}
-                                  key={product.id}
-                                  className="lg:w-1/3 md:w-1/2 p-3 w-full hover:border border-[#76885B] mb-4 cursor-pointer rounded-3xl"
-                                >
-                                  <a className="capitialize block capitalize relative h-48 rounded overflow-hidden">
-                                    <img
-                                      alt={product.name}
-                                      className="object-contain object-center w-full h-full block"
-                                      src={product.images_list[0]}
-                                    />
-                                  </a>
-                                  <div className="mt-4">
-                                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">
-                                      {product.decription}
-                                    </h3>
-                                    <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
-                                      {product.name}
-                                    </h2>
-                                    <p className="mt-1 text-md font-semibold">
-                                      $ {product.price}
-                                    </p>
-                                  </div>
-                                </Link>
-                              )
+                              <Link
+                                to={`/products/${product.id}`}
+                                key={product.id}
+                                className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
+                              >
+                                <a className="capitialize block capitalize relative overflow-hidden">
+                                  <img
+                                    alt={product.name}
+                                    className="object-contain object-center w-full h-full block"
+                                    src={product.image}
+                                  />
+                                </a>
+                                <div className="mt-4">
+                                  <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                    {product.name}
+                                  </h2>
+                                  <p className="mt-1 text-md my-2 font-semibold">
+                                    $ {product.price}
+                                  </p>
+                                  <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                    View Details
+                                  </button>
+                                </div>
+                              </Link>
                             );
                           }
                         })}
