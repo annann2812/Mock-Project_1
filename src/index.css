@@ -1,11 +1,7 @@
-
-
 /* @import "../src/components/Header_Footer/Header.css"; */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 * {
   margin: 0;
@@ -17,19 +13,13 @@
   /* scroll-behavior: smooth; */
 }
 
-body {
-}
-
-.pay-ìnomation{
-  background-color: red;
-}
-
 a {
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
+  color: #ff9800;
 }
 
 .search-input {
