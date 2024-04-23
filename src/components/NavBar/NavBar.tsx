@@ -128,14 +128,14 @@ const NavBar = () => {
           </Link>
         </div>
         <div
-          className="items-center  justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-user"
         >
-          <ul className="flex flex-col font-medium  md:p-0 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+          <ul className="flex flex-col font-medium  md:p-0 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-blue-500"
+                className="block py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-primary-01"
               >
                 Home
               </Link>
@@ -143,7 +143,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/best-sellers"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-primary-01"
               >
                 Best Sellers
               </Link>
@@ -152,7 +152,7 @@ const NavBar = () => {
               <li onClick={toggleShop}>
                 <Link
                   to="/"
-                  className="flex items-center py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="flex items-center gap-1 py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-primary-01"
                 >
                   Shop
                   <IoIosArrowDown />
@@ -195,7 +195,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-primary-01"
               >
                 Contact
               </Link>

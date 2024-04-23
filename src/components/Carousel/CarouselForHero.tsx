@@ -32,11 +32,11 @@ const SliderHero: React.FC<SliderHeroProps> = ({ slides }) => {
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
-        <div key={index} className="w-full h-screen">
+        <div key={index}>
           <img
             src={slide.imgSrc}
             alt={slide.altText}
-            className="object-contain w-full h-full"
+            className="object-cover"
           />
           <div className="absolute bottom-0 left-0 w-full p-4 text-red-600">
             <h2 className="text-4xl font-bold">{slide.title}</h2>
