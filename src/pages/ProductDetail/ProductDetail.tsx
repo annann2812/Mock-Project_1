@@ -30,6 +30,7 @@ import {
   FaTiktok,
   FaTruck,
 } from "react-icons/fa";
+import App from "./SwipperProduct";
 
 const API_URL = "http://localhost:8888/products";
 
@@ -135,13 +136,13 @@ const ProductCard: React.FC<Product> = () => {
         <section className="w-full text-gray-600 body-font overflow-hidden">
           <div className="container mx-auto">
             <div className="lg:w-4/5 w-full mx-auto flex">
-              <img src={product.image} className="w-[50%]"/>
+              <img src={product.image} className="w-[80%]"/>
               <div className="w-full lg:w-4/5 lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-lg title-font text-gray-500 tracking-widest uppercase">
                   {product.name}
                 </h2>
                 <h1 className="capitalize text-gray-900 my-2 text-3xl mb-3 title-font font-medium mb-1">
-                  {product.price}
+                  ${product.price}
                 </h1>
                 <div className="flex mb-4">
                   <span className="text-[#FC6736] flex items-center">
@@ -169,7 +170,7 @@ const ProductCard: React.FC<Product> = () => {
                 </div>
                 <p className="leading-loose">{product?.description}</p>
                 {product && (
-                  <div className="flex gap-3 items-center">
+                  <div className="flex mt-3 gap-3 items-center">
                     <div className="title-font font-medium text-xl text-gray-700">
                       Quantity:
                     </div>
@@ -198,7 +199,7 @@ const ProductCard: React.FC<Product> = () => {
                     </div>
                   </div>
                 )}
-                <div className="p-2 mt-4">
+                <div className="p-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
                     className="text-white w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
@@ -221,6 +222,7 @@ const ProductCard: React.FC<Product> = () => {
           </div>
         </section>
       </div>
+      <App/>
       <Footer />
     </Fragment>
   );

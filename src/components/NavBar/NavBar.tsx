@@ -132,7 +132,7 @@ function Navbar() {
             <li>
               <Link
                 to="/best-sellers"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white"
+                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
               >
                 Best Sellers
               </Link>
