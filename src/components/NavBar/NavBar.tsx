@@ -8,7 +8,6 @@ import { RootState } from "../../Redux/store";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 
-
 const NavBar = () => {
   const renderAccount = () => {
     const storedValueAcc = window.sessionStorage.getItem("username");
@@ -90,14 +89,15 @@ const NavBar = () => {
               </ul>
             </div>
           )}
-          <button onClick={toggleSearch}
+          <button
+            onClick={toggleSearch}
             className="ml-4 mr-2 text-[24px] flex justify-center items-center"
           >
             <FaSearch />
             {isSearchOpen && (
               <div className="z-50 absolute top-[100px] right-[100px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                   <span className="sr-only">Search icon</span>
                 </div>
                 <input
@@ -205,7 +205,6 @@ const NavBar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar;
-
+export default NavBar;

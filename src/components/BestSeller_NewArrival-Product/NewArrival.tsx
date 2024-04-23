@@ -32,22 +32,6 @@ const NewArrival: React.FC<Product> = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await AppService.getProducts();
-        setProducts(response);
-        setError(null);
-      } catch (err) {
-        console.error("Failed to fetch products:", err);
-        setError("Failed to load products");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
   const handleChangeNextPage = () => {
     if (products.length && counterNextPageMax >= products.length) {
       setCounterNextPageMax(products.length);
@@ -286,7 +270,7 @@ const NewArrival: React.FC<Product> = (props) => {
                                   <img
                                     alt={product.name}
                                     className="object-contain object-center w-full h-full block"
-                                    src={product.image}
+                                    src={product.images_list[0]}
                                   />
                                 </a>
                                 <div className="mt-4">
