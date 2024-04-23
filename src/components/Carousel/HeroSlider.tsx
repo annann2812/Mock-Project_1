@@ -7,22 +7,22 @@ import Hero3 from "../../assets/image/HeroSlider_3.jpeg";
 
 const slides = [
   {
-    imgSrc: Hero1,
-    altText: "Image 1",
-    title: "Slide 1",
-    description: "Description for Slide 1",
+    imgSrc: "https://m.media-amazon.com/images/I/61oSyFbfluL._AC_SX395_.jpg",
+    altText: "Golf Shoes",
+    title: "Golf Shoes",
+    description: "Description for Golf Shoes",
   },
   {
-    imgSrc: Hero2,
+    imgSrc: "https://m.media-amazon.com/images/I/51mNlxDSv1L._AC_SY395_.jpg",
     altText: "Image 2",
-    title: "Slide 2",
-    description: "Description for Slide 2",
+    title: "Ballet Flats",
+    description: "Description for Ballet Flats",
   },
   {
-    imgSrc: Hero3,
+    imgSrc: "https://m.media-amazon.com/images/I/51yfg7sxn4L._AC_SX395_.jpg",
     altText: "Image 3",
-    title: "Slide 3",
-    description: "Description for Slide 3",
+    title: "Espadrille Wedges",
+    description: "Description for Espadrille Wedges",
   },
 ];
 

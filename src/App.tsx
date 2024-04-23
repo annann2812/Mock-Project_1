@@ -16,8 +16,21 @@ import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
+import { useDispatch } from "react-redux";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/products");
+      dispatch(setProductList(data));
+    })();
+    (async () => {
+      const { data } = await instance.get("/blog");
+      dispatch(setBlogs(data));
+    })();
+  }, []);
+
   return (
     <Fragment>
       {/* <Newsletter/> */}

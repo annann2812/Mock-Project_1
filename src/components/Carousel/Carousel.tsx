@@ -117,8 +117,6 @@ const CarouselDefault = ({
           !isNewArrive ? [Navigation, Pagination] : [Autoplay, Pagination]
         }
         className="p-3"
-        observer={true}
-        observeParents={true}
       >
         {Array.from({ length: images.length }, (_, index) => (
           <SwiperSlide key={index} className={`p-3 flex flex-col`}>
@@ -133,12 +131,12 @@ const CarouselDefault = ({
               <img
                 src={images[index]}
                 alt={title[index]}
-                className={`object-contain h-[120px] md:h-[160px]`}
+                className={`object-contain w-full h-full`}
               />
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
                 <Link
                   to="/"
-                  className="text-sm text-black hover:text-primary-02"
+                  className="hover:no-underline text-sm text-black hover:text-primary-02"
                 >
                   {itemNames[index]}
                 </Link>

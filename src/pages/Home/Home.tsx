@@ -18,11 +18,13 @@ const Home = () => {
   return (
     <Fragment>
       <NavBar />
-      {/* <Hero /> */}
+      <Hero />
       <div className="container px-5">
         {/* <Filter />  */}
         <div className="flex gap-6 justify-between my-4 w-full items-center">
+          <Headphone />
           <BestSellerItem />
+          <Watches />
         </div>
         <TrendingProduct />
         <div className="flex gap-8 mb-4 w-full">

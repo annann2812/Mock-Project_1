@@ -266,13 +266,13 @@ const NewArrival: React.FC<Product> = (props) => {
                                 key={product.id}
                                 className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
                               >
-                                <div className="capitialize block capitalize relative overflow-hidden">
+                                <a className="capitialize block capitalize relative overflow-hidden">
                                   <img
                                     alt={product.name}
                                     className="object-contain object-center w-full h-full block"
                                     src={product.images_list[0]}
                                   />
-                                </div>
+                                </a>
                                 <div className="mt-4">
                                   <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
                                     {product.name}
