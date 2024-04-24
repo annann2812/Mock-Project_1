@@ -16,6 +16,7 @@ import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
+
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";

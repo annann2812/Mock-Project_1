@@ -34,14 +34,23 @@ a:hover {
 
 .search-input {
   position: absolute;
-  top: calc(100% + 10px); /* Position below the navbar with some space */
+  top: calc(100% + 10px);
+
   left: 0;
   width: 100%; /* Full width */
   background-color: #ffffff;
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 8px;
-  z-index: 999; /* Ensure it's above other content */
+  z-index: 999; 
+
 }
+
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 
 

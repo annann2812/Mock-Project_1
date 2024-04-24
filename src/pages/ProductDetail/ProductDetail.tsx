@@ -28,7 +28,9 @@ import {
   FaStar,
   FaStarHalfAlt,
   FaTiktok,
+  FaTruck,
 } from "react-icons/fa";
+import App from "./SwipperProduct";
 
 const API_URL = "http://localhost:8888/products";
 
@@ -131,82 +133,16 @@ const ProductCard: React.FC<Product> = () => {
     <Fragment>
       <NavBar />
       <div className="flex gap-3 px-5 py-12">
-        <div className="w-1/4 ">
-          <SidebarList />
-        </div>
-        <section className="w-3/4 text-gray-600 body-font overflow-hidden">
-          <div className="container mx-auto">
-            <div className="lg:w-4/5 w-full mx-auto flex">
-              <div className="w-[50%]">
-                <Typography>
-                  <img
-                    src={imageList[currentImageIndex].image}
-                    alt="Product"
-                    style={{
-                      width: "100%",
-                      height: "400px",
-                      objectFit: "contain",
-                    }}
-                  />
-                </Typography>
-                <Typography
-                  display="flex "
-                  flexDirection="row"
-                  alignItems="center"
-                  justifyContent="center"
-                  padding="auto"
-                  margin="auto"
-                  gap={1}
-                >
-                  <Grid item xs={1}>
-                    <IconButton onClick={handleIncreClick}>
-                      <IoIosArrowBack fontSize="large" />
-                    </IconButton>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <ImageList
-                      sx={{ width: "100%", height: "200px" }}
-                      cols={3}
-                      style={{ alignItems: "center", justifyContent: "center" }}
-                    >
-                      {imageList
-                        .slice(currentImageIndex, currentImageIndex + 3)
-                        .map((image, index) => (
-                          <ImageListItem
-                            onClick={() => handleThumbnailClick(index)}
-                            style={
-                              {
-                                //   backgroundColor: "#CCC",
-                              }
-                            }
-                          >
-                            <img
-                              style={{
-                                width: "100px",
-                                height: "100px",
-                                objectFit: "contain",
-                                padding: "8px",
-                              }}
-                              src={image.image}
-                              alt=""
-                            />
-                          </ImageListItem>
-                        ))}
-                    </ImageList>
-                  </Grid>
-                  <Grid item xs={1}>
-                    <IconButton onClick={handleNextClick}>
-                      <IoIosArrowForward fontSize="large" />
-                    </IconButton>
-                  </Grid>
-                </Typography>
-              </div>
-              <div className="w-full lg:w-4/5 lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase">
-                  {product.category}
-                </h2>
-                <h1 className="capitalize text-gray-900 text-3xl my-2 title-font font-medium mb-1">
+        <section className="w-full text-gray-600 body-font overflow-hidden">
+          <div className="container w-[90%] mx-auto">
+            <div className="lg:w-full w-1/2 mx-auto flex">
+              <img src={product.image} className="w-[100%]"/>
+              <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 className="text-3xl font-semibold text-[#76885B] tracking-widest uppercase">
                   {product.name}
+                </h2>
+                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium mb-1">
+                  ${product.price}
                 </h1>
                 <div className="flex mb-4">
                   <span className="text-[#FC6736] flex items-center">
@@ -232,43 +168,11 @@ const ProductCard: React.FC<Product> = () => {
                     </Link>
                   </span>
                 </div>
-                <p className="leading-relaxed">{product?.description}</p>
-                <div className="flex mt-6 items-center mb-4">
-                  <div className="flex">
-                    <span className="mr-3">Color</span>
-                    <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                  </div>
-                  <div className="flex ml-6 items-center">
-                    <span className="mr-3">Size</span>
-                    <div className="relative">
-                      <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                      </select>
-                      <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-4 h-4"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <p className="leading-9">{product?.description}</p>
                 {product && (
-                  <div className="flex justify-between items-center">
-                    <div className="title-font font-medium text-2xl text-gray-700">
-                      ${product.price * quantity}
+                  <div className="flex mt-3 gap-5 items-center ">
+                    <div className="title-font font-medium text-xl text-gray-700">
+                      Quantity:
                     </div>
                     <div className="flex items-center h-full">
                       <button
@@ -286,29 +190,47 @@ const ProductCard: React.FC<Product> = () => {
                       >
                         <AiOutlinePlus className="w-[22px] h-[22px]" />
                       </button>
+                    </div>
                       <button
                         onClick={handleWishList}
-                        className="rounded-full w-10 h-10 bg-[#76885B] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
+                        className="rounded-full w-10 h-10 bg-[#76885B] hover:bg-opacity-90 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
                       >
-                        <BsFillSuitHeartFill />
+                        <BsFillSuitHeartFill className="hover:text-[#FC6736]"/>
                       </button>
-                    </div>
                   </div>
                 )}
-                <div className="p-2  text-center mt-4">
+                <div className="p-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white w-[70%] bg-[#76885B] border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg"
+                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
                   >
                     Add to Cart
                   </button>
                   <ToastContainer />
+                </div>
+                <div className="mt-3 font-semibold rounded">
+                  <div className="py-2 px-3 flex flex-col">
+                    <p className="uppercase text-[15px]">Hurry! Only <span className="text-[#FC6736]">4</span> items left in stock.</p>
+                    <div className="w-full bg-[#76885B] h-[13px] rounded-xl my-2">
+                      <input className="bg-[#FC6736] w-[30%]"></input>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 font-semibold border rounded">
+                  <div className="py-2 px-3 border bg-gray-200 gap-4 flex items-center">
+                    <FaTruck className="text-[29px]"/>
+                    <div className="text-sm leading-loose">
+                      <p>Delivery: 2 Working Days</p>
+                      <p>Expected Delivery Date is 24th April, 2024</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <App/>
       <Footer />
     </Fragment>
   );

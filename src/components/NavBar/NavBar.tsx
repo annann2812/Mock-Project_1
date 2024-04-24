@@ -89,15 +89,16 @@ const NavBar = () => {
               </ul>
             </div>
           )}
-          <button
-            onClick={toggleSearch}
+          <button onClick={toggleSearch}
+
             className="ml-4 mr-2 text-[24px] flex justify-center items-center"
           >
             <FaSearch />
             {isSearchOpen && (
               <div className="z-50 absolute top-[100px] right-[100px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+
                   <span className="sr-only">Search icon</span>
                 </div>
                 <input
@@ -128,14 +129,16 @@ const NavBar = () => {
           </Link>
         </div>
         <div
-          className="items-center  justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+
           id="navbar-user"
         >
           <ul className="flex flex-col font-medium  md:p-0 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 rounded hover:text-[#FC6736] md:bg-transparent md:p-0 md:dark:text-blue-500"
+                className="block py-2 px-3 text-[#76885B] rounded hover:text-[#FC6736] md:bg-transparent md:p-0"
+
               >
                 Home
               </Link>
@@ -143,7 +146,8 @@ const NavBar = () => {
             <li>
               <Link
                 to="/best-sellers"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
               >
                 Best Sellers
               </Link>
@@ -152,7 +156,8 @@ const NavBar = () => {
               <li onClick={toggleShop}>
                 <Link
                   to="/"
-                  className="flex items-center block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="flex items-center block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
                 >
                   Shop
                   <IoIosArrowDown />
@@ -167,7 +172,8 @@ const NavBar = () => {
                     <li>
                       <Link
                         to="/best-sellers"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        className="block px-4 py-2 text-sm text-[#76885B] hover:bg-gray-100"
+
                       >
                         Best Sellers
                       </Link>
@@ -175,7 +181,8 @@ const NavBar = () => {
                     <li>
                       <Link
                         to="/"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        className="block px-4 text-[#76885B] py-2 text-sm hover:bg-gray-100"
+
                       >
                         Sale
                       </Link>
@@ -183,8 +190,9 @@ const NavBar = () => {
                     <li>
                       <Link
                         to="/new-arrivals"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                      >
+                        className="block px-4 py-2 text-sm text-[#76885B] hover:bg-gray-100 "
+
+                    >
                         New Arrival
                       </Link>
                     </li>
@@ -195,7 +203,8 @@ const NavBar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-[#76885B] rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
               >
                 Contact
               </Link>
@@ -205,6 +214,7 @@ const NavBar = () => {
       </div>
     </nav>
   );
-};
+}
 
-export default NavBar;
+export default Navbar;
+

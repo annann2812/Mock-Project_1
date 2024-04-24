@@ -1,9 +1,9 @@
-// App.tsx
-import React from "react";
-import SliderHero from "./CarouselForHero";
-import Hero1 from "../../assets/image/HeroSlider_1.jpeg";
-import Hero2 from "../../assets/image/HeroSilder_2.jpeg";
-import Hero3 from "../../assets/image/HeroSlider_3.jpeg";
+import React from 'react';
+import SliderHero from './CarouselForHero';
+import Hero1 from "../../assets/image/HeroSlider_1.jpeg"
+import Hero2 from "../../assets/image/HeroSilder_2.jpeg"
+import Hero3 from "../../assets/image/HeroSlider_3.jpeg"
+
 
 const slides = [
   {
