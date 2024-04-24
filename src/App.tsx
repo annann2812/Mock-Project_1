@@ -32,11 +32,10 @@ const App = () => {
       dispatch(setBlogs(data));
     })();
   }, []);
-
   return (
     <Fragment>
       {/* <Newsletter/> */}
-      <SpecialCase/>
+      <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
@@ -50,7 +49,7 @@ const App = () => {
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <ButtonScroll/>
+      <ButtonScroll />
     </Fragment>
   );
 };

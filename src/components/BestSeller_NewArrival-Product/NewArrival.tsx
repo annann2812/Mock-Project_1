@@ -13,8 +13,6 @@ import Grid from "@mui/material/Grid";
 import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
-import { useSelector } from "react-redux";
-
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 
