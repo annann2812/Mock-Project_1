@@ -7,8 +7,18 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   const categoriesInfo = {
-    image: [ShopCategories1, ShopCategories2, ShopCategories3, ShopCategories4],
-    title: ["ELECTRONIC", "OFFICE APPLIANCE", "CAMERA", "SMART-WATCHES"],
+    image: [
+      "https://m.media-amazon.com/images/I/71Co6D9F6tL._AC_SX695_.jpg",
+      "https://m.media-amazon.com/images/I/71kguy-KUTL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71XEbL2FHaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71jAmMbzIVL._AC_SL1500_.jpg",
+    ],
+    title: [
+      "Embellished Flats",
+      "Leopard Print Booties",
+      "Suede Sandals",
+      "Metallic Sneakers",
+    ],
     categories: [
       ["Office Appliance", "Kitchen Appliance", "Cameras"],
       ["Computers", "Headphones", "Air Conditioner"],

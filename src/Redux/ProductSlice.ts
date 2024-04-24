@@ -2,71 +2,108 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 interface Product {
-    id: number;
-    name: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    colors: [],
-    company: string;
-    quantity?: number;
-    shipping: boolean;
+  id?: number;
+  name: string;
+  decription: string;
+  color: string;
+  size: string;
+  branch: string;
+  price: number;
+  discount: {
+    is_discount: boolean;
+    price_discount: string;
+  };
+  images_list: string[];
+  best_seller: boolean;
+  new_arriver: boolean;
+  quantity?: number;
+  shipping?: boolean;
+}
+interface BlogProps {
+  postId: number;
+  imgUrl: string;
+  title: string;
+  body: string;
 }
 
 interface ProductState {
-    products: Product[];
-    loading: boolean;
-    error: string | null;
-    product: Product | null;
-    shipping: boolean;
+  products: Product[];
+  loading: boolean;
+  error: string | null;
+  product: Product | null;
+  shipping: boolean;
+  blogs: BlogProps[];
 }
 
 const initialState: ProductState = {
-    products: [],
-    loading: false,
-    error: null,
-    product: null,
-    shipping: false,
-}
+  products: [],
+  loading: false,
+  error: null,
+  product: null,
+  shipping: false,
+  blogs: [],
+};
 
 const productSlice = createSlice({
-    name: "loopStore",
-    initialState,
-    reducers: {
-        addToCart: (state, action: PayloadAction<Product>) => {
-            const { id, quantity } = action.payload;
-            const existingProduct = state.products.find((product) => product.id === id);
+  name: "loopStore",
+  initialState,
+  reducers: {
+    setProductList: (state, action: PayloadAction<Product[]>) => {
+      state.loading = false;
+      state.products = action.payload;
+    },
+    setBlogs: (state, action: PayloadAction<BlogProps[]>) => {
+      state.loading = false;
+      state.blogs = action.payload;
+    },
+    addToCart: (state, action: PayloadAction<Product>) => {
+      const { id, quantity } = action.payload;
+      const existingProduct = state.products.find(
+        (product) => product.id === id
+      );
 
-            if (existingProduct) {
-                existingProduct.quantity = (existingProduct.quantity || 0) + (quantity || 1);
-            } else {
-                state.products.push({ ...action.payload, quantity: quantity || 1 });
-            }
-            toast.success("Product added to cart");
-        },
+      if (existingProduct) {
+        existingProduct.quantity =
+          (existingProduct.quantity || 0) + (quantity || 1);
+      } else {
+        state.products.push({ ...action.payload, quantity: quantity || 1 });
+      }
+      toast.success("Product added to cart");
+    },
+    deleteItem: (state, action: PayloadAction<Product>) => {
+      state.products = state.products.filter(
+        (product) => product.id !== action.payload.id
+      );
+    },
 
-        deleteItem: (state, action: PayloadAction<Product>) => {
-            state.products = state.products.filter((product) => product.id !== action.payload.id);
-        },
+    resetCart: (state) => {
+      state.products = [];
+      toast.success("OMG! No more products.");
+    },
 
-        resetCart: (state) => {
-            state.products = [];
-            toast.success("OMG! No more products.")
-        },
+    updateQuantity: (
+      state,
+      action: PayloadAction<{ id: number; quantityChange: number }>
+    ) => {
+      const { id, quantityChange } = action.payload;
+      const existingProduct = state.products.find(
+        (product) => product.id === id
+      );
 
-        updateQuantity: (state, action: PayloadAction<{ id: number; quantityChange: number }>) => {
-            const { id, quantityChange } = action.payload;
-            const existingProduct = state.products.find((product) => product.id === id);
+      if (existingProduct) {
+        const newQuantity = (existingProduct.quantity || 1) + quantityChange;
+        existingProduct.quantity = Math.max(newQuantity, 1);
+      }
+    },
+  },
+});
 
-            if (existingProduct) {
-                const newQuantity = (existingProduct.quantity || 1) + quantityChange;
-                existingProduct.quantity = Math.max(newQuantity, 1);
-            }
-        },
-
-    }
-})
-
-export const { addToCart, resetCart, updateQuantity, deleteItem } = productSlice.actions;
+export const {
+  addToCart,
+  resetCart,
+  updateQuantity,
+  deleteItem,
+  setProductList,
+  setBlogs,
+} = productSlice.actions;
 export default productSlice.reducer;

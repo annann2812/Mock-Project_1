@@ -28,7 +28,7 @@ const Cart: React.FC = () => {
   useEffect(() => {
     // Calculate total amount
     let price = 0;
-    products.forEach((item) => {
+    products.forEach((item: Product) => {
       price += item.price * (item.quantity || 1);
     });
     setTotalAmt(price);
@@ -93,8 +93,9 @@ const Cart: React.FC = () => {
                 {products.map((product) => (
                   <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
                     <div className="w-full w-[30%]">
+
                       <img
-                        src={product.image}
+                        src={product.images_list[1]}
                         alt="perfume bottle image"
                         className="mx-auto"
                       />
@@ -106,7 +107,7 @@ const Cart: React.FC = () => {
                             {product.name}
                           </h6>
                           <h6 className="font-normal text-base leading-7 text-gray-500">
-                            {product.category}
+                            {product.decription}
                           </h6>
                           <h6 className="font-semibold text-base leading-7 text-[#76885B]">
                             $ {product.price}
@@ -116,6 +117,7 @@ const Cart: React.FC = () => {
                       <div className="flex items-center justify-center h-full">
                         <div className="flex items-center w-1/2">
                           <p className="border-l border-y border-[#76885B] px-4 py-3 border-gray-200 outline-none text-[#76885B] font-semibold text-lg placeholder:text-gray-900 text-center bg-transparent">
+
                             {product.quantity}
                           </p>
                           <div className="">

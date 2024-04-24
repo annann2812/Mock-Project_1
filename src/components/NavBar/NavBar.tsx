@@ -8,7 +8,17 @@ import { RootState } from "../../Redux/store";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Navbar() {
+const NavBar = () => {
+  const renderAccount = () => {
+    const storedValueAcc = window.sessionStorage.getItem("username");
+    const storedValueGG = window.sessionStorage.getItem("usernameGG");
+
+    if (storedValueAcc) {
+      return `Hi, ${storedValueAcc}`;
+    } else if (storedValueGG) {
+      return `Hi, ${storedValueGG}`;
+    }
+  };
   const products = useSelector((state: RootState) => state.loopStore.products);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isListOpen, setIsListOpen] = useState(false);
@@ -80,6 +90,7 @@ function Navbar() {
             </div>
           )}
           <button onClick={toggleSearch}
+
             className="ml-4 mr-2 text-[24px] flex justify-center items-center"
           >
             <FaSearch />
@@ -87,6 +98,7 @@ function Navbar() {
               <div className="z-50 absolute top-[100px] right-[100px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+
                   <span className="sr-only">Search icon</span>
                 </div>
                 <input
@@ -118,6 +130,7 @@ function Navbar() {
         </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+
           id="navbar-user"
         >
           <ul className="flex flex-col font-medium  md:p-0 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
@@ -125,6 +138,7 @@ function Navbar() {
               <Link
                 to="/"
                 className="block py-2 px-3 text-[#76885B] rounded hover:text-[#FC6736] md:bg-transparent md:p-0"
+
               >
                 Home
               </Link>
@@ -133,6 +147,7 @@ function Navbar() {
               <Link
                 to="/best-sellers"
                 className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
               >
                 Best Sellers
               </Link>
@@ -142,6 +157,7 @@ function Navbar() {
                 <Link
                   to="/"
                   className="flex items-center block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
                 >
                   Shop
                   <IoIosArrowDown />
@@ -157,6 +173,7 @@ function Navbar() {
                       <Link
                         to="/best-sellers"
                         className="block px-4 py-2 text-sm text-[#76885B] hover:bg-gray-100"
+
                       >
                         Best Sellers
                       </Link>
@@ -165,6 +182,7 @@ function Navbar() {
                       <Link
                         to="/"
                         className="block px-4 text-[#76885B] py-2 text-sm hover:bg-gray-100"
+
                       >
                         Sale
                       </Link>
@@ -173,7 +191,8 @@ function Navbar() {
                       <Link
                         to="/new-arrivals"
                         className="block px-4 py-2 text-sm text-[#76885B] hover:bg-gray-100 "
-                      >
+
+                    >
                         New Arrival
                       </Link>
                     </li>
@@ -185,6 +204,7 @@ function Navbar() {
               <Link
                 to="/contact"
                 className="block py-2 px-3 text-[#76885B] rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+
               >
                 Contact
               </Link>
