@@ -134,14 +134,14 @@ const ProductCard: React.FC<Product> = () => {
       <NavBar />
       <div className="flex gap-3 px-5 py-12">
         <section className="w-full text-gray-600 body-font overflow-hidden">
-          <div className="container mx-auto">
-            <div className="lg:w-4/5 w-full mx-auto flex">
-              <img src={product.image} className="w-[80%]"/>
-              <div className="w-full lg:w-4/5 lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-lg title-font text-gray-500 tracking-widest uppercase">
+          <div className="container w-[90%] mx-auto">
+            <div className="lg:w-full w-1/2 mx-auto flex">
+              <img src={product.image} className="w-[100%]"/>
+              <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 className="text-3xl font-semibold text-[#76885B] tracking-widest uppercase">
                   {product.name}
                 </h2>
-                <h1 className="capitalize text-gray-900 my-2 text-3xl mb-3 title-font font-medium mb-1">
+                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium mb-1">
                   ${product.price}
                 </h1>
                 <div className="flex mb-4">
@@ -168,9 +168,9 @@ const ProductCard: React.FC<Product> = () => {
                     </Link>
                   </span>
                 </div>
-                <p className="leading-loose">{product?.description}</p>
+                <p className="leading-9">{product?.description}</p>
                 {product && (
-                  <div className="flex mt-3 gap-3 items-center">
+                  <div className="flex mt-3 gap-5 items-center ">
                     <div className="title-font font-medium text-xl text-gray-700">
                       Quantity:
                     </div>
@@ -190,23 +190,31 @@ const ProductCard: React.FC<Product> = () => {
                       >
                         <AiOutlinePlus className="w-[22px] h-[22px]" />
                       </button>
+                    </div>
                       <button
                         onClick={handleWishList}
-                        className="rounded-full w-10 h-10 bg-[#76885B] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
+                        className="rounded-full w-10 h-10 bg-[#76885B] hover:bg-opacity-90 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
                       >
-                        <BsFillSuitHeartFill />
+                        <BsFillSuitHeartFill className="hover:text-[#FC6736]"/>
                       </button>
-                    </div>
                   </div>
                 )}
                 <div className="p-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
+                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
                   >
                     Add to Cart
                   </button>
                   <ToastContainer />
+                </div>
+                <div className="mt-3 font-semibold rounded">
+                  <div className="py-2 px-3 flex flex-col">
+                    <p className="uppercase text-[15px]">Hurry! Only <span className="text-[#FC6736]">4</span> items left in stock.</p>
+                    <div className="w-full bg-[#76885B] h-[13px] rounded-xl my-2">
+                      <input className="bg-[#FC6736] w-[30%]"></input>
+                    </div>
+                  </div>
                 </div>
                 <div className="mt-3 font-semibold border rounded">
                   <div className="py-2 px-3 border bg-gray-200 gap-4 flex items-center">

@@ -17,6 +17,7 @@ import {
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Cart: React.FC = () => {
   const products = useSelector((state: RootState) => state.loopStore.products);
@@ -64,11 +65,11 @@ const Cart: React.FC = () => {
             <div className="grid grid-cols-12">
               <div className="col-span-12 xl:col-span-8 lg:pr-8 pt-14 pb-8 lg:py-14 w-full max-xl:max-w-3xl max-xl:mx-auto">
                 <div className="flex items-center justify-between pb-8 border-b border-gray-300">
-                  <h2 className="font-manrope font-semibold text-3xl leading-10 text-[#FC6736]">
+                  <h2 className="font-manrope uppercase text-2xl font-semibold leading-10 text-[#76885B]">
                     My Shopping Cart
                   </h2>
                 </div>
-                <div className="grid grid-cols-12 mt-8 max-md:hidden pb-6 border-b border-gray-200">
+                {/* <div className="grid grid-cols-12 mt-8 max-md:hidden pb-6 border-b border-gray-200">
                   <div className="col-span-12 md:col-span-7">
                     <p className="font-normal text-lg leading-8 text-gray-400">
                       Product Details
@@ -88,10 +89,10 @@ const Cart: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {products.map((product) => (
                   <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
-                    <div className="w-full md:max-w-[126px]">
+                    <div className="w-full w-[30%]">
                       <img
                         src={product.image}
                         alt="perfume bottle image"
@@ -100,8 +101,8 @@ const Cart: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 w-full">
                       <div className="md:col-span-2">
-                        <div className="flex flex-col max-[500px]:items-center gap-3">
-                          <h6 className="font-semibold text-base leading-7 text-black">
+                        <div className="flex flex-col ml-4 gap-3">
+                          <h6 className="uppercase font-semibold text-base leading-7 text-black">
                             {product.name}
                           </h6>
                           <h6 className="font-normal text-base leading-7 text-gray-500">
@@ -112,23 +113,26 @@ const Cart: React.FC = () => {
                           </h6>
                         </div>
                       </div>
-                      <div className="flex items-center max-[400px]:justify-center h-full max-md:mt-3">
-                        <div className="flex items-center w-full">
-                          <button
-                            onClick={() => handleDecrement(product.id)}
-                            className="group rounded-l-full px-3 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
-                          >
-                            <AiOutlineMinus className="w-[20px] h-[20px]" />
-                          </button>
-                          <p className="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-h-[58px] min-w-[40px] placeholder:text-gray-900 py-[15px]  text-center bg-transparent">
+                      <div className="flex items-center justify-center h-full">
+                        <div className="flex items-center w-1/2">
+                          <p className="border-l border-y border-[#76885B] px-4 py-3 border-gray-200 outline-none text-[#76885B] font-semibold text-lg placeholder:text-gray-900 text-center bg-transparent">
                             {product.quantity}
                           </p>
-                          <button
-                            onClick={() => handleIncrement(product.id)}
-                            className="group rounded-r-full px-3 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
-                          >
-                            <AiOutlinePlus className="w-[20px] h-[20px]" />
-                          </button>
+                          <div className="">
+                            <button
+                              onClick={() => handleDecrement(product.id)}
+                              className=" border p-1 border-[#76885B] hover:text-[#FC6736] flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
+                            >
+                              <IoIosArrowUp className="w-[20px] font-bold h-[20px]" />
+                            </button>
+                            <button
+                              onClick={() => handleIncrement(product.id)}
+                              className=" border p-1 border-[#76885B] hover:text-[#FC6736] flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
+                            >
+                              <IoIosArrowDown className="w-[20px] font-bold h-[20px]" />
+                            </button>
+
+                          </div>
                         </div>
                       </div>
                       <div className="items-center flex justify-center">

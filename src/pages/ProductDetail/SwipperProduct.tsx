@@ -7,9 +7,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import  EffectCoverflow from 'swiper';
-import  Pagination from 'swiper';
-import  Navigation from 'swiper';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import "../../index.css"
 
 import slide_image_1 from '../../assets/image/BannerSale_1.jpeg';
@@ -18,8 +16,8 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 function App () {
   return (
-    <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+    <div className="container my-20">
+      <h1 className="heading text-center">Other products in the same category</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -42,25 +40,30 @@ function App () {
         className="swiper_container"
       >
         <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
+          {/* <img src={slide_image_1} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
+          {/* <img src={slide_image_1} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_2} alt="slide_image" />
+
+          {/* <img src={slide_image_2} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
+
+          {/* <img src={slide_image_1} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_2} alt="slide_image" />
+
+          {/* <img src={slide_image_2} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
+
+          {/* <img src={slide_image_1} alt="slide_image" /> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide_image_2} alt="slide_image" />
+
+          {/* <img src={slide_image_2} alt="slide_image" /> */}
         </SwiperSlide>
 
         <div className="slider-controler">
