@@ -132,7 +132,7 @@ const NewArrival: React.FC<Product> = (props) => {
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
         <h1 className="text-4xl text-[#76885B] font-bold tracking-tight">
-          New Arrivals
+          Loop's Watches
         </h1>
 
         <div className="flex items-center">

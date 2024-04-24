@@ -60,12 +60,12 @@ const Cart: React.FC = () => {
     <Fragment>
       <NavBar />
       {products.length > 0 ? (
-        <section className="relative z-10 after:contents-[''] after:absolute after:z-0 after:h-full xl:after:w-1/3 after:top-0 after:right-0 after:bg-gray-50">
-          <div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto relative z-10">
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 xl:col-span-8 lg:pr-8 pt-14 pb-8 lg:py-14 w-full max-xl:max-w-3xl max-xl:mx-auto">
-                <div className="flex items-center justify-between pb-8 border-b border-gray-300">
-                  <h2 className="font-manrope uppercase text-2xl font-semibold leading-10 text-[#76885B]">
+        <section className="relative z-10  after:contents-[''] after:absolute after:z-0 after:h-full xl:after:w-1/3 after:top-0 after:right-0 after:bg-gray-50">
+          <div className="w-full max-w-7xl px-3 py-5 md:px-4 lg-6 mx-auto relative z-10">
+            <div className="grid grid-cols-12 gap-3">
+              <div className="col-span-12 border xl:col-span-8 py-8 w-full max-xl:max-w-3xl max-xl:mx-auto">
+                <div className="flex items-center justify-between px-3 border-b border-gray-300">
+                  <h2 className="uppercase text-2xl font-semibold text-[#76885B]">
                     My Shopping Cart
                   </h2>
                 </div>
@@ -91,7 +91,7 @@ const Cart: React.FC = () => {
                   </div>
                 </div> */}
                 {products.map((product) => (
-                  <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
+                  <div className="flex flex-col px-3 min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
                     <div className="w-[30%]">
                       <img
                         src={product.image}
@@ -120,18 +120,17 @@ const Cart: React.FC = () => {
                           </p>
                           <div className="">
                             <button
-                              onClick={() => handleDecrement(product.id)}
+                              onClick={() => handleIncrement(product.id)}
                               className=" border p-1 border-[#76885B] hover:text-[#FC6736] flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
                             >
                               <IoIosArrowUp className="w-[20px] font-bold h-[20px]" />
                             </button>
                             <button
-                              onClick={() => handleIncrement(product.id)}
+                              onClick={() => handleDecrement(product.id)}
                               className=" border p-1 border-[#76885B] hover:text-[#FC6736] flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
                             >
                               <IoIosArrowDown className="w-[20px] font-bold h-[20px]" />
                             </button>
-
                           </div>
                         </div>
                       </div>
@@ -150,26 +149,26 @@ const Cart: React.FC = () => {
                   </div>
                 ))}
 
-                <div className="flex items-center justify-between mt-8">
+                <div className="flex items-center px-3 justify-between mt-8">
                   <Link to="/new-arrivals">
-                    <button className="flex items-center px-3 py-2 rounded-full gap-2 border-none outline-0 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] hover:bg-gray-300">
-                      <BsCaretLeftFill />
+                    <button className="flex items-center rounded py-2 px-3 gap-2 border-none outline-0 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] bg-gray-300 hover:border-indigo-300 hover:bg-gray-200">
+                      {/* <BsCaretLeftFill /> */}
                       Continue Shopping
                     </button>
                   </Link>
                   <button
                     onClick={() => dispatch(resetCart())}
-                    className="flex items-center px-5 py-3 rounded-full gap-2 border-none outline-0 font-semibold text-lg leading-8 text-red-600 shadow-sm shadow-transparent transition-all duration-500 hover:shadow-red-500 bg-red-100"
+                    className="flex items-center px-3 py-2 gap-2 rounded border-none outline-0 font-medium text-lg leading-8 text-white shadow-sm shadow-transparent transition-all duration-500 hover:shadow-red-500 bg-[#76885B]"
                   >
                     Reset
                   </button>
                 </div>
               </div>
-              <div className=" col-span-12 xl:col-span-4 bg-gray-50 w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-14">
-                <h2 className="font-manrope font-bold text-3xl leading-10 text-[#76885B] pb-8 border-b border-gray-300">
+              <div className=" col-span-12 xl:col-span-4 py-8 w-full border">
+                <h2 className="font-semibold text-2xl mx-3 text-[#76885B] border-b border-gray-300">
                   Order Summary
                 </h2>
-                <div className="mt-8">
+                <div className="mt-8 mx-3">
                   <div className="flex items-center justify-between pb-6">
                     <p className="font-normal text-lg leading-8 text-black">
                       {products.length > 0 ? `Items: ${products.length}` : ""}
@@ -196,7 +195,7 @@ const Cart: React.FC = () => {
                       </p>
                     </div>
                     <div>
-                      <button className="w-full text-center bg-[#76885B] rounded-full py-3 px-5 font-semibold text-lg text-white transition-all duration-300 hover:bg-opacity-90">
+                      <button className="w-full text-center bg-[#76885B] py-2 px-2 rounded font-medium uppercase text-lg text-white transition-all duration-300 hover:bg-opacity-90">
                         Checkout
                       </button>
                     </div>
