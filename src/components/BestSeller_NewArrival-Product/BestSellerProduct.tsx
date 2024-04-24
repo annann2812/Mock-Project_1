@@ -91,7 +91,7 @@ const BestSellerProduct = () => {
                   </ListProductRowContainer>
                 </Grid>
               ))}
-          </Fragment>
+†          </Fragment>
         ) : (
           <Fragment>
             {productSales &&

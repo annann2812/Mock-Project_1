@@ -92,7 +92,7 @@ const Cart: React.FC = () => {
                 </div> */}
                 {products.map((product) => (
                   <div className="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-1 py-6 border-b border-gray-200">
-                    <div className="w-full w-[30%]">
+                    <div className="w-[30%]">
                       <img
                         src={product.image}
                         alt="perfume bottle image"
