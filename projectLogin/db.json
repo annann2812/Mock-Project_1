@@ -2,1356 +2,1031 @@
   "products": [
     {
       "id": 1,
-      "name": "Running Shoes",
+      "name": "Rolex Submariner",
       "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
+      "color": "Red",
       "size": "S",
-      "branch": "Adidas",
-      "price": 299,
+      "branch": "Casio",
+      "price": 99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/51+3J2SqJRL._AC_SX500_.jpg",
-        "https://m.media-amazon.com/images/I/61vtnFMNcBL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61+nIbLoPTL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61TxXJR01+L._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 2,
-      "name": "Casual Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "M",
-      "branch": "Nike",
-      "price": 299,
+      "name": "Omega Speedmaster",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 199,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/41l2imvuWJL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51IvIT8EnIL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/41DrEs1-gYL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61UN3UQIarL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/1-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 3,
-      "name": "High-Top Basketball Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "L",
-      "branch": "Vans",
-      "price": 189,
+      "name": "Tag Heuer Carrera",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 299,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/51Cwrg+CuVL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61newZq6N+L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61newZq6N+L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51diSd+p2oL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 4,
-      "name": "Slip-On Loafers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 169,
+      "name": "Patek Philippe Nautilus",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 399,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/51P5Lw0F8TL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61aFoHccpyL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51+vVu8D-0L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51L2ZL53HCL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 5,
-      "name": "Hiking Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
+      "name": "Audemars Piguet Royal Oak",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Adidas",
-      "price": 209,
+      "branch": "Casio",
+      "price": 499,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/612bDB-gsIL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61gHS7FSI2L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71D3lZp8AZL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71MdCAcKhWL._AC_SY500_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 6,
-      "name": "Skate Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "M",
-      "branch": "Nike",
-      "price": 399,
+      "name": "Seiko Prospex",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 599,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/519cVPdKeqL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51IZDQVrLPL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/519cVPdKeqL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51iDmWVGvcL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/19-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 7,
-      "name": "Formal Oxfords",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Vans",
-      "price": 189,
+      "name": "Breitling Navitimer",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 699,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/613DG4G9lQL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71ZmaSD1hPL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71BT9WRPnaL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71vocQ3EeZL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 8,
-      "name": "Beach Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 169,
+      "name": "Cartier Tank",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 799,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/711EPhthmML._AC_SY575_.jpg",
-        "https://m.media-amazon.com/images/I/61syxpEq4NL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61syxpEq4NL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61dSiKCuZkL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 9,
-      "name": "Training Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "M",
-      "branch": "Nike",
-      "price": 499,
+      "name": "IWC Portugieser",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 899,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71AA93kzoxL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/8187O4gXUML._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81XxplTA0nL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81PiAs5dpBL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 10,
-      "name": "Chelsea Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Vans",
-      "price": 389,
+      "name": "Tudor Black Bay",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 999,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/813UuOjWfZL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81cjyr4hyoL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81w+tb0MFGL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81BtcSoCKFL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 11,
-      "name": "Ankle Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 269,
+      "name": "Jaeger-LeCoultre Reverso",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 199,
       "discount": {
-        "is_discount": false,
+        "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/61aovkSU3uL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61iHAMK1gHL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71qHXSmoOnL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61Y0PFcIQXL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/53-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
+      "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 12,
-      "name": "Moccasin Slippers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
+      "name": "Hublot Big Bang",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Adidas",
-      "price": 409,
+      "branch": "Casio",
+      "price": 299,
       "discount": {
-        "is_discount": false,
+        "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/61EDMhFVXxL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61ubGianPuL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61QS3iUkO2L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61dPsTtg49L._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/76-home_default/eius-tempora.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
+      "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 13,
-      "name": "Flip Flops",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
+      "name": "Panerai Luminor",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Adidas",
-      "price": 219,
+      "branch": "Casio",
+      "price": 99,
       "discount": {
-        "is_discount": false,
+        "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/81hbwdrmvjL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71uy2fB6HoL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71g647UlzML._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71x5RZETbtL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
+      "best_seller": false,
       "new_arriver": false
     },
     {
       "id": 14,
-      "name": "Espadrilles",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "M",
-      "branch": "Nike",
-      "price": 139,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/81D3RBFb2UL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81o0fJ-VZKL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/812sHvj-EqL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81hyWyGVZPL._AC_SY575_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 15,
-      "name": "Boat Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Vans",
-      "price": 190,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71vQP9kXn2L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71Ry-5UxmFL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71B4I-DQEFL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71OaWPdxaOL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 16,
-      "name": "Combat Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 160,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/613HmnmaO6L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71uXGc5jQCL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61NqY3H+JDL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/710sEhNuwXL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 17,
-      "name": "Derby Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "M",
-      "branch": "nike",
-      "price": 239,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51mNlxDSv1L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51AVk-sNWqL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/41IUGQOuzzL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51JZRv0qX4L._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 18,
-      "name": "Golf Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "XL",
-      "branch": "Nike",
-      "price": 599,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/61oSyFbfluL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/616oEQjOW0L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71650g5SJPL._AC_SY500_.jpg",
-        "https://m.media-amazon.com/images/I/61FNLxf4CeL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 19,
-      "name": "Ballet Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
+      "name": "Longines Master Collection",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Vans",
-      "price": 89,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51yfg7sxn4L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/51z7jYoQZML._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61zf6tRFohL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61m-PIucrAL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51YEMaj6m2L._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 20,
-      "name": "Espadrille Wedges",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "M",
-      "branch": "Lining",
-      "price": 129,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71ce3hPF-vL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61iO0u5HuSL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71aTzGufq9L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71clBfOsvlL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": false
-    },
-    {
-      "id": 21,
-      "name": "Rain Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Adidas",
-      "price": 209,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71aw2Z+2WML._AC_SX466_.jpg",
-        "https://m.media-amazon.com/images/I/71h5bWbBaSL._AC_SX679_.jpg",
-        "https://m.media-amazon.com/images/I/61wla26S4lL._AC_SY445_.jpg",
-        "https://m.media-amazon.com/images/I/71yB-K2GNoL._AC_SX679_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 22,
-      "name": "Snow Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Nike",
-      "price": 499,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51s8yBzNHDL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/516Z8j7eMuL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/514PMEHngvL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81Xgx5DIfJL._AC_SY395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 23,
-      "name": "Heeled Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "M",
-      "branch": "Vans",
-      "price": 89,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51F8HlwvhTL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51ynyFRjOrL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51hlA8ND89L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51qiwEwXamL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61JJbCsNKBL._AC_SY395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 24,
-      "name": "Platform Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "S",
-      "branch": "Lining",
-      "price": 169,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51kHV9dpWBL._AC_SY625_.jpg",
-        "https://m.media-amazon.com/images/I/515wwfPxiYL._AC_SY625_.jpg",
-        "https://m.media-amazon.com/images/I/51GiGtFoiNL._AC_SY625_.jpg",
-        "https://m.media-amazon.com/images/I/71Guhfa0OTL._AC_SY625_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 25,
-      "name": "Chukka Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "S",
-      "branch": "Nike",
-      "price": 499,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51Prnon4QpL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61hrgZW41DL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61NYJ48EreL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/51P8qthuU9L._AC_SX395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 26,
-      "name": "Driving Moccasins",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "XL",
-      "branch": "Vans",
-      "price": 489,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71JOqdGkcbL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71TOMjfDvIL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71jtzZi6R5L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81omz3ftpoL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71jtzZi6R5L._AC_SY395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 27,
-      "name": "Mary Jane Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "M",
-      "branch": "Lining",
-      "price": 169,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71H9AI109eL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71lREpdYjBL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71ko03cOKrL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71f3zpwj8aL._AC_SX395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 28,
-      "name": "T-Strap Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Adidas",
-      "price": 209,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71QzzETE6ML._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71JGJWtTh4L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/719400U2TML._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/714cPJLlykL._AC_SX395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 29,
-      "name": "Clog Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "XL",
-      "branch": "Adidas",
-      "price": 319,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71y-7jzv9RL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71HGV8jifVL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71kNAUlF4dL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71HGV8jifVL._AC_SX395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 30,
-      "name": "Slide Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "L",
-      "branch": "Nike",
-      "price": 239,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71ABbKDy8+L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81xiuLYuBhL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81s+z9qK1OL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/812fC5D7RVL._AC_SX395_.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 31,
-      "name": "Peep Toe Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "S",
-      "branch": "Vans",
-      "price": 90,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51T5UfUe5nL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51oYc7I3vWL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51iofp3HIiL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51ky3p-4gcL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 32,
-      "name": "Suede Loafers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Lining",
-      "price": 100,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/81eOPVSz+lL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/816DYKWnDYL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71xIX2V7ofL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81ZiKSQjpkL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 33,
-      "name": "Slipper Socks",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "S",
-      "branch": "Adidas",
-      "price": 299,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71C4sYiscYL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71ddfyGVrZL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71JC7NUzb7L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71QbCWayxJL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 34,
-      "name": "Slingback Pumps",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "M",
-      "branch": "Nike",
-      "price": 299,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/61DYj1I-K0L._AC_SX625_.jpg",
-        "https://m.media-amazon.com/images/I/61-AA4FDGVL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71E6AaiUILL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71ApuAeHPAL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 35,
-      "name": "Lace-Up Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Vans",
-      "price": 189,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71NjblvJxoL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71Q3pe0VkOL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/9102mfs10SL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81spMz2U8hL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 36,
-      "name": "Monk Strap Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 169,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51JjJGLAqZL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61I+DC5KoFL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51PEmAkqX0L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51M5GBIuPaL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 37,
-      "name": "Penny Loafers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "S",
-      "branch": "Adidas",
-      "price": 209,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71nanZ1jE7S._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71FwRD9t7lS._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61c5022QZgS._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71YiX0ov8ES._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 38,
-      "name": "Wedge Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "M",
-      "branch": "Nike",
+      "branch": "Casio",
       "price": 399,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71iF0c4CiPL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71Fe2vtmylL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71jIgK+JB2L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61EUwydpjTL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
-      "new_arriver": true
+      "best_seller": false,
+      "new_arriver": false
     },
     {
-      "id": 39,
-      "name": "Gladiator Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Vans",
-      "price": 189,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71+k4l6-opL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71jVEe4Ct4L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71JRSVghZjL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71fyBl1JfmL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 40,
-      "name": "Knee-High Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 169,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/81oOebqz+ML._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/717LNglpNHL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81KXtcd0Y1L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81Q4FpIKivL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 41,
-      "name": "Peep Toe Pumps",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "M",
-      "branch": "Nike",
+      "id": 15,
+      "name": "Citizen Eco-Drive",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
       "price": 499,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71eLQ1bB3QL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/715Dx5U9u-L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/61cdQlQl8SL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71PDBF7OaEL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
-      "new_arriver": true
+      "best_seller": false,
+      "new_arriver": false
     },
     {
-      "id": 42,
-      "name": "Combat Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "L",
-      "branch": "Vans",
-      "price": 389,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/81Z5KO2uwnL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81Z5KO2uwnL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81ymJa+UlOL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81BldEdwWQL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 43,
-      "name": "Stiletto Heels",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 269,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/61vcqWfj9WL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61lt5JYX+DL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61gIrCBJ0ML._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/610kjpPHJlL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 44,
-      "name": "Ballet Pumps",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
+      "id": 16,
+      "name": "Tissot T-Touch",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Adidas",
-      "price": 409,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51yc9OqrHsL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/51iybRUiTxL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/514BF0jACOL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/51xuSJ9RrzL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 45,
-      "name": "Pointed Toe Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "S",
-      "branch": "Adidas",
-      "price": 219,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71GaNqL9XkL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71Wah8k9c3L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71J81f12ZCL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71sSqHpipTL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 46,
-      "name": "Riding Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "M",
-      "branch": "Nike",
-      "price": 139,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/81tc6arDvFL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/81X34fxocYL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71cxQ6xzIbL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/81QKfwSsGKL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 47,
-      "name": "Studded Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "L",
-      "branch": "Vans",
-      "price": 190,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71oMOrqXoCL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71WFvH3HF6L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71FbOr2gnBL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71Laspw2mgL._AC_SX395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 48,
-      "name": "Chelsea Rain Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 160,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/61LRAeHEdtL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61Yv3tB93xL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61DC52G-smL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61J3RppX+sL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 49,
-      "name": "Suede Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "M",
-      "branch": "Adidas",
-      "price": 239,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/511+TfOOujL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61wIO7SI-hL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/510UoeuK72L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51EAxq9phtL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 50,
-      "name": "Open Toe Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
-      "size": "XL",
-      "branch": "Lining",
+      "branch": "Casio",
       "price": 599,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71XlKHSN6hL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71GdJPJjDCL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61zCDxE5TdL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71fHsMIp7SL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
-      "best_seller": true,
-      "new_arriver": true
+      "best_seller": false,
+      "new_arriver": false
     },
     {
-      "id": 51,
-      "name": "Chunky Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
+      "id": 17,
+      "name": "Bulova Precisionist",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "S",
-      "branch": "Nike",
-      "price": 89,
+      "branch": "Apple",
+      "price": 699,
       "discount": {
-        "is_discount": true,
+        "is_discount": false,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/61SfkBer7jL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51C86nz5eIL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51Z7sCe9W2L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/51YK2EKmnIL._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg"
       ],
       "best_seller": true,
-      "new_arriver": true
+      "new_arriver": false
     },
     {
-      "id": 52,
-      "name": "Chelsea Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "red",
+      "id": 18,
+      "name": "Hamilton Khaki Field",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
       "size": "M",
-      "branch": "Vans",
-      "price": 129,
+      "branch": "Apple",
+      "price": 799,
       "discount": {
-        "is_discount": true,
+        "is_discount": false,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71hIhrcYztL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71BO8fhf88L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/71DqvbPNqWL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/611U+1R7zFL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/1-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
       ],
       "best_seller": true,
-      "new_arriver": true
+      "new_arriver": false
     },
     {
-      "id": 53,
-      "name": "Wingtip Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Adidas",
+      "id": 19,
+      "name": "Casio G-Shock",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "M",
+      "branch": "Apple",
+      "price": 899,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 20,
+      "name": "Timex Expedition",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 99,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 21,
+      "name": "Vacheron Constantin Overseas",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 120,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 22,
+      "name": "Blancpain Fifty Fathoms",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 289,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/19-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 23,
+      "name": "Breguet Classique",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 359,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 24,
+      "name": "Girard-Perregaux Laureato",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 809,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 25,
+      "name": "Rado True",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 109,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 26,
+      "name": "Zenith El Primero",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
       "price": 209,
       "discount": {
-        "is_discount": true,
+        "is_discount": false,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/613cSc4eenL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/610oBnxQh+L._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/715qFwl-YJL._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/615PSfStAIL._AC_SX395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": true,
-      "new_arriver": true
+      "new_arriver": false
     },
     {
-      "id": 54,
-      "name": "Woven Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "L",
-      "branch": "Lining",
-      "price": 499,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/41MyOKb+8yL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/41ab4CG4hqL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/41-kTkKsinL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/41JX4BAh7jL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 55,
-      "name": "Slip-On Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
+      "id": 27,
+      "name": "Ulysse Nardin Marine",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
       "size": "M",
-      "branch": "Nike",
-      "price": 89,
+      "branch": "Apple",
+      "price": 509,
       "discount": {
-        "is_discount": true,
+        "is_discount": false,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/712zRxY86JL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71rLVTlE54S._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71KTuvOtlzS._AC_SX395_.jpg",
-        "https://m.media-amazon.com/images/I/712ZCZKXOpS._AC_SY395_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/53-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": true,
-      "new_arriver": true
+      "new_arriver": false
     },
     {
-      "id": 56,
-      "name": "Bow Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "blue",
-      "size": "S",
-      "branch": "Adidas",
-      "price": 169,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71LK1wjCb1L._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/61-j9dERLiL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71KkUfb3bhL._AC_SY395_.jpg",
-        "https://m.media-amazon.com/images/I/71nlVg+5eTL._AC_SY395_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 57,
-      "name": "Slipper Shoes",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "S",
-      "branch": "Lining",
-      "price": 499,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71kguy-KUTL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71kb+1C1mWL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/710hdbe-pJL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71CkJgHF+7L._AC_SL1500_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 58,
-      "name": "Loafer Mules",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 489,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71XEbL2FHaL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71wH6t8h35L._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71TzVR31pPL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71ew65ma8RL._AC_SL1500_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 59,
-      "name": "Platform Boots",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
+      "id": 28,
+      "name": "Oris Aquis",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
       "size": "M",
-      "branch": "Nike",
-      "price": 169,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71jAmMbzIVL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/81dhqu04GUL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71zOVgwwrRL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/71Njs2hhAqL._AC_SL1500_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 60,
-      "name": "Metallic Sneakers",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Vans",
-      "price": 209,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/51Auev-548L._AC_SX385_.jpg",
-        "https://m.media-amazon.com/images/I/51RJQJ4H6uL._AC_SX385_.jpg",
-        "https://m.media-amazon.com/images/I/51SGdlO4S6L._AC_SX385_.jpg",
-        "https://m.media-amazon.com/images/I/61eUf5cbziL._AC_SX385_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 61,
-      "name": "Suede Sandals",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "XL",
-      "branch": "Lining",
-      "price": 319,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        " https://m.media-amazon.com/images/I/71MoNkHM0jL._AC_SX625_.jpg",
-        " https://m.media-amazon.com/images/I/71OLjJY2zoL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71Cx54I3QpL._AC_SX695_.jpg",
-        " https://m.media-amazon.com/images/I/71eQlvluDBL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71RKTbrqXmL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71VGJYudgQL._AC_SX695_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 62,
-      "name": "Strappy Heels",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "pink",
-      "size": "L",
-      "branch": "Adidas",
-      "price": 239,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://m.media-amazon.com/images/I/71Co6D9F6tL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71XV7x8xreL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/61ndA+V1icL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71flUi2LLBL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71RuASzUxFL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71BnMrpFBrL._AC_SX695_.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 63,
-      "name": "Embellished Flats",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "S",
-      "branch": "Adidas",
-      "price": 90,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "../src/assets/image/best-seller-1.jpg",
-        "https://m.media-amazon.com/images/I/41NTacc4AgL.jpg",
-        "https://m.media-amazon.com/images/I/41d1WEhR6sL.jpg",
-        "https://m.media-amazon.com/images/I/41YSGeMUsdL.jpg",
-        "https://m.media-amazon.com/images/I/41AzeeUhO3L.jpg"
-      ],
-      "best_seller": true,
-      "new_arriver": true
-    },
-    {
-      "id": 64,
-      "name": "Leopard Print Booties",
-      "decription": "  Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "white",
-      "size": "L",
-      "branch": "Vans",
+      "branch": "Apple",
       "price": 100,
       "discount": {
-        "is_discount": true,
+        "is_discount": false,
         "price_discount": "20%"
       },
       "images_list": [
-        "https://m.media-amazon.com/images/I/71Z3oWiLclL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71pVrOQPe-L._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/613IVPBemrL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71IQB9r6bYL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/71IgUPt8IKL._AC_SX695_.jpg",
-        "https://m.media-amazon.com/images/I/61QS5Ka-ebL._AC_SX695_.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/76-home_default/eius-tempora.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 29,
+      "name": "Sinn U1",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 300,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 30,
+      "name": "Maurice Lacroix Aikon",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 405,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 31,
+      "name": "Chopard Mille Miglia",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 200,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 32,
+      "name": "Louis Vuitton Tambour",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 500,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/56-large_default/architecto-beatae.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 33,
+      "name": "Montblanc 1858",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "M",
+      "branch": "Apple",
+      "price": 800,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 34,
+      "name": "Piaget Polo",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "L",
+      "branch": "Apple",
+      "price": 129,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 35,
+      "name": "Frederique Constant Classics",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Blue",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 139,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/1-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 36,
+      "name": "Bell & Ross BR 03",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 37,
+      "name": "Raymond Weil Tango",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 519,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 38,
+      "name": "Shinola Runwell",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 309,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 39,
+      "name": "Corum Admiral's Cup",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 119,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/19-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 40,
+      "name": "Meistersinger Pangaea",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 219,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 41,
+      "name": "NOMOS Glashütte Tangente",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 309,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 42,
+      "name": "Ebel Classic",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 205,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 43,
+      "name": "Bulgari Octo",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 150,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 44,
+      "name": "Jacob & Co. Astronomia",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 250,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/53-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 45,
+      "name": "H. Moser & Cie. Venturer",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 350,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/76-home_default/eius-tempora.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 46,
+      "name": "Harry Winston Mid night",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 47,
+      "name": "De Bethune DB28",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 500,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 48,
+      "name": "Richard Mille RM 011",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 109,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 49,
+      "name": "Bremont Supermarine",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/56-large_default/architecto-beatae.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
       "new_arriver": true
     }
   ],
