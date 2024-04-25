@@ -32,11 +32,12 @@ import Navbar from "../NavBar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { Product } from "../../ApiServices/types";
-const BestSellerProduct = () => {
+const BestSellerProduct = (props: any) => {
   const { products } = useSelector((state: RootState) => state.loopStore);
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
   // console.log(productSales);
+  const [sortOrder, setSortOrder] = useState("asc");
   const handleChangeGridRow = () => {
     setGridProduct(false);
   };
@@ -55,50 +56,63 @@ const BestSellerProduct = () => {
 
     fetchData();
   }, []);
+
   return (
     <Fragment>
       <Grid container spacing={5} width="900px" margin="auto">
         {gridProduct ? (
           <Fragment>
-            {products.map(
-              (product: Product) =>
-                !product.best_seller && (
-                  <Grid item xs={3} key={product.id} className="">
-                    <ListProductRowContainer>
-                      <ListProductRow>
-                        {" "}
-                        <ImgProductSaleRow
-                          src={product.images_list[0]}
-                          className=""
-                          alt=""
-                        />
-                        <p
-                          className="text-muted my-1"
-                          style={{ fontSize: "12px" }}
-                        >
-                          {product.name}
-                        </p>
-                        <p>
-                          <strong>$</strong>
-                          {product.price}
-                        </p>
-                        <ButtonProductSaleRow>
-                          View details
-                        </ButtonProductSaleRow>
-                        <IconEyeCenter>
-                          <RemoveRedEyeIcon className=" bg-light rounded" />
-                        </IconEyeCenter>
-                        <IconTopRowLeft>
-                          <strong>New</strong>
-                        </IconTopRowLeft>
-                        <IconTopRowRight>
-                          <strong>On Sale!</strong>
-                        </IconTopRowRight>
-                      </ListProductRow>
-                    </ListProductRowContainer>
-                  </Grid>
-                )
-            )}
+            {products &&
+              products
+                .slice()
+                .sort((a, b) => {
+                  if (props.sortOrder === "asc") {
+                    return a.price - b.price;
+                  } else if (props.sortOrder === "desc") {
+                    return b.price - a.price;
+                  } else {
+                    return 0;
+                  }
+                })
+                .map(
+                  (product: Product) =>
+                    !product.best_seller && (
+                      <Grid item xs={3} key={product.id} className="">
+                        <ListProductRowContainer>
+                          <ListProductRow>
+                            {" "}
+                            <ImgProductSaleRow
+                              src={product.images_list[0]}
+                              className=""
+                              alt=""
+                            />
+                            <p
+                              className="text-muted my-1"
+                              style={{ fontSize: "12px" }}
+                            >
+                              {product.name}
+                            </p>
+                            <p>
+                              <strong>$</strong>
+                              {product.price}
+                            </p>
+                            <ButtonProductSaleRow>
+                              View details
+                            </ButtonProductSaleRow>
+                            <IconEyeCenter>
+                              <RemoveRedEyeIcon className=" bg-light rounded" />
+                            </IconEyeCenter>
+                            <IconTopRowLeft>
+                              <strong>New</strong>
+                            </IconTopRowLeft>
+                            <IconTopRowRight>
+                              <strong>On Sale!</strong>
+                            </IconTopRowRight>
+                          </ListProductRow>
+                        </ListProductRowContainer>
+                      </Grid>
+                    )
+                )}
           </Fragment>
         ) : (
           <Fragment>

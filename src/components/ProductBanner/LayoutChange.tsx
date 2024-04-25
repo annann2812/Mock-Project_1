@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 // import { BsGridFill } from "react-icons/bs";
 // import { ImList } from "react-icons/im";
 // import { GoTriangleDown } from "react-icons/go";
-import { Squares2X2Icon } from '@heroicons/react/20/solid'
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-
+import { Squares2X2Icon } from "@heroicons/react/20/solid";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 
 interface ProductBannerProps {
   itemsPerPageFromBanner: (itemsPerPage: number) => void;
 }
 
-const LayoutChange: React.FC<ProductBannerProps> = ({ itemsPerPageFromBanner }) => {
+const LayoutChange: React.FC<ProductBannerProps> = ({
+  itemsPerPageFromBanner,
+}) => {
   const [gridViewActive, setGridViewActive] = useState<boolean>(true);
   const [listViewActive, setListViewActive] = useState<boolean>(false);
 
