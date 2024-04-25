@@ -209,7 +209,7 @@ const ProductCard: React.FC<Product> = () => {
                   <ToastContainer />
                 </div>
                 <div className="mt-3 font-semibold rounded">
-                  <div className="py-2 px-3 flex flex-col">
+                  <div className="py-2 flex flex-col">
                     <p className="uppercase text-[15px]">Hurry! Only <span className="text-[#FC6736]">4</span> items left in stock.</p>
                     <div className="w-full bg-[#76885B] h-[13px] rounded-xl my-2">
                       <input className="bg-[#FC6736] w-[30%]"></input>
