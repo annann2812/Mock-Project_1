@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useCallback, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   ChevronDownIcon,
@@ -17,8 +17,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 
 const sortOptions = [
-  { name: "Price: Low to High", href: "#", current: true },
-  { name: "Price: High to Low", href: "#", current: false },
+  { name: "Price: Low to High", href: "#", current: true, value: "asc" },
+  { name: "Price: High to Low", href: "#", current: false, value: "desc" },
 ];
 
 const NewArrival: React.FC<Product> = (props) => {
@@ -30,6 +30,14 @@ const NewArrival: React.FC<Product> = (props) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const [sortOrder, setSortOrder] = useState("");
+
+  const handleSortTypeChange = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
+    setSortOrder(event.target.value);
+  };
 
   const handleChangeNextPage = () => {
     if (products.length && counterNextPageMax >= products.length) {
@@ -124,13 +132,21 @@ const NewArrival: React.FC<Product> = (props) => {
         <div className="flex items-center">
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                Sort
-                <ChevronDownIcon
-                  className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                  aria-hidden="true"
-                />
-              </Menu.Button>
+              <label
+                htmlFor="sort-price"
+                className="text-sm font-medium leading-6 inline"
+              >
+                Sort:
+              </label>
+              <select
+                id="sort-price"
+                value={sortOrder}
+                onChange={handleSortTypeChange}
+              >
+                <option value="">Sort by price</option>
+                <option value="asc">Price: Low to hight</option>
+                <option value="desc">Price: Hight to low </option>
+              </select>
             </div>
 
             <Transition
@@ -252,41 +268,55 @@ const NewArrival: React.FC<Product> = (props) => {
                   {gridProduct ? (
                     <Fragment>
                       {products &&
-                        products.map((product: Product, index: number) => {
-                          if (
-                            (index <= counterNextPageMax &&
-                              index > counterNextPageMin) ||
-                            (index < counterNextPageMax &&
-                              index >= counterNextPageMin)
-                          ) {
-                            return (
-                              <Link
-                                to={`/products/${product.id}`}
-                                key={product.id}
-                                className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
-                              >
-                                <a className="capitialize block capitalize relative overflow-hidden">
-                                  <img
-                                    alt={product.name}
-                                    className="object-contain object-center w-full h-full block"
-                                    src={product.images_list[0]}
-                                  />
-                                </a>
-                                <div className="mt-4">
-                                  <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
-                                    {product.name}
-                                  </h2>
-                                  <p className="mt-1 text-md my-2 font-semibold">
-                                    $ {product.price}
-                                  </p>
-                                  <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
-                                    View Details
-                                  </button>
-                                </div>
-                              </Link>
-                            );
-                          }
-                        })}
+                        products
+                          .slice()
+                          .sort((a, b) => {
+                            if (sortOrder === "asc") {
+                              return a.price - b.price;
+                            } else if (sortOrder === "desc") {
+                              return b.price - a.price;
+                            } else {
+                              return 0;
+                            }
+                          })
+                          .map((product: Product, index: number) => {
+                            if (
+                              (index <= counterNextPageMax &&
+                                index > counterNextPageMin) ||
+                              (index < counterNextPageMax &&
+                                index >= counterNextPageMin)
+                            ) {
+                              return (
+                                <Link
+                                  to={`/products/${product.id}`}
+                                  key={product.id}
+                                  className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
+                                >
+                                  <a className="capitialize block capitalize relative overflow-hidden">
+                                    <img
+                                      alt={product.name}
+                                      className="object-contain object-center w-full h-full block"
+                                      src={product.images_list[0]}
+                                    />
+                                  </a>
+                                  <div
+                                    className="mt-4"
+                                    // onChange={() => handleSortTypeChange}
+                                  >
+                                    <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                      {product.name}
+                                    </h2>
+                                    <p className="mt-1 text-md my-2 font-semibold">
+                                      $ {product.price}
+                                    </p>
+                                    <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                      View Details
+                                    </button>
+                                  </div>
+                                </Link>
+                              );
+                            }
+                          })}
                       <Grid item xs={12} textAlign="right">
                         <button
                           className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
@@ -305,59 +335,71 @@ const NewArrival: React.FC<Product> = (props) => {
                     </Fragment>
                   ) : (
                     <Fragment>
-                      {products.map((product, index) => {
-                        if (
-                          (index <= counterNextPageMax &&
-                            index > counterNextPageMin) ||
-                          (index < counterNextPageMax &&
-                            index >= counterNextPageMin)
-                        ) {
-                          return (
-                            !product.new_arriver && (
-                              <section className="text-gray-600 body-font overflow-hidden">
-                                <div className="container px-5 py-10 mx-auto border-b border-gray-200">
-                                  <div className="-my-8 divide-y-2 divide-gray-100">
-                                    <div className="py-8 flex items-center gap-12">
-                                      <div className="block capitalize relative h-48 rounded overflow-hidden">
-                                        <img
-                                          alt={product.name}
-                                          className="object-contain w-[200px] object-center block"
-                                          src={product.images_list[0]}
-                                        />
-                                      </div>
-                                      <div className="md:flex-grow">
-                                        <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
-                                          {product.decription}
-                                        </h5>
-                                        <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
-                                          {product.name}
-                                        </h5>
-                                        <p className="text-md font-medium text-gray-900 title-font mb-2">
-                                          {product.decription.length > 90
-                                            ? product.decription.substring(
-                                                0,
-                                                50
-                                              ) + "..."
-                                            : product.decription}
-                                        </p>
-                                        <p className="text-xl font-medium text-[#76885B] leading-relaxed">
-                                          $ {product.price}
-                                        </p>
-                                        <Link
-                                          to={`/products/${product.id}`}
-                                          className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
-                                        >
-                                          View Details
-                                        </Link>
+                      {products &&
+                        products
+                          .slice()
+                          .sort((a, b) => {
+                            if (sortOrder === "asc") {
+                              return a.price - b.price;
+                            } else if (sortOrder === "desc") {
+                              return b.price - a.price;
+                            } else {
+                              return 0;
+                            }
+                          })
+                          .map((product, index) => {
+                            if (
+                              (index <= counterNextPageMax &&
+                                index > counterNextPageMin) ||
+                              (index < counterNextPageMax &&
+                                index >= counterNextPageMin)
+                            ) {
+                              return (
+                                !product.new_arriver && (
+                                  <section className="text-gray-600 body-font overflow-hidden">
+                                    <div className="container px-5 py-10 mx-auto border-b border-gray-200">
+                                      <div className="-my-8 divide-y-2 divide-gray-100">
+                                        <div className="py-8 flex items-center gap-12">
+                                          <div className="block capitalize relative h-48 rounded overflow-hidden">
+                                            <img
+                                              alt={product.name}
+                                              className="object-contain w-[200px] object-center block"
+                                              src={product.images_list[0]}
+                                            />
+                                          </div>
+                                          <div className="md:flex-grow">
+                                            <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
+                                              {product.decription}
+                                            </h5>
+                                            <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
+                                              {product.name}
+                                            </h5>
+                                            <p className="text-md font-medium text-gray-900 title-font mb-2">
+                                              {product.decription.length > 90
+                                                ? product.decription.substring(
+                                                    0,
+                                                    50
+                                                  ) + "..."
+                                                : product.decription}
+                                            </p>
+                                            <p className="text-xl font-medium text-[#76885B] leading-relaxed">
+                                              $ {product.price}
+                                            </p>
+                                            <Link
+                                              to={`/products/${product.id}`}
+                                              className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                                            >
+                                              View Details
+                                            </Link>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                              </section>
-                            )
-                          );
-                        }
-                      })}
+                                  </section>
+                                )
+                              );
+                            }
+                          })}
                       <Grid item xs={12} textAlign="right">
                         <button
                           className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
