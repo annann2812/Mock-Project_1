@@ -35,9 +35,9 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 boder border-b dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 overflow-x-hidden boder border-b dark:bg-gray-900">
       <Newsletter />
-      <div className="container max-w-screen- text-[#76885B] flex px-5 py-3 flex-wrap items-center justify-between mx-auto">
+      <div className="container max-w-screen- text-[#76885B]  flex px-5 py-3 flex-wrap items-center justify-between mx-auto">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -95,12 +95,7 @@ const NavBar = () => {
           >
             <FaSearch />
             {isSearchOpen && (
-              <div className="z-50 absolute top-[100px] right-[100px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-
-                  <span className="sr-only">Search icon</span>
-                </div>
+              <div className="z-50 top-[100px] right-[100px] mt-2 w-48 bg-white divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <input
                   type="text"
                   id="search-navbar"
@@ -108,6 +103,10 @@ const NavBar = () => {
                   placeholder="Search..."
                   onClick={(e) => e.stopPropagation()}
                 />
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events">
+                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  <span className="sr-only">Search icon</span>
+                </div>
               </div>
             )}
           </button>
@@ -143,10 +142,10 @@ const NavBar = () => {
             </li>
             <li>
               <Link
-                to="/best-sellers"
+                to="/all-items"
                 className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
               >
-                Best Sellers
+                Watches
               </Link>
             </li>
             <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -206,6 +205,6 @@ const NavBar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default NavBar;

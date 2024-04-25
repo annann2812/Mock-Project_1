@@ -16,6 +16,7 @@ import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
+import SearchResult from "./pages/SearchResult/SearchResult";
 
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
@@ -41,13 +42,14 @@ const App = () => {
         <Route path="/best-sellers" element={<BestSellers />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/new-arrivals" element={<NewArrivalPage />} />
+        <Route path="/all-items" element={<NewArrivalPage />} />
         <Route path="/products/:id" element={<ProductCard />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/search" element={<SearchResult />} />
       </Routes>
       <ButtonScroll />
     </Fragment>
