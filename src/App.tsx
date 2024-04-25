@@ -6,6 +6,8 @@ import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import BlogPage from "./pages/Blog/Blog";
+import { useEffect } from "react";
+import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
 import SpecialCase from "./components/SpecialCase";
@@ -16,11 +18,25 @@ import Newsletter from "./components/Newsletter/Newsletter";
 import ButtonScroll from "./components/ButtonScroll";
 import SearchResult from "./pages/SearchResult/SearchResult";
 
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./Redux/store";
+import { setBlogs, setProductList } from "./Redux/ProductSlice";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    (async () => {
+      const { data } = await instance.get("/products");
+      dispatch(setProductList(data));
+    })();
+    (async () => {
+      const { data } = await instance.get("/blog");
+      dispatch(setBlogs(data));
+    })();
+  }, []);
   return (
     <Fragment>
       {/* <Newsletter/> */}
-      <SpecialCase/>
+      <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/best-sellers" element={<BestSellers />} />
@@ -35,7 +51,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/search" element={<SearchResult />} />
       </Routes>
-      <ButtonScroll/>
+      <ButtonScroll />
     </Fragment>
   );
 };

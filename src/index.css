@@ -35,6 +35,7 @@ a:hover {
 .search-input {
   position: absolute;
   top: calc(100% + 10px);
+
   left: 0;
   width: 100%; /* Full width */
   background-color: #ffffff;
@@ -42,6 +43,7 @@ a:hover {
   border-radius: 4px;
   padding: 8px;
   z-index: 999; 
+
 }
 
 

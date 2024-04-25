@@ -29,7 +29,11 @@ import { ProductsSaleProps } from "../../../public/type";
 import AppService from "../../ApiServices/AppService";
 import Navbar from "../NavBar/NavBar";
 
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
+import { Product } from "../../ApiServices/types";
 const BestSellerProduct = () => {
+  const { products } = useSelector((state: RootState) => state.loopStore);
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
   // console.log(productSales);
@@ -56,42 +60,46 @@ const BestSellerProduct = () => {
       <Grid container spacing={5} width="900px" margin="auto">
         {gridProduct ? (
           <Fragment>
-            {productSales &&
-              productSales.map((product) => (
-                <Grid item xs={3} key={product.id} className="">
-                  <ListProductRowContainer>
-                    <ListProductRow>
-                      {" "}
-                      <ImgProductSaleRow
-                        src={product.image}
-                        className=""
-                        alt=""
-                      />
-                      <p
-                        className="text-muted my-1"
-                        style={{ fontSize: "12px" }}
-                      >
-                        Name Product
-                      </p>
-                      <p>
-                        <strong>$</strong>
-                        {product.price}
-                      </p>
-                      <ButtonProductSaleRow>View details</ButtonProductSaleRow>
-                      <IconEyeCenter>
-                        <RemoveRedEyeIcon className=" bg-light rounded" />
-                      </IconEyeCenter>
-                      <IconTopRowLeft>
-                        <strong>New</strong>
-                      </IconTopRowLeft>
-                      <IconTopRowRight>
-                        <strong>On Sale!</strong>
-                      </IconTopRowRight>
-                    </ListProductRow>
-                  </ListProductRowContainer>
-                </Grid>
-              ))}
-†          </Fragment>
+            {products.map(
+              (product: Product) =>
+                !product.best_seller && (
+                  <Grid item xs={3} key={product.id} className="">
+                    <ListProductRowContainer>
+                      <ListProductRow>
+                        {" "}
+                        <ImgProductSaleRow
+                          src={product.images_list[0]}
+                          className=""
+                          alt=""
+                        />
+                        <p
+                          className="text-muted my-1"
+                          style={{ fontSize: "12px" }}
+                        >
+                          {product.name}
+                        </p>
+                        <p>
+                          <strong>$</strong>
+                          {product.price}
+                        </p>
+                        <ButtonProductSaleRow>
+                          View details
+                        </ButtonProductSaleRow>
+                        <IconEyeCenter>
+                          <RemoveRedEyeIcon className=" bg-light rounded" />
+                        </IconEyeCenter>
+                        <IconTopRowLeft>
+                          <strong>New</strong>
+                        </IconTopRowLeft>
+                        <IconTopRowRight>
+                          <strong>On Sale!</strong>
+                        </IconTopRowRight>
+                      </ListProductRow>
+                    </ListProductRowContainer>
+                  </Grid>
+                )
+            )}
+          </Fragment>
         ) : (
           <Fragment>
             {productSales &&
