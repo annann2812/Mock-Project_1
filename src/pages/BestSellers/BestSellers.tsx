@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import BestSellerProduct from "../../components/BestSeller_NewArrival-Product/BestSellerProduct";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+
 import {
   ChevronDownIcon,
   FunnelIcon,
@@ -15,6 +16,8 @@ import Navbar from "../../components/NavBar/NavBar";
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true, value: "asc" },
   { name: "Price: High to Low", href: "#", current: false, value: "desc" },
+  { name: "Name: A to Z", href: "#", current: false, value: "name-asc" },
+  { name: "Name: Z to A", href: "#", current: false, value: "name-desc" },
 ];
 
 const subCategories = [
@@ -57,7 +60,7 @@ function classNames(...classes: string[]) {
 const BestSellers: React.FC = () => {
   const [gridViewActive, setGridViewActive] = useState<boolean>(true);
   const [listViewActive, setListViewActive] = useState<boolean>(false);
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("");
   const handleSortTypeChange = (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
@@ -95,9 +98,11 @@ const BestSellers: React.FC = () => {
                   value={sortOrder}
                   onChange={handleSortTypeChange}
                 >
-                  <option value="">Sort by price</option>
-                  <option value="asc">Price: Low to hight</option>
-                  <option value="desc">Price: Hight to low </option>
+                  {sortOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.name}
+                    </option>
+                  ))}
                 </select>
               </div>
 
