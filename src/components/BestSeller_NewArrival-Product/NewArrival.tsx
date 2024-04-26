@@ -29,6 +29,8 @@ interface FilterProps {
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true, value: "asc" },
   { name: "Price: High to Low", href: "#", current: false, value: "desc" },
+  { name: "Name: A to Z", href: "#", current: false, value: "name-asc" },
+  { name: "Name: Z to A", href: "#", current: false, value: "name-desc" },
 ];
 
 const NewArrival: React.FC<Product> = (props) => {
@@ -219,9 +221,11 @@ const NewArrival: React.FC<Product> = (props) => {
                 value={sortOrder}
                 onChange={handleSortTypeChange}
               >
-                <option value="">Sort by price</option>
-                <option value="asc">Price: Low to hight</option>
-                <option value="desc">Price: Hight to low </option>
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.name}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -520,6 +524,10 @@ const NewArrival: React.FC<Product> = (props) => {
                               return a.price - b.price;
                             } else if (sortOrder === "desc") {
                               return b.price - a.price;
+                            } else if (sortOrder.startsWith("name")) {
+                              return sortOrder === "name-asc"
+                                ? a.name.localeCompare(b.name)
+                                : b.name.localeCompare(a.name);
                             } else {
                               return 0;
                             }
@@ -588,6 +596,10 @@ const NewArrival: React.FC<Product> = (props) => {
                               return a.price - b.price;
                             } else if (sortOrder === "desc") {
                               return b.price - a.price;
+                            } else if (sortOrder.startsWith("name")) {
+                              return sortOrder === "name-asc"
+                                ? a.name.localeCompare(b.name)
+                                : b.name.localeCompare(a.name);
                             } else {
                               return 0;
                             }

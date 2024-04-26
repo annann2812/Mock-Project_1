@@ -37,7 +37,7 @@ const BestSellerProduct = (props: any) => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [productSales, setProductSales] = useState<ProductsSaleProps[]>();
   // console.log(productSales);
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("");
   const handleChangeGridRow = () => {
     setGridProduct(false);
   };
@@ -70,6 +70,10 @@ const BestSellerProduct = (props: any) => {
                     return a.price - b.price;
                   } else if (props.sortOrder === "desc") {
                     return b.price - a.price;
+                  } else if (props.sortOrder.startsWith("name")) {
+                    return props.sortOrder === "name-asc"
+                      ? a.name.localeCompare(b.name)
+                      : b.name.localeCompare(a.name);
                   } else {
                     return 0;
                   }
