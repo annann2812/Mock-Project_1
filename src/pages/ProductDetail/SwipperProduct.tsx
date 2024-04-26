@@ -1,69 +1,98 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import "../../index.css";
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import "../../index.css"
+import slide_image_1 from "../../assets/image/BannerSale_1.jpeg";
+import slide_image_2 from "../../assets/image/BannerSale_2.jpeg";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
+import { Product } from "../../ApiServices/types";
 
-import slide_image_1 from '../../assets/image/BannerSale_1.jpeg';
-import slide_image_2 from '../../assets/image/BannerSale_2.jpeg';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-
-function App () {
+function SwiperComponent() {
+  const { products } = useSelector((state: RootState) => state.loopStore);
   return (
     <div className="container my-20">
-      <h1 className="heading text-center">Other products in the same category</h1>
+      <h1 className="heading text-center">
+        Other products in the same category
+      </h1>
+      {/* <img src={slide_image_1} alt="" /> */}
       <Swiper
-        effect={'coverflow'}
+        effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 2.5,
         }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
+        pagination={{ el: ".swiper-pagination", clickable: true }}
         navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
         <SwiperSlide>
-          {/* <img src={slide_image_1} alt="slide_image" /> */}
+          <img
+            src={slide_image_1}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-          {/* <img src={slide_image_1} alt="slide_image" /> */}
+          <img
+            src={slide_image_1}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-
-          {/* <img src={slide_image_2} alt="slide_image" /> */}
+          <img
+            src={slide_image_2}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-
-          {/* <img src={slide_image_1} alt="slide_image" /> */}
+          <img
+            src={slide_image_1}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-
-          {/* <img src={slide_image_2} alt="slide_image" /> */}
+          <img
+            src={slide_image_2}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-
-          {/* <img src={slide_image_1} alt="slide_image" /> */}
+          <img
+            src={slide_image_1}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
         <SwiperSlide>
-
-          {/* <img src={slide_image_2} alt="slide_image" /> */}
+          <img
+            src={slide_image_2}
+            alt="slide_image"
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
         </SwiperSlide>
 
         <div className="slider-controler">
@@ -80,4 +109,4 @@ function App () {
   );
 }
 
-export default App;
+export default SwiperComponent;

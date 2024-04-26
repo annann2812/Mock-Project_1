@@ -15,7 +15,17 @@ import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
-
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+//
+import CheckIcon from "@mui/icons-material/Check";
+import ToggleButton from "@mui/material/ToggleButton";
+import ClearIcon from "@mui/icons-material/Clear";
+interface FilterProps {
+  branch: string[];
+  minPrice: number;
+  maxPrice: number;
+}
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true, value: "asc" },
   { name: "Price: High to Low", href: "#", current: false, value: "desc" },
@@ -121,7 +131,73 @@ const NewArrival: React.FC<Product> = (props) => {
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
   }
+  // new Hieu
 
+  const [filter, setFilter] = useState<FilterProps>({
+    branch: [],
+    minPrice: 0,
+    maxPrice: 0,
+  });
+
+  //
+  const [value, setValue] = React.useState<number[]>([0, 1000]);
+
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    setValue(newValue as number[]);
+  };
+  console.log(value);
+  function valuetext(value: number) {
+    return `${value}°C`;
+  }
+  const handlePrice = () => {
+    setFilter((prevFilter) => ({
+      ...prevFilter,
+      minPrice: value[0] < value[1] ? value[0] : value[1],
+      maxPrice: value[0] > value[1] ? value[0] : value[1],
+    }));
+  };
+  //
+  const handleAddFilter = (value: string) => {
+    const newValue = value.trim().replace(/\s+/g, "");
+    if (!filter.branch.includes(newValue)) {
+      setFilter((prevFilter) => ({
+        ...prevFilter,
+        branch: [...prevFilter.branch, newValue],
+      }));
+    }
+  };
+  const handleDelFilter = (value: string) => {
+    const valueToRemove = value.trim().replace(/\s+/g, "");
+    if (filter.branch.includes(valueToRemove)) {
+      setFilter((prevFilter) => ({
+        ...prevFilter,
+        branch: prevFilter.branch.filter((item) => item !== valueToRemove),
+      }));
+    }
+  };
+
+  //   lọc
+  const [productFilter, setProductFilter] = useState<Product[]>(products);
+  const FilterProducts = (filter: FilterProps) => {
+    const filtered = products.filter((product: Product) => {
+      return (
+        (!filter.branch.length || filter.branch.includes(product.branch)) &&
+        (!filter.minPrice || filter.minPrice <= product.price) &&
+        (!filter.maxPrice || filter.maxPrice >= product.price)
+      );
+    });
+    return filtered;
+  };
+  useEffect(() => {
+    const filterData = FilterProducts(filter);
+    setProductFilter(filterData);
+  }, [filter]);
+
+  console.log(products);
+  console.log(productFilter);
+  const [selectedCasio, setSelectedCasio] = React.useState(false);
+  const [selectedRolex, setSelectedRolex] = React.useState(false);
+  const [selectedApple, setSelectedApple] = React.useState(false);
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
@@ -208,10 +284,179 @@ const NewArrival: React.FC<Product> = (props) => {
         </h2>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-          <form className="hidden lg:block">
+          <div className="hidden lg:block">
             <h3 className="sr-only">Categories</h3>
+            <Disclosure as="div" className="border-b border-gray-200 py-6">
+              <h3 className="-my-3 flow-root mb-5">
+                <h2 id="products-heading" className="">
+                  Branch
+                </h2>
+                <ToggleButton
+                  value="check"
+                  selected={selectedCasio}
+                  onClick={() => {
+                    !selectedCasio
+                      ? handleAddFilter("Casio")
+                      : handleDelFilter("Casio");
+                  }}
+                  onChange={() => {
+                    setSelectedCasio(!selectedCasio);
+                  }}
+                  className="my-2"
+                  sx={{
+                    // Kiểu CSS cho trạng thái "không chọn"
+                    backgroundColor: "lightgrey",
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor: "grey",
+                      color: "white",
+                    },
+                    // Kiểu CSS cho trạng thái "chọn"
+                    "&.Mui-selected": {
+                      backgroundColor: "grey",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "lightgrey",
+                        color: "black",
+                      },
+                    },
+                  }}
+                >
+                  Casio{" "}
+                  <span
+                    className={
+                      !selectedCasio
+                        ? "flex items-center justify-between invisible "
+                        : "flex items-center justify-between visible"
+                    }
+                  >
+                    <ClearIcon style={{ fontSize: "20px" }} />
+                  </span>
+                </ToggleButton>
+                <hr />
+                <ToggleButton
+                  value="check"
+                  selected={selectedRolex}
+                  onClick={() => {
+                    !selectedRolex
+                      ? handleAddFilter("Rolex")
+                      : handleDelFilter("Rolex");
+                  }}
+                  onChange={() => {
+                    setSelectedRolex(!selectedRolex);
+                  }}
+                  className="my-2"
+                  sx={{
+                    // Kiểu CSS cho trạng thái "không chọn"
+                    backgroundColor: "lightgrey",
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor: "grey",
+                      color: "white",
+                    },
+                    // Kiểu CSS cho trạng thái "chọn"
+                    "&.Mui-selected": {
+                      backgroundColor: "grey",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "lightgrey",
+                        color: "black",
+                      },
+                    },
+                  }}
+                >
+                  Rolex{" "}
+                  <span
+                    className={
+                      !selectedRolex
+                        ? "flex items-center justify-between invisible "
+                        : "flex items-center justify-between visible"
+                    }
+                  >
+                    <ClearIcon style={{ fontSize: "20px" }} />
+                  </span>
+                </ToggleButton>
+                <hr />
+                <ToggleButton
+                  value="check"
+                  selected={selectedApple}
+                  onClick={() => {
+                    !selectedApple
+                      ? handleAddFilter("Apple")
+                      : handleDelFilter("Apple");
+                  }}
+                  onChange={() => {
+                    setSelectedApple(!selectedApple);
+                  }}
+                  className="my-1 "
+                  sx={{
+                    // Kiểu CSS cho trạng thái "không chọn"
+                    backgroundColor: "lightgrey",
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor: "grey",
+                      color: "white",
+                    },
 
-            {filters.map((section, index) => (
+                    // Kiểu CSS cho trạng thái "chọn"
+                    "&.Mui-selected": {
+                      backgroundColor: "grey",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "lightgrey",
+                        color: "black",
+                      },
+                    },
+                  }}
+                >
+                  Apple{" "}
+                  <span
+                    className={
+                      !selectedApple
+                        ? "flex items-center justify-between invisible "
+                        : "flex items-center justify-between visible"
+                    }
+                  >
+                    <ClearIcon style={{ fontSize: "20px" }} />
+                  </span>
+                </ToggleButton>
+              </h3>
+
+              <h3 className="-my-3 flow-root">
+                <h2 id="products-heading" className="">
+                  Price
+                </h2>
+                <Box sx={{ width: 300 }}>
+                  <Slider
+                    sx={{
+                      width: 300, // Chiều rộng của thanh trượt
+                      "& .MuiSlider-thumb": {
+                        backgroundColor: "orangered", // Màu của nút trượt
+                      },
+                      "& .MuiSlider-rail": {
+                        backgroundColor: "lightgray", // Màu của đường dẫn
+                      },
+                      "& .MuiSlider-track": {
+                        backgroundColor: "", // Màu của vùng đã chọn
+                      },
+                    }}
+                    getAriaLabel={() => "Temperature range"}
+                    value={value}
+                    onChange={handleChange}
+                    valueLabelDisplay="auto"
+                    min={0} // Đặt giá trị tối thiểu của thanh trượt
+                    max={1000} // Đặt giá trị tối đa của thanh trượt
+                    getAriaValueText={valuetext}
+                  />
+                </Box>
+                {/* css lại button */}
+                <button className="btn btn-dark" onClick={handlePrice}>
+                  Filter ${value[0] < value[1] ? value[0] : value[1]} - $
+                  {value[0] > value[1] ? value[0] : value[1]}
+                </button>
+              </h3>
+            </Disclosure>
+            {/* {filters.map((section, index) => (
               <Disclosure
                 as="div"
                 key={index}
@@ -259,16 +504,16 @@ const NewArrival: React.FC<Product> = (props) => {
                   </>
                 )}
               </Disclosure>
-            ))}
-          </form>
+            ))} */}
+          </div>
           <div className="lg:col-span-3">
             <section className="text-gray-600 body-font">
               <div className="container py-12 mx-auto">
                 <Grid container spacing={5} width="900px" margin="auto">
                   {gridProduct ? (
                     <Fragment>
-                      {products &&
-                        products
+                      {productFilter &&
+                        productFilter
                           .slice()
                           .sort((a, b) => {
                             if (sortOrder === "asc") {
@@ -335,8 +580,8 @@ const NewArrival: React.FC<Product> = (props) => {
                     </Fragment>
                   ) : (
                     <Fragment>
-                      {products &&
-                        products
+                      {productFilter &&
+                        productFilter
                           .slice()
                           .sort((a, b) => {
                             if (sortOrder === "asc") {
@@ -355,48 +600,46 @@ const NewArrival: React.FC<Product> = (props) => {
                                 index >= counterNextPageMin)
                             ) {
                               return (
-                                !product.new_arriver && (
-                                  <section className="text-gray-600 body-font overflow-hidden">
-                                    <div className="container px-5 py-10 mx-auto border-b border-gray-200">
-                                      <div className="-my-8 divide-y-2 divide-gray-100">
-                                        <div className="py-8 flex items-center gap-12">
-                                          <div className="block capitalize relative h-48 rounded overflow-hidden">
-                                            <img
-                                              alt={product.name}
-                                              className="object-contain w-[200px] object-center block"
-                                              src={product.images_list[0]}
-                                            />
-                                          </div>
-                                          <div className="md:flex-grow">
-                                            <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
-                                              {product.decription}
-                                            </h5>
-                                            <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
-                                              {product.name}
-                                            </h5>
-                                            <p className="text-md font-medium text-gray-900 title-font mb-2">
-                                              {product.decription.length > 90
-                                                ? product.decription.substring(
-                                                    0,
-                                                    50
-                                                  ) + "..."
-                                                : product.decription}
-                                            </p>
-                                            <p className="text-xl font-medium text-[#76885B] leading-relaxed">
-                                              $ {product.price}
-                                            </p>
-                                            <Link
-                                              to={`/products/${product.id}`}
-                                              className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
-                                            >
-                                              View Details
-                                            </Link>
-                                          </div>
+                                <section className="text-gray-600 body-font overflow-hidden">
+                                  <div className="container px-5 py-10 mx-auto border-b border-gray-200">
+                                    <div className="-my-8 divide-y-2 divide-gray-100">
+                                      <div className="py-8 flex items-center gap-12">
+                                        <div className="block capitalize relative h-48 rounded overflow-hidden">
+                                          <img
+                                            alt={product.name}
+                                            className="object-contain w-[200px] object-center block"
+                                            src={product.images_list[0]}
+                                          />
+                                        </div>
+                                        <div className="md:flex-grow">
+                                          <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
+                                            {product.decription}
+                                          </h5>
+                                          <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
+                                            {product.name}
+                                          </h5>
+                                          <p className="text-md font-medium text-gray-900 title-font mb-2">
+                                            {product.decription.length > 90
+                                              ? product.decription.substring(
+                                                  0,
+                                                  50
+                                                ) + "..."
+                                              : product.decription}
+                                          </p>
+                                          <p className="text-xl font-medium text-[#76885B] leading-relaxed">
+                                            $ {product.price}
+                                          </p>
+                                          <Link
+                                            to={`/products/${product.id}`}
+                                            className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                                          >
+                                            View Details
+                                          </Link>
                                         </div>
                                       </div>
                                     </div>
-                                  </section>
-                                )
+                                  </div>
+                                </section>
                               );
                             }
                           })}

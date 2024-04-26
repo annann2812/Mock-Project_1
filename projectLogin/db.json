@@ -1,111 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Rolex Submariner",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "Red",
-      "size": "S",
-      "branch": "Casio",
-      "price": 99,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": false
-    },
-    {
-      "id": 2,
-      "name": "Omega Speedmaster",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "Red",
-      "size": "S",
-      "branch": "Casio",
-      "price": 199,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/1-home_default/perspiciatis-unde.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": false
-    },
-    {
-      "id": 3,
-      "name": "Tag Heuer Carrera",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "Red",
-      "size": "S",
-      "branch": "Casio",
-      "price": 299,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": false
-    },
-    {
-      "id": 4,
-      "name": "Patek Philippe Nautilus",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "Red",
-      "size": "S",
-      "branch": "Casio",
-      "price": 399,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": false
-    },
-    {
-      "id": 5,
-      "name": "Audemars Piguet Royal Oak",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "Red",
-      "size": "S",
-      "branch": "Casio",
-      "price": 499,
-      "discount": {
-        "is_discount": true,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": false
-    },
-    {
       "id": 6,
       "name": "Seiko Prospex",
       "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
@@ -126,6 +21,323 @@
       "best_seller": false,
       "new_arriver": false
     },
+    {
+      "id": 36,
+      "name": "Bell & Ross BR 03",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+
+    {
+      "id": 46,
+      "name": "Harry Winston Mid night",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 47,
+      "name": "De Bethune DB28",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 500,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 48,
+      "name": "Richard Mille RM 011",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 109,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 49,
+      "name": "Bremont Supermarine",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 299,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/56-large_default/architecto-beatae.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 38,
+      "name": "Shinola Runwell",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 309,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 37,
+      "name": "Raymond Weil Tango",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 519,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 39,
+      "name": "Corum Admiral's Cup",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 119,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/19-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 40,
+      "name": "Meistersinger Pangaea",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 219,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 41,
+      "name": "NOMOS Glashütte Tangente",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 309,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 42,
+      "name": "Ebel Classic",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 205,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 43,
+      "name": "Bulgari Octo",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 150,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 44,
+      "name": "Jacob & Co. Astronomia",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 250,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/53-home_default/porro-quisquam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 45,
+      "name": "H. Moser & Cie. Venturer",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "White",
+      "size": "L",
+      "branch": "Rolex",
+      "price": 350,
+      "discount": {
+        "is_discount": false,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/76-home_default/eius-tempora.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": true
+    },
+    {
+      "id": 1,
+      "name": "Rolex Submariner",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 99,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": false
+    },
+
     {
       "id": 7,
       "name": "Breitling Navitimer",
@@ -349,10 +561,10 @@
         "price_discount": "20%"
       },
       "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
         "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
         "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg"
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg"
       ],
       "best_seller": true,
       "new_arriver": false
@@ -502,6 +714,90 @@
         "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": true,
+      "new_arriver": false
+    },
+    {
+      "id": 2,
+      "name": "Omega Speedmaster",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 199,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/1-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": false
+    },
+    {
+      "id": 3,
+      "name": "Tag Heuer Carrera",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 299,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": false
+    },
+    {
+      "id": 4,
+      "name": "Patek Philippe Nautilus",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 399,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
+      "new_arriver": false
+    },
+    {
+      "id": 5,
+      "name": "Audemars Piguet Royal Oak",
+      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "color": "Red",
+      "size": "S",
+      "branch": "Casio",
+      "price": 499,
+      "discount": {
+        "is_discount": true,
+        "price_discount": "20%"
+      },
+      "images_list": [
+        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
+        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
+      ],
+      "best_seller": false,
       "new_arriver": false
     },
     {
@@ -731,300 +1027,6 @@
         "https://demo4techies.com/etrend/presta/smartwatch/2-home_default/perspiciatis-unde.jpg",
         "https://demo4techies.com/etrend/presta/smartwatch/3-home_default/perspiciatis-unde.jpg",
         "https://demo4techies.com/etrend/presta/smartwatch/4-home_default/perspiciatis-unde.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 36,
-      "name": "Bell & Ross BR 03",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 299,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/5-home_default/perspiciatis-unde.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/6-home_default/omnis-iste.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/7-home_default/omnis-iste.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/8-home_default/omnis-iste.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 37,
-      "name": "Raymond Weil Tango",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 519,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/11-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 38,
-      "name": "Shinola Runwell",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 309,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/15-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/12-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/13-home_default/accusantium-dolore.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/14-home_default/accusantium-dolore.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 39,
-      "name": "Corum Admiral's Cup",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 119,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/19-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 40,
-      "name": "Meistersinger Pangaea",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 219,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 41,
-      "name": "NOMOS Glashütte Tangente",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 309,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 42,
-      "name": "Ebel Classic",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 205,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 43,
-      "name": "Bulgari Octo",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 150,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/51-home_default/porro-quisquam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 44,
-      "name": "Jacob & Co. Astronomia",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 250,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/53-home_default/porro-quisquam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 45,
-      "name": "H. Moser & Cie. Venturer",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 350,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/76-home_default/eius-tempora.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 46,
-      "name": "Harry Winston Mid night",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 299,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/25-home_default/adipisci-velit.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 47,
-      "name": "De Bethune DB28",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 500,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 48,
-      "name": "Richard Mille RM 011",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 109,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/29-home_default/numquam-eius.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
-      ],
-      "best_seller": false,
-      "new_arriver": true
-    },
-    {
-      "id": 49,
-      "name": "Bremont Supermarine",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "color": "White",
-      "size": "L",
-      "branch": "Rolex",
-      "price": 299,
-      "discount": {
-        "is_discount": false,
-        "price_discount": "20%"
-      },
-      "images_list": [
-        "https://demo4techies.com/etrend/presta/smartwatch/56-large_default/architecto-beatae.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
-        "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg"
       ],
       "best_seller": false,
       "new_arriver": true

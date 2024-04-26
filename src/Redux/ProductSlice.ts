@@ -29,6 +29,7 @@ interface BlogProps {
 
 interface ProductState {
   products: Product[];
+  searchProducts: Product[];
   loading: boolean;
   error: string | null;
   product: Product | null;
@@ -38,6 +39,7 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
+  searchProducts: [],
   loading: false,
   error: null,
   product: null,
@@ -52,6 +54,10 @@ const productSlice = createSlice({
     setProductList: (state, action: PayloadAction<Product[]>) => {
       state.loading = false;
       state.products = action.payload;
+    },
+    setProductSearch: (state, action: PayloadAction<Product[]>) => {
+      state.loading = false;
+      state.searchProducts = action.payload;
     },
     setBlogs: (state, action: PayloadAction<BlogProps[]>) => {
       state.loading = false;
@@ -106,5 +112,6 @@ export const {
   deleteItem,
   setProductList,
   setBlogs,
+  setProductSearch,
 } = productSlice.actions;
 export default productSlice.reducer;

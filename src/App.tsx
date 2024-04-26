@@ -21,6 +21,9 @@ import SearchResult from "./pages/SearchResult/SearchResult";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
+import LoginWithGG from "./components/Account/LoginWithGG";
+import Swipper from "./pages/ProductDetail/SwipperProduct";
+import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -46,9 +49,12 @@ const App = () => {
         <Route path="/products/:id" element={<ProductCard />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logingg" element={<LoginWithGG />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/payment" element={<PayPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/swiper" element={<SwiperComponent />} />
+
         <Route path="/search" element={<SearchResult />} />
       </Routes>
       <ButtonScroll />

@@ -1,14 +1,52 @@
 import React, { useState } from "react";
 import Newsletter from "../Newsletter/Newsletter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logoLoop from "../../assets/image/LOOP-logo (2).png";
 import { FaSearch, FaUserAlt } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { setProductSearch } from "../../Redux/ProductSlice";
 
+interface ProductProps {
+  image: string | undefined;
+  id?: number;
+  name: string;
+  decription: string;
+  color: string;
+  size: string;
+  branch: string;
+  price: number;
+  discount: {
+    is_discount: boolean;
+    price_discount: string;
+  };
+  images_list: string[];
+  best_seller: boolean;
+  new_arriver: boolean;
+  quantity?: number;
+  shipping?: boolean;
+}
 const NavBar = () => {
+  const products = useSelector((state: RootState) => state.loopStore.products);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isListOpen, setIsListOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+  const toggleShop = () => {
+    setIsListOpen(!isListOpen);
+  };
+
+  // new
+
+  const navigate = useNavigate();
+  // console.log(renderUser);
   const renderAccount = () => {
     const storedValueAcc = window.sessionStorage.getItem("username");
     const storedValueGG = window.sessionStorage.getItem("usernameGG");
@@ -17,23 +55,62 @@ const NavBar = () => {
       return `Hi, ${storedValueAcc}`;
     } else if (storedValueGG) {
       return `Hi, ${storedValueGG}`;
+    } else {
+      return "Name";
     }
   };
-  const products = useSelector((state: RootState) => state.loopStore.products);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isListOpen, setIsListOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-  const toggleShop = () => {
-    setIsListOpen(!isListOpen);
-  };
-  const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen);
+  const userNameAccount = renderAccount();
+  // console.log(userNameAccount);
+  const handleLogOut = () => {
+    const isConfirm = confirm("Do you want to log out?");
+    if (isConfirm) {
+      window.sessionStorage.clear();
+      window.location.reload();
+    }
   };
 
+  const handleLogin = () => {
+    navigate("/login");
+  };
+  const handleSignup = () => {
+    navigate("/signup");
+  };
+  // hieu
+
+  // search
+  const [inputValue, setInputValue] = useState("");
+
+  function searchProduct(products: ProductProps[], inputValue: string) {
+    if (inputValue.trim() === "") {
+      return [];
+    }
+    const keyword = inputValue.trim().replace(/\s+/g, "").toLowerCase();
+    return products.filter((product) => {
+      return (
+        product.name
+          .trim()
+          .replace(/\s+/g, "")
+          .toLowerCase()
+          .indexOf(keyword) !== -1 ||
+        product.branch
+          .trim()
+          .replace(/\s+/g, "")
+          .toLowerCase()
+          .indexOf(keyword) !== -1
+      );
+    });
+  }
+  const handleSearch = () => {
+    const results = searchProduct(products, inputValue);
+    dispatch(setProductSearch(results));
+
+    navigate("/search");
+  };
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
   return (
     <nav className="bg-white border-gray-200 overflow-x-hidden boder border-b dark:bg-gray-900">
       <Newsletter />
@@ -50,36 +127,40 @@ const NavBar = () => {
           </button>
           {isDropdownOpen && (
             <div
-              className="z-50 absolute top-[100px] right-[100px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+              className="z-50 absolute top-[100px] right-[400px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
               id="user-dropdown"
             >
               <div className="px-4 py-3">
                 <span className="block text-sm text-gray-900 dark:text-white">
-                  name
-                </span>
-                <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
-                  email
+                  {renderAccount()}
                 </span>
               </div>
               <ul className="py-2">
+                {userNameAccount === "Name" && (
+                  <div>
+                    <li>
+                      <a
+                        onClick={handleLogin}
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Login
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        onClick={handleSignup}
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Sign Up
+                      </a>
+                    </li>
+                  </div>
+                )}
                 <li>
                   <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Login
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Sign Up
-                  </a>
-                </li>
-                <li>
-                  <a
+                    onClick={handleLogOut}
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
@@ -89,27 +170,28 @@ const NavBar = () => {
               </ul>
             </div>
           )}
-          <button
-            onClick={toggleSearch}
-            className="ml-4 mr-2 text-[24px] flex justify-center items-center"
-          >
-            <FaSearch />
-            {isSearchOpen && (
-              <div className="z-50 top-[100px] right-[100px] mt-2 w-48 bg-white divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
-                <input
-                  type="text"
-                  id="search-navbar"
-                  className="block w-full py-3 px-7 ml-2 ps-10 outline-none text-sm text-gray-900 rounded-lg"
-                  placeholder="Search..."
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events">
-                  <FaSearch className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="sr-only">Search icon</span>
-                </div>
-              </div>
-            )}
-          </button>
+          <div>
+            <TextField
+              className="mx-3 p-0"
+              size="small"
+              id="outlined-basic"
+              placeholder="Search watch ..."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyPress}
+              InputProps={{
+                endAdornment: (
+                  <Button onClick={handleSearch} disableRipple={true}>
+                    <FaSearch
+                      className="text-[#76885B]"
+                      style={{ fontSize: "20px" }}
+                    />
+                  </Button>
+                ),
+                style: { margin: 0 }, // Đặt margin bằng 0 để button nằm sát bên phải của ô input
+              }}
+            />
+          </div>
           <Link to="/cart">
             <div className="relative ">
               <div className="flex justify-center h-[40px] items-center">
@@ -205,6 +287,6 @@ const NavBar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;
