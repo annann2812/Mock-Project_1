@@ -31,7 +31,7 @@ interface ProductProps {
   shipping?: boolean;
 }
 const NavBar = () => {
-  const products = useSelector((state: RootState) => state.loopStore.products);
+  const products = useSelector((state: RootState) => state.loopStore.addToCart);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isListOpen, setIsListOpen] = useState(false);
   const dispatch = useDispatch();

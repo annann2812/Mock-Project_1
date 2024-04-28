@@ -20,6 +20,26 @@ interface Product {
   quantity?: number;
   shipping?: boolean;
 }
+interface ProductCart {
+  image: string | undefined;
+  id?: number;
+  name: string;
+  decription: string;
+  color: string;
+  size: string;
+  branch: string;
+  price: number;
+  discount: {
+    is_discount: boolean;
+    price_discount: string;
+  };
+  images_list: string[];
+  best_seller: boolean;
+  new_arriver: boolean;
+  quantity?: number;
+  shipping?: boolean;
+}
+
 interface BlogProps {
   postId: number;
   imgUrl: string;
@@ -30,6 +50,7 @@ interface BlogProps {
 interface ProductState {
   products: Product[];
   searchProducts: Product[];
+  addToCart: ProductCart[];
   loading: boolean;
   error: string | null;
   product: Product | null;
@@ -40,6 +61,7 @@ interface ProductState {
 const initialState: ProductState = {
   products: [],
   searchProducts: [],
+  addToCart: [],
   loading: false,
   error: null,
   product: null,
@@ -63,9 +85,9 @@ const productSlice = createSlice({
       state.loading = false;
       state.blogs = action.payload;
     },
-    addToCart: (state, action: PayloadAction<Product>) => {
+    addToCart: (state, action: PayloadAction<ProductCart>) => {
       const { id, quantity } = action.payload;
-      const existingProduct = state.products.find(
+      const existingProduct = state.addToCart.find(
         (product) => product.id === id
       );
 
@@ -73,18 +95,18 @@ const productSlice = createSlice({
         existingProduct.quantity =
           (existingProduct.quantity || 0) + (quantity || 1);
       } else {
-        state.products.push({ ...action.payload, quantity: quantity || 1 });
+        state.addToCart.push({ ...action.payload, quantity: quantity || 1 });
       }
       toast.success("Product added to cart");
     },
-    deleteItem: (state, action: PayloadAction<Product>) => {
-      state.products = state.products.filter(
+    deleteItem: (state, action: PayloadAction<ProductCart>) => {
+      state.addToCart = state.addToCart.filter(
         (product) => product.id !== action.payload.id
       );
     },
 
     resetCart: (state) => {
-      state.products = [];
+      state.addToCart = [];
       toast.success("OMG! No more products.");
     },
 
@@ -102,6 +124,20 @@ const productSlice = createSlice({
         existingProduct.quantity = Math.max(newQuantity, 1);
       }
     },
+    updateCartQuantity: (
+      state,
+      action: PayloadAction<{ id: number; quantityChange: number }>
+    ) => {
+      const { id, quantityChange } = action.payload;
+      const existingProduct = state.addToCart.find(
+        (product) => product.id === id
+      );
+
+      if (existingProduct) {
+        const newQuantity = (existingProduct.quantity || 1) + quantityChange;
+        existingProduct.quantity = Math.max(newQuantity, 1);
+      }
+    },
   },
 });
 
@@ -109,6 +145,7 @@ export const {
   addToCart,
   resetCart,
   updateQuantity,
+  updateCartQuantity,
   deleteItem,
   setProductList,
   setBlogs,

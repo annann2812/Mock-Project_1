@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import emptyCart from "../../assets/image/emptyCart.png";
-import { Product } from "../../ApiServices/types";
 import { AppDispatch, RootState } from "../../Redux/store";
 import {
   deleteItem,
   resetCart,
+  updateCartQuantity,
   updateQuantity,
 } from "../../Redux/ProductSlice";
 import { FiPlus, FiMinus } from "react-icons/fi";
@@ -16,12 +16,13 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
 import { FaTrashAlt } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
+import { Product } from "../../ApiServices/types";
 
 const Cart: React.FC = () => {
-  const products = useSelector((state: RootState) => state.loopStore.products);
-  const dispatch: AppDispatch = useDispatch();
+  const products = useSelector((state: RootState) => state.loopStore.addToCart);
   const [totalAmt, setTotalAmt] = useState<number>(0);
   const [shippingCharge, setShippingCharge] = useState<number>();
+  const dispatch: AppDispatch = useDispatch()
 
   useEffect(() => {
     // Calculate total amount
@@ -43,11 +44,11 @@ const Cart: React.FC = () => {
   }, []);
 
   const handleIncrement = (id: number) => {
-    dispatch(updateQuantity({ id, quantityChange: 1 }));
+    dispatch(updateCartQuantity({ id, quantityChange: 1 }));
   };
 
   const handleDecrement = (id: number) => {
-    dispatch(updateQuantity({ id, quantityChange: -1 }));
+    dispatch(updateCartQuantity({ id, quantityChange: -1 }));
   };
 
   const handleDeleteSelectedItem = (product: Product) => {
@@ -58,10 +59,8 @@ const Cart: React.FC = () => {
     <Fragment>
       <NavBar />
       {products.length > 0 ? (
-        <div className="h-screen bg-gray-100 pt-12">
-          <h1 className="mb-3 text-center text-2xl font-medium uppercase text-[#76885B]">
-            My Shopping Cart
-          </h1>
+        <div className="h-screen overflow-x-hidden bg-gray-100 py-12">
+          <h1 className="mb-3 text-center text-2xl font-medium uppercase text-[#76885B]">My Shopping Cart</h1>
           <div className="mx-auto max-w-6xl justify-center md:flex md:space-x-6 xl:px-0">
             <div className="rounded-lg md:w-full">
               {products.map((product) => (
@@ -113,7 +112,7 @@ const Cart: React.FC = () => {
               <div className="flex items-center justify-between mt-4">
                 <Link to="/all-items">
                   <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-[#76885B] gap-2 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] hover:bg-[#FC6736] hover:text-white hover:border-none">
-                    <IoIosArrowBack className="text-[20px]" />
+                    <IoIosArrowBack className="text-[20px]"/>
                     Continue Shopping
                   </button>
                 </Link>
@@ -144,7 +143,7 @@ const Cart: React.FC = () => {
                   <p className="text-sm text-gray-700">including VAT</p>
                 </div>
               </div>
-              <Link to="/payment">
+              <Link to = "/payment">
                 <button className="mt-6 w-full transition-all duration-200 rounded-md bg-[#76885B] py-1.5 font-medium text-blue-50 hover:bg-opacity-90">
                   Check out
                 </button>

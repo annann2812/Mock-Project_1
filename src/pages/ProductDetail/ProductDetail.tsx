@@ -32,7 +32,7 @@ import {
 } from "react-icons/fa";
 import App from "./SwipperProduct";
 
-const API_URL = "http://localhost:8888/products";
+const API_URL = "http://localhost:3000/products";
 
 const imageList = [
   { image: "https://m.media-amazon.com/images/I/31nDRF+18zL.jpg" },
@@ -51,25 +51,9 @@ const ProductCard: React.FC<Product> = () => {
   const [error, setError] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch: AppDispatch = useDispatch();
-  const products = useSelector((state: RootState) => state.loopStore.products);
-  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const productItem = useSelector((state: RootState) => state.loopStore.product);
   const [wishList, setWishList] = useState<string[]>([]);
 
-  const handleNextClick = () => {
-    if (currentImageIndex < imageList.length - 3) {
-      setCurrentImageIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-
-  const handleIncreClick = () => {
-    if (currentImageIndex > 0) {
-      setCurrentImageIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
-  const handleThumbnailClick = (index: React.SetStateAction<number>) => {
-    setCurrentImageIndex(index);
-  };
 
   const handleWishList = () => {
     if (!wishList.includes(product.id.toString())) {
@@ -136,7 +120,7 @@ const ProductCard: React.FC<Product> = () => {
         <section className="w-full text-gray-600 body-font overflow-hidden">
           <div className="container w-[90%] mx-auto">
             <div className="lg:w-full w-1/2 mx-auto flex">
-              <img src={product.image} className="w-[100%]"/>
+              <img src={product.images_list[0]} className="w-[100%]"/>
               <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-3xl font-semibold text-[#76885B] tracking-widest uppercase">
                   {product.name}
@@ -168,7 +152,7 @@ const ProductCard: React.FC<Product> = () => {
                     </Link>
                   </span>
                 </div>
-                <p className="leading-9">{product?.description}</p>
+                <p className="leading-9">{product?.decription}</p>
                 {product && (
                   <div className="flex mt-3 gap-5 items-center ">
                     <div className="title-font font-medium text-xl text-gray-700">
@@ -199,7 +183,7 @@ const ProductCard: React.FC<Product> = () => {
                       </button>
                   </div>
                 )}
-                <div className="p-2 mt-3">
+                <div className="py-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
                     className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"

@@ -57,7 +57,6 @@ const App = () => {
 
         <Route path="/search" element={<SearchResult />} />
       </Routes>
-      <ButtonScroll />
     </Fragment>
   );
 };

@@ -3,11 +3,12 @@
     {
       "id": 6,
       "name": "Seiko Prospex",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 599,
+      "price": 599.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -24,11 +25,12 @@
     {
       "id": 36,
       "name": "Bell & Ross BR 03",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 6,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 299,
+      "price": 299.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -46,11 +48,12 @@
     {
       "id": 46,
       "name": "Harry Winston Mid night",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 2,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 299,
+      "price": 299.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -67,11 +70,12 @@
     {
       "id": 47,
       "name": "De Bethune DB28",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 5,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 500,
+      "price": 500.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -88,11 +92,12 @@
     {
       "id": 48,
       "name": "Richard Mille RM 011",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 109,
+      "price": 109.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -109,11 +114,12 @@
     {
       "id": 49,
       "name": "Bremont Supermarine",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 6,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 299,
+      "price": 299.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -130,11 +136,12 @@
     {
       "id": 38,
       "name": "Shinola Runwell",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 309,
+      "price": 309.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -151,11 +158,12 @@
     {
       "id": 37,
       "name": "Raymond Weil Tango",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 1,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 519,
+      "price": 519.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -172,11 +180,12 @@
     {
       "id": 39,
       "name": "Corum Admiral's Cup",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 2,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 119,
+      "price": 119.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -193,11 +202,12 @@
     {
       "id": 40,
       "name": "Meistersinger Pangaea",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 219,
+      "price": 219.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -214,11 +224,12 @@
     {
       "id": 41,
       "name": "NOMOS Glashütte Tangente",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 309,
+      "price": 309.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -235,11 +246,12 @@
     {
       "id": 42,
       "name": "Ebel Classic",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 205,
+      "price": 205.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -256,11 +268,12 @@
     {
       "id": 43,
       "name": "Bulgari Octo",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 3,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 150,
+      "price": 150.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -277,11 +290,12 @@
     {
       "id": 44,
       "name": "Jacob & Co. Astronomia",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 250,
+      "price": 250.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -298,11 +312,12 @@
     {
       "id": 45,
       "name": "H. Moser & Cie. Venturer",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 5,
       "color": "White",
       "size": "L",
       "branch": "Rolex",
-      "price": 350,
+      "price": 350.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -319,11 +334,12 @@
     {
       "id": 1,
       "name": "Rolex Submariner",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 5,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 99,
+      "price": 99.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -341,11 +357,12 @@
     {
       "id": 7,
       "name": "Breitling Navitimer",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 699,
+      "price": 699.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -362,11 +379,12 @@
     {
       "id": 8,
       "name": "Cartier Tank",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 6,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 799,
+      "price": 799.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -383,11 +401,12 @@
     {
       "id": 9,
       "name": "IWC Portugieser",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 7,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 899,
+      "price": 899.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -404,11 +423,12 @@
     {
       "id": 10,
       "name": "Tudor Black Bay",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 999,
+      "price": 999.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -425,11 +445,12 @@
     {
       "id": 11,
       "name": "Jaeger-LeCoultre Reverso",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 199,
+      "price": 199.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -446,11 +467,12 @@
     {
       "id": 12,
       "name": "Hublot Big Bang",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 1,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 299,
+      "price": 299.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -467,11 +489,12 @@
     {
       "id": 13,
       "name": "Panerai Luminor",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 99,
+      "price": 99.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -488,11 +511,12 @@
     {
       "id": 14,
       "name": "Longines Master Collection",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 399,
+      "price": 399.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -509,11 +533,12 @@
     {
       "id": 15,
       "name": "Citizen Eco-Drive",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 499,
+      "price": 499.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -530,11 +555,12 @@
     {
       "id": 16,
       "name": "Tissot T-Touch",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 599,
+      "price": 599.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -551,11 +577,12 @@
     {
       "id": 17,
       "name": "Bulova Precisionist",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Apple",
-      "price": 699,
+      "price": 699.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -572,11 +599,12 @@
     {
       "id": 18,
       "name": "Hamilton Khaki Field",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "M",
       "branch": "Apple",
-      "price": 799,
+      "price": 799.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -593,11 +621,12 @@
     {
       "id": 19,
       "name": "Casio G-Shock",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "M",
       "branch": "Apple",
-      "price": 899,
+      "price": 899.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -614,11 +643,12 @@
     {
       "id": 20,
       "name": "Timex Expedition",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 99,
+      "price": 99.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -635,11 +665,12 @@
     {
       "id": 21,
       "name": "Vacheron Constantin Overseas",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 120,
+      "price": 120.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -656,11 +687,12 @@
     {
       "id": 22,
       "name": "Blancpain Fifty Fathoms",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 289,
+      "price": 289.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -677,11 +709,12 @@
     {
       "id": 23,
       "name": "Breguet Classique",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 359,
+      "price": 359.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -698,11 +731,12 @@
     {
       "id": 24,
       "name": "Girard-Perregaux Laureato",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 809,
+      "price": 809.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -719,11 +753,12 @@
     {
       "id": 2,
       "name": "Omega Speedmaster",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 199,
+      "price": 199.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -740,11 +775,12 @@
     {
       "id": 3,
       "name": "Tag Heuer Carrera",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 299,
+      "price": 299.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -761,11 +797,12 @@
     {
       "id": 4,
       "name": "Patek Philippe Nautilus",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 399,
+      "price": 399.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -782,11 +819,12 @@
     {
       "id": 5,
       "name": "Audemars Piguet Royal Oak",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Red",
       "size": "S",
       "branch": "Casio",
-      "price": 499,
+      "price": 499.99,
       "discount": {
         "is_discount": true,
         "price_discount": "20%"
@@ -803,11 +841,12 @@
     {
       "id": 25,
       "name": "Rado True",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 109,
+      "price": 109.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -824,11 +863,12 @@
     {
       "id": 26,
       "name": "Zenith El Primero",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 209,
+      "price": 209.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -845,11 +885,12 @@
     {
       "id": 27,
       "name": "Ulysse Nardin Marine",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 509,
+      "price": 509.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -866,11 +907,12 @@
     {
       "id": 28,
       "name": "Oris Aquis",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 100,
+      "price": 100.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -887,11 +929,12 @@
     {
       "id": 29,
       "name": "Sinn U1",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 300,
+      "price": 300.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -908,11 +951,12 @@
     {
       "id": 30,
       "name": "Maurice Lacroix Aikon",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 405,
+      "price": 405.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -929,11 +973,12 @@
     {
       "id": 31,
       "name": "Chopard Mille Miglia",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 200,
+      "price": 200.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -950,11 +995,12 @@
     {
       "id": 32,
       "name": "Louis Vuitton Tambour",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 500,
+      "price": 500.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -971,11 +1017,12 @@
     {
       "id": 33,
       "name": "Montblanc 1858",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "M",
       "branch": "Apple",
-      "price": 800,
+      "price": 800.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -992,11 +1039,12 @@
     {
       "id": 34,
       "name": "Piaget Polo",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "L",
       "branch": "Apple",
-      "price": 129,
+      "price": 129.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"
@@ -1013,11 +1061,12 @@
     {
       "id": 35,
       "name": "Frederique Constant Classics",
-      "decription": " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
+      "left": 4,
       "color": "Blue",
       "size": "L",
       "branch": "Rolex",
-      "price": 139,
+      "price": 139.99,
       "discount": {
         "is_discount": false,
         "price_discount": "20%"

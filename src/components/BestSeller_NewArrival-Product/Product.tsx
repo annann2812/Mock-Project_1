@@ -7,8 +7,6 @@ import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   ChevronDownIcon,
-  MinusIcon,
-  PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
