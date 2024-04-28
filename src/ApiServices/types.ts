@@ -16,3 +16,4 @@ export interface Product {
   quantity?: number;
   shipping?: boolean;
 }
+

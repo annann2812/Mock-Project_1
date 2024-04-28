@@ -29,13 +29,15 @@ interface FilterProps {
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true, value: "asc" },
   { name: "Price: High to Low", href: "#", current: false, value: "desc" },
+  { name: "Name: A to Z", href: "#", current: false, value: "name-asc" },
+  { name: "Name: Z to A", href: "#", current: false, value: "name-desc" },
 ];
 
-const NewArrival: React.FC<Product> = (props) => {
+const LoopAllProducts: React.FC<Product> = (props) => {
   const { products } = useSelector((state: RootState) => state.loopStore);
 
   const [gridProduct, setGridProduct] = useState<boolean>(true);
-  const [counterNextPageMax, setCounterNextPageMax] = useState<number>(6);
+  const [counterNextPageMax, setCounterNextPageMax] = useState<number>(8);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [loading, setLoading] = useState(true);
@@ -73,60 +75,9 @@ const NewArrival: React.FC<Product> = (props) => {
     setCounterNextPageMin((prevCount) =>
       prevCount !== 0 ? prevCount - 10 : prevCount
     );
-    setCurrentPage(currentPage - 1);
+    setCurrentPage(currentPage - 9);
   };
-
-  const filters = [
-    {
-      id: "category",
-      name: "Category",
-      options: [
-        { value: "new-arrivals", label: "New Arrivals", checked: false },
-        { value: "sale", label: "Sale", checked: false },
-        { value: "travel", label: "Travel", checked: true },
-        { value: "organization", label: "Organization", checked: false },
-        { value: "accessories", label: "Accessories", checked: false },
-      ],
-    },
-    {
-      id: "color",
-      name: "Color",
-      options: [
-        { value: "new-arrivals", label: "New Arrivals", checked: false },
-        { value: "sale", label: "Sale", checked: false },
-        { value: "travel", label: "Travel", checked: true },
-        { value: "organization", label: "Organization", checked: false },
-        { value: "accessories", label: "Accessories", checked: false },
-      ],
-    },
-    {
-      id: "price",
-      name: "Price",
-      options: [
-        { value: "new-arrivals", label: "New Arrivals", checked: false },
-        { value: "sale", label: "Sale", checked: false },
-        { value: "travel", label: "Travel", checked: true },
-        { value: "organization", label: "Organization", checked: false },
-        { value: "accessories", label: "Accessories", checked: false },
-      ],
-    },
-    {
-      id: "brand",
-      name: "Brand",
-      options: [
-        { value: "white", label: "White", checked: false },
-        { value: "beige", label: "Beige", checked: false },
-        { value: "blue", label: "Blue", checked: true },
-        { value: "brown", label: "Brown", checked: false },
-        { value: "green", label: "Green", checked: false },
-        { value: "purple", label: "Purple", checked: false },
-      ],
-    },
-  ];
-
-  function handleItemPerPageChange(itemsPerPage: number): void {
-    throw new Error("Function not implemented.");
-  }
+  
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
@@ -219,9 +170,11 @@ const NewArrival: React.FC<Product> = (props) => {
                 value={sortOrder}
                 onChange={handleSortTypeChange}
               >
-                <option value="">Sort by price</option>
-                <option value="asc">Price: Low to hight</option>
-                <option value="desc">Price: Hight to low </option>
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.name}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -520,6 +473,10 @@ const NewArrival: React.FC<Product> = (props) => {
                               return a.price - b.price;
                             } else if (sortOrder === "desc") {
                               return b.price - a.price;
+                            } else if (sortOrder.startsWith("name")) {
+                              return sortOrder === "name-asc"
+                                ? a.name.localeCompare(b.name)
+                                : b.name.localeCompare(a.name);
                             } else {
                               return 0;
                             }
@@ -535,19 +492,22 @@ const NewArrival: React.FC<Product> = (props) => {
                                 <Link
                                   to={`/products/${product.id}`}
                                   key={product.id}
-                                  className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
+                                  className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-2 cursor-pointer p-3"
                                 >
-                                  <a className="capitialize block capitalize relative overflow-hidden">
+                                  <div className="capitialize block capitalize relative overflow-hidden">
                                     <img
                                       alt={product.name}
                                       className="object-contain object-center w-full h-full block"
                                       src={product.images_list[0]}
                                     />
-                                  </a>
+                                  </div>
                                   <div
-                                    className="mt-4"
+                                    className="mt-3"
                                     // onChange={() => handleSortTypeChange}
                                   >
+                                    <p className="capitalize mb-2 text-gray-700 capitalize title-font text-lg font-thin">
+                                      {product.branch}
+                                    </p>
                                     <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
                                       {product.name}
                                     </h2>
@@ -588,6 +548,10 @@ const NewArrival: React.FC<Product> = (props) => {
                               return a.price - b.price;
                             } else if (sortOrder === "desc") {
                               return b.price - a.price;
+                            } else if (sortOrder.startsWith("name")) {
+                              return sortOrder === "name-asc"
+                                ? a.name.localeCompare(b.name)
+                                : b.name.localeCompare(a.name);
                             } else {
                               return 0;
                             }
@@ -612,8 +576,8 @@ const NewArrival: React.FC<Product> = (props) => {
                                           />
                                         </div>
                                         <div className="md:flex-grow">
-                                          <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
-                                            {product.decription}
+                                          <h5 className="capitalize font-thin text-xl text-gray-900 title-font mb-2">
+                                            {product.branch}
                                           </h5>
                                           <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
                                             {product.name}
@@ -622,7 +586,7 @@ const NewArrival: React.FC<Product> = (props) => {
                                             {product.decription.length > 90
                                               ? product.decription.substring(
                                                   0,
-                                                  50
+                                                  90
                                                 ) + "..."
                                               : product.decription}
                                           </p>
@@ -670,4 +634,4 @@ const NewArrival: React.FC<Product> = (props) => {
   );
 };
 
-export default NewArrival;
+export default LoopAllProducts;

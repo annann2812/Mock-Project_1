@@ -6,7 +6,7 @@ import Store from "./pages/Store/Store";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import Contact from "./pages/Contact/Contact";
 import Sitemap from "./pages/Sitemap/Sitemap";
-import NewArrival from "./components/BestSeller_NewArrival-Product/NewArrival";
+import NewArrival from "./components/BestSeller_NewArrival-Product/LoopAllProducts";
 import About from "./pages/About/About";
 import Delivery from "./pages/Delivery/Delivery";
 import Cameras from "./pages/Categories/Cameras";

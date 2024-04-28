@@ -3,8 +3,6 @@ import Navbar from "../../components/NavBar/NavBar";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import { Link } from "react-router-dom";
-import Grid from "@mui/material/Grid";
-import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 const SearchResult = () => {
   const { searchProducts } = useSelector((state: RootState) => state.loopStore);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(6);

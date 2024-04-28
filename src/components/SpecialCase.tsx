@@ -5,7 +5,7 @@ import { RiShoppingCart2Fill } from "react-icons/ri";
 import { RootState } from '../Redux/store';
 
 const SpecialCase = () => {
-    const products = useSelector((state: RootState) => state.loopStore.products)
+    const products = useSelector((state: RootState) => state.loopStore.addToCart)
   return (
     <div className='fixed top-52 right-2 z-20 hidden md:flex flex-col gap-2'>
       <Link to="/cart">
