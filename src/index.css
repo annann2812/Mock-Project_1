@@ -9,7 +9,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
   /* scroll-behavior: smooth; */
 }
 
@@ -33,5 +32,3 @@ a:hover {
   padding: 8px;
   z-index: 999; /* Ensure it's above other content */
 }
-
-

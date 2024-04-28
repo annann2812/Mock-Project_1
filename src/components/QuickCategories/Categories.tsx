@@ -1,8 +1,4 @@
 import { StarIcon } from "@heroicons/react/24/outline";
-import ShopCategories1 from "../../assets/image/shop-categories-1.jpg";
-import ShopCategories2 from "../../assets/image/shop-categories-2.jpg";
-import ShopCategories3 from "../../assets/image/shop-categories-3.jpg";
-import ShopCategories4 from "../../assets/image/shop-categories-4.jpg";
 import { Link } from "react-router-dom";
 
 const Categories = () => {
@@ -37,7 +33,11 @@ const Categories = () => {
             key={index}
             className={`border-secondary-01 flex flex-col mb-4 lg:mb-0 w-1/2 lg:w-1/4 gap-2 [&:nth-child(2n+1)]:border-r-[1px] lg:[&:not(:nth-last-child(-n+1))]:border-r-[1px]`}
           >
-            <img src={categoriesInfo.image[index]} alt="" className="block" />
+            <img
+              src={categoriesInfo.image[index]}
+              alt=""
+              className="block object-contain h-60 p-2"
+            />
             <Link to="/" className="text-center text-black hover:text-black">
               {categoriesInfo.title[index]}
             </Link>

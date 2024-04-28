@@ -110,7 +110,7 @@ const Cart: React.FC = () => {
                           <h6 className="font-normal text-base leading-7 text-gray-500">
                             {product.decription}
                           </h6>
-                          <h6 className="font-semibold text-base leading-7 text-[#76885B]">
+                          <h6 className="font-semibold text-base leading-7 text-primary-01">
                             $ {product.price}
                           </h6>
                         </div>
@@ -153,7 +153,7 @@ const Cart: React.FC = () => {
 
                 <div className="flex items-center justify-between mt-8">
                   <Link to="/new-arrivals">
-                    <button className="flex items-center px-3 py-2 rounded-full gap-2 border-none outline-0 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] hover:bg-gray-300">
+                    <button className="flex items-center px-3 py-2 rounded-full gap-2 border-none outline-0 font-semibold text-m leading-8 text-primary-01 shadow-sm shadow-transparent transition-all duration-200 hover:shadow-primary-01 hover:bg-gray-300">
                       <BsCaretLeftFill />
                       Continue Shopping
                     </button>
@@ -167,7 +167,7 @@ const Cart: React.FC = () => {
                 </div>
               </div>
               <div className=" col-span-12 xl:col-span-4 bg-gray-50 w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-14">
-                <h2 className="font-manrope font-bold text-3xl leading-10 text-[#76885B] pb-8 border-b border-gray-300">
+                <h2 className="font-manrope font-bold text-3xl leading-10 text-primary-01 pb-8 border-b border-gray-300">
                   Order Summary
                 </h2>
                 <div className="mt-8">
@@ -184,7 +184,7 @@ const Cart: React.FC = () => {
                       <p className="font-medium text-l text-black">
                         Shipping Fee:
                       </p>
-                      <p className="font-semibold text-xl leading-8 text-[#76885B]">
+                      <p className="font-semibold text-xl leading-8 text-primary-01">
                         ${shippingCharge}
                       </p>
                     </div>
@@ -192,12 +192,12 @@ const Cart: React.FC = () => {
                       <p className="font-medium text-xl leading-8 text-black">
                         Total:
                       </p>
-                      <p className="font-semibold text-xl leading-8 text-[#76885B]">
+                      <p className="font-semibold text-xl leading-8 text-primary-01">
                         ${totalAmt + Number(shippingCharge)}
                       </p>
                     </div>
                     <div>
-                      <button className="w-full text-center bg-[#76885B] rounded-full py-3 px-5 font-semibold text-lg text-white transition-all duration-300 hover:bg-opacity-90">
+                      <button className="w-full text-center bg-primary-01 rounded-full py-3 px-5 font-semibold text-lg text-white transition-all duration-300 hover:bg-opacity-90">
                         Checkout
                       </button>
                     </div>
@@ -230,7 +230,7 @@ const Cart: React.FC = () => {
               books, electronics, videos, etc. and make it happy.
             </p>
             <Link to="/new-arrivals">
-              <button className="bg-primeColor border border-[#76885B] rounded cursor-pointer hover:bg-[#76885B] active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-400 hover:text-white duration-300">
+              <button className="bg-primeColor border border-primary-01 rounded cursor-pointer hover:bg-primary-01 active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-400 hover:text-white duration-300">
                 Continue Shopping
               </button>
             </Link>

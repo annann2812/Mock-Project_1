@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CarouselProps } from "../../../public/type";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { useState, useEffect } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
@@ -15,7 +15,6 @@ const CarouselDefault = ({
   redirectLinks,
   id,
   blogDescription,
-  isNewArrive,
 }: CarouselProps) => {
   const [slidesPerView, setSlidesPerView] = useState<number>(5);
 
@@ -82,17 +81,13 @@ const CarouselDefault = ({
           <div className="flex gap-2 ml-4 md:ml-8">
             <button
               id={`prev-btn-${id}`}
-              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500 ${
-                isNewArrive && "hidden"
-              }`}
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500`}
             >
               <ChevronLeftIcon />
             </button>
             <button
               id={`next-btn-${id}`}
-              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 hover:text-white disabled:hover:bg-transparent text-white disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500 ${
-                isNewArrive && "hidden"
-              }`}
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 hover:text-white disabled:hover:bg-transparent text-white disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500`}
             >
               <ChevronRightIcon />
             </button>
@@ -102,36 +97,22 @@ const CarouselDefault = ({
 
       <Swiper
         slidesPerView={slidesPerView}
-        navigation={
-          !isNewArrive
-            ? {
-                enabled: true,
-                nextEl: `#next-btn-${id}`,
-                prevEl: `#prev-btn-${id}`,
-              }
-            : false
-        }
+        navigation={{
+          enabled: true,
+          nextEl: `#next-btn-${id}`,
+          prevEl: `#prev-btn-${id}`,
+        }}
         pagination={{ enabled: true, dynamicBullets: true }}
-        autoplay={{ delay: 2500 }}
-        modules={
-          !isNewArrive ? [Navigation, Pagination] : [Autoplay, Pagination]
-        }
+        modules={[Navigation, Pagination]}
         className="p-3"
       >
         {Array.from({ length: images.length }, (_, index) => (
-          <SwiperSlide key={index} className={`p-3 flex flex-col`}>
-            <div
-              className={`${
-                title !== "New Product" &&
-                title !== "Best Seller Item" &&
-                title !== "Lastest Blogs" &&
-                ""
-              }`}
-            >
+          <SwiperSlide key={index} className="p-3 flex flex-col">
+            <div className="flex flex-col">
               <img
                 src={images[index]}
                 alt={title[index]}
-                className={`object-contain w-full h-full`}
+                className={`object-contain h-[200px]`}
               />
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
                 <Link

@@ -5,7 +5,7 @@ import Footer from "../../components/Header_Footer/Footer";
 const Contact: React.FC = () => {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <section className="text-gray-600 body-font relative">
         <div className="container px-5 py-10 mx-auto flex">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 flex items-end justify-start relative">
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                 className="w-full bg-white rounded border border-[#76558B] focus:border-gray-300 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <button className="text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded text-lg">
+            <button className="text-white bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded text-lg">
               Send Feedback
             </button>
             <p className="text-xs text-center text-gray-500 mt-3">
@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -56,7 +56,7 @@ const SignUp = () => {
     <Fragment>
       <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
         <div className="flex justify-center items-center w-full">
-          <div className="flex w-9/12 xl:w-7/12 h-full flex-col p-4 gap-2 text-white relative transition-all duration-300">
+          <div className="flex w-10/12 md:w-8/12 h-full flex-col p-4 gap-2 text-white relative transition-all duration-300">
             <Link
               className="flex gap-2 items-center duration-300 w-fit absolute -translate-y-[34px]"
               to="/"
@@ -114,7 +114,7 @@ const SignUp = () => {
                         <p className="text-sm pb-2">
                           or use your email for registration
                         </p>
-                        <div className={`${showErrorMessages ? "mb-3" : ""}`}>
+                        <div className="mb-4">
                           <Field
                             type="text"
                             id="username"
@@ -124,18 +124,14 @@ const SignUp = () => {
                           />
                           <ErrorMessage name="username">
                             {(errMsg) => (
-                              <div
-                                className={`text-red-600 pt-1 text-xs ${
-                                  showErrorMessages ? "" : "hidden"
-                                }`}
-                              >
+                              <div className="text-red-600 pt-2 text-sm">
                                 {errMsg}
                               </div>
                             )}
                           </ErrorMessage>
                         </div>
 
-                        <div className="mb-3">
+                        <div className="mb-4">
                           <Field
                             type="email"
                             id="email"
@@ -145,14 +141,14 @@ const SignUp = () => {
                           />
                           <ErrorMessage name="email">
                             {(errMsg) => (
-                              <div className="text-red-600 pt-1 text-xs">
+                              <div className="text-red-600 pt-2 text-sm">
                                 {errMsg}
                               </div>
                             )}
                           </ErrorMessage>
                         </div>
 
-                        <div className="mb-3">
+                        <div className="mb-4">
                           <Field
                             type="password"
                             id="password"
@@ -162,14 +158,14 @@ const SignUp = () => {
                           />
                           <ErrorMessage name="password">
                             {(errMsg) => (
-                              <div className="text-red-600 pt-1 text-xs">
+                              <div className="text-red-600 pt-2 text-sm">
                                 {errMsg}
                               </div>
                             )}
                           </ErrorMessage>
                         </div>
 
-                        <div className="mb-3">
+                        <div className="mb-4">
                           <Field
                             type="password"
                             id="confirmPassword"
@@ -179,7 +175,7 @@ const SignUp = () => {
                           />
                           <ErrorMessage name="password">
                             {(errMsg) => (
-                              <div className="text-red-600 pt-1 text-xs">
+                              <div className="text-red-600 pt-2 text-sm">
                                 {errMsg}
                               </div>
                             )}
@@ -200,7 +196,7 @@ const SignUp = () => {
                             Already Sign Up?
                           </p>
                           <Link
-                            to="/log-in"
+                            to="/login"
                             className="text-primary-01 font-bold transition-all duration-300 text-base"
                           >
                             Log In

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   ChevronDownIcon,
@@ -7,14 +7,12 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import AppService from "../../ApiServices/AppService";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
-import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 
 const sortOptions = [
@@ -118,7 +116,7 @@ const NewArrival: React.FC<Product> = (props) => {
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
-        <h1 className="text-4xl text-[#76885B] font-bold tracking-tight">
+        <h1 className="text-4xl text-primary-01 font-bold tracking-tight">
           New Arrivals
         </h1>
 
@@ -264,23 +262,23 @@ const NewArrival: React.FC<Product> = (props) => {
                               <Link
                                 to={`/products/${product.id}`}
                                 key={product.id}
-                                className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-4 cursor-pointer p-3"
+                                className="lg:w-1/3 md:w-1/2 w-full border-primary-01 text-center mb-4 cursor-pointer p-3"
                               >
                                 <a className="capitialize block capitalize relative overflow-hidden">
                                   <img
                                     alt={product.name}
-                                    className="object-contain object-center w-full h-full block"
+                                    className="object-contain object-center w-full h-[200px] block"
                                     src={product.images_list[0]}
                                   />
                                 </a>
                                 <div className="mt-4">
-                                  <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                  <h2 className="capitalize text-gray-900 title-font text-lg font-medium">
                                     {product.name}
                                   </h2>
                                   <p className="mt-1 text-md my-2 font-semibold">
                                     $ {product.price}
                                   </p>
-                                  <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                  <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                                     View Details
                                   </button>
                                 </div>
@@ -290,14 +288,14 @@ const NewArrival: React.FC<Product> = (props) => {
                         })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-[#76885B] p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
@@ -327,7 +325,7 @@ const NewArrival: React.FC<Product> = (props) => {
                                         />
                                       </a>
                                       <div className="md:flex-grow">
-                                        <h5 className="uppercase text-gray-300 text-xl text-gray-900 title-font mb-2">
+                                        <h5 className="uppercase text-xl text-gray-900 title-font mb-2">
                                           {product.decription}
                                         </h5>
                                         <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
@@ -341,12 +339,12 @@ const NewArrival: React.FC<Product> = (props) => {
                                               ) + "..."
                                             : product.decription}
                                         </p>
-                                        <p className="text-xl font-medium text-[#76885B] leading-relaxed">
+                                        <p className="text-xl font-medium text-primary-01 leading-relaxed">
                                           $ {product.price}
                                         </p>
                                         <Link
                                           to={`/products/${product.id}`}
-                                          className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                                          className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
                                         >
                                           View Details
                                         </Link>
@@ -361,14 +359,14 @@ const NewArrival: React.FC<Product> = (props) => {
                       })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-[#76885B] p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
