@@ -114,8 +114,8 @@ const BestSellerProduct: React.FC<Product> = (props) => {
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
+    <main className="mx-auto w-full xl:w-[90%] px-5">
+      <div className="flex itemss-center justify-between border-b border-gray-200 pb-6 pt-8">
         <h1 className="text-4xl text-primary-01 font-bold tracking-tight">
           Best Seller
         </h1>
@@ -246,8 +246,8 @@ const BestSellerProduct: React.FC<Product> = (props) => {
           </form>
           <div className="lg:col-span-3">
             <section className="text-gray-600 body-font">
-              <div className="container py-12 mx-auto">
-                <Grid container spacing={5} width="900px" margin="auto">
+              <div className="py-6 mx-auto">
+                <Grid container>
                   {gridProduct ? (
                     <Fragment>
                       {products &&
@@ -264,10 +264,10 @@ const BestSellerProduct: React.FC<Product> = (props) => {
                                 key={product.id}
                                 className="lg:w-1/3 md:w-1/2 w-full border-primary-01 text-center mb-4 cursor-pointer p-3"
                               >
-                                <a className="capitialize block capitalize relative overflow-hidden">
+                                <a className="capitialize flex capitalize relative overflow-hidden w-full">
                                   <img
                                     alt={product.name}
-                                    className="object-contain object-center w-full h-[200px] block"
+                                    className="object-contain w-full h-[200px] block"
                                     src={product.images_list[0]}
                                   />
                                 </a>
@@ -314,10 +314,10 @@ const BestSellerProduct: React.FC<Product> = (props) => {
                           return (
                             !product.new_arriver && (
                               <section className="text-gray-600 body-font overflow-hidden">
-                                <div className="container px-5 py-10 mx-auto border-b border-gray-200">
+                                <div className="px-5 py-10 mx-auto border-b border-gray-200">
                                   <div className="-my-8 divide-y-2 divide-gray-100">
                                     <div className="py-8 flex items-center gap-12">
-                                      <a className="block capitalize relative h-48 rounded overflow-hidden">
+                                      <a className="block capitalize relative rounded overflow-hidden h-full">
                                         <img
                                           alt={product.name}
                                           className="object-contain w-[200px] object-center block"
@@ -357,7 +357,7 @@ const BestSellerProduct: React.FC<Product> = (props) => {
                           );
                         }
                       })}
-                      <Grid item xs={12} textAlign="right">
+                      <Grid item xs={12} textAlign="right" marginTop={2}>
                         <button
                           className="bg-primary-01 mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
