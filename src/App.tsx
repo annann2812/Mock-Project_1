@@ -1,10 +1,9 @@
-import { Route, RouterProvider, Routes } from "react-router-dom";
-import { Fragment } from "react/jsx-runtime";
+import { Route, Routes } from "react-router-dom";
+import { Fragment } from "react";
 import Home from "./pages/Home/Home";
 
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
-import BestSellers from "./pages/BestSellers/BestSellers";
 import BlogPage from "./pages/Blog/Blog";
 import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
@@ -14,16 +13,14 @@ import SpecialCase from "./components/SpecialCase";
 import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
-import Newsletter from "./components/Newsletter/Newsletter";
-import ButtonScroll from "./components/ButtonScroll";
 import SearchResult from "./pages/SearchResult/SearchResult";
 
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "./Redux/store";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
 import LoginWithGG from "./components/Account/LoginWithGG";
 import Swipper from "./pages/ProductDetail/SwipperProduct";
 import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
+import BestSellerPage from "./pages/BestSellers/BestSellers";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -42,7 +39,7 @@ const App = () => {
       <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/best-sellers" element={<BestSellers />} />
+        <Route path="/best-sellers" element={<BestSellerPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/all-items" element={<NewArrivalPage />} />

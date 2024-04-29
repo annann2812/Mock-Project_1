@@ -138,16 +138,28 @@ const ProductCard: React.FC<Product> = () => {
                     <span className="text-gray-600 ml-3">4 Reviews</span>
                   </span>
                   <span className="flex ml-3 pl-3 py-2 border-l-2 text-[20px] border-gray-200 space-x-2s">
-                    <Link to='https://www.facebook.com/fptcorp' className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-primary-01 mr-2"
+                    >
                       <FaFacebookF />
                     </Link>
-                    <Link to="https://www.facebook.com/fptcorp" className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-primary-01 mr-2"
+                    >
                       <FaInstagram />
                     </Link>
-                    <Link to = "https://www.facebook.com/fptcorp" className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-primary-01 mr-2"
+                    >
                       <RiThreadsLine />
                     </Link>
-                    <Link to = "https://www.facebook.com/fptcorp" className="text-[#76885B]">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-primary-01"
+                    >
                       <FaTiktok />
                     </Link>
                   </span>
@@ -177,7 +189,7 @@ const ProductCard: React.FC<Product> = () => {
                     </div>
                       <button
                         onClick={handleWishList}
-                        className="rounded-full w-10 h-10 bg-[#76885B] hover:bg-opacity-90 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
+                        className="rounded-full w-10 h-10 bg-primary-01 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
                       >
                         <BsFillSuitHeartFill className="hover:text-[#FC6736]"/>
                       </button>
@@ -186,7 +198,7 @@ const ProductCard: React.FC<Product> = () => {
                 <div className="py-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
+                    className="text-white w-[70%] bg-primary-01 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg"
                   >
                     Add to Cart
                   </button>
@@ -221,4 +233,3 @@ const ProductCard: React.FC<Product> = () => {
 };
 
 export default ProductCard;
-

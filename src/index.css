@@ -13,7 +13,7 @@
   /* scroll-behavior: smooth; */
 }
 
-.pay-ìnomation {
+.pay-information {
   background-color: red;
 }
 
@@ -23,6 +23,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: #ff9800;
 }
 
 .search-input {

@@ -1,18 +1,11 @@
-import React, { Fragment } from "react";
-import { Formik, Form, ErrorMessage } from "formik";
+import React, { Fragment, useState } from "react";
+import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { FormValues } from "../../../public/type";
-import {
-  BackgroundLogin,
-  FormButton,
-  FormIcon,
-  FormInput,
-  FormText,
-  LoginForm,
-} from "../../../public/styled";
 import { User } from "../../../projectLogin/src/interface/user";
 import instance from "../../../projectLogin/src/service";
+import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 
 const initialValues: FormValues = {
   username: "",
@@ -22,13 +15,13 @@ const initialValues: FormValues = {
 };
 
 const validationSchema = Yup.object({
-  username: Yup.string().required("UserName is Required"),
+  username: Yup.string().required("Username is required!"),
   email: Yup.string()
     .email("Invalid Email Address")
-    .required("Email is Required"),
+    .required("Email is required!"),
   password: Yup.string()
-    .min(8, "Password is too short - should be 8 chars minimum.")
-    .required("Password is Required"),
+    .min(8, "Password is too short - should be 8 characters minimum.")
+    .required("Password is required!"),
 });
 
 const Login: React.FC = () => {
@@ -53,139 +46,162 @@ const Login: React.FC = () => {
 
   return (
     <Fragment>
-      <BackgroundLogin className="py-3 vh-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
-          <div className="col col-xl-9">
-            <FormIcon className="fa-solid fa-arrow-right"></FormIcon>
-            <FormText>
-              <Link to="/">Back to Home</Link>
-            </FormText>
-            <div className="card" style={{ borderRadius: "1rem" }}>
-              <LoginForm className="row g-0">
-                <div className="col-md-6 col-lg-5 d-none d-md-block">
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                    alt="login form"
-                    className="img-fluid"
-                    // style={{ borderRadius: "1rem 0 0 1rem" }}
-                  />
-                </div>
-                <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                  <div className="card-body p-4 p-lg-5 text-black text-center">
+      <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
+        <div className="flex justify-center items-center w-full">
+          <div className="flex w-10/12 md:w-8/12 h-full flex-col px-4 gap-2 text-white relative">
+            <Link
+              className="flex gap-2 items-center duration-300 w-fit absolute -translate-y-[34px]"
+              to="/"
+            >
+              <ArrowLeftIcon className="h-4 w-4" />
+              <p>Back to Home</p>
+            </Link>
+
+            <div className="rounded-2xl">
+              <div className="flex bg-white rounded-3xl shadow-md relative overflow-hidden">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                  alt="login form"
+                  className="object-cover w-0 md:w-[40%] lg:block transition-all duration-300"
+                />
+                <div className="w-full md:w-[60%] flex items-center transition-all duration-300">
+                  <div className="w-full p-4 text-center">
                     <Formik
                       initialValues={initialValues}
                       onSubmit={onSubmit}
                       validationSchema={validationSchema}
+                      validateOnChange={false}
+                      validateOnBlur={false}
                     >
-                      <Form>
-                        <h3
-                          className="fw-normal mb-3"
-                          style={{ letterSpacing: "1px" }}
-                        >
+                      <Form className="text-gray-500">
+                        <h3 className="mb-3 tracking-wider">
                           Sign into your account
                         </h3>
-                        <div className="social-icons my-3">
-                          <FormIcon
-                            href="#"
-                            className="icon"
-                            onClick={() => navigate("/logingg")}
+                        <div className="my-2 flex justify-evenly">
+                          <Link
+                            to="#"
+                            className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"
                           >
                             <i className="fa-brands fa-google-plus-g"></i>
-                          </FormIcon>
-                          <FormIcon href="#" className="icon">
+                          </Link>
+                          <Link
+                            to="#"
+                            className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"
+                          >
                             <i className="fa-brands fa-facebook-f"></i>
-                          </FormIcon>
-                          <FormIcon href="#" className="icon">
+                          </Link>
+                          <Link
+                            to="#"
+                            className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"
+                          >
                             <i className="fa-brands fa-github"></i>
-                          </FormIcon>
-                          <FormIcon href="#" className="icon">
+                          </Link>
+                          <Link
+                            to="#"
+                            className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"
+                          >
                             <i className="fa-brands fa-linkedin-in"></i>
-                          </FormIcon>
+                          </Link>
                         </div>
-                        <p style={{ fontSize: "12px" }}>
-                          or use your email password
-                        </p>
-                        <div className="form-outline mb-4">
-                          <FormInput
+                        <p className="text-sm">or use your email password</p>
+                        <div className="my-4 mb-4">
+                          <Field
                             type="text"
                             id="username"
                             name="username"
-                            className="form-control form-control-lg"
+                            className="bg-secondary-03 border-0 py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Username"
                           />
                           <ErrorMessage name="username">
                             {(errMsg) => (
-                              <div className="text-danger">{errMsg}</div>
+                              <div className="text-red-600 pt-2 text-sm">
+                                {errMsg}
+                              </div>
                             )}
                           </ErrorMessage>
                         </div>
 
                         <div className="form-outline mb-4">
-                          <FormInput
+                          <Field
                             type="email"
                             id="email"
                             name="email"
-                            className="form-control form-control-lg"
+                            className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Email"
                           />
                           <ErrorMessage name="email">
                             {(errMsg) => (
-                              <div className="text-danger">{errMsg}</div>
+                              <div className="text-red-600 pt-2 text-sm">
+                                {errMsg}
+                              </div>
                             )}
                           </ErrorMessage>
                         </div>
 
                         <div className="form-outline mb-4">
-                          <FormInput
+                          <Field
                             type="password"
                             id="password"
                             name="password"
-                            className="form-control form-control-lg"
+                            className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Password"
                           />
                           <ErrorMessage name="password">
                             {(errMsg) => (
-                              <div className="text-danger">{errMsg}</div>
+                              <div className="text-red-600 pt-2 text-sm">
+                                {errMsg}
+                              </div>
                             )}
                           </ErrorMessage>
                         </div>
 
-                        <div className="pt-1 mb-4">
-                          <FormButton
+                        <div className="flex justify-center text-white">
+                          <button
                             type="submit"
-                            className="btn btn-dark btn-lg btn-block"
+                            className="block bg-primary-01 text-xs py-[10px] px-16 border-[1px] border-transparent rounded-[10px] font-bold tracking-wider uppercase cursor-pointer opacity-80 hover:opacity-100 transition-all duration-300"
                           >
                             Login
-                          </FormButton>
+                          </button>
                         </div>
 
-                        <FormText className="small text-muted" href="#!">
+                        <Link
+                          className="flex text-sm no-underline text-gray-500 mt-2 transition-all duration-300 w-fit mx-auto"
+                          to="#!"
+                        >
                           Forgot password?
-                        </FormText>
-                        <p className="mt-3 pb-lg-2">
-                          Don't have an account? <br />
+                        </Link>
+                        <div className="mt-3 pb-3">
+                          <p>Don't have an account?</p>
                           <Link
                             to="/signup"
-                            style={{ color: "#76885B", fontWeight: "bold" }}
+                            className="text-primary-01 font-bold transition-all duration-300 text-xl"
                           >
                             Sign Up
                           </Link>
-                        </p>
-                        <FormText href="#!" className="small text-muted">
-                          Terms of use
-                        </FormText>
-                        <FormText href="#!" className="small text-muted">
-                          Privacy policy
-                        </FormText>
+                        </div>
+                        <div className="flex gap-5 justify-center ">
+                          <Link
+                            to="#!"
+                            className="text-primary-01 text-sm transition-all duration-300"
+                          >
+                            Terms of use
+                          </Link>
+                          <Link
+                            to="#!"
+                            className="text-primary-01 text-sm transition-all duration-300"
+                          >
+                            Privacy policy
+                          </Link>
+                        </div>
                       </Form>
                     </Formik>
                   </div>
                 </div>
-              </LoginForm>
+              </div>
             </div>
           </div>
         </div>
-      </BackgroundLogin>
+      </div>
     </Fragment>
   );
 };

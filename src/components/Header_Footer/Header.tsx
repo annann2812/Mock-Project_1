@@ -187,10 +187,7 @@ const Header = () => {
         </div>
       </div>
       {/*  */}
-      <div
-        className="nav-bar  m-auto d-flex flex-row justify-content-between align-items-center py-3"
-        style={{ width: "90%" }}
-      >
+      <div className="nav-bar mx-auto flex justify-between items-center px-2 py-3 w-full xl:w-[1280px]">
         <div className="Logo">
           <img style={{ height: "100px" }} src={logo} alt="" />
         </div>

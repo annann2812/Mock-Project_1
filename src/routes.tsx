@@ -6,7 +6,6 @@ import Store from "./pages/Store/Store";
 import BestSellers from "./pages/BestSellers/BestSellers";
 import Contact from "./pages/Contact/Contact";
 import Sitemap from "./pages/Sitemap/Sitemap";
-import NewArrival from "./components/BestSeller_NewArrival-Product/LoopAllProducts";
 import About from "./pages/About/About";
 import Delivery from "./pages/Delivery/Delivery";
 import Cameras from "./pages/Categories/Cameras";
@@ -17,7 +16,6 @@ import Smartphones from "./pages/Categories/Smartphones";
 import Login from "./components/Account/LogIn";
 import SignUp from "./components/Account/SignUp";
 import Cart from "./pages/Cart/Cart";
-import React from "react";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 
 export const router = createBrowserRouter([
