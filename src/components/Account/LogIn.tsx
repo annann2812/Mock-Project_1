@@ -79,7 +79,7 @@ const Login: React.FC = () => {
                         </h3>
                         <div className="my-2 flex justify-evenly">
                           <Link
-                            to="#"
+                            to="/logingg"
                             className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"
                           >
                             <i className="fa-brands fa-google-plus-g"></i>

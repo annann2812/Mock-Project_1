@@ -124,12 +124,12 @@ const NavTop = () => {
     <Fragment>
       <Newsletter />
       <nav className="bg-gray-100 border-gray-200 overflow-x-hidden boder border-b dark:bg-gray-900">
-        <div className="container max-w-screen- text-[#76885B]  flex px-5 py-3 flex-wrap items-center justify-between mx-auto">
+        <div className="container max-w-screen text-[#76885B]  flex px-10 py-4 flex-wrap items-center justify-between mx-auto">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logoLoop} className="w-[100px]" alt="" />
+            <img src={logoLoop} className="w-[120px]" alt="" />
           </Link>
           <form className="w-[50%] mx-auto">
             <label
@@ -142,7 +142,7 @@ const NavTop = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full px-4 py-3 ps-10 text-sm text-gray-900 border border-[#76885B] rounded-lg bg-gray-50 outline-none focus:ring-[#FC7636]"
+                className="block w-full py-4 px-2 ps-10 text-sm text-gray-900 border border-[#76885B] rounded-lg bg-gray-50 outline-none focus:ring-[#FC7636]"
                 placeholder="Search products..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -153,7 +153,7 @@ const NavTop = () => {
               <button
                 onClick={handleSearch}
                 type="button"
-                className="text-white mr-2 flex items-center gap-3 absolute end-2.5 top-1/2 transform -translate-y-1/2 bg-[#76885B] hover:bg-blue-800 focus:ring-4 focus:ring-[#FC6736] font-medium rounded-lg text-sm px-3 py-2"
+                className="text-white mr-2 flex items-center gap-3 absolute end-2.5 top-1/2 transform -translate-y-1/2 bg-[#76885B] hover:bg-opacity-80 focus:ring-4 focus:ring-[#FC6736] font-medium rounded-lg text-sm px-3 py-2"
               >
                 <FaSearch />
                 Search
@@ -161,7 +161,7 @@ const NavTop = () => {
             </div>
           </form>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <div className="flex justify-center items-center">
               <button className="text-xl" onClick={toggleDropdown}>
                 <FaUserAlt className="hover:text-primary-02 transition-all duration-300" />
@@ -213,10 +213,9 @@ const NavTop = () => {
               )}
             </div>
 
-            {/* <div className="ml-5 mr-4"> */}
             <Link to="/cart">
               <div className="relative">
-                <ShoppingBagIcon className="text-2xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
+                <ShoppingBagIcon className="text-xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
                 {productCart.length > 0 && (
                   <p className="absolute -top-1 right-1 bg-[#FC6736] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
                     {productCart.length}
@@ -234,24 +233,6 @@ const NavTop = () => {
                 )}
               </div>
             </Link>
-
-            {/* </div> */}
-            {/* <div>
-                <Link to="/wishlist">
-                <div className="relative ">
-                    <div className="flex justify-center h-[40px] items-center">
-
-                    <FaHeart className="-translate-x-3 text-[28px] group-hover:translate-x-12 transition-transform duration-200" />
-                    </div>
-                    {productsWishList.length > 0 && (
-                    <p className="absolute top-1 right-2 bg-[#FC6736] text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold">
-                        {productsWishList.length}
-                    </p>
-                    )}
-                </div>
-                </Link>
-
-            </div> */}
           </div>
         </div>
       </nav>
