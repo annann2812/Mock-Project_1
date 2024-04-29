@@ -8,7 +8,7 @@ const NavBar = () => {
     <Fragment>
       <NavTop />
       <nav className="bg-white border-gray-200 boder border-b dark:bg-gray-900">
-        <div className="container max-w-screen- text-[#76885B]  flex px-5 py-2 text-center flex-wrap items-center justify-between mx-auto">
+        <div className="container max-w-screen- text-[#76885B]  flex p-5 text-center flex-wrap items-center justify-between mx-auto">
           <ul className="flex mx-auto font-medium  md:p-0 rounded-lg md:space-x-8">
             <li>
               <Link

@@ -17,10 +17,10 @@ const SaleProduct = () => {
 
   return (
     <div className="mx-auto pb-12 pt-6">
-      <h1 className="text-4xl capitalize my-3 text-center text-[#76885B] font-bold tracking-wide">
+      <h1 className="text-4xl capitalize my-3 text-center text-[#76885B] font-semibold tracking-wide">
         <span className="text-[#FC7636]">Big </span>   sale
       </h1>
-      <p className="text-center text-[14px] font-thin">
+      <p className="text-center text-[16px] mb-4 font-thin">
         Join with us to buy with good prices!
       </p>
       <div className="col-span-3">

@@ -56,7 +56,7 @@ const Footer = () => {
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 lg:lg-10 bg-white flex flex-col gap-3 rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B] min-h-20">
               <GlobeAmericasIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-extrabold text-[#76885B]">
+              <p className="text-uppercase text-3xl font-bold text-[#76885B]">
                 Find Us
               </p>
             </div>
@@ -76,7 +76,7 @@ const Footer = () => {
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 bg-white flex flex-col gap-3 rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B] min-h-20">
               <EnvelopeIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-extrabold text-[#76885B] w-fit">
+              <p className="text-uppercase text-3xl font-bold text-[#76885B] w-fit">
                 Daily Updates
               </p>
             </div>
@@ -97,7 +97,7 @@ const Footer = () => {
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 gap-3 bg-white flex flex-col rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B]">
               <MegaphoneIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-extrabold text-[#76885B] w-fit">
+              <p className="text-uppercase text-3xl font-bold text-[#76885B] w-fit">
                 Best Offers
               </p>
             </div>
@@ -120,7 +120,7 @@ const Footer = () => {
             key={index}
             className="w-1/2 lg:w-1/4 px-3 [&:nth-child(2n+1)]:border-r-2 lg:[&:not(:nth-last-child(-n+1))]:border-r-[2px] mb-4"
           >
-            <p className="font-extrabold text-2xl">{footerInfo[index].name}</p>
+            <p className="font-semibold text-2xl">{footerInfo[index].name}</p>
             <div className="py-3 flex flex-col gap-2">
               {footerInfo[index].lists.map((item, index) => (
                 <p key={index} className="font-italic">
