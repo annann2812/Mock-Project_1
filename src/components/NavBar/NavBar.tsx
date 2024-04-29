@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import Newsletter from "../Newsletter/Newsletter";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,27 +9,14 @@ import { RootState } from "../../Redux/store";
 import { IoIosArrowDown } from "react-icons/io";
 import { ShoppingBagIcon } from "@heroicons/react/20/solid";
 import { setProductSearch } from "../../Redux/ProductSlice";
+=======
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import NavTop from "./NavTop";
+>>>>>>> origin/Fix-App
 
-interface ProductProps {
-  image: string | undefined;
-  id?: number;
-  name: string;
-  decription: string;
-  color: string;
-  size: string;
-  branch: string;
-  price: number;
-  discount: {
-    is_discount: boolean;
-    price_discount: string;
-  };
-  images_list: string[];
-  best_seller: boolean;
-  new_arriver: boolean;
-  quantity?: number;
-  shipping?: boolean;
-}
 const NavBar = () => {
+<<<<<<< HEAD
   // new
 
   const navigate = useNavigate();
@@ -252,6 +240,59 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
+=======
+ 
+  return (
+    <Fragment>
+      <NavTop />
+      <nav className="bg-white border-gray-200 boder border-b dark:bg-gray-900">
+        <div className="container max-w-screen- text-[#76885B]  flex px-5 py-2 text-center flex-wrap items-center justify-between mx-auto">
+          <ul className="flex mx-auto font-medium  md:p-0 rounded-lg md:space-x-8">
+            <li>
+              <Link
+                to="/"
+                className="block py-2 px-3 text-[#76885B] rounded hover:text-[#FC6736] md:bg-transparent md:p-0"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/all-items"
+                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+              >
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sale"
+                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+              >
+                Sale
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/payment"
+                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+              >
+                Payment
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block py-2 px-3 text-[#76885B] rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+              >
+                Contact us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </Fragment>
+>>>>>>> origin/Fix-App
   );
 };
 

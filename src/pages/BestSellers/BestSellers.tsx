@@ -1,15 +1,16 @@
-import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Header_Footer/Footer";
-import BestSellerProduct from "../../components/BestSeller_NewArrival-Product/BestSellerProduct";
+import React from 'react'
+import NavBar from '../../components/NavBar/NavBar'
+import SaleProduct from '../../components/BestSeller_NewArrival-Product/SaleProduct'
+import Footer from '../../components/Header_Footer/Footer'
 
-const BestSellerPage = () => {
+const BestSellers = () => {
   return (
     <div>
-      <NavBar />
-      <BestSellerProduct />
-      <Footer />
+      <NavBar/>
+      <SaleProduct/>
+      <Footer/>
     </div>
-  );
-};
+  )
+}
 
-export default BestSellerPage;
+export default BestSellers;
