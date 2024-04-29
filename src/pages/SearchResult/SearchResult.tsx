@@ -18,7 +18,7 @@ const SearchResult = () => {
     <Fragment>
       <Navbar />
       <div className="px-3 py-5 flex flex-col items-center">
-        <h3 className="uppercase text-2xl font-medium">Search result</h3>
+        <h3 className="text-3xl text-center text-[#76885B] font-bold tracking-tight">Search result</h3>
         {searchProducts.length === 0 ? (
           <p className="mt-6 mb-12 text-[#FC6736]">
             OMG! No results for your search...
@@ -28,7 +28,7 @@ const SearchResult = () => {
             {searchProducts.slice(0, displayCount).map((product, index) => {
               return (
                 <section key={index} className="text-gray-600 body-font overflow-hidden">
-                  <div className="container px-5 py-10 mx-auto border-b border-gray-200">
+                  <div className="container px-5 py-10 mx-auto">
                     <div className="-my-8 divide-y-2 divide-gray-100">
                        <div className="py-8 flex items-center gap-12">
                          <div className="block capitalize relative h-48 rounded overflow-hidden">
@@ -71,10 +71,10 @@ const SearchResult = () => {
             })}
             {searchProducts.length > displayCount && (
               <button
-                className="mt-4 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                className="mt-4 text-white uppercase font-medium text-[14px] bg-[#FC6736] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded-2xl"
                 onClick={handleLoadMore}
               >
-                Load More
+                Load More...
               </button>
             )}
           </Fragment>

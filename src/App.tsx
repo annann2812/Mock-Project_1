@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/BestSellers/BestSellers";
-import BlogPage from "./pages/Blog/Blog";
+// import BlogPage from "./pages/Blog/Blog";
 import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
@@ -25,6 +25,7 @@ import LoginWithGG from "./components/Account/LoginWithGG";
 import Swipper from "./pages/ProductDetail/SwipperProduct";
 import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
 import Store from "./pages/Store/Store";
+import SaleProduct from "./components/BestSeller_NewArrival-Product/SaleProduct";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -43,12 +44,12 @@ const App = () => {
       <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/best-sellers" element={<BestSellers />} />
+        <Route path="/sale" element={<BestSellers />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/all-items" element={<NewArrivalPage />} />
         <Route path="/products/:id" element={<ProductCard />} />
-        <Route path="/blog" element={<BlogPage />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/logingg" element={<LoginWithGG />} />
         <Route path="/signup" element={<SignUp />} />

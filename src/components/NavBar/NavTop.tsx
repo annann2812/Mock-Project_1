@@ -10,6 +10,7 @@ import { IoIosArrowDown, IoMdSearch } from "react-icons/io";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { setProductSearch } from "../../Redux/ProductSlice";
+import { ShoppingBagIcon } from "@heroicons/react/20/solid";
 
 interface ProductProps {
   image: string | undefined;
@@ -35,7 +36,7 @@ const NavTop = () => {
   const productCart = useSelector(
     (state: RootState) => state.loopStore.addToCart
   );
-  console.log(productCart)
+  console.log(productCart);
   const productsWishList = useSelector(
     (state: RootState) => state.loopStore.addToWishlist
   );
@@ -115,7 +116,7 @@ const NavTop = () => {
   };
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-        event.preventDefault();
+      event.preventDefault();
       handleSearch();
     }
   };
@@ -160,76 +161,85 @@ const NavTop = () => {
             </div>
           </form>
 
-          <div className="flex items-center justify-between">
-                <button className="text-[24px]" onClick={toggleDropdown}>
-                <FaUserAlt />
-                </button>
-                {isDropdownOpen && (
+          <div className="flex items-center gap-4">
+            <div className="flex justify-center items-center">
+              <button className="text-xl" onClick={toggleDropdown}>
+                <FaUserAlt className="hover:text-primary-02 transition-all duration-300" />
+              </button>
+              {isDropdownOpen && (
                 <div
-                    className="z-50 absolute top-[100px] right-[200px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-                    id="user-dropdown"
+                  className="z-50 absolute top-[100px] right-[200px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                  id="user-dropdown"
                 >
-                    <div className="px-4 py-3">
+                  <div className="px-4 py-3">
                     <span className="block text-sm text-gray-900 dark:text-white">
-                        {renderAccount()}
+                      {renderAccount()}
                     </span>
-                    </div>
-                    <ul className="py-2">
+                  </div>
+                  <ul className="py-2">
                     {userNameAccount === "Name" && (
-                        <div>
+                      <div>
                         <li>
-                            <Link
+                          <Link
                             onClick={handleLogin}
                             to="/login"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
+                          >
                             Login
-                            </Link>
+                          </Link>
                         </li>
                         <li>
-                            <Link
+                          <Link
                             onClick={handleSignup}
                             to="/signup"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                            >
+                          >
                             Sign Up
-                            </Link>
+                          </Link>
                         </li>
-                        </div>
+                      </div>
                     )}
                     <li>
-                        <Link
+                      <Link
                         onClick={handleLogOut}
                         to="/"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
+                      >
                         Log out
-                        </Link>
+                      </Link>
                     </li>
-                    </ul>
+                  </ul>
                 </div>
-                )}
-
-            <div className="ml-5 mr-4">
-                <Link to="/cart">
-                <div className="relative ">
-                    <div className="flex justify-center h-[40px] items-center">
-                    <HiMiniShoppingBag className="-translate-x-3 text-[28px] group-hover:translate-x-12 transition-transform duration-200" />
-                    </div>
-                    {productCart.length > 0 && (
-                    <p className="absolute top-1 right-2 bg-[#FC6736] text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold">
-                        {productCart.length}
-                    </p>
-                    )}
-                </div>
-                </Link>
-
+              )}
             </div>
-            <div>
+
+            {/* <div className="ml-5 mr-4"> */}
+            <Link to="/cart">
+              <div className="relative">
+                <ShoppingBagIcon className="text-2xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
+                {productCart.length > 0 && (
+                  <p className="absolute -top-1 right-1 bg-[#FC6736] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
+                    {productCart.length}
+                  </p>
+                )}
+              </div>
+            </Link>
+            <Link to="/cart">
+              <div className="relative">
+                <FaHeart className="text-2xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
+                {productsWishList.length > 0 && (
+                  <p className="absolute -top-1 right-1 bg-[#FC6736] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
+                    {productsWishList.length}
+                  </p>
+                )}
+              </div>
+            </Link>
+
+            {/* </div> */}
+            {/* <div>
                 <Link to="/wishlist">
                 <div className="relative ">
                     <div className="flex justify-center h-[40px] items-center">
-                    {/* <FaHeart className="-translate-x-12 text-[28px] group-hover:translate-x-3 transition-transform duration-200" /> */}
 
                     <FaHeart className="-translate-x-3 text-[28px] group-hover:translate-x-12 transition-transform duration-200" />
                     </div>
@@ -241,7 +251,7 @@ const NavTop = () => {
                 </div>
                 </Link>
 
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

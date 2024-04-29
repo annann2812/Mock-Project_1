@@ -44,7 +44,6 @@
       "best_seller": false,
       "new_arriver": true
     },
-
     {
       "id": 46,
       "name": "Harry Winston Mid night",
@@ -353,7 +352,6 @@
       "best_seller": false,
       "new_arriver": false
     },
-
     {
       "id": 7,
       "name": "Breitling Navitimer",
@@ -444,7 +442,7 @@
     },
     {
       "id": 11,
-      "name": "Jaeger-LeCoultre Reverso",
+      "name": "Jaeger-LeCoultre",
       "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
       "left": 4,
       "color": "Red",
@@ -510,7 +508,7 @@
     },
     {
       "id": 14,
-      "name": "Longines Master Collection",
+      "name": "Longines Master",
       "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
       "left": 4,
       "color": "Red",
@@ -818,7 +816,7 @@
     },
     {
       "id": 5,
-      "name": "Audemars Piguet Royal Oak",
+      "name": "Audemars Piguet",
       "decription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo omnis in reprehenderit pariatur aut et excepturi velit doloribus fuga facere ab saepe hic quaerat, consequatur, iste corrupti eum dolores fugiat sunt, reiciendis non sit! Soluta, vel ut! Omnis reprehenderit ex eligendi iusto? Cum id non, a alias provident, quidem asperiores autem rem unde, cumque minus porro impedit quo repellat beatae magnam ea iusto.",
       "left": 4,
       "color": "Red",
@@ -1095,6 +1093,20 @@
       "username": "admin2",
       "confirmPassword": "12341234",
       "id": 6
+    },
+    {
+      "email": "an@123",
+      "password": "$2a$10$YFySWL6yINv4qxEdYH5m4.L820U1JG4JRYgMHn6z3OPj5YsrbKe0G",
+      "username": "an10101210@gmail.com",
+      "confirmPassword": "123456789",
+      "id": 7
+    },
+    {
+      "email": "an@1234456",
+      "password": "$2a$10$Ujbfc1LHyNKpP9rHJVc4fOFN3xjBfIWQS/I5IcK2NQ6P6vYowgOTC",
+      "username": "an10@gmail.com",
+      "confirmPassword": "123456789?",
+      "id": 8
     }
   ],
   "blog": [

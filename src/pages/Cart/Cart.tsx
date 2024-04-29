@@ -72,11 +72,11 @@ const Cart: React.FC = () => {
                   />
                   <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                     <div className="mt-3 sm:mt-0">
-                      <h2 className="text-xl capitalize font-bold text-gray-900">
+                      <h2 className="text-xl capitalize font-bold text-[#76885B]">
                         {product.name}
                       </h2>
-                      <p className="mt-1 text-xs text-gray-700">
-                        {product.price}
+                      <p className="mt-1 text-md text-gray-700">
+                        $ {product.price}
                       </p>
                     </div>
                     <div className="flex items-center justify-between">
@@ -187,3 +187,7 @@ const Cart: React.FC = () => {
 };
 
 export default Cart;
+
+
+
+

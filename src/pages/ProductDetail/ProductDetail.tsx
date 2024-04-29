@@ -36,7 +36,7 @@ const API_URL = "http://localhost:3000/products";
 
 
 
-const ProductCard: React.FC<Product> = () => {
+const ProductCard = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -184,7 +184,7 @@ const ProductCard: React.FC<Product> = () => {
                 <div className="mt-3 font-semibold rounded">
                   <div className="py-2 flex flex-col">
                     <p className="uppercase text-[15px]">Hurry! Only <span className="text-[#FC6736]">4</span> items left in stock.</p>
-                    <div className="w-full bg-[#76885B] h-[13px] rounded-xl my-2">
+                    <div className="w-full bg-[#76885B] h-[13px] rounded-xl†">
                       <input className="bg-[#FC6736] w-[30%]"></input>
                     </div>
                   </div>

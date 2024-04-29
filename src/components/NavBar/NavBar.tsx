@@ -28,7 +28,7 @@ const NavBar = () => {
             </li>
             <li>
               <Link
-                to="/best-sellers"
+                to="/sale"
                 className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
               >
                 Sale
