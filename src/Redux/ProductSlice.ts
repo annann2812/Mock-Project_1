@@ -51,6 +51,7 @@ interface ProductState {
   products: Product[];
   searchProducts: Product[];
   addToCart: ProductCart[];
+  addToWishlist: Product[];
   loading: boolean;
   error: string | null;
   product: Product | null;
@@ -62,6 +63,7 @@ const initialState: ProductState = {
   products: [],
   searchProducts: [],
   addToCart: [],
+  addToWishlist: [],
   loading: false,
   error: null,
   product: null,
@@ -99,6 +101,21 @@ const productSlice = createSlice({
       }
       toast.success("Product added to cart");
     },
+
+    addToWishList: (state, action: PayloadAction<Product>) => {
+      const {id} = action.payload;
+      const existingProduct = state.addToWishlist.find(
+        (product) => product.id === id
+      );
+    
+      if (!existingProduct) {
+        state.addToWishlist.push({...action.payload});
+        toast("Item added to Wishlist.");
+      } else {
+        toast("Item already exists in Wishlist.");
+      }
+    },
+
     deleteItem: (state, action: PayloadAction<ProductCart>) => {
       state.addToCart = state.addToCart.filter(
         (product) => product.id !== action.payload.id
@@ -148,6 +165,7 @@ export const {
   updateCartQuantity,
   deleteItem,
   setProductList,
+  addToWishList,
   setBlogs,
   setProductSearch,
 } = productSlice.actions;

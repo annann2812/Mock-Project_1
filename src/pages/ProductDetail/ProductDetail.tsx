@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { addToCart, updateQuantity } from "../../Redux/ProductSlice";
+import { addToCart, addToWishList, updateQuantity } from "../../Redux/ProductSlice";
 import { AppDispatch, RootState } from "../../Redux/store";
 import { Product } from "../../ApiServices/types";
 import { BsFillSuitHeartFill, BsStarFill, BsStarHalf } from "react-icons/bs";
@@ -30,19 +30,11 @@ import {
   FaTiktok,
   FaTruck,
 } from "react-icons/fa";
-import App from "./SwipperProduct";
+import ProductList from "../../components/BestSeller_NewArrival-Product/Product";
 
 const API_URL = "http://localhost:3000/products";
 
-const imageList = [
-  { image: "https://m.media-amazon.com/images/I/31nDRF+18zL.jpg" },
-  { image: "https://m.media-amazon.com/images/I/41fDWigjB7L.jpg" },
-  { image: "https://m.media-amazon.com/images/I/412bxYVtsXL.jpg" },
-  { image: "https://m.media-amazon.com/images/I/31tKdSWjROL.jpg" },
-  { image: "https://m.media-amazon.com/images/I/31353Xlws6L.jpg" },
-  { image: "https://m.media-amazon.com/images/I/31IceqeyO9L.jpg" },
-  { image: "https://m.media-amazon.com/images/I/31lHSWRw6dL.jpg" },
-];
+
 
 const ProductCard: React.FC<Product> = () => {
   const { id } = useParams<{ id: string }>();
@@ -56,11 +48,8 @@ const ProductCard: React.FC<Product> = () => {
 
 
   const handleWishList = () => {
-    if (!wishList.includes(product.id.toString())) {
-      setWishList([...wishList, product.id.toString()]);
-      toast("Item added to Wishlist.");
-    } else {
-      toast.info("Oh! It's already in the wishlist.");
+    if (product) {
+      dispatch(addToWishList({...product}));
     }
   };
   console.log(wishList);
@@ -86,7 +75,7 @@ const ProductCard: React.FC<Product> = () => {
     if (product) {
       dispatch(addToCart({ ...product, quantity }));
     }
-    console.log(product);
+    // console.log(product);
   };
 
   const handleIncrement = (id: number) => {
@@ -176,7 +165,7 @@ const ProductCard: React.FC<Product> = () => {
                       </button>
                     </div>
                       <button
-                        onClick={handleWishList}
+                        onClick={() => dispatch(handleWishList)}
                         className="rounded-full w-10 h-10 bg-[#76885B] hover:bg-opacity-90 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
                       >
                         <BsFillSuitHeartFill className="hover:text-[#FC6736]"/>
@@ -214,7 +203,7 @@ const ProductCard: React.FC<Product> = () => {
           </div>
         </section>
       </div>
-      <App/>
+      <ProductList/>
       <Footer />
     </Fragment>
   );
