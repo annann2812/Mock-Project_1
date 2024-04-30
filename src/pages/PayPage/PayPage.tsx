@@ -1,83 +1,167 @@
-import React, { Fragment, useState } from "react";
-import "tailwindcss/tailwind.css";
-import CreditCardForm from "./CreditCardForm";
-
-import BillingAdres from "./BillingAdres";
-import { Container, Grid, Typography } from "@mui/material";
-
+import React, { ChangeEvent, Fragment, useState } from "react";
+import instance from "../../../projectLogin/src/service";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../Redux/store";
+interface userProps {
+  name: string;
+  phone: string;
+  email: string;
+  address: string;
+  shippingMethod: string;
+  paymentMethod: string;
+  products: { [key: string]: string };
+}
 const PayPage = () => {
+  const products = useSelector((state: RootState) => state.loopStore.addToCart);
+  console.log(products);
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    address: "",
+    shippingMethod: "free",
+    paymentMethod: "cash_on_delivery",
+    products: products,
+  });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    (async () => {
+      const { data } = await instance.post("/invoice", formData);
+      const isConfirm = confirm("Continue shopping?");
+      isConfirm && navigate("/");
+    })();
+  };
+
   return (
     <Fragment>
-      <Container maxWidth="sm">
-        <form
-          style={{
-            display: "grid",
-            padding: "20px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <Typography variant="h6" display="inline">
-                <strong>Locoste</strong>
-              </Typography>
-            </Grid>
-            <Grid item xs={9}>
-              <img src="" alt="11" style={{ display: "inline" }} />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="caption">
-                All transactions are secure and end crypted
-              </Typography>
-            </Grid>
-          </Grid>
-        </form>
-      </Container>
-      <div className="payment-wrap">
-        <div className="contact-infomation  ">
-          <table className="table-auto w-full mx-auto">
-            <p>
-              <strong>Contact Infomation</strong>
-            </p>
-            <tbody>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Contact</td>
-                <td className="p-4 w-1/3">Name & Email</td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Change
-                  </button>
-                </td>
-              </tr>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Snip to</td>
-                <td className="p-4 w-1/3">Address</td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Change
-                  </button>
-                </td>
-              </tr>
-              <tr className="border border-gray-400 ">
-                <td className=" p-4 w-1/3">Method</td>
-                <td className="p-4 w-1/3">
-                  <strong>Economy</strong>(sadasdsads)
-                </td>
-                <td className=" p-4 w-1/3">
-                  <button className="bg-transparent border-0 hover:bg-blue-500 hover:text-white font-semibold hover:py-2 px-4 rounded">
-                    Free
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <form onSubmit={handleSubmit} className="border-1 p-4 rounded-lg">
+        <div className="mb-4">
+          <label htmlFor="name" className="block mb-1">
+            Recipient's name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 px-3 py-2 rounded-lg w-full"
+          />
         </div>
-        <hr />
-        <CreditCardForm />
-        <BillingAdres />
-      </div>
-      {/* <CreditCardForm />
-      <BillingAdres /> */}
+        <div className="mb-4">
+          <label htmlFor="phone" className="block mb-1">
+            Phone number:
+          </label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 px-3 py-2 rounded-lg w-full"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="email" className="block mb-1">
+            Email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 px-3 py-2 rounded-lg w-full"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="address" className="block mb-1">
+            Delivery address:
+          </label>
+          <textarea
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 px-3 py-2 rounded-lg w-full"
+          ></textarea>
+        </div>
+        <div className="mb-4">
+          <label className="block mb-1">Phương thức vận chuyển:</label>
+          <div>
+            <input
+              type="radio"
+              id="free"
+              name="shippingMethod"
+              value="free"
+              checked={formData.shippingMethod === "free"}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="free" className="mr-4">
+              Free ship (5-7day)
+            </label>
+            <input
+              type="radio"
+              id="express"
+              name="shippingMethod"
+              value="express"
+              checked={formData.shippingMethod === "express"}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="express">Express shipping (now)</label>
+          </div>
+        </div>
+        <div className="mb-4">
+          <label className="block mb-1">Phương thức thanh toán:</label>
+          <div>
+            <input
+              type="radio"
+              id="cash_on_delivery"
+              name="paymentMethod"
+              value="cash_on_delivery"
+              checked={formData.paymentMethod === "cash_on_delivery"}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="cash_on_delivery" className="mr-4">
+              Thanh toán khi nhận hàng
+            </label>
+            <input
+              type="radio"
+              id="banking"
+              name="paymentMethod"
+              value="banking"
+              checked={formData.paymentMethod === "banking"}
+              onChange={handleChange}
+              className="mr-2"
+            />
+            <label htmlFor="banking">Banking</label>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+        >
+          Gửi
+        </button>
+      </form>
     </Fragment>
   );
 };
