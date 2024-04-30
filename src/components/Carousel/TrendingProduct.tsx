@@ -1,37 +1,45 @@
+import { useSelector } from "react-redux";
 import BestSeller1 from "../../assets/image/best-seller-1.jpg";
 import BestSeller2 from "../../assets/image/best-seller-2.jpg";
 import BestSeller3 from "../../assets/image/best-seller-3.jpg";
 import CarouselDefault from "./Carousel";
+import { RootState } from "../../Redux/store";
 
 const TrendingProduct = () => {
-  const trendingProductInfo = {
-    images: [
-      "https://m.media-amazon.com/images/I/81Z5KO2uwnL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/61vcqWfj9WL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/51yc9OqrHsL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71GaNqL9XkL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/81tc6arDvFL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71oMOrqXoCL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/61LRAeHEdtL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/511+TfOOujL._AC_SY395_.jpg",
-    ],
-    title: "Trending Products",
-    itemNames: [
-      "Wingtip Shoes",
-      "Chelsea Sneakers",
-      "Chunky Sneakers",
-      "Open Toe Booties",
-      "Suede Booties",
-      "Chelsea Rain Boots",
-      "Chelsea Rain Boots",
-      "Chelsea Rain Boots",
-    ],
-    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9],
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
+  const trendingProductInfo: {
+    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    title: string;
+    itemNames: string[];
+    prices: number[];
+    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
+    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    blogDescriptions: string[];
+    id: number;
+  } = {
+    images: [], // Khởi tạo mảng images rỗng
+    title: "Trending Product",
+    itemNames: [],
+    prices: [],
     redirectButtons: ["POPULAR ITEM", "NEW ARRIVAL"],
     redirectLinks: ["/best-sellers", "/new-arrivals"],
     blogDescriptions: [],
     id: 2,
   };
+  products.map((product) => {
+    if (product.new_arriver) {
+      // console.log(product.id);
+      const shortenedName =
+        product.name.length > 10
+          ? product.name.slice(0, 8) + "..."
+          : product.name;
+      trendingProductInfo.images.push(product.images_list[0]);
+      trendingProductInfo.itemNames.push(shortenedName);
+      trendingProductInfo.prices.push(product.price);
+    }
+  });
+
   return (
     <CarouselDefault
       images={trendingProductInfo.images}
