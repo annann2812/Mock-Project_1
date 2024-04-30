@@ -21,6 +21,7 @@ import Slider from "@mui/material/Slider";
 import CheckIcon from "@mui/icons-material/Check";
 import ToggleButton from "@mui/material/ToggleButton";
 import ClearIcon from "@mui/icons-material/Clear";
+import Button from "@mui/material/Button";
 interface FilterProps {
   branch: string[];
   minPrice: number;
@@ -171,7 +172,11 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                 className="px-3 border"
               >
                 {sortOptions.map((option) => (
-                  <option className="text-sm" key={option.value} value={option.value}>
+                  <option
+                    className="text-sm"
+                    key={option.value}
+                    value={option.value}
+                  >
                     {option.name}
                   </option>
                 ))}
@@ -232,7 +237,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
       </div>
 
       <section aria-labelledby="products-heading" className="pb-24 pt-6">
-        <h2 id="products-heading" className="sr-only">
+        <h2 id="products-heading" className="sr-only ">
           Products
         </h2>
 
@@ -240,8 +245,8 @@ const LoopAllProducts: React.FC<Product> = (props) => {
           <div className="hidden lg:block">
             <h3 className="sr-only">Categories</h3>
             <Disclosure as="div" className="border-b border-gray-200 py-6">
-              <h3 className="-my-3 flow-root mb-5">
-                <h2 id="products-heading" className="">
+              <h3 className="my-3 flow-root mb-5">
+                <h2 id="products-heading" className="mb-1.5">
                   Branch
                 </h2>
                 <ToggleButton
@@ -255,7 +260,6 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   onChange={() => {
                     setSelectedCasio(!selectedCasio);
                   }}
-                  className="my-2"
                   sx={{
                     // Kiểu CSS cho trạng thái "không chọn"
                     backgroundColor: "lightgrey",
@@ -286,7 +290,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     <ClearIcon style={{ fontSize: "20px" }} />
                   </span>
                 </ToggleButton>
-                <hr />
+                <hr className="my-1.5" />
                 <ToggleButton
                   value="check"
                   selected={selectedRolex}
@@ -298,7 +302,6 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   onChange={() => {
                     setSelectedRolex(!selectedRolex);
                   }}
-                  className="my-2"
                   sx={{
                     // Kiểu CSS cho trạng thái "không chọn"
                     backgroundColor: "lightgrey",
@@ -329,7 +332,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     <ClearIcon style={{ fontSize: "20px" }} />
                   </span>
                 </ToggleButton>
-                <hr />
+                <hr className="my-1.5" />
                 <ToggleButton
                   value="check"
                   selected={selectedApple}
@@ -375,7 +378,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                 </ToggleButton>
               </h3>
 
-              <h3 className="-my-3 flow-root">
+              <h3 className="my-3 flow-root">
                 <h2 id="products-heading" className="">
                   Price
                 </h2>
@@ -403,10 +406,14 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   />
                 </Box>
                 {/* css lại button */}
-                <button className="btn btn-dark" onClick={handlePrice}>
+                <Button
+                  variant="contained"
+                  color="inherit"
+                  onClick={handlePrice}
+                >
                   Filter ${value[0] < value[1] ? value[0] : value[1]} - $
                   {value[0] > value[1] ? value[0] : value[1]}
-                </button>
+                </Button>
               </h3>
             </Disclosure>
           </div>

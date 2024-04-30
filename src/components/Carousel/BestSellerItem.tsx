@@ -1,36 +1,42 @@
+import { useSelector } from "react-redux";
 import CarouselDefault from "./Carousel";
+import { RootState } from "../../Redux/store";
 
 const BestSellerItem = () => {
-  const bestSellerInfo = {
-    images: [
-      "https://m.media-amazon.com/images/I/51+3J2SqJRL._AC_SX500_.jpg",
-      "https://m.media-amazon.com/images/I/41l2imvuWJL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/51Cwrg+CuVL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/51P5Lw0F8TL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/612bDB-gsIL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/519cVPdKeqL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/613DG4G9lQL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/711EPhthmML._AC_SY575_.jpg",
-      "https://m.media-amazon.com/images/I/813UuOjWfZL._AC_SX395_.jpg",
-    ],
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
+  const bestSellerInfo: {
+    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    title: string;
+    itemNames: string[];
+    prices: number[];
+    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
+    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    blogDescriptions: string[];
+    id: number;
+  } = {
+    images: [], // Khởi tạo mảng images rỗng
     title: "Best Seller Item",
-    itemNames: [
-      "Metallic Sneakers",
-      "Suede Sandals",
-      "Platform Boots",
-      "Loafer Mules",
-      "Slipper Shoes",
-      "Slipper Shoes",
-      "Slipper Shoes",
-      "Slipper Shoes",
-      "Slipper Shoes",
-    ],
-    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9, 12.9],
+    itemNames: [],
+    prices: [],
     redirectButtons: [],
     redirectLinks: [],
     blogDescriptions: [],
     id: 1,
   };
+  products.map((product) => {
+    if (product.best_seller) {
+      // console.log(product.id);
+      const shortenedName =
+        product.name.length > 10
+          ? product.name.slice(0, 8) + "..."
+          : product.name;
+      bestSellerInfo.images.push(product.images_list[0]);
+      bestSellerInfo.itemNames.push(shortenedName);
+      bestSellerInfo.prices.push(product.price);
+    }
+  });
+  console.log(bestSellerInfo);
   return (
     <CarouselDefault
       images={bestSellerInfo.images}

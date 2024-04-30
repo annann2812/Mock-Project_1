@@ -116,11 +116,12 @@ const CarouselDefault = ({
               />
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
                 <Link
-                  to="/"
+                  to={`/products/${index + 1}`}
                   className="hover:no-underline text-sm text-black hover:text-primary-02"
                 >
                   {itemNames[index]}
                 </Link>
+
                 <p>${prices[index]}</p>
                 <p>{blogDescription[index]}</p>
               </div>

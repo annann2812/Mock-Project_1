@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   const categoriesInfo = {
     image: [
-      "https://m.media-amazon.com/images/I/71Co6D9F6tL._AC_SX695_.jpg",
-      "https://m.media-amazon.com/images/I/71kguy-KUTL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71XEbL2FHaL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71jAmMbzIVL._AC_SL1500_.jpg",
+      "https://demo4techies.com/etrend/presta/smartwatch/30-home_default/numquam-eius.jpg",
+      "https://demo4techies.com/etrend/presta/smartwatch/16-home_default/rem-aperiam.jpg",
+      "https://demo4techies.com/etrend/presta/smartwatch/18-home_default/rem-aperiam.jpg",
+      "https://demo4techies.com/etrend/presta/smartwatch/20-home_default/rem-aperiam.jpg",
     ],
     title: [
       "Embellished Flats",
