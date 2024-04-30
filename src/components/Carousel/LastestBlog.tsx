@@ -1,30 +1,46 @@
+import { useSelector } from "react-redux";
 import Blog1 from "../../assets/image/blog-1.png";
 import Blog2 from "../../assets/image/blog-2.png";
 import Blog3 from "../../assets/image/blog-3.png";
 import Blog4 from "../../assets/image/blog-4.png";
 import CarouselDefault from "./Carousel";
+import { RootState } from "../../Redux/store";
 
 const LastestBlog = () => {
-  const lastestBlogInfo = {
-    images: [
-      "https://m.media-amazon.com/images/I/71ABbKDy8+L._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/51T5UfUe5nL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/81eOPVSz+lL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71C4sYiscYL._AC_SY395_.jpg",
-    ],
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
+  const lastestBlogInfo: {
+    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    title: string;
+    itemNames: string[];
+    prices: number[];
+    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
+    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    blogDescriptions: string[];
+    id: number;
+  } = {
+    images: [], // Khởi tạo mảng images rỗng
     title: "Lastest Blogs",
     itemNames: [],
-    prices: [12.9, 12.9, 28.72, 12.9],
+    prices: [],
     redirectButtons: [],
     redirectLinks: [],
-    blogDescriptions: [
-      "Open Toe Booties",
-      "Studded Sandals",
-      "Suede Booties",
-      "Chelsea Rain Boots",
-    ],
+    blogDescriptions: [],
     id: 5,
   };
+  products.map((product) => {
+    if (product.best_seller) {
+      // console.log(product.id);
+      const shortenedName =
+        product.name.length > 10
+          ? product.name.slice(0, 8) + "..."
+          : product.name;
+      lastestBlogInfo.images.push(product.images_list[0]);
+      lastestBlogInfo.itemNames.push(shortenedName);
+      lastestBlogInfo.prices.push(product.price);
+    }
+  });
+
   return (
     <CarouselDefault
       images={lastestBlogInfo.images}

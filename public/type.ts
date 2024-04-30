@@ -38,6 +38,7 @@ export interface CarouselProps {
   redirectButtons: string[];
   redirectLinks: string[];
   blogDescription: string[];
+
   id: number;
 }
 
