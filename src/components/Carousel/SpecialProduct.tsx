@@ -1,37 +1,45 @@
+import { useSelector } from "react-redux";
 import BestSeller1 from "../../assets/image/best-seller-1.jpg";
 import BestSeller2 from "../../assets/image/best-seller-2.jpg";
 import BestSeller3 from "../../assets/image/best-seller-3.jpg";
 import CarouselDefault from "./Carousel";
+import { RootState } from "../../Redux/store";
 
 const SpecialProduct = () => {
-  const specialProductInfo = {
-    images: [
-      "https://m.media-amazon.com/images/I/61DYj1I-K0L._AC_SX625_.jpg",
-      "https://m.media-amazon.com/images/I/71NjblvJxoL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/51JjJGLAqZL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/71nanZ1jE7S._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71iF0c4CiPL._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71+k4l6-opL._AC_SY395_.jpg",
-      "https://m.media-amazon.com/images/I/81oOebqz+ML._AC_SX395_.jpg",
-      "https://m.media-amazon.com/images/I/71eLQ1bB3QL._AC_SX395_.jpg",
-    ],
+  const { products } = useSelector((state: RootState) => state.loopStore);
+
+  const specialProductInfo: {
+    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    title: string;
+    itemNames: string[];
+    prices: number[];
+    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
+    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    blogDescriptions: string[];
+    id: number;
+  } = {
+    images: [], // Khởi tạo mảng images rỗng
     title: "SPECIAL PRODUCT",
-    itemNames: [
-      "Wingtip Shoes",
-      "Chelsea Sneakers",
-      "Chunky Sneakers",
-      "Open Toe Booties",
-      "Suede Booties",
-      "Chelsea Rain Boots",
-      "Chelsea Rain Boots",
-      "Chelsea Rain Boots",
-    ],
-    prices: [12.9, 12.9, 28.72, 12.9, 12.9, 12.9, 12.9, 12.9],
+    itemNames: [],
+    prices: [],
     redirectButtons: [],
     redirectLinks: [],
-    id: 4,
     blogDescriptions: [],
+    id: 4,
   };
+  products.map((product) => {
+    if (product.best_seller) {
+      // console.log(product.id);
+      const shortenedName =
+        product.name.length > 10
+          ? product.name.slice(0, 8) + "..."
+          : product.name;
+      specialProductInfo.images.unshift(product.images_list[0]);
+      specialProductInfo.itemNames.unshift(shortenedName);
+      specialProductInfo.prices.unshift(product.price);
+    }
+  });
+
   return (
     <CarouselDefault
       images={specialProductInfo.images}

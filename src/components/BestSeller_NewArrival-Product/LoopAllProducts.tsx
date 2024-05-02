@@ -13,6 +13,7 @@ import Slider from "@mui/material/Slider";
 //
 import ToggleButton from "@mui/material/ToggleButton";
 import ClearIcon from "@mui/icons-material/Clear";
+import Button from "@mui/material/Button";
 interface FilterProps {
   branch: string[];
   minPrice: number;
@@ -228,7 +229,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
       </div>
 
       <section aria-labelledby="products-heading" className="pb-24 pt-6">
-        <h2 id="products-heading" className="sr-only">
+        <h2 id="products-heading" className="sr-only ">
           Products
         </h2>
 
@@ -351,8 +352,8 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     value={value}
                     onChange={handleChange}
                     valueLabelDisplay="auto"
-                    min={0} // Đặt giá trị tối thiểu của thanh trượt
-                    max={1000} // Đặt giá trị tối đa của thanh trượt
+                    min={0} 
+                    max={1000} 
                     getAriaValueText={valuetext}
                   />
                 </Box>
