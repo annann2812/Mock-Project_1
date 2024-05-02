@@ -4,11 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logoLoop from "../../assets/image/LOOP-logo (2).png";
 import { FaHeart, FaSearch, FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../Redux/store";
-import { HiMiniShoppingBag } from "react-icons/hi2";
-import { IoIosArrowDown, IoMdSearch } from "react-icons/io";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
+import { AppDispatch, RootState } from "../../Redux/store";
 import { setProductSearch } from "../../Redux/ProductSlice";
 import { ShoppingBagIcon } from "@heroicons/react/20/solid";
 
@@ -41,14 +37,10 @@ const NavTop = () => {
     (state: RootState) => state.loopStore.addToWishlist
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isListOpen, setIsListOpen] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch:AppDispatch = useDispatch();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-  };
-  const toggleShop = () => {
-    setIsListOpen(!isListOpen);
   };
 
   // new
@@ -96,13 +88,13 @@ const NavTop = () => {
     return products.filter((product) => {
       return (
         product.name
-          .trim()
-          .replace(/\s+/g, "")
+          ?.trim()
+          ?.replace(/\s+/g, "")
           .toLowerCase()
           .indexOf(keyword) !== -1 ||
         product.branch
-          .trim()
-          .replace(/\s+/g, "")
+          ?.trim()
+          ?.replace(/\s+/g, "")
           .toLowerCase()
           .indexOf(keyword) !== -1
       );
@@ -223,7 +215,7 @@ const NavTop = () => {
                 )}
               </div>
             </Link>
-            <Link to="/cart">
+            <Link to="/wishlist">
               <div className="relative">
                 <FaHeart className="text-2xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
                 {productsWishList.length > 0 && (

@@ -1,27 +1,21 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { addToCart, addToWishList, updateQuantity } from "../../Redux/ProductSlice";
+import {
+  addToCart,
+  addToWishList,
+  updateQuantity,
+} from "../../Redux/ProductSlice";
 import { AppDispatch, RootState } from "../../Redux/store";
 import { Product } from "../../ApiServices/types";
-import { BsFillSuitHeartFill, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 import { RiThreadsLine } from "react-icons/ri";
-import {
-  Grid,
-  Typography,
-  IconButton,
-  ImageListItem,
-  ImageList,
-} from "@mui/material";
 import Footer from "../../components/Header_Footer/Footer";
-import Header from "../../components/Header_Footer/Header";
 import NavBar from "../../components/NavBar/NavBar";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import SidebarList from "../../components/Sidebar/SidebarList";
 import {
   FaFacebookF,
   FaInstagram,
@@ -34,8 +28,6 @@ import ProductList from "../../components/BestSeller_NewArrival-Product/Product"
 
 const API_URL = "http://localhost:3000/products";
 
-
-
 const ProductCard = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
@@ -43,13 +35,11 @@ const ProductCard = () => {
   const [error, setError] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch: AppDispatch = useDispatch();
-  const productItem = useSelector((state: RootState) => state.loopStore.product);
   const [wishList, setWishList] = useState<string[]>([]);
-
 
   const handleWishList = () => {
     if (product) {
-      dispatch(addToWishList({...product}));
+      dispatch(addToWishList({ ...product }));
     }
   };
   console.log(wishList);
@@ -105,17 +95,29 @@ const ProductCard = () => {
   return (
     <Fragment>
       <NavBar />
-      <div className="flex gap-3 px-5 py-12">
+      <div className="flex gap-3 px-5 py-12 md:flex md:space-x-6 xl:px-0">
         <section className="w-full text-gray-600 body-font overflow-hidden">
           <div className="container w-[90%] mx-auto">
             <div className="lg:w-full w-1/2 mx-auto flex">
-              <img src={product.images_list[0]} className="w-[100%]"/>
+              <img src={product.images_list[0]} className="w-[80%] sm:w-full" />
               <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-3xl font-semibold text-[#76885B] tracking-widest uppercase">
                   {product.name}
                 </h2>
                 <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium mb-1">
-                  ${product.price}
+                  {product.discount && product.discount.is_discount ? (
+                    <Fragment>
+                      <span className="line-through text-gray-400 mr-3">${product.price}</span> $
+                      {(
+                        product.price -
+                        (product.price *
+                          parseFloat(product.discount.price_discount)) /
+                          100
+                      ).toFixed(2)}
+                    </Fragment>
+                  ) : (
+                    `$${product.price}`
+                  )}
                 </h1>
                 <div className="flex mb-4">
                   <span className="text-[#FC6736] flex items-center">
@@ -127,16 +129,28 @@ const ProductCard = () => {
                     <span className="text-gray-600 ml-3">4 Reviews</span>
                   </span>
                   <span className="flex ml-3 pl-3 py-2 border-l-2 text-[20px] border-gray-200 space-x-2s">
-                    <Link to='https://www.facebook.com/fptcorp' className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-[#76885B] mr-2"
+                    >
                       <FaFacebookF />
                     </Link>
-                    <Link to="https://www.facebook.com/fptcorp" className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-[#76885B] mr-2"
+                    >
                       <FaInstagram />
                     </Link>
-                    <Link to = "https://www.facebook.com/fptcorp" className="text-[#76885B] mr-2">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-[#76885B] mr-2"
+                    >
                       <RiThreadsLine />
                     </Link>
-                    <Link to = "https://www.facebook.com/fptcorp" className="text-[#76885B]">
+                    <Link
+                      to="https://www.facebook.com/fptcorp"
+                      className="text-[#76885B]"
+                    >
                       <FaTiktok />
                     </Link>
                   </span>
@@ -150,7 +164,7 @@ const ProductCard = () => {
                     <div className="flex items-center h-full">
                       <button
                         onClick={() => handleDecrement(product.id)}
-                        className="group rounded-l-full px-3 py-[12px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
+                        className="group rounded-l-full px-3 py-[12px] hover:scale-110 border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-200 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
                       >
                         <AiOutlineMinus className="w-[22px] h-[22px]" />
                       </button>
@@ -159,39 +173,42 @@ const ProductCard = () => {
                       </p>
                       <button
                         onClick={() => handleIncrement(product.id)}
-                        className="group rounded-r-full px-3 py-[12px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
+                        className="group rounded-r-full px-3 py-[12px] border hover:scale-110 border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-200 hover:bg-gray-50 hover:border-gray-300 hover:shadow-gray-300 focus-within:outline-gray-300"
                       >
                         <AiOutlinePlus className="w-[22px] h-[22px]" />
                       </button>
                     </div>
-                      <button
-                        onClick={() => dispatch(handleWishList)}
-                        className="rounded-full w-10 h-10 bg-[#76885B] hover:bg-opacity-90 p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
-                      >
-                        <BsFillSuitHeartFill className="hover:text-[#FC6736] text-white"/>
-                      </button>
+                    <button
+                      onClick={() => dispatch(handleWishList)}
+                      className="rounded-full w-10 h-10 bg-[#76885B] hover:scale-110 transition-all duration-200 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
+                    >
+                      <BsFillSuitHeartFill className="hover:text-[#76885B] text-white" />
+                    </button>
                   </div>
                 )}
                 <div className="py-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:bg-gray-600 rounded-2xl text-lg uppercase"
+                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
                   >
                     Add to Cart
                   </button>
-                  <ToastContainer />
+                  <ToastContainer autoClose = {1000}/>
                 </div>
                 <div className="mt-3 font-semibold rounded">
                   <div className="py-2 flex flex-col">
-                    <p className="uppercase text-[15px]">Hurry! Only <span className="text-[#FC6736]">4</span> items left in stock.</p>
-                    <div className="w-full bg-[#76885B] h-[13px] rounded-xl†">
-                      <input className="bg-[#FC6736] w-[30%]"></input>
+                    <p className="uppercase text-[15px] mt-2">
+                      Hurry! Only <span className="text-[#FC6736]">4</span>{" "}
+                      items left in stock.
+                    </p>
+                    <div className="w-full bg-[#76885B] h-[13px]  rounded-xl">
+                      <input className="bg-[#FC6736] h-[100%] rounded-xl"></input>
                     </div>
                   </div>
                 </div>
                 <div className="mt-3 font-semibold border rounded">
                   <div className="py-2 px-3 border bg-gray-200 gap-4 flex items-center">
-                    <FaTruck className="text-[29px]"/>
+                    <FaTruck className="text-[29px]" />
                     <div className="text-sm leading-loose">
                       <p>Delivery: 2 Working Days</p>
                       <p>Expected Delivery Date is 24th April, 2024</p>
@@ -203,11 +220,10 @@ const ProductCard = () => {
           </div>
         </section>
       </div>
-      <ProductList/>
+      <ProductList />
       <Footer />
     </Fragment>
   );
 };
 
 export default ProductCard;
-

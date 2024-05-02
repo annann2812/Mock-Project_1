@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
 import Blog from "./pages/Blog/Blog";
 import Store from "./pages/Store/Store";
-import BestSellers from "./pages/BestSellers/BestSellers";
+import BestSellers from "./pages/SalePage/SalePage";
 import Contact from "./pages/Contact/Contact";
 import Sitemap from "./pages/Sitemap/Sitemap";
 import About from "./pages/About/About";

@@ -16,7 +16,7 @@ const SaleProduct = () => {
   };
 
   return (
-    <div className="mx-auto pb-12 pt-6">
+    <div className="mx-auto pb-20 pt-6">
       <h1 className="text-4xl capitalize my-3 text-center text-[#76885B] font-semibold tracking-wide">
         <span className="text-[#FC7636]">Big </span>   sale
       </h1>
@@ -26,10 +26,10 @@ const SaleProduct = () => {
       <div className="col-span-3">
         <section className="text-gray-600 body-font">
           <div className="py-2 mx-auto">
-            <Grid container spacing={5} width="80%" margin="auto">
+            <Grid container spacing={6} width="80%" margin="auto">
               <Fragment>
                 {discountedProducts.slice(0, displayCount).map((product, index) => (
-                  <Grid item xs={12} sm={6} md={3} key={index}>
+                  <Grid xs={12} sm={6} md={3} key={index}>
                     <Link
                       to={`/products/${product.id}`}
                       className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"

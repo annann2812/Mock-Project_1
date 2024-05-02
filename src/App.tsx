@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
-import BestSellers from "./pages/BestSellers/BestSellers";
+import BestSellers from "./pages/SalePage/SalePage";
 // import BlogPage from "./pages/Blog/Blog";
 import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
@@ -23,6 +23,7 @@ import Swipper from "./pages/ProductDetail/SwipperProduct";
 import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
 import Store from "./pages/Store/Store";
 import SaleProduct from "./components/BestSeller_NewArrival-Product/SaleProduct";
+import WishListPage from "./pages/WishList/WishListPage";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -54,7 +55,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/swiper" element={<SwiperComponent />} />
         <Route path="/abc" element={<Store />} />
-
+        <Route path="/wishlist" element={<WishListPage />} />
         <Route path="/search" element={<SearchResult />} />
       </Routes>
     </Fragment>
