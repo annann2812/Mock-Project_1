@@ -6,6 +6,7 @@ import { FormValues } from "../../../public/type";
 import { User } from "../../../projectLogin/src/interface/user";
 import instance from "../../../projectLogin/src/service";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
+import { FaArrowLeft } from "react-icons/fa";
 
 const initialValues: FormValues = {
   username: "",
@@ -48,12 +49,12 @@ const Login: React.FC = () => {
     <Fragment>
       <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
         <div className="flex justify-center items-center w-full">
-          <div className="flex w-10/12 md:w-8/12 h-full flex-col px-4 gap-2 text-white relative">
+          <div className="flex w-9/12  h-full text-[18px] font-semibold flex-col px-4 gap-2 text-white relative">
             <Link
-              className="flex gap-2 items-center duration-300 w-fit absolute -translate-y-[34px]"
+              className="flex gap-2 items-center duration-200 hover:scale-110 w-fit absolute -translate-y-[34px]"
               to="/"
             >
-              <ArrowLeftIcon className="h-4 w-4" />
+              <FaArrowLeft />
               <p>Back to Home</p>
             </Link>
 
@@ -158,7 +159,7 @@ const Login: React.FC = () => {
                         <div className="flex justify-center text-white">
                           <button
                             type="submit"
-                            className="block bg-primary-01 text-xs py-[10px] px-16 border-[1px] border-transparent rounded-[10px] font-bold tracking-wider uppercase cursor-pointer opacity-80 hover:opacity-100 transition-all duration-300"
+                            className="block bg-primary-01 text-md py-[8px] mt-2 px-16 border-[1px] border-transparent rounded-[10px] font-bold tracking-wider uppercase cursor-pointer opacity-80 hover:opacity-100 transition-all duration-300"
                           >
                             Login
                           </button>

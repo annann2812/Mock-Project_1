@@ -1,24 +1,16 @@
-import React, { Fragment, useCallback, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/20/solid";
+import { Squares2X2Icon } from "@heroicons/react/20/solid";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import AppService from "../../ApiServices/AppService";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
-import { ProductsSaleProps } from "../../../public/type";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { Product } from "../../ApiServices/types";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 //
-import CheckIcon from "@mui/icons-material/Check";
 import ToggleButton from "@mui/material/ToggleButton";
 import ClearIcon from "@mui/icons-material/Clear";
 interface FilterProps {
@@ -149,8 +141,8 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   const [selectedRolex, setSelectedRolex] = React.useState(false);
   const [selectedApple, setSelectedApple] = React.useState(false);
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-8">
+    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+      <div className="flex items-baseline justify-between border-b border-gray-200 py-6">
         <h1 className="text-4xl text-[#76885B] font-bold tracking-tight">
           Loop's Watches
         </h1>
@@ -171,7 +163,11 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                 className="px-3 border"
               >
                 {sortOptions.map((option) => (
-                  <option className="text-sm" key={option.value} value={option.value}>
+                  <option
+                    className="text-sm"
+                    key={option.value}
+                    value={option.value}
+                  >
                     {option.name}
                   </option>
                 ))}
@@ -236,161 +232,119 @@ const LoopAllProducts: React.FC<Product> = (props) => {
           Products
         </h2>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-          <div className="hidden lg:block">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4 sm:px-10 lg:px-0">
+          <div className="lg:block">
             <h3 className="sr-only">Categories</h3>
-            <Disclosure as="div" className="border-b border-gray-200 py-6">
-              <h3 className="-my-3 flow-root mb-5">
-                <h2 id="products-heading" className="">
-                  Branch
-                </h2>
-                <ToggleButton
-                  value="check"
-                  selected={selectedCasio}
-                  onClick={() => {
-                    !selectedCasio
-                      ? handleAddFilter("Casio")
-                      : handleDelFilter("Casio");
-                  }}
-                  onChange={() => {
-                    setSelectedCasio(!selectedCasio);
-                  }}
-                  className="my-2"
-                  sx={{
-                    // Kiểu CSS cho trạng thái "không chọn"
-                    backgroundColor: "lightgrey",
-                    color: "black",
-                    "&:hover": {
-                      backgroundColor: "grey",
-                      color: "white",
-                    },
-                    // Kiểu CSS cho trạng thái "chọn"
-                    "&.Mui-selected": {
-                      backgroundColor: "grey",
-                      color: "white",
-                      "&:hover": {
-                        backgroundColor: "lightgrey",
-                        color: "black",
-                      },
-                    },
-                  }}
-                >
-                  Casio{" "}
-                  <span
-                    className={
-                      !selectedCasio
-                        ? "flex items-center justify-between invisible "
-                        : "flex items-center justify-between visible"
-                    }
-                  >
-                    <ClearIcon style={{ fontSize: "20px" }} />
+            <Disclosure as="div" className="border-b border-gray-200 py-6 ">
+              <div className="border-b border-gray-200 py-6">
+                <h3 className="my-2 flow-root">
+                  <span className="font-medium text-[20px] text-gray-900 uppercase">
+                    Branch
                   </span>
-                </ToggleButton>
-                <hr />
-                <ToggleButton
-                  value="check"
-                  selected={selectedRolex}
-                  onClick={() => {
-                    !selectedRolex
-                      ? handleAddFilter("Rolex")
-                      : handleDelFilter("Rolex");
-                  }}
-                  onChange={() => {
-                    setSelectedRolex(!selectedRolex);
-                  }}
-                  className="my-2"
-                  sx={{
-                    // Kiểu CSS cho trạng thái "không chọn"
-                    backgroundColor: "lightgrey",
-                    color: "black",
-                    "&:hover": {
-                      backgroundColor: "grey",
-                      color: "white",
-                    },
-                    // Kiểu CSS cho trạng thái "chọn"
-                    "&.Mui-selected": {
-                      backgroundColor: "grey",
-                      color: "white",
-                      "&:hover": {
-                        backgroundColor: "lightgrey",
-                        color: "black",
-                      },
-                    },
-                  }}
-                >
-                  Rolex{" "}
-                  <span
-                    className={
-                      !selectedRolex
-                        ? "flex items-center justify-between invisible "
-                        : "flex items-center justify-between visible"
-                    }
-                  >
-                    <ClearIcon style={{ fontSize: "20px" }} />
+                </h3>
+                <div className="pt-6" id="filter-section-0">
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        id="rolexCategory"
+                        value="checked"
+                        checked={selectedRolex}
+                        onClick={() => {
+                          if (!selectedRolex) {
+                            handleAddFilter("Rolex");
+                          } else {
+                            handleDelFilter("Rolex");
+                            setSelectedRolex(false);
+                          }
+                        }}
+                        onChange={() => {
+                          setSelectedRolex(!selectedRolex);
+                        }}
+                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <label
+                        htmlFor="rolexCategory"
+                        className="ml-3 text-sm text-gray-600"
+                      >
+                        Rolex
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        value="check"
+                        id="casioCategory"
+                        checked={selectedCasio}
+                        onClick={() => {
+                          if (!selectedCasio) {
+                            handleAddFilter("Casio");
+                          } else {
+                            handleDelFilter("Casio");
+                            setSelectedCasio(false);
+                          }
+                        }}
+                        onChange={() => {
+                          setSelectedCasio(!selectedCasio);
+                        }}
+                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <label
+                        htmlFor="casioCategory"
+                        className="ml-3 text-sm text-gray-600"
+                      >
+                        Casio
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        type="radio"
+                        id="appleCategory"
+                        value="check"
+                        checked={selectedApple}
+                        onClick={() => {
+                          if (!selectedApple) {
+                            handleAddFilter("Apple");
+                          } else {
+                            handleDelFilter("Apple");
+                            setSelectedApple(false);
+                          }
+                        }}
+                        onChange={() => {
+                          setSelectedApple(!selectedApple);
+                        }}
+                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <label
+                        htmlFor="appleCategory"
+                        className="ml-3 text-sm text-gray-600"
+                      >
+                        Apple
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="my-3 flow-root">
+                  <span className="font-medium text-[20px] text-gray-900 uppercase">
+                    Price
                   </span>
-                </ToggleButton>
-                <hr />
-                <ToggleButton
-                  value="check"
-                  selected={selectedApple}
-                  onClick={() => {
-                    !selectedApple
-                      ? handleAddFilter("Apple")
-                      : handleDelFilter("Apple");
-                  }}
-                  onChange={() => {
-                    setSelectedApple(!selectedApple);
-                  }}
-                  className="my-1 "
-                  sx={{
-                    // Kiểu CSS cho trạng thái "không chọn"
-                    backgroundColor: "lightgrey",
-                    color: "black",
-                    "&:hover": {
-                      backgroundColor: "grey",
-                      color: "white",
-                    },
-
-                    // Kiểu CSS cho trạng thái "chọn"
-                    "&.Mui-selected": {
-                      backgroundColor: "grey",
-                      color: "white",
-                      "&:hover": {
-                        backgroundColor: "lightgrey",
-                        color: "black",
-                      },
-                    },
-                  }}
-                >
-                  Apple{" "}
-                  <span
-                    className={
-                      !selectedApple
-                        ? "flex items-center justify-between invisible "
-                        : "flex items-center justify-between visible"
-                    }
-                  >
-                    <ClearIcon style={{ fontSize: "20px" }} />
-                  </span>
-                </ToggleButton>
-              </h3>
-
-              <h3 className="-my-3 flow-root">
-                <h2 id="products-heading" className="">
-                  Price
-                </h2>
-                <Box sx={{ width: 300 }}>
+                </h3>
+                <Box sx={{ width: "100%" }}>
                   <Slider
                     sx={{
-                      width: 300, // Chiều rộng của thanh trượt
+                      height: 10,
+                      color: "#76885B",
+                      width: "100%",
                       "& .MuiSlider-thumb": {
-                        backgroundColor: "orangered", // Màu của nút trượt
+                        backgroundColor: "orangered",
                       },
                       "& .MuiSlider-rail": {
-                        backgroundColor: "lightgray", // Màu của đường dẫn
+                        backgroundColor: "lightgray",
                       },
                       "& .MuiSlider-track": {
-                        backgroundColor: "", // Màu của vùng đã chọn
+                        backgroundColor: "",
                       },
                     }}
                     getAriaLabel={() => "Temperature range"}
@@ -402,18 +356,24 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     getAriaValueText={valuetext}
                   />
                 </Box>
-                {/* css lại button */}
-                <button className="btn btn-dark" onClick={handlePrice}>
-                  Filter ${value[0] < value[1] ? value[0] : value[1]} - $
-                  {value[0] > value[1] ? value[0] : value[1]}
+                <p className="text-gray-500 ">
+                  The price is in ${value[0] < value[1] ? value[0] : value[1]} - $
+                  {value[0] > value[1] ? value[0] : value[1]}{" "}
+                </p>
+                <button
+                  className="bg-[#76885B] text-white px-3 text-[14px] font-semibold py-1 my-2 rounded-lg"
+                  onClick={handlePrice}
+                >
+                  Filter
                 </button>
-              </h3>
+
+              </div>
             </Disclosure>
           </div>
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 sm:col-span-2">
             <section className="text-gray-600 body-font">
-              <div className="container py-12 mx-auto">
-                <Grid container spacing={5} width="900px" margin="auto">
+              <div className="container py-10 mx-auto">
+                <Grid container spacing={4} width="100%" margin="auto">
                   {gridProduct ? (
                     <Fragment>
                       {productFilter &&
@@ -440,49 +400,52 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                 index >= counterNextPageMin)
                             ) {
                               return (
-                                <Link
-                                  to={`/products/${product.id}`}
-                                  key={product.id}
-                                  className="lg:w-1/3 md:w-1/2 w-full border-[#76885B] text-center mb-2 cursor-pointer p-3"
-                                >
-                                  <div className="capitialize block capitalize relative overflow-hidden">
-                                    <img
-                                      alt={product.name}
-                                      className="object-contain object-center w-full h-full block"
-                                      src={product.images_list[0]}
-                                    />
-                                  </div>
-                                  <div
-                                    className="mt-3"
-                                    // onChange={() => handleSortTypeChange}
+                                <Grid xs={12} sm={6} md={4} key={index}>
+                                  <Link
+                                    to={`/products/${product.id}`}
+                                    className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"
                                   >
-                                    <p className="capitalize mb-2 text-gray-700 capitalize title-font text-lg font-thin">
-                                      {product.branch}
-                                    </p>
-                                    <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
-                                      {product.name}
-                                    </h2>
-                                    <p className="mt-1 text-md my-2 font-semibold">
-                                      $ {product.price}
-                                    </p>
-                                    <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
-                                      View Details
-                                    </button>
-                                  </div>
-                                </Link>
+                                    <div className="capitialize relative">
+                                      <img
+                                        alt={product.name}
+                                        className="object-contain object-center w-full h-full"
+                                        src={product.images_list[0]}
+                                      />
+                                      {product.discount &&
+                                        product.discount.is_discount && (
+                                          <div className="absolute m-2 top-0 left-0 bg-[#FC6736] rounded-lg text-[12px] text-white px-1 py-1">
+                                            {product.discount.price_discount}
+                                          </div>
+                                        )}
+                                    </div>
+                                    <div className="mt-3">
+                                      <p className="capitalize mb-2 text-gray-700 capitalize title-font text-lg font-thin">
+                                        {product.branch}
+                                      </p>
+                                      <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                        {product.name}
+                                      </h2>
+                                      <p className="mt-1 text-md my-2 font-semibold">
+                                        $ {product.price}
+                                      </p>
+                                      <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                        View Details
+                                      </button>
+                                    </div>
+                                  </Link>
+                                </Grid>
                               );
                             }
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-white hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
-                        {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-[#76885B] p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-[#76885B] p-2 rounded-xl text-white hover:bg-opacity-70"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
@@ -546,7 +509,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                           </p>
                                           <Link
                                             to={`/products/${product.id}`}
-                                            className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                                            className="inline-flex text-center w-[40%] justify-center mt-2 text-white font-medium bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded"
                                           >
                                             View Details
                                           </Link>

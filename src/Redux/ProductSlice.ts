@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
+
 interface Product {
   image: string | undefined;
   id?: number;

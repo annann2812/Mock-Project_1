@@ -22,23 +22,33 @@ const Cart: React.FC = () => {
   const products = useSelector((state: RootState) => state.loopStore.addToCart);
   const [totalAmt, setTotalAmt] = useState<number>(0);
   const [shippingCharge, setShippingCharge] = useState<number>();
-  const dispatch: AppDispatch = useDispatch()
+  const dispatch: AppDispatch = useDispatch();
+  const hasDiscount = products.some(
+    (product) => product.discount && product.discount.is_discount
+  );
 
   useEffect(() => {
-    // Calculate total amount
-    let price = 0;
+    let total = 0;
     products.forEach((item) => {
-      price += item.price * (item.quantity || 1);
+      if (item.discount && item.discount.is_discount) {
+        const discountedPrice =
+          item.price -
+          (item.price * parseFloat(item.discount.price_discount)) / 100;
+        total += discountedPrice * (item.quantity || 1);
+      } else {
+        total += item.price * (item.quantity || 1);
+      }
     });
-    setTotalAmt(price);
+
+    setTotalAmt(total);
   }, [products]);
 
   useEffect(() => {
-    if (totalAmt <= 3000) {
+    if (totalAmt <= 300.00) {
       setShippingCharge(30);
-    } else if (totalAmt <= 4000) {
+    } else if (totalAmt <= 500.00) {
       setShippingCharge(20);
-    } else if (totalAmt > 4000) {
+    } else if (totalAmt > 500.00) {
       setShippingCharge(10);
     }
   }, []);
@@ -59,8 +69,10 @@ const Cart: React.FC = () => {
     <Fragment>
       <NavBar />
       {products.length > 0 ? (
-        <div className="h-screen overflow-x-hidden bg-gray-100 py-12">
-          <h1 className="mb-3 text-center text-2xl font-medium uppercase text-[#76885B]">My Shopping Cart</h1>
+        <div className="h-screen overflow-x-hidden bg-gray-100 py-12 sm:px-10 lg:px-20 xl:px-32 mt-16">
+          <h1 className="text-4xl mb-10 text-center capitalize text-[#76885B] font-semibold tracking-normal">
+            My Shopping Cart
+          </h1>
           <div className="mx-auto max-w-6xl justify-center md:flex md:space-x-6 xl:px-0">
             <div className="rounded-lg md:w-full">
               {products.map((product) => (
@@ -72,11 +84,35 @@ const Cart: React.FC = () => {
                   />
                   <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                     <div className="mt-3 sm:mt-0">
+                      <p className="capitalize text-gray-700 capitalize title-font text-md font-thin">
+                        {product.branch}
+                      </p>
                       <h2 className="text-xl capitalize font-bold text-[#76885B]">
                         {product.name}
                       </h2>
-                      <p className="mt-1 text-md text-gray-700">
-                        $ {product.price}
+                      <p
+                        className={`mt-1 font-semibold text-md ${
+                          product.discount && product.discount.is_discount
+                            ? "text-[#FC6736]"
+                            : "text-gray-700"
+                        }`}
+                      >
+                        {product.discount && product.discount.is_discount ? (
+                          <Fragment>
+                            <span className="line-through text-gray-400 mr-3">
+                              ${product.price}
+                            </span>{" "}
+                            $
+                            {(
+                              product.price -
+                              (product.price *
+                                parseFloat(product.discount.price_discount)) /
+                                100
+                            ).toFixed(2)}
+                          </Fragment>
+                        ) : (
+                          `$${product.price}`
+                        )}
                       </p>
                     </div>
                     <div className="flex items-center justify-between">
@@ -112,7 +148,7 @@ const Cart: React.FC = () => {
               <div className="flex items-center justify-between mt-4">
                 <Link to="/all-items">
                   <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-[#76885B] gap-2 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] hover:bg-[#FC6736] hover:text-white hover:border-none">
-                    <IoIosArrowBack className="text-[20px]"/>
+                    <IoIosArrowBack className="text-[20px]" />
                     Continue Shopping
                   </button>
                 </Link>
@@ -125,14 +161,22 @@ const Cart: React.FC = () => {
               </div>
             </div>
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
-              <div className="mb-2 flex justify-between">
-                <p className="text-gray-700">Subtotal</p>
+              <div className="flex justify-between">
+                <p className="text-lg font-medium text-[#76885B]">Subtotal</p>
                 <p className="text-gray-700">${totalAmt.toFixed(2)}</p>
               </div>
-              <div className="flex justify-between">
-                <p className="text-gray-700">Shipping</p>
+              <div className="flex my-2 justify-between">
+                <p className="text-md font-medium text-[#76885B]">Shipping</p>
                 <p className="text-gray-700">${shippingCharge}</p>
               </div>
+              {hasDiscount && (
+                <div className="flex justify-between ">
+                  <p className="text-md font-medium text-[#76885B]">Discount</p>
+                  <p className="font-bold text-[#FC6736]">
+                    {products[0].discount.price_discount}
+                  </p>
+                </div>
+              )}
               <hr className="my-4" />
               <div className="flex justify-between">
                 <p className="text-lg font-bold">Total</p>
@@ -143,8 +187,8 @@ const Cart: React.FC = () => {
                   <p className="text-sm text-gray-700">including VAT</p>
                 </div>
               </div>
-              <Link to = "/payment">
-                <button className="mt-6 w-full transition-all duration-200 rounded-md bg-[#76885B] py-1.5 font-medium text-blue-50 hover:bg-opacity-90">
+              <Link to="/payment">
+                <button className="mt-6 w-full transition-all duration-200 hover:scale-110 rounded-md bg-[#76885B] py-1.5 font-medium text-blue-50 hover:bg-[#FC6736]">
                   Check out
                 </button>
               </Link>
@@ -187,7 +231,3 @@ const Cart: React.FC = () => {
 };
 
 export default Cart;
-
-
-
-
