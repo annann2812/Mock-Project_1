@@ -97,10 +97,13 @@ const ProductCard = () => {
       <NavBar />
       <div className="flex gap-3 px-5 py-12 md:flex md:space-x-6 xl:px-0">
         <section className="w-full text-gray-600 body-font overflow-hidden">
-          <div className="container w-[90%] mx-auto">
-            <div className="lg:w-full w-1/2 mx-auto flex">
-              <img src={product.images_list[0]} className="w-[80%] sm:w-full" />
-              <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <div className="px-10">
+            <div className="w-full flex gap-5 flex-col lg:flex-row items-center">
+              <img
+                src={product.images_list[0]}
+                className="object-contain max-[1024px]:max-h-96"
+              />
+              <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-3xl font-semibold text-primary-01 tracking-widest uppercase">
                   {product.name}
                 </h2>
