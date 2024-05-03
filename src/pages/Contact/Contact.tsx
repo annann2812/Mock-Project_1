@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
                 </h2>
                 <a
                   href="tel: 123-456-7890"
-                  className="leading-relaxed text-[#76885B]"
+                  className="leading-relaxed text-primary-01"
                 >
                   123-456-7890
                 </a>

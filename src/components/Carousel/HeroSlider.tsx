@@ -27,7 +27,7 @@ const slides = [
 
 const Hero: React.FC = () => {
   return (
-    <div className="w-70">
+    <div className="">
       <SliderHero slides={slides} />
     </div>
   );

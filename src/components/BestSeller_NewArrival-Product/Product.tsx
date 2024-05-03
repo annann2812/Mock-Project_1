@@ -11,7 +11,9 @@ const ProductList = () => {
 
   return (
     <div className="mx-auto pb-24 pt-12 border border-t-gray">
-      <h3 className="text-3xl uppercase font-medium text-center">Some popular items...</h3>
+      <h3 className="text-3xl uppercase font-medium text-center">
+        Some popular items...
+      </h3>
       <div className="col-span-3">
         <section className="text-gray-600 body-font">
           <div className="mx-auto">
@@ -21,7 +23,7 @@ const ProductList = () => {
                   <Grid item xs={12} sm={6} md={4} width="900px" key={index}>
                     <Link
                       to={`/products/${product.id}`}
-                      className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"
+                      className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
                     >
                       <div className="capitialize block capitalize relative overflow-hidden">
                         <img
@@ -40,7 +42,7 @@ const ProductList = () => {
                         <p className="mt-1 text-md my-2 font-semibold">
                           $ {product.price}
                         </p>
-                        <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                        <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                           View Details
                         </button>
                       </div>

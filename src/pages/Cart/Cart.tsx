@@ -44,11 +44,11 @@ const Cart: React.FC = () => {
   }, [products]);
 
   useEffect(() => {
-    if (totalAmt <= 300.00) {
+    if (totalAmt <= 300.0) {
       setShippingCharge(30);
-    } else if (totalAmt <= 500.00) {
+    } else if (totalAmt <= 500.0) {
       setShippingCharge(20);
-    } else if (totalAmt > 500.00) {
+    } else if (totalAmt > 500.0) {
       setShippingCharge(10);
     }
   }, []);
@@ -70,7 +70,7 @@ const Cart: React.FC = () => {
       <NavBar />
       {products.length > 0 ? (
         <div className="h-screen overflow-x-hidden bg-gray-100 py-12 sm:px-10 lg:px-20 xl:px-32 mt-16">
-          <h1 className="text-4xl mb-10 text-center capitalize text-[#76885B] font-semibold tracking-normal">
+          <h1 className="text-4xl mb-10 text-center capitalize text-primary-01 font-semibold tracking-normal">
             My Shopping Cart
           </h1>
           <div className="mx-auto max-w-6xl justify-center md:flex md:space-x-6 xl:px-0">
@@ -87,7 +87,7 @@ const Cart: React.FC = () => {
                       <p className="capitalize text-gray-700 capitalize title-font text-md font-thin">
                         {product.branch}
                       </p>
-                      <h2 className="text-xl capitalize font-bold text-[#76885B]">
+                      <h2 className="text-xl capitalize font-bold text-primary-01">
                         {product.name}
                       </h2>
                       <p
@@ -139,7 +139,7 @@ const Cart: React.FC = () => {
                         }
                         className="ml-12 transition-all duration-200"
                       >
-                        <FaTrashAlt className="text-[#76885B] hover:text-[#FC6736] text-[20px] font-semibold" />
+                        <FaTrashAlt className="text-primary-01 hover:text-[#FC6736] text-[20px] font-semibold" />
                       </div>
                     </div>
                   </div>
@@ -147,14 +147,14 @@ const Cart: React.FC = () => {
               ))}
               <div className="flex items-center justify-between mt-4">
                 <Link to="/all-items">
-                  <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-[#76885B] gap-2 font-semibold text-m leading-8 text-[#76885B] shadow-sm shadow-transparent transition-all duration-200 hover:shadow-[#76885B] hover:bg-[#FC6736] hover:text-white hover:border-none">
+                  <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-primary-01 gap-2 font-semibold text-m leading-8 text-primary-01 shadow-sm shadow-transparent transition-all duration-200 hover:shadow-primary-01 hover:bg-[#FC6736] hover:text-white hover:border-none">
                     <IoIosArrowBack className="text-[20px]" />
                     Continue Shopping
                   </button>
                 </Link>
                 <button
                   onClick={() => dispatch(resetCart())}
-                  className="flex items-center px-3 py-2 gap-2 rounded border-none outline-0 font-medium text-lg leading-8 text-white shadow-sm shadow-transparent transition-all duration-200 hover:shadow-red-500 bg-[#76885B] hover:bg-[#FC6736] hover:text-white"
+                  className="flex items-center px-3 py-2 gap-2 rounded border-none outline-0 font-medium text-lg leading-8 text-white shadow-sm shadow-transparent transition-all duration-200 hover:shadow-red-500 bg-primary-01 hover:bg-[#FC6736] hover:text-white"
                 >
                   Reset
                 </button>
@@ -162,16 +162,18 @@ const Cart: React.FC = () => {
             </div>
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div className="flex justify-between">
-                <p className="text-lg font-medium text-[#76885B]">Subtotal</p>
+                <p className="text-lg font-medium text-primary-01">Subtotal</p>
                 <p className="text-gray-700">${totalAmt.toFixed(2)}</p>
               </div>
               <div className="flex my-2 justify-between">
-                <p className="text-md font-medium text-[#76885B]">Shipping</p>
+                <p className="text-md font-medium text-primary-01">Shipping</p>
                 <p className="text-gray-700">${shippingCharge}</p>
               </div>
               {hasDiscount && (
                 <div className="flex justify-between ">
-                  <p className="text-md font-medium text-[#76885B]">Discount</p>
+                  <p className="text-md font-medium text-primary-01">
+                    Discount
+                  </p>
                   <p className="font-bold text-[#FC6736]">
                     {products[0].discount.price_discount}
                   </p>
@@ -188,7 +190,7 @@ const Cart: React.FC = () => {
                 </div>
               </div>
               <Link to="/payment">
-                <button className="mt-6 w-full transition-all duration-200 hover:scale-110 rounded-md bg-[#76885B] py-1.5 font-medium text-blue-50 hover:bg-[#FC6736]">
+                <button className="mt-6 w-full transition-all duration-200 hover:scale-110 rounded-md bg-primary-01 py-1.5 font-medium text-blue-50 hover:bg-[#FC6736]">
                   Check out
                 </button>
               </Link>
@@ -218,7 +220,7 @@ const Cart: React.FC = () => {
               books, electronics, videos, etc. and make it happy.
             </p>
             <Link to="/all-items">
-              <button className="bg-primeColor border border-[#76885B] rounded cursor-pointer hover:bg-[#76885B] active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-400 hover:text-white duration-300">
+              <button className="bg-primeColor border border-primary-01 rounded cursor-pointer hover:bg-primary-01 active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-400 hover:text-white duration-300">
                 Continue Shopping
               </button>
             </Link>

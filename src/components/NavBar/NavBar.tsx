@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import NavTop from "./NavTop";
 
 const NavBar = () => {
- 
   return (
     <Fragment>
       <NavTop />
-      <nav className="bg-white border-gray-200 boder border-b dark:bg-gray-900">
-        <div className="container max-w-screen- text-[#76885B]  flex p-5 text-center flex-wrap items-center justify-between mx-auto">
-          <ul className="flex mx-auto font-medium  md:p-0 rounded-lg md:space-x-8">
+      <nav className="bg-white border-gray-200 border-b">
+        <div className="text-primary-01 flex text-center flex-wrap items-center justify-between mx-auto">
+          <ul className="flex mx-auto font-medium rounded-lg">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 text-[#76885B] rounded hover:text-[#FC6736] md:bg-transparent md:p-0"
+                className="block py-6 px-3 md:px-6 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
               >
                 Home
               </Link>
@@ -21,7 +20,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/all-items"
-                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+                className="block py-6 px-3 md:px-6 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
               >
                 Shop
               </Link>
@@ -29,7 +28,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/sale"
-                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+                className="block py-6 px-3 md:px-6 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
               >
                 Sale
               </Link>
@@ -37,7 +36,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/payment"
-                className="block py-2 px-3 text-[#76885B] rounded  md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+                className="block py-6 px-3 md:px-6 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
               >
                 Payment
               </Link>
@@ -45,7 +44,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block py-2 px-3 text-[#76885B] rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-[#FC6736] md:p-0"
+                className="block py-6 px-3 md:px-6 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
               >
                 Contact us
               </Link>

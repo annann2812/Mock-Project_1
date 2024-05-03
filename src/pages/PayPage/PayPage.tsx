@@ -30,11 +30,11 @@ const PayPage = () => {
     if (formData.shippingMethod === "free") {
       setShippingCharge(0);
     } else {
-      if (totalAmt <= 300.00) {
+      if (totalAmt <= 300.0) {
         setShippingCharge(30);
-      } else if (totalAmt <= 500.00) {
+      } else if (totalAmt <= 500.0) {
         setShippingCharge(20);
-      } else if (totalAmt > 500.00) {
+      } else if (totalAmt > 500.0) {
         setShippingCharge(10);
       }
     }
@@ -78,16 +78,19 @@ const PayPage = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <ToastContainer/>
+        <ToastContainer />
         <Link to="/" className="block sm:px-10 lg:px-20 xl:px-32 mt-16">
-          <FaArrowLeft className="text-[28px] hover:text-[#FC6736] hover:scale-110"/>  
-
+          <FaArrowLeft className="text-[28px] hover:text-[#FC6736] hover:scale-110" />
         </Link>
         <div className="grid mb-16 sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
           <div className="px-4 pt-8">
             <p className="text-xl font-medium">Order Summary</p>
             <p className="text-gray-400">
-              Check your <span className="font-bold text-[#FC6736] text-[20px]">{products.length}</span> items. And select a suitable shipping method.
+              Check your{" "}
+              <span className="font-bold text-[#FC6736] text-[20px]">
+                {products.length}
+              </span>{" "}
+              items. And select a suitable shipping method.
             </p>
             <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6 overflow-y-auto md:h-[200px]">
               {products.map((product, index) => (
@@ -336,7 +339,7 @@ const PayPage = () => {
             </div>
             <button
               type="submit"
-              className="mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-[#76885B] hover:bg-[#FC6736] px-6 py-3 font-medium text-white"
+              className="mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-primary-01 hover:bg-[#FC6736] px-6 py-3 font-medium text-white"
             >
               Place Order
             </button>

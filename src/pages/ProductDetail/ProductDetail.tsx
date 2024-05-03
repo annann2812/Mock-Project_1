@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -10,7 +10,7 @@ import {
   addToWishList,
   updateQuantity,
 } from "../../Redux/ProductSlice";
-import { AppDispatch, RootState } from "../../Redux/store";
+import { AppDispatch } from "../../Redux/store";
 import { Product } from "../../ApiServices/types";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { RiThreadsLine } from "react-icons/ri";
@@ -101,13 +101,16 @@ const ProductCard = () => {
             <div className="lg:w-full w-1/2 mx-auto flex">
               <img src={product.images_list[0]} className="w-[80%] sm:w-full" />
               <div className="w-full lg:w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-3xl font-semibold text-[#76885B] tracking-widest uppercase">
+                <h2 className="text-3xl font-semibold text-primary-01 tracking-widest uppercase">
                   {product.name}
                 </h2>
-                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium mb-1">
+                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium">
                   {product.discount && product.discount.is_discount ? (
                     <Fragment>
-                      <span className="line-through text-gray-400 mr-3">${product.price}</span> $
+                      <span className="line-through text-gray-400 mr-3">
+                        ${product.price}
+                      </span>{" "}
+                      $
                       {(
                         product.price -
                         (product.price *
@@ -131,25 +134,25 @@ const ProductCard = () => {
                   <span className="flex ml-3 pl-3 py-2 border-l-2 text-[20px] border-gray-200 space-x-2s">
                     <Link
                       to="https://www.facebook.com/fptcorp"
-                      className="text-[#76885B] mr-2"
+                      className="text-primary-01 mr-2"
                     >
                       <FaFacebookF />
                     </Link>
                     <Link
                       to="https://www.facebook.com/fptcorp"
-                      className="text-[#76885B] mr-2"
+                      className="text-primary-01 mr-2"
                     >
                       <FaInstagram />
                     </Link>
                     <Link
                       to="https://www.facebook.com/fptcorp"
-                      className="text-[#76885B] mr-2"
+                      className="text-primary-01 mr-2"
                     >
                       <RiThreadsLine />
                     </Link>
                     <Link
                       to="https://www.facebook.com/fptcorp"
-                      className="text-[#76885B]"
+                      className="text-primary-01"
                     >
                       <FaTiktok />
                     </Link>
@@ -180,20 +183,20 @@ const ProductCard = () => {
                     </div>
                     <button
                       onClick={() => dispatch(handleWishList)}
-                      className="rounded-full w-10 h-10 bg-[#76885B] hover:scale-110 transition-all duration-200 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
+                      className="rounded-full w-10 h-10 bg-primary-01 hover:scale-110 transition-all duration-200 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
                     >
-                      <BsFillSuitHeartFill className="hover:text-[#76885B] text-white" />
+                      <BsFillSuitHeartFill className="hover:text-primary-01 text-white" />
                     </button>
                   </div>
                 )}
                 <div className="py-2 mt-3">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-[#76885B] border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
+                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-primary-01 border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
                   >
                     Add to Cart
                   </button>
-                  <ToastContainer autoClose = {1000}/>
+                  <ToastContainer autoClose={1000} />
                 </div>
                 <div className="mt-3 font-semibold rounded">
                   <div className="py-2 flex flex-col">
@@ -201,7 +204,7 @@ const ProductCard = () => {
                       Hurry! Only <span className="text-[#FC6736]">4</span>{" "}
                       items left in stock.
                     </p>
-                    <div className="w-full bg-[#76885B] h-[13px]  rounded-xl">
+                    <div className="w-full bg-primary-01 h-[13px]  rounded-xl">
                       <input className="bg-[#FC6736] h-[100%] rounded-xl"></input>
                     </div>
                   </div>

@@ -58,12 +58,12 @@ const SearchResult = () => {
                               ? product.decription.substring(0, 90) + "..."
                               : product.decription}
                           </p>
-                          <p className="text-xl font-medium text-[#76885B] leading-relaxed">
+                          <p className="text-xl font-medium text-primary-01 leading-relaxed">
                             $ {product.price}
                           </p>
                           <Link
                             to={`/products/${product.id}`}
-                            className="inline-flex text-center w-[30%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
+                            className="inline-flex text-center w-[30%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded"
                           >
                             View Details
                           </Link>

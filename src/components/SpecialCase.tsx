@@ -1,15 +1,15 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { RiShoppingCart2Fill } from "react-icons/ri";
-import { RootState } from '../Redux/store';
+import { RootState } from "../Redux/store";
 
 const SpecialCase = () => {
-    const products = useSelector((state: RootState) => state.loopStore.addToCart)
+  const products = useSelector((state: RootState) => state.loopStore.addToCart);
   return (
-    <div className='fixed top-52 right-2 z-20 hidden md:flex flex-col gap-2'>
+    <div className="fixed top-52 right-2 z-20 hidden md:flex flex-col gap-2">
       <Link to="/cart">
-        <div className="bg-[#76885B] w-16 h-[70px] rounded-md flex flex-col gap-1 text-white justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative">
+        <div className="bg-primary-01 w-16 h-[70px] right-2 rounded-md flex flex-col gap-1 text-white justify-center items-center shadow-testShadow overflow-x-hidden group cursor-pointer relative">
           <div className="flex justify-center items-center">
             <RiShoppingCart2Fill className="text-2xl -translate-x-12 group-hover:translate-x-3 transition-transform duration-200" />
 
@@ -24,7 +24,7 @@ const SpecialCase = () => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default SpecialCase
+export default SpecialCase;
