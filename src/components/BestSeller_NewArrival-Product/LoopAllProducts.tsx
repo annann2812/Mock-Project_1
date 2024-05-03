@@ -10,10 +10,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-//
-import ToggleButton from "@mui/material/ToggleButton";
-import ClearIcon from "@mui/icons-material/Clear";
-import Button from "@mui/material/Button";
+
 interface FilterProps {
   branch: string[];
   minPrice: number;
@@ -32,7 +29,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(8);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentPage, setCurrentPage] = useState<number>(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -45,15 +42,18 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   };
 
   const handleChangeNextPage = () => {
-    if (products.length && counterNextPageMax >= products.length) {
-      setCounterNextPageMax(products.length);
-      setCounterNextPageMin(products.length - 9);
-    } else {
-      setCounterNextPageMax((pre) => pre + 9);
-      setCounterNextPageMin((pre) => pre + 9);
-      setCurrentPage((pre) => pre + 1);
+    if (currentPage < Math.floor(products.length / 9)) {
+      const itemsPerPage = 9;
+      const newCounterNextPageMax = counterNextPageMax + itemsPerPage;
+      const newCounterNextPageMin = counterNextPageMin + itemsPerPage;
+
+      setCounterNextPageMax(newCounterNextPageMax);
+      setCounterNextPageMin(newCounterNextPageMin);
+
+      setCurrentPage((prevPage) => prevPage + 1);
     }
   };
+
   const handleChangeListView = () => {
     setGridProduct(false);
   };
@@ -62,19 +62,21 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   };
 
   const handleChangePreviousPage = () => {
-    setCounterNextPageMax((prevCount) => {
-      return prevCount > 10 ? prevCount - 10 : prevCount;
-    });
-    setCounterNextPageMin((prevCount) =>
-      prevCount !== 0 ? prevCount - 10 : prevCount
-    );
-    setCurrentPage(currentPage - 9);
+    if (currentPage > 0) {
+      const itemsPerPage = 9;
+      const newCounterNextPageMax = counterNextPageMax - itemsPerPage;
+      const newCounterNextPageMin = counterNextPageMin - itemsPerPage;
+
+      setCounterNextPageMax(newCounterNextPageMax);
+      setCounterNextPageMin(newCounterNextPageMin);
+
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
   };
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
   }
-  // new Hieu
 
   const [filter, setFilter] = useState<FilterProps>({
     branch: [],
@@ -82,7 +84,6 @@ const LoopAllProducts: React.FC<Product> = (props) => {
     maxPrice: 0,
   });
 
-  //
   const [value, setValue] = React.useState<number[]>([0, 1000]);
 
   const handleChange = (event: Event, newValue: number | number[]) => {
@@ -99,7 +100,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
       maxPrice: value[0] > value[1] ? value[0] : value[1],
     }));
   };
-  //
+
   const handleAddFilter = (value: string) => {
     const newValue = value.trim().replace(/\s+/g, "");
     if (!filter.branch.includes(newValue)) {
@@ -134,26 +135,27 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   useEffect(() => {
     const filterData = FilterProducts(filter);
     setProductFilter(filterData);
-  }, [filter]);
+    console.log(currentPage);
+  }, [filter, currentPage]);
 
-  console.log(products);
-  console.log(productFilter);
+  // console.log(products);
+  // console.log(productFilter);
   const [selectedCasio, setSelectedCasio] = React.useState(false);
   const [selectedRolex, setSelectedRolex] = React.useState(false);
   const [selectedApple, setSelectedApple] = React.useState(false);
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-      <div className="flex items-baseline justify-between border-b border-gray-200 py-6">
-        <h1 className="text-4xl text-[#76885B] font-bold tracking-tight">
+      <div className="flex md:items-center justify-between border-b border-gray-200 py-6 flex-col md:flex-row gap-6 md:gap-0">
+        <h1 className="text-4xl text-primary-01 font-bold tracking-tight">
           Loop's Watches
         </h1>
 
         <div className="flex items-center">
           <Menu as="div" className="relative inline-block text-left">
-            <div>
+            <div className="flex items-center">
               <label
                 htmlFor="sort-price"
-                className="text-lg mx-2 font-medium leading-6 inline"
+                className="text-lg mr-3 font-medium leading-6 inline"
               >
                 Sort:
               </label>
@@ -233,18 +235,21 @@ const LoopAllProducts: React.FC<Product> = (props) => {
           Products
         </h2>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4 sm:px-10 lg:px-0">
-          <div className="lg:block">
+        <div className="grid grid-cols-1 gap-x-8 lg:grid-cols-4">
+          <div className="">
             <h3 className="sr-only">Categories</h3>
-            <Disclosure as="div" className="border-b border-gray-200 py-6 ">
-              <div className="border-b border-gray-200 py-6">
+            <Disclosure
+              as="div"
+              className="border-b border-gray-200 py-6 flex flex-row lg:flex-col gap-4"
+            >
+              <div className="lg:border-b lg:border-gray-200 w-1/2 md:w-full">
                 <h3 className="my-2 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Branch
                   </span>
                 </h3>
-                <div className="pt-6" id="filter-section-0">
-                  <div className="space-y-4">
+                <div className="py-4" id="filter-section-0">
+                  <div className="flex flex-col gap-4">
                     <div className="flex items-center">
                       <input
                         type="radio"
@@ -326,7 +331,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   </div>
                 </div>
               </div>
-              <div>
+              <div className="w-1/2 md:w-full">
                 <h3 className="my-3 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Price
@@ -352,28 +357,27 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     value={value}
                     onChange={handleChange}
                     valueLabelDisplay="auto"
-                    min={0} 
-                    max={1000} 
+                    min={0}
+                    max={1000}
                     getAriaValueText={valuetext}
                   />
                 </Box>
                 <p className="text-gray-500 ">
-                  The price is in ${value[0] < value[1] ? value[0] : value[1]} - $
-                  {value[0] > value[1] ? value[0] : value[1]}{" "}
+                  The price is in ${value[0] < value[1] ? value[0] : value[1]} -
+                  ${value[0] > value[1] ? value[0] : value[1]}{" "}
                 </p>
                 <button
-                  className="bg-[#76885B] text-white px-3 text-[14px] font-semibold py-1 my-2 rounded-lg"
+                  className="bg-primary-01 text-white px-3 text-[14px] font-semibold py-1 my-2 rounded-lg"
                   onClick={handlePrice}
                 >
                   Filter
                 </button>
-
               </div>
             </Disclosure>
           </div>
           <div className="lg:col-span-3 sm:col-span-2">
             <section className="text-gray-600 body-font">
-              <div className="container py-10 mx-auto">
+              <div className="py-4 lg:py-10">
                 <Grid container spacing={4} width="100%" margin="auto">
                   {gridProduct ? (
                     <Fragment>
@@ -401,10 +405,10 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                 index >= counterNextPageMin)
                             ) {
                               return (
-                                <Grid xs={12} sm={6} md={4} key={index}>
+                                <Grid item xs={12} sm={6} md={4} key={index}>
                                   <Link
                                     to={`/products/${product.id}`}
-                                    className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"
+                                    className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
                                   >
                                     <div className="capitialize relative">
                                       <img
@@ -420,16 +424,16 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                         )}
                                     </div>
                                     <div className="mt-3">
-                                      <p className="capitalize mb-2 text-gray-700 capitalize title-font text-lg font-thin">
+                                      <p className="mb-2 text-gray-700 capitalize title-font text-lg font-thin">
                                         {product.branch}
                                       </p>
-                                      <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
+                                      <h2 className="text-gray-900 capitalize title-font text-lg font-medium truncate">
                                         {product.name}
                                       </h2>
                                       <p className="mt-1 text-md my-2 font-semibold">
                                         $ {product.price}
                                       </p>
-                                      <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                      <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                                         View Details
                                       </button>
                                     </div>
@@ -440,13 +444,13 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-white hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl text-white hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         <button
-                          className="bg-[#76885B] p-2 rounded-xl text-white hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 rounded-xl text-white hover:bg-opacity-70"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
@@ -480,10 +484,10 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                             ) {
                               return (
                                 <section className="text-gray-600 body-font overflow-hidden">
-                                  <div className="container px-5 py-10 mx-auto border-b border-gray-200">
+                                  <div className="lg:px-5 py-10 mx-auto border-b border-gray-200">
                                     <div className="-my-8 divide-y-2 divide-gray-100">
-                                      <div className="py-8 flex items-center gap-12">
-                                        <div className="block capitalize relative h-48 rounded overflow-hidden">
+                                      <div className="py-8 flex items-center gap-6 md:gap-12">
+                                        <div className="flex capitalize relative h-48 rounded overflow-hidden items-center">
                                           <img
                                             alt={product.name}
                                             className="object-contain w-[200px] object-center block"
@@ -505,12 +509,12 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                                 ) + "..."
                                               : product.decription}
                                           </p>
-                                          <p className="text-xl font-medium text-[#76885B] leading-relaxed">
+                                          <p className="text-xl font-medium text-primary-01 leading-relaxed">
                                             $ {product.price}
                                           </p>
                                           <Link
                                             to={`/products/${product.id}`}
-                                            className="inline-flex text-center w-[40%] justify-center mt-2 text-white font-medium bg-[#76885B] border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded"
+                                            className="inline-flex text-center w-[40%] justify-center mt-2 text-white font-medium bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded"
                                           >
                                             View Details
                                           </Link>
@@ -524,14 +528,14 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-[#76885B] mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-[#76885B] p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 rounded-xl text-light hover:bg-opacity-70"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />

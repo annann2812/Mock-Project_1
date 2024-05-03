@@ -20,7 +20,7 @@ const WishListPage = () => {
     <Fragment>
       <NavBar />
       <div className="mx-auto pb-12 pt-6">
-        <h1 className="text-4xl capitalize my-3 text-center text-[#76885B] font-semibold tracking-wide">
+        <h1 className="text-4xl capitalize my-3 text-center text-primary-01 font-semibold tracking-wide">
           My wishlist
         </h1>
         <p className="text-center text-[16px] font-thin">
@@ -29,18 +29,18 @@ const WishListPage = () => {
         <div className="col-span-3">
           <section className="text-gray-600 body-font">
             <div className="py-1 mx-auto">
-                {favProduct.length === 0 ? (
-                  <p className="mt-6 text-center font-semibold mb-12 text-[14px] text-[#FC6736]">
-                    Your wishlist is empty now!
-                  </p>
-                ) : (
-              <Grid container spacing={6} width="80%" margin="auto">
+              {favProduct.length === 0 ? (
+                <p className="mt-6 text-center font-semibold mb-12 text-[14px] text-[#FC6736]">
+                  Your wishlist is empty now!
+                </p>
+              ) : (
+                <Grid container spacing={6} width="80%" margin="auto">
                   <Fragment>
                     {favProduct.slice(0, displayCount).map((product, index) => (
                       <Grid xs={12} sm={6} md={3} key={index}>
                         <Link
                           to={`/products/${product.id}`}
-                          className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"
+                          className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
                         >
                           <div className="capitialize relative">
                             <img
@@ -54,7 +54,7 @@ const WishListPage = () => {
                                   {product.discount.price_discount}
                                 </div>
                               )}
-                            <div className="absolute m-2 top-0 right-0 bg-[#76885B] rounded-md text-[12px] text-white p-1">
+                            <div className="absolute m-2 top-0 right-0 bg-primary-01 rounded-md text-[12px] text-white p-1">
                               <FaHeart className="text-white" />
                             </div>
                           </div>
@@ -68,7 +68,7 @@ const WishListPage = () => {
                             <p className="mt-1 text-md my-2 font-semibold">
                               $ {product.price}
                             </p>
-                            <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                            <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                               View Details
                             </button>
                           </div>
@@ -76,8 +76,8 @@ const WishListPage = () => {
                       </Grid>
                     ))}
                   </Fragment>
-              </Grid>
-                )}
+                </Grid>
+              )}
               {displayCount < favProduct.length && (
                 <div className="text-center mt-4">
                   <button

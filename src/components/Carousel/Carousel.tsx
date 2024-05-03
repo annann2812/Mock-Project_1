@@ -25,8 +25,10 @@ const CarouselDefault = ({
       if (title === "Lastest Blogs") {
         if (windowWidth > 1024) {
           setSlidesPerView(3);
-        } else {
+        } else if (windowWidth > 768) {
           setSlidesPerView(2);
+        } else {
+          setSlidesPerView(1);
         }
       } else if (title === "New Product") {
         if (windowWidth > 1024) {
@@ -66,10 +68,10 @@ const CarouselDefault = ({
         <div className="font-bold tracking-wider uppercase text-white">
           {title}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center ">
           {redirectButtons &&
             redirectButtons.map((item, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative hidden min-[850px]:block">
                 <Link
                   to={redirectLinks[index]}
                   className="text-xs lg:text-sm no-underline tracking-wider hover:text-primary-02 py-0 px-4 md:px-8 relative flex items-center after:block after:absolute after:w-[1px] after:h-[15px] after:my-[auto] after:right-0 after:top-0 after:bottom-0 after:bg-white"
@@ -102,7 +104,20 @@ const CarouselDefault = ({
           nextEl: `#next-btn-${id}`,
           prevEl: `#prev-btn-${id}`,
         }}
-        pagination={{ enabled: true, dynamicBullets: true }}
+        pagination={{
+          enabled: true,
+          dynamicBullets: true,
+          renderBullet: (index, className) => {
+            return `
+              <span
+                class="${className}"
+                style="background-color: ${
+                  index !== id ? "#76885b" : "#76885b"
+                }"
+              ></span>
+            `;
+          },
+        }}
         modules={[Navigation, Pagination]}
         className="p-3"
       >
@@ -112,17 +127,24 @@ const CarouselDefault = ({
               <img
                 src={images[index]}
                 alt={title[index]}
-                className={`object-contain h-[200px]`}
+                className={`object-contain ${
+                  title === "Lastest Blogs" && "h-[400px]"
+                }`}
               />
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
                 <Link
                   to={`/products/${index + 1}`}
-                  className="hover:no-underline text-sm text-black hover:text-primary-02"
+                  className="hover:no-underline text-sm text-black hover:text-primary-02 truncate"
                 >
                   {itemNames[index]}
                 </Link>
 
-                <p>${prices[index]}</p>
+                <p>
+                  <span className={`${title === "Lastest Blogs" && "hidden"}`}>
+                    $
+                  </span>
+                  {prices[index]}
+                </p>
                 <p>{blogDescription[index]}</p>
               </div>
             </div>

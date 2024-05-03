@@ -15,7 +15,7 @@ import {
   PaperAirplaneIcon,
   PhoneIcon,
 } from "@heroicons/react/20/solid";
-import paymentMethod from "../../assets/image/paymentMethod.png"
+import paymentMethod from "../../assets/image/paymentMethod.png";
 
 const Footer = () => {
   const footerInfo = [
@@ -51,32 +51,32 @@ const Footer = () => {
 
   return (
     <Fragment>
-      <div className="bg-[#76885B]">
+      <div className="bg-primary-01">
         <div className=" flex flex-col gap-8 lg:flex-row w-full xl:w-[1280px] px-4 py-5 justify-between mx-auto">
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 lg:lg-10 bg-white flex flex-col gap-3 rounded-lg">
-            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B] min-h-20">
-              <GlobeAmericasIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-bold text-[#76885B]">
+            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01 min-h-20">
+              <GlobeAmericasIcon className="w-16 h-16 text-primary-01" />
+              <p className="text-uppercase text-3xl font-bold text-primary-01">
                 Find Us
               </p>
             </div>
             <div className="flex gap-3 items-center">
-              <MapPinIcon className="w-5 h-5 text-[#76885B]" />
+              <MapPinIcon className="w-5 h-5 text-primary-01" />
               <p>17 Duy Tan, Cau Giay, Ha Noi</p>
             </div>
             <div className="flex gap-3 items-center">
-              <PhoneIcon className="w-5 h-5 text-[#76885B]" />
+              <PhoneIcon className="w-5 h-5 text-primary-01" />
               <p>0123-456-789</p>
             </div>
             <div className="flex gap-3 items-center">
-              <ChatBubbleLeftIcon className="w-5 h-5 text-[#76885B]" />
+              <ChatBubbleLeftIcon className="w-5 h-5 text-primary-01" />
               <p className="break-words">Sales@Company.com</p>
             </div>
           </div>
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 bg-white flex flex-col gap-3 rounded-lg">
-            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B] min-h-20">
-              <EnvelopeIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-bold text-[#76885B] w-fit">
+            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01 min-h-20">
+              <EnvelopeIcon className="w-16 h-16 text-primary-01" />
+              <p className="text-uppercase text-3xl font-bold text-primary-01 w-fit">
                 Daily Updates
               </p>
             </div>
@@ -86,18 +86,18 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className="w-full border-2 border-[#76885B] px-2 py-1 rounded-lg focus:outline-none focus:border-primary-02"
+                  className="w-full border-2 border-primary-01 px-2 py-1 rounded-lg focus:outline-none focus:border-primary-02"
                 />
                 <button>
-                  <PaperAirplaneIcon className="w-5 h-5 text-[#76885B] hover:text-primary-02" />
+                  <PaperAirplaneIcon className="w-5 h-5 text-primary-01 hover:text-primary-02" />
                 </button>
               </div>
             </div>
           </div>
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 gap-3 bg-white flex flex-col rounded-lg">
-            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-[#76885B]">
-              <MegaphoneIcon className="w-16 h-16 text-[#76885B]" />
-              <p className="text-uppercase text-3xl font-bold text-[#76885B] w-fit">
+            <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01">
+              <MegaphoneIcon className="w-16 h-16 text-primary-01" />
+              <p className="text-uppercase text-3xl font-bold text-primary-01 w-fit">
                 Best Offers
               </p>
             </div>
@@ -136,62 +136,62 @@ const Footer = () => {
           <div className="flex text-white">
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-twitter"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fas fa-rss"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-youtube"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-google-plus-g"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-pinterest-p"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-vimeo-v"></i>
             </a>
             <a
               href="/"
-              className="flex items-center justify-center text-[#76885B] hover:text-white h-8 rounded-full hover:bg-[#76885B] w-8"
+              className="flex items-center justify-center text-primary-01 hover:text-white h-8 rounded-full hover:bg-primary-01 w-8"
             >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
           <img src={Logo} alt="/" className="w-30%" />
-          <Link to = "/payment" className="">
-          <div className=" gap-6">
-            <img
-              className="object-cover w-[300px]"
-              src={paymentMethod}
-              alt="/"
-            />
-          </div>
+          <Link to="/payment" className="">
+            <div className=" gap-6">
+              <img
+                className="object-cover w-[300px]"
+                src={paymentMethod}
+                alt="/"
+              />
+            </div>
           </Link>
         </div>
       </div>

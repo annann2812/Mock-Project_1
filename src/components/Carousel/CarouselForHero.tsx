@@ -25,7 +25,7 @@ const SliderHero: React.FC<SliderHeroProps> = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: true,
   };
 
@@ -38,9 +38,11 @@ const SliderHero: React.FC<SliderHeroProps> = ({ slides }) => {
             alt={slide.altText}
             className="w-full h-[70%]"
           />
-          <div className="absolute bottom-0 left-0 w-full p-4 text-white">
-            <h2 className="text-4xl font-bold">{slide.title}</h2>
-            <p className="text-lg">{slide.description}</p>
+          <div className="absolute bottom-0 left-0 w-full p-8 text-white flex flex-col gap-3">
+            <h2 className="text-4xl font-bold text-primary-01">
+              {slide.title}
+            </h2>
+            <p className="text-lg text-primary-01">{slide.description}</p>
           </div>
         </div>
       ))}

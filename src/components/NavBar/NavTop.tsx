@@ -37,7 +37,7 @@ const NavTop = () => {
     (state: RootState) => state.loopStore.addToWishlist
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dispatch:AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -115,18 +115,19 @@ const NavTop = () => {
   return (
     <Fragment>
       <Newsletter />
-      <nav className="bg-gray-100 border-gray-200 overflow-x-hidden boder border-b dark:bg-gray-900">
-        <div className="container max-w-screen text-[#76885B]  flex px-10 py-4 flex-wrap items-center justify-between mx-auto">
-          <Link
-            to="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img src={logoLoop} className="w-[120px]" alt="" />
+      <nav className="bg-gray-100 border-gray-200 boder border-b">
+        <div className=" text-primary-01 flex px-4 md:px-10 py-4 flex-wrap items-center justify-between mx-auto">
+          <Link to="/" className="flex items-center">
+            <img
+              src={logoLoop}
+              className="w-[80px] md:w-[120px] transition-all duration-300"
+              alt=""
+            />
           </Link>
-          <form className="w-[50%] mx-auto">
+          <form className="w-[40%] md:w-1/2">
             <label
               id="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only"
             >
               Search
             </label>
@@ -134,7 +135,7 @@ const NavTop = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full py-4 px-2 ps-10 text-sm text-gray-900 border border-[#76885B] rounded-lg bg-gray-50 outline-none focus:ring-[#FC7636]"
+                className="block w-full py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-02 transition-all duration-500"
                 placeholder="Search products..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -145,64 +146,67 @@ const NavTop = () => {
               <button
                 onClick={handleSearch}
                 type="button"
-                className="text-white mr-2 flex items-center gap-3 absolute end-2.5 top-1/2 transform -translate-y-1/2 bg-[#76885B] hover:bg-opacity-80 focus:ring-4 focus:ring-[#FC6736] font-medium rounded-lg text-sm px-3 py-2"
+                className="text-white flex items-center gap-3 absolute right-3 top-1/2 transform -translate-y-1/2 bg-primary-01 hover:bg-opacity-80 focus:ring-4 focus:ring-[#FC6736] font-medium rounded-lg text-sm px-3 py-2"
               >
                 <FaSearch />
-                Search
+                <span className="hidden md:block">Search</span>
               </button>
             </div>
           </form>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 md:gap-5 relative">
             <div className="flex justify-center items-center">
               <button className="text-xl" onClick={toggleDropdown}>
                 <FaUserAlt className="hover:text-primary-02 transition-all duration-300" />
               </button>
-              {isDropdownOpen && (
-                <div
-                  className="z-50 absolute top-[100px] right-[200px] mt-2 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-                  id="user-dropdown"
-                >
-                  <div className="px-4 py-3">
-                    <span className="block text-sm text-gray-900 dark:text-white">
-                      {renderAccount()}
-                    </span>
-                  </div>
-                  <ul className="py-2">
-                    {userNameAccount === "Name" && (
-                      <div>
-                        <li>
-                          <Link
-                            onClick={handleLogin}
-                            to="/login"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                          >
-                            Login
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={handleSignup}
-                            to="/signup"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                          >
-                            Sign Up
-                          </Link>
-                        </li>
-                      </div>
-                    )}
+            </div>
+
+            <div
+              className={`z-20 absolute w-48 top-0 ${
+                isDropdownOpen
+                  ? "translate-y-10 opacity-100"
+                  : "-translate-y-60 opacity-0"
+              } right-0 bg-white rounded-lg shadow transition-all duration-500`}
+              id="user-dropdown"
+            >
+              <div className="px-4 py-3 border-b-2">
+                <span className="block text-sm text-gray-900">
+                  {renderAccount()}
+                </span>
+              </div>
+              <ul className="">
+                {userNameAccount === "Name" && (
+                  <div>
                     <li>
                       <Link
-                        onClick={handleLogOut}
-                        to="/"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        onClick={handleLogin}
+                        to="/login"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300"
                       >
-                        Log out
+                        Login
                       </Link>
                     </li>
-                  </ul>
-                </div>
-              )}
+                    <li>
+                      <Link
+                        onClick={handleSignup}
+                        to="/signup"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300"
+                      >
+                        Sign Up
+                      </Link>
+                    </li>
+                  </div>
+                )}
+                <li>
+                  <Link
+                    onClick={handleLogOut}
+                    to="/"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-b-lg transition-all duration-300"
+                  >
+                    Log out
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             <Link to="/cart">

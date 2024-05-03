@@ -17,8 +17,8 @@ const SaleProduct = () => {
 
   return (
     <div className="mx-auto pb-20 pt-6">
-      <h1 className="text-4xl capitalize my-3 text-center text-[#76885B] font-semibold tracking-wide">
-        <span className="text-[#FC7636]">Big </span>   sale
+      <h1 className="text-4xl capitalize my-3 text-center text-primary-01 font-semibold tracking-wide">
+        <span className="text-[#FC7636]">Big </span> sale
       </h1>
       <p className="text-center text-[16px] mb-4 font-thin">
         Join with us to buy with good prices!
@@ -28,41 +28,43 @@ const SaleProduct = () => {
           <div className="py-2 mx-auto">
             <Grid container spacing={6} width="80%" margin="auto">
               <Fragment>
-                {discountedProducts.slice(0, displayCount).map((product, index) => (
-                  <Grid xs={12} sm={6} md={3} key={index}>
-                    <Link
-                      to={`/products/${product.id}`}
-                      className="w-full border-[#76885B] text-center mb-2 cursor-pointer p-3 block"
-                    >
-                      <div className="capitialize relative">
-                        <img
-                          alt={product.name}
-                          className="object-contain object-center w-full h-full"
-                          src={product.images_list[0]}
-                        />
-                        {product.discount && product.discount.is_discount && (
-                          <div className="absolute m-2 top-0 left-0 bg-[#FC6736] rounded-lg text-[12px] text-white px-1 py-1">
-                            {product.discount.price_discount}
-                          </div>
-                        )}
-                      </div>
-                      <div className="mt-3">
-                        <p className="capitalize mb-2 text-gray-700 capitalize title-font text-lg font-thin">
-                          {product.branch}
-                        </p>
-                        <h2 className="capitalize text-gray-900 capitalize title-font text-lg font-medium">
-                          {product.name}
-                        </h2>
-                        <p className="mt-1 text-md my-2 font-semibold">
-                          $ {product.price}
-                        </p>
-                        <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-[#76885B] border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
-                          View Details
-                        </button>
-                      </div>
-                    </Link>
-                  </Grid>
-                ))}
+                {discountedProducts
+                  .slice(0, displayCount)
+                  .map((product, index) => (
+                    <Grid xs={12} sm={6} md={3} key={index}>
+                      <Link
+                        to={`/products/${product.id}`}
+                        className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
+                      >
+                        <div className="capitialize relative ">
+                          <img
+                            alt={product.name}
+                            className="object-contain object-center w-full h-full"
+                            src={product.images_list[0]}
+                          />
+                          {product.discount && product.discount.is_discount && (
+                            <div className="absolute m-2 top-0 left-0 bg-[#FC6736] rounded-lg text-[12px] text-white px-1 py-1">
+                              {product.discount.price_discount}
+                            </div>
+                          )}
+                        </div>
+                        <div className="mt-3">
+                          <p className="capitalize mb-2 text-gray-700 title-font text-lg font-thin">
+                            {product.branch}
+                          </p>
+                          <h2 className="capitalize text-gray-900 title-font text-lg font-medium truncate">
+                            {product.name}
+                          </h2>
+                          <p className="mt-1 text-md my-2 font-semibold">
+                            $ {product.price}
+                          </p>
+                          <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                            View Details
+                          </button>
+                        </div>
+                      </Link>
+                    </Grid>
+                  ))}
               </Fragment>
             </Grid>
             {displayCount < discountedProducts.length && (

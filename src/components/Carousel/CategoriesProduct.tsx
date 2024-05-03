@@ -1,7 +1,4 @@
 import { useSelector } from "react-redux";
-import BestSeller1 from "../../assets/image/best-seller-1.jpg";
-import BestSeller2 from "../../assets/image/best-seller-2.jpg";
-import BestSeller3 from "../../assets/image/best-seller-3.jpg";
 import CarouselDefault from "./Carousel";
 import { RootState } from "../../Redux/store";
 
@@ -9,16 +6,16 @@ const CategoriesProduct = () => {
   const { products } = useSelector((state: RootState) => state.loopStore);
 
   const categoriesProductInfo: {
-    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    images: string[];
     title: string;
     itemNames: string[];
     prices: number[];
-    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
-    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    redirectButtons: string[];
+    redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
   } = {
-    images: [], // Khởi tạo mảng images rỗng
+    images: [],
     title: "Category Products",
     itemNames: [],
     prices: [],
@@ -28,16 +25,9 @@ const CategoriesProduct = () => {
     id: 3,
   };
   products.map((product) => {
-    if (product.new_arriver) {
-      // console.log(product.id);
-      const shortenedName =
-        product.name.length > 10
-          ? product.name.slice(0, 8) + "..."
-          : product.name;
-      categoriesProductInfo.images.unshift(product.images_list[0]);
-      categoriesProductInfo.itemNames.unshift(shortenedName);
-      categoriesProductInfo.prices.unshift(product.price);
-    }
+    categoriesProductInfo.images.unshift(product.images_list[0]);
+    categoriesProductInfo.itemNames.unshift(product.name);
+    categoriesProductInfo.prices.unshift(product.price);
   });
 
   return (
@@ -50,7 +40,6 @@ const CategoriesProduct = () => {
       title={categoriesProductInfo.title}
       id={categoriesProductInfo.id}
       blogDescription={categoriesProductInfo.blogDescriptions}
-      isNewArrive={false}
     />
   );
 };
