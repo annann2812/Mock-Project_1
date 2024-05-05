@@ -24,6 +24,7 @@ export const ListProductRowContainer = styled.div`
     box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.2);
   }
 `;
+
 export const ListProductRow = styled.div`
   display: flex;
   padding: 10px;

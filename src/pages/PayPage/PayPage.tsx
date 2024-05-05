@@ -7,6 +7,7 @@ import { CiLocationOn, CiMail, CiPhone, CiUser } from "react-icons/ci";
 import { ToastContainer, toast } from "react-toastify";
 import { resetCart } from "../../Redux/ProductSlice";
 import { FaArrowLeft } from "react-icons/fa";
+import QRCode from "react-qr-code";
 
 const PayPage = () => {
   const products = useSelector((state: RootState) => state.loopStore.addToCart);
@@ -68,17 +69,33 @@ const PayPage = () => {
     (async () => {
       const { data } = await instance.post("/invoice", formData);
       toast("Yayyy! Your order is now being packaged for shipping!");
-      const isConfirm = confirm("Your order confirmed!");
-      if (isConfirm) {
+      // const isConfirm = confirm("Your order confirmed!");
+      // if (isConfirm) {
+      //   dispatch(resetCart());
+      //   navigate("/");
+      // }
+      setTimeout(() => {
         dispatch(resetCart());
         navigate("/");
-      }
+      }, 3000);
     })();
   };
+  //
+  const [qrData, setQRData] = useState<string | null>(null);
+  const [showButtonPayment, setShowButtonPayment] = useState<boolean>(false);
+  const handleQRScan = (scannedData: string) => {
+    // Xử lý dữ liệu sau khi quét thành công
+    setQRData(`${(totalAmt + shippingCharge).toFixed(2)}`);
+    setTimeout(() => {
+      setShowButtonPayment(true);
+      toast("Payment successfully");
+    }, 1000);
+  };
+  console.log(showButtonPayment);
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <ToastContainer />
+        <ToastContainer autoClose={3000} />
         <Link to="/" className="block sm:px-10 lg:px-20 xl:px-32 mt-16">
           <FaArrowLeft className="text-[28px] hover:text-[#FC6736] hover:scale-110" />
         </Link>
@@ -201,7 +218,25 @@ const PayPage = () => {
                       Credit/Debit Cards
                     </span>
                   </div>
-                </label>
+                </label>{" "}
+                {formData.paymentMethod === "banking" && (
+                  <Fragment>
+                    {qrData && (
+                      <QRCode
+                        value={qrData}
+                        className="w-40 h-40 mx-auto my-5"
+                      />
+                    )}
+                    {!qrData && (
+                      <button
+                        className=" rounded p-1 mx-10 mt-5"
+                        onClick={() => handleQRScan("Data from QR")}
+                      >
+                        Scan QR Code
+                      </button>
+                    )}
+                  </Fragment>
+                )}
               </div>
 
               <div className="relative">
@@ -339,7 +374,11 @@ const PayPage = () => {
             </div>
             <button
               type="submit"
-              className="mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-primary-01 hover:bg-[#FC6736] px-6 py-3 font-medium text-white"
+              className={`${
+                showButtonPayment
+                  ? ""
+                  : "pointer-events-none opacity-50 cursor-not-allowed"
+              } mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-primary-01 hover:bg-[#FC6736] px-6 py-3 font-medium text-white`}
             >
               Place Order
             </button>
