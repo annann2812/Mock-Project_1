@@ -31,7 +31,7 @@ const SaleProduct = () => {
                 {discountedProducts
                   .slice(0, displayCount)
                   .map((product, index) => (
-                    <Grid xs={12} sm={6} md={3} key={index}>
+                    <Grid item xs={12} sm={6} md={3} key={index}>
                       <Link
                         to={`/products/${product.id}`}
                         className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
@@ -58,7 +58,7 @@ const SaleProduct = () => {
                           <p className="mt-1 text-md my-2 font-semibold">
                             $ {product.price}
                           </p>
-                          <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                          <button className="inline-flex text-center w-[80%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                             View Details
                           </button>
                         </div>

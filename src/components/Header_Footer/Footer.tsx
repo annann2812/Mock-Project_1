@@ -3,7 +3,7 @@
 // import Logo from "../../assets/image/LOOP-logo (2).png";
 import { Link } from "react-router-dom";
 // import paymentMethod from "../../assets/image/paymentMethod.png";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Logo from "../../assets/image/LOOP-logo (2).png";
 import {
   ChatBubbleLeftIcon,
@@ -16,8 +16,21 @@ import {
   PhoneIcon,
 } from "@heroicons/react/20/solid";
 import paymentMethod from "../../assets/image/paymentMethod.png";
+import { ToastContainer, toast } from "react-toastify";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const emailInfo = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && emailRegex.test(email)) {
+      setEmail("");
+      toast("Your email has been saved!");
+    } else {
+      alert("Please enter a valid email");
+    }
+  };
+
   const footerInfo = [
     {
       name: "Information",
@@ -51,7 +64,7 @@ const Footer = () => {
 
   return (
     <Fragment>
-      <div className="bg-primary-01">
+      <div className="bg-primary-01 mt-20">
         <div className=" flex flex-col gap-8 lg:flex-row w-full xl:w-[1280px] px-4 py-5 justify-between mx-auto">
           <div className="w-3/5 lg:w-[30%] mx-auto p-4 lg:lg-10 bg-white flex flex-col gap-3 rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01 min-h-20">
@@ -86,11 +99,14 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full border-2 border-primary-01 px-2 py-1 rounded-lg focus:outline-none focus:border-primary-02"
                 />
-                <button>
+                <button onClick={emailInfo}>
                   <PaperAirplaneIcon className="w-5 h-5 text-primary-01 hover:text-primary-02" />
                 </button>
+                <ToastContainer autoClose={1200}/>
               </div>
             </div>
           </div>

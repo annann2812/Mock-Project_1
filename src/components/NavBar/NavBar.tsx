@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <Fragment>
       <NavTop />
-      <nav className="bg-white border-gray-200 border-b">
+      <nav className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] border-gray-200 border-b">
         <div className="text-primary-01 flex text-center flex-wrap items-center justify-between mx-auto">
           <ul className="flex mx-auto font-medium rounded-lg">
             <li>

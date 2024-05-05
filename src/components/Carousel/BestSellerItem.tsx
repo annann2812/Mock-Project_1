@@ -29,7 +29,7 @@ const BestSellerItem = () => {
     bestSellerInfo.itemNames.push(product.name);
     bestSellerInfo.prices.push(product.price);
   });
-  console.log(bestSellerInfo);
+  // console.log(bestSellerInfo);
   return (
     <CarouselDefault
       images={bestSellerInfo.images}

@@ -49,9 +49,9 @@ const Login: React.FC = () => {
     <Fragment>
       <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
         <div className="flex justify-center items-center w-full">
-          <div className="flex w-9/12  h-full text-[18px] font-semibold flex-col px-4 gap-2 text-white relative">
+          <div className="flex w-9/12 h-full lg:w-10/12 text-[18px] font-semibold flex-col px-4 gap-2 text-white relative">
             <Link
-              className="flex gap-2 items-center duration-200 hover:scale-110 w-fit absolute -translate-y-[34px]"
+              className="flex gap-2 items-center hover:text-primary-01 duration-200 hover:scale-110 w-fit absolute -translate-y-[34px]"
               to="/"
             >
               <FaArrowLeft />
@@ -61,11 +61,11 @@ const Login: React.FC = () => {
             <div className="rounded-2xl">
               <div className="flex bg-white rounded-3xl shadow-md relative overflow-hidden">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                  src="https://i.pinimg.com/originals/8e/35/c4/8e35c4d62cd5693527ac3d2e84fb2571.png"
                   alt="login form"
                   className="object-cover w-0 md:w-[40%] lg:block transition-all duration-300"
                 />
-                <div className="w-full md:w-[60%] flex items-center transition-all duration-300">
+                <div className="w-full md:w-[60%] px-5 flex items-center transition-all duration-300">
                   <div className="w-full p-4 text-center">
                     <Formik
                       initialValues={initialValues}
@@ -75,10 +75,10 @@ const Login: React.FC = () => {
                       validateOnBlur={false}
                     >
                       <Form className="text-gray-500">
-                        <h3 className="mb-3 tracking-wider">
+                        <h3 className="mb-3 text-primary-01 font-medium text-xl tracking-wider">
                           Sign into your account
                         </h3>
-                        <div className="my-2 flex justify-evenly">
+                        <div className="my-2 flex justify-center">
                           <Link
                             to="/logingg"
                             className="border-[1px] border-secondary-01 rounded-2xl inline-flex justify-center items-center w-8 h-8 lg:w-10 lg:h-10 no-underline text-primary-01 mx-3 transition-all duration-300"

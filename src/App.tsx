@@ -5,7 +5,6 @@ import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import BestSellers from "./pages/SalePage/SalePage";
-// import BlogPage from "./pages/Blog/Blog";
 import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
@@ -47,7 +46,6 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/all-items" element={<NewArrivalPage />} />
         <Route path="/products/:id" element={<ProductCard />} />
-        {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/logingg" element={<LoginWithGG />} />
         <Route path="/signup" element={<SignUp />} />

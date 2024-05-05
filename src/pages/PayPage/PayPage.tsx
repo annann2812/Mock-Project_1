@@ -3,7 +3,15 @@ import instance from "../../../projectLogin/src/service";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../Redux/store";
-import { CiLocationOn, CiMail, CiPhone, CiUser } from "react-icons/ci";
+import {
+  CiCalendarDate,
+  CiCreditCard2,
+  CiLocationOn,
+  CiLock,
+  CiMail,
+  CiPhone,
+  CiUser,
+} from "react-icons/ci";
 import { ToastContainer, toast } from "react-toastify";
 import { resetCart } from "../../Redux/ProductSlice";
 import { FaArrowLeft } from "react-icons/fa";
@@ -18,6 +26,9 @@ const PayPage = () => {
     phone: "",
     email: "",
     address: "",
+    cardNumber: "",
+    expirationDate: "",
+    cvv: "",
     shippingMethod: "free",
     paymentMethod: "cash_on_delivery",
     products: products,
@@ -67,18 +78,90 @@ const PayPage = () => {
     e.preventDefault();
     (async () => {
       const { data } = await instance.post("/invoice", formData);
-      toast("Yayyy! Your order is now being packaged for shipping!");
-      const isConfirm = confirm("Your order confirmed!");
-      if (isConfirm) {
+      toast("Yay! Your order is being packed for shipping!");
+      // const isConfirm = confirm("Your order confirmed!");
+      // // if (isConfirm) {
+
+      // // }
+      setTimeout(() => {
         dispatch(resetCart());
         navigate("/");
-      }
+      }, 3500);
     })();
+  };
+
+  const bankingInfoField = () => {
+    if (formData.paymentMethod === "banking") {
+      return (
+        <Fragment>
+          <label
+            htmlFor="cardNumber"
+            className="mt-4 mb-2 block text-sm font-medium"
+          >
+            Card Number
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              value={formData.cardNumber}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="Card Number"
+            />
+            <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+              <CiCreditCard2 />
+            </div>
+          </div>
+          <label
+            htmlFor="expirationDate"
+            className="mt-4 mb-2 block text-sm font-medium"
+          >
+            Expiration Date
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              id="expirationDate"
+              name="expirationDate"
+              value={formData.expirationDate}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="MM/YY"
+            />
+            <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+              <CiCalendarDate />
+            </div>
+          </div>
+          <label htmlFor="cvv" className="mt-4 mb-2 block text-sm font-medium">
+            CVV
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              id="cvv"
+              name="cvv"
+              value={formData.cvv}
+              onChange={handleChange}
+              required
+              className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="CVV"
+            />
+            <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+              <CiLock />
+            </div>
+          </div>
+        </Fragment>
+      );
+    }
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <ToastContainer />
+        <ToastContainer autoClose={3000} />
         <Link to="/" className="block sm:px-10 lg:px-20 xl:px-32 mt-16">
           <FaArrowLeft className="text-[28px] hover:text-[#FC6736] hover:scale-110" />
         </Link>
@@ -92,49 +175,57 @@ const PayPage = () => {
               </span>{" "}
               items. And select a suitable shipping method.
             </p>
-            <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6 overflow-y-auto md:h-[200px]">
-              {products.map((product, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col rounded-lg bg-white sm:flex-row"
-                >
-                  <img
-                    className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                    src={product.images_list[0]}
-                    alt={product.name}
-                  />
-                  <div className="flex w-full flex-col px-4 py-4">
-                    <span className="font-semibold">{product.name}</span>
-                    <span className="float-right text-gray-400">
-                      {product.branch}
-                    </span>
-                    <p
-                      className={`mt-1 font-semibold text-md ${
-                        product.discount && product.discount.is_discount
-                          ? "text-[#FC6736]"
-                          : "text-gray-700"
-                      }`}
+            <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6 overflow-y-auto md:h-[300px]">
+              {products.length === 0 ? (
+                <p className="mt-6 mb-12 text-center text-[#FC6736] text-[20px] font-semibold">
+                  No product in your cart...
+                </p>
+              ) : (
+                <Fragment>
+                  {products.map((product, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col rounded-lg bg-white sm:flex-row"
                     >
-                      {product.discount && product.discount.is_discount ? (
-                        <Fragment>
-                          <span className="line-through text-gray-400 mr-3">
-                            ${product.price}
-                          </span>{" "}
-                          $
-                          {(
-                            product.price -
-                            (product.price *
-                              parseFloat(product.discount.price_discount)) /
-                              100
-                          ).toFixed(2)}
-                        </Fragment>
-                      ) : (
-                        `$${product.price}`
-                      )}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                      <img
+                        className="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                        src={product.images_list[0]}
+                        alt={product.name}
+                      />
+                      <div className="flex w-full flex-col px-4 py-4">
+                        <span className="font-semibold">{product.name}</span>
+                        <span className="float-right text-gray-400">
+                          {product.branch}
+                        </span>
+                        <p
+                          className={`mt-1 font-semibold text-md ${
+                            product.discount && product.discount.is_discount
+                              ? "text-[#FC6736]"
+                              : "text-gray-700"
+                          }`}
+                        >
+                          {product.discount && product.discount.is_discount ? (
+                            <Fragment>
+                              <span className="line-through text-gray-400 mr-3">
+                                ${product.price}
+                              </span>{" "}
+                              $
+                              {(
+                                product.price -
+                                (product.price *
+                                  parseFloat(product.discount.price_discount)) /
+                                  100
+                              ).toFixed(2)}
+                            </Fragment>
+                          ) : (
+                            `$${product.price}`
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </Fragment>
+              )}
             </div>
 
             <p className="mt-8 text-lg font-medium">Shipping Methods</p>
@@ -305,6 +396,7 @@ const PayPage = () => {
                   <CiLocationOn />
                 </div>
               </div>
+              {bankingInfoField()}
 
               <div className="mt-6 border-t border-b py-2">
                 <div className="flex items-center justify-between">

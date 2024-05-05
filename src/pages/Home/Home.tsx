@@ -10,26 +10,28 @@ import { Fragment } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
 import Hero from "../../components/Carousel/HeroSlider";
+import HomeIntro from "../../components/Carousel/HomeIntro";
+import AdsWatchesSale from "../../components/Advertisement/AdsWatchesSale";
+import AdsWatchesSale2 from "../../components/Advertisement/AdsWatchesSale2";
 
 const Home = () => {
   return (
     <Fragment>
       <NavBar />
+      <HomeIntro />
       <Hero />
       <div className="xl:w-[90%] mx-auto px-5">
-        {/* <Filter />  */}
-        <div className="flex gap-6 justify-between my-4 w-full items-center">
-          <BestSellerItem />
-        </div>
-        <TrendingProduct />
-        <div className="flex gap-8 lg:gap-16 w-full mb-8 overflow-hidden">
+        <div className="flex gap-6 justify-between my-16 w-full items-center">
           <AdsBannerPC />
+          <BestSellerItem />
           <AdsBannerCamera />
         </div>
-        <CategoriesProduct />
-        <Categories />
+        <TrendingProduct />
+        <div className="flex gap-12 my-12">
+          <AdsWatchesSale />
+          <AdsWatchesSale2 />
+        </div>
         <SpecialProduct />
-        <LastestBlog />
       </div>
       <Footer />
     </Fragment>

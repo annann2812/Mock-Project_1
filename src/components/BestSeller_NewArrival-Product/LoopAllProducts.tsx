@@ -89,7 +89,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   const handleChange = (event: Event, newValue: number | number[]) => {
     setValue(newValue as number[]);
   };
-  console.log(value);
+  // console.log(value);
   function valuetext(value: number) {
     return `${value}°C`;
   }
@@ -135,7 +135,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   useEffect(() => {
     const filterData = FilterProducts(filter);
     setProductFilter(filterData);
-    console.log(currentPage);
+    // console.log(currentPage);
   }, [filter, currentPage]);
 
   // console.log(products);
@@ -252,7 +252,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center">
                       <input
-                        type="radio"
+                        type="checkbox"
                         id="rolexCategory"
                         value="checked"
                         checked={selectedRolex}
@@ -278,7 +278,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     </div>
                     <div className="flex items-center">
                       <input
-                        type="radio"
+                        type="checkbox"
                         value="check"
                         id="casioCategory"
                         checked={selectedCasio}
@@ -304,7 +304,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                     </div>
                     <div className="flex items-center">
                       <input
-                        type="radio"
+                        type="checkbox"
                         id="appleCategory"
                         value="check"
                         checked={selectedApple}
@@ -341,7 +341,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   <Slider
                     sx={{
                       height: 10,
-                      color: "#76885B",
+                      color: "#4D869C",
                       width: "100%",
                       "& .MuiSlider-thumb": {
                         backgroundColor: "orangered",
@@ -433,7 +433,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                       <p className="mt-1 text-md my-2 font-semibold">
                                         $ {product.price}
                                       </p>
-                                      <button className="inline-flex text-center w-[60%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
+                                      <button className="inline-flex text-center md:w-[80%] justify-center mt-2 text-white bg-primary-01 border-0 py-2 px-3  focus:outline-none hover:bg-opacity-90 rounded">
                                         View Details
                                       </button>
                                     </div>
@@ -444,13 +444,13 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-primary-01 mr-2 p-2 rounded-xl text-white hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl transition-all duration-200 text-white hover:bg-[#FC6736]"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         <button
-                          className="bg-primary-01 p-2 rounded-xl text-white hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 rounded-xl transition-all duration-200 text-white hover:bg-[#FC6736]"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
@@ -528,14 +528,14 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-primary-01 mr-2 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 mr-2 p-2 transition-all duration-200 rounded-xl hover:bg-[#FC6736] text-white"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-primary-01 p-2 rounded-xl text-light hover:bg-opacity-70"
+                          className="bg-primary-01 p-2 transition-all duration-200 rounded-xl hover:bg-[#FC6736] text-white"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />

@@ -23,7 +23,7 @@ interface Product {
 }
 interface ProductCart {
   image: string | undefined;
-  id?: number;
+  id: number;
   name: string;
   decription: string;
   color: string;
@@ -100,7 +100,7 @@ const productSlice = createSlice({
       } else {
         state.addToCart.push({ ...action.payload, quantity: quantity || 1 });
       }
-      toast.success("Product added to cart");
+      toast("Product added to cart");
     },
 
     addToWishList: (state, action: PayloadAction<Product>) => {
@@ -125,7 +125,7 @@ const productSlice = createSlice({
 
     resetCart: (state) => {
       state.addToCart = [];
-      toast.success("OMG! No more products.");
+      // toast.success("OMG! No more products.");
     },
 
     updateQuantity: (

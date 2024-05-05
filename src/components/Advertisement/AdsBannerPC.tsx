@@ -1,22 +1,16 @@
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
-import flashSaleBanner2 from "../../assets/image/BannerSale_3.jpeg";
 
 const AdsBannerPC = () => {
   return (
     <Fragment>
-      <div className="w-1/2 text-center shadow-xl border-2 border-secondary-01">
-        <Link
-          className="relative flex items-center justify-center"
-          to="/best-sellers"
-        >
-          <img
-            src={flashSaleBanner2}
-            alt="/"
-            className="object-contain w-full"
-          />
-        </Link>
-      </div>
+      <Link to="/products/7" className="block w-[22%] max-sm:hidden transition hover:scale-110">
+        <img
+          className="w-full"
+          src="https://www.ringke.com/site/data/file/item/default/1601946104_7yepfQgb"
+          alt=""
+        />
+      </Link>
     </Fragment>
   );
 };
