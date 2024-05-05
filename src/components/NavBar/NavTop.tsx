@@ -32,7 +32,7 @@ const NavTop = () => {
   const productCart = useSelector(
     (state: RootState) => state.loopStore.addToCart
   );
-  console.log(productCart);
+  // console.log(productCart);
   const productsWishList = useSelector(
     (state: RootState) => state.loopStore.addToWishlist
   );
@@ -115,8 +115,8 @@ const NavTop = () => {
   return (
     <Fragment>
       <Newsletter />
-      <nav className="bg-gray-100 border-gray-200 boder border-b">
-        <div className=" text-primary-01 flex px-4 md:px-10 py-4 flex-wrap items-center justify-between mx-auto">
+      <nav className="bg-gray-100 px-5 border-gray-200 boder border-b">
+        <div className=" text-primary-01 flex lg:w-[90%] py-4 flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
             <img
               src={logoLoop}

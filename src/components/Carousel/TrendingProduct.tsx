@@ -23,19 +23,14 @@ const TrendingProduct = () => {
     itemNames: [],
     prices: [],
     redirectButtons: ["POPULAR ITEM", "NEW ARRIVAL"],
-    redirectLinks: ["/best-sellers", "/new-arrivals"],
+    redirectLinks: ["/all-items", "/sale"],
     blogDescriptions: [],
     id: 2,
   };
   products.map((product) => {
     if (product.new_arriver) {
-      // console.log(product.id);
-      const shortenedName =
-        product.name.length > 10
-          ? product.name.slice(0, 8) + "..."
-          : product.name;
       trendingProductInfo.images.push(product.images_list[0]);
-      trendingProductInfo.itemNames.push(shortenedName);
+      trendingProductInfo.itemNames.push(product.name);
       trendingProductInfo.prices.push(product.price);
     }
   });

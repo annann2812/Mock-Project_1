@@ -35,14 +35,14 @@ const ProductCard = () => {
   const [error, setError] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch: AppDispatch = useDispatch();
-  const [wishList, setWishList] = useState<string[]>([]);
+  // const [wishList, setWishList] = useState<string[]>([]);
 
   const handleWishList = () => {
     if (product) {
       dispatch(addToWishList({ ...product }));
     }
   };
-  console.log(wishList);
+  // console.log(wishList);
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -98,13 +98,13 @@ const ProductCard = () => {
       <div className="flex gap-3 px-5 py-12 md:flex md:space-x-6 xl:px-0">
         <section className="w-full text-gray-600 body-font overflow-hidden">
           <div className="px-10">
-            <div className="w-full flex gap-5 flex-col lg:flex-row items-center">
+            <div className="w-full md:w-[90%] mx-auto flex gap-5 flex-col lg:flex-row items-center">
               <img
                 src={product.images_list[0]}
                 className="object-contain max-[1024px]:max-h-96"
               />
               <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-3xl font-semibold text-primary-01 tracking-widest uppercase">
+                <h2 className="text-4xl font-medium text-primary-01 tracking-wide uppercase">
                   {product.name}
                 </h2>
                 <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium">
@@ -201,17 +201,7 @@ const ProductCard = () => {
                   </button>
                   <ToastContainer autoClose={1000} />
                 </div>
-                <div className="mt-3 font-semibold rounded">
-                  <div className="py-2 flex flex-col">
-                    <p className="uppercase text-[15px] mt-2">
-                      Hurry! Only <span className="text-[#FC6736]">4</span>{" "}
-                      items left in stock.
-                    </p>
-                    <div className="w-full bg-primary-01 h-[13px]  rounded-xl">
-                      <input className="bg-[#FC6736] h-[100%] rounded-xl"></input>
-                    </div>
-                  </div>
-                </div>
+
                 <div className="mt-3 font-semibold border rounded">
                   <div className="py-2 px-3 border bg-gray-200 gap-4 flex items-center">
                     <FaTruck className="text-[29px]" />

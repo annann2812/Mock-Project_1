@@ -23,7 +23,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #ff9800;
+  /* color: #ff9800; */
 }
 
 .search-input {
@@ -38,3 +38,4 @@ a:hover {
   padding: 8px;
   z-index: 999;
 }
+

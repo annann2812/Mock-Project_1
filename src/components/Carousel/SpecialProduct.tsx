@@ -19,7 +19,7 @@ const SpecialProduct = () => {
     id: number;
   } = {
     images: [], // Khởi tạo mảng images rỗng
-    title: "SPECIAL PRODUCT",
+    title: "NEW ARRIVALS",
     itemNames: [],
     prices: [],
     redirectButtons: [],
@@ -29,13 +29,8 @@ const SpecialProduct = () => {
   };
   products.map((product) => {
     if (product.best_seller) {
-      // console.log(product.id);
-      const shortenedName =
-        product.name.length > 10
-          ? product.name.slice(0, 8) + "..."
-          : product.name;
       specialProductInfo.images.unshift(product.images_list[0]);
-      specialProductInfo.itemNames.unshift(shortenedName);
+      specialProductInfo.itemNames.unshift(product.name);
       specialProductInfo.prices.unshift(product.price);
     }
   });

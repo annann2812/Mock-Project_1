@@ -134,7 +134,7 @@ const CarouselDefault = ({
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
                 <Link
                   to={`/products/${index + 1}`}
-                  className="hover:no-underline text-sm text-black hover:text-primary-02 truncate"
+                  className="hover:no-underline text-md font-medium text-black hover:text-primary-01 truncate"
                 >
                   {itemNames[index]}
                 </Link>

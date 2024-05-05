@@ -17,10 +17,10 @@ const ProductList = () => {
       <div className="col-span-3">
         <section className="text-gray-600 body-font">
           <div className="mx-auto">
-            <Grid container spacing={5} width="900px" margin="auto">
+            <Grid container spacing={5} width="80%" margin="auto">
               <Fragment>
                 {slicedProducts.map((product, index) => (
-                  <Grid item xs={12} sm={6} md={4} width="900px" key={index}>
+                  <Grid item xs={12} sm={6} md={4} key={index}>
                     <Link
                       to={`/products/${product.id}`}
                       className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
