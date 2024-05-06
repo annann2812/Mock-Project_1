@@ -1,7 +1,4 @@
 import { useSelector } from "react-redux";
-import BestSeller1 from "../../assets/image/best-seller-1.jpg";
-import BestSeller2 from "../../assets/image/best-seller-2.jpg";
-import BestSeller3 from "../../assets/image/best-seller-3.jpg";
 import CarouselDefault from "./Carousel";
 import { RootState } from "../../Redux/store";
 
@@ -9,16 +6,17 @@ const TrendingProduct = () => {
   const { products } = useSelector((state: RootState) => state.loopStore);
 
   const trendingProductInfo: {
-    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    images: string[];
     title: string;
     itemNames: string[];
     prices: number[];
-    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
-    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    redirectButtons: string[];
+    redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
+    itemId: number[];
   } = {
-    images: [], // Khởi tạo mảng images rỗng
+    images: [],
     title: "Trending Product",
     itemNames: [],
     prices: [],
@@ -26,13 +24,12 @@ const TrendingProduct = () => {
     redirectLinks: ["/all-items", "/sale"],
     blogDescriptions: [],
     id: 2,
+    itemId: [],
   };
   products.map((product) => {
-    if (product.new_arriver) {
-      trendingProductInfo.images.push(product.images_list[0]);
-      trendingProductInfo.itemNames.push(product.name);
-      trendingProductInfo.prices.push(product.price);
-    }
+    trendingProductInfo.images.push(product.images_list[0]);
+    trendingProductInfo.itemNames.push(product.name);
+    trendingProductInfo.prices.push(product.price);
   });
 
   return (
@@ -45,7 +42,7 @@ const TrendingProduct = () => {
       title={trendingProductInfo.title}
       id={trendingProductInfo.id}
       blogDescription={trendingProductInfo.blogDescriptions}
-      isNewArrive={false}
+      itemId={trendingProductInfo.itemId}
     />
   );
 };

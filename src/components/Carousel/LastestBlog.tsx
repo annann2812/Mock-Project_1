@@ -15,6 +15,7 @@ const LastestBlog = () => {
     redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
+    itemId: number[];
   } = {
     images: [],
     title: "Lastest Blogs",
@@ -24,6 +25,7 @@ const LastestBlog = () => {
     redirectLinks: [],
     blogDescriptions: [],
     id: 5,
+    itemId: [],
   };
   products.map((product) => {
     lastestBlogInfo.images.push(product.images_list[0]);
@@ -41,6 +43,7 @@ const LastestBlog = () => {
       title={lastestBlogInfo.title}
       id={lastestBlogInfo.id}
       blogDescription={lastestBlogInfo.blogDescriptions}
+      itemId={lastestBlogInfo.itemId}
     />
   );
 };

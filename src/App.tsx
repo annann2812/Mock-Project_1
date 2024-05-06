@@ -9,19 +9,19 @@ import { useEffect } from "react";
 import instance from "../projectLogin/src/service";
 import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
-import SpecialCase from "./components/SpecialCase";
+// import SpecialCase from "./components/SpecialCase";
 import SignUp from "./components/Account/SignUp";
 import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import SearchResult from "./pages/SearchResult/SearchResult";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setBlogs, setProductList } from "./Redux/ProductSlice";
 import LoginWithGG from "./components/Account/LoginWithGG";
-import Swipper from "./pages/ProductDetail/SwipperProduct";
+
 import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
 import Store from "./pages/Store/Store";
-import SaleProduct from "./components/BestSeller_NewArrival-Product/SaleProduct";
+
 import WishListPage from "./pages/WishList/WishListPage";
 const App = () => {
   const dispatch = useDispatch();
@@ -37,8 +37,6 @@ const App = () => {
   }, []);
   return (
     <Fragment>
-      {/* <Newsletter/> */}
-      <SpecialCase />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/sale" element={<BestSellers />} />

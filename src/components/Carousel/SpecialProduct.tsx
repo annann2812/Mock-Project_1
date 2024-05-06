@@ -1,7 +1,4 @@
 import { useSelector } from "react-redux";
-import BestSeller1 from "../../assets/image/best-seller-1.jpg";
-import BestSeller2 from "../../assets/image/best-seller-2.jpg";
-import BestSeller3 from "../../assets/image/best-seller-3.jpg";
 import CarouselDefault from "./Carousel";
 import { RootState } from "../../Redux/store";
 
@@ -9,30 +6,30 @@ const SpecialProduct = () => {
   const { products } = useSelector((state: RootState) => state.loopStore);
 
   const specialProductInfo: {
-    images: string[]; // Chỉ định kiểu dữ liệu của mảng images là string[]
+    images: string[];
     title: string;
     itemNames: string[];
     prices: number[];
-    redirectButtons: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectButtons
-    redirectLinks: any[]; // Hoặc bạn có thể chỉ định kiểu dữ liệu cụ thể cho mảng redirectLinks
+    redirectButtons: string[];
+    redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
+    itemId: number[];
   } = {
-    images: [], // Khởi tạo mảng images rỗng
-    title: "NEW ARRIVALS",
+    images: [],
+    title: "Special Product",
     itemNames: [],
     prices: [],
     redirectButtons: [],
     redirectLinks: [],
     blogDescriptions: [],
     id: 4,
+    itemId: [],
   };
   products.map((product) => {
-    if (product.best_seller) {
-      specialProductInfo.images.unshift(product.images_list[0]);
-      specialProductInfo.itemNames.unshift(product.name);
-      specialProductInfo.prices.unshift(product.price);
-    }
+    specialProductInfo.images.unshift(product.images_list[0]);
+    specialProductInfo.itemNames.unshift(product.name);
+    specialProductInfo.prices.unshift(product.price);
   });
 
   return (
@@ -45,7 +42,7 @@ const SpecialProduct = () => {
       title={specialProductInfo.title}
       id={specialProductInfo.id}
       blogDescription={specialProductInfo.blogDescriptions}
-      isNewArrive={false}
+      itemId={specialProductInfo.itemId}
     />
   );
 };

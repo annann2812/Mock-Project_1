@@ -9,7 +9,6 @@ import {
   deleteItem,
   resetCart,
   updateCartQuantity,
-  updateQuantity,
 } from "../../Redux/ProductSlice";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import NavBar from "../../components/NavBar/NavBar";
@@ -76,7 +75,10 @@ const Cart: React.FC = () => {
           <div className="mx-auto max-w-6xl justify-center md:flex md:space-x-6 xl:px-0">
             <div className="rounded-lg md:w-full">
               {products.map((product) => (
-                <div key={product.id} className=" mb-6 rounded-lg bg-white p-6 shadow-md sm:flex">
+                <div
+                  key={product.id}
+                  className=" mb-6 rounded-lg bg-white p-6 shadow-md sm:flex"
+                >
                   <img
                     className="w-[15%]"
                     src={product.images_list[0]}
@@ -84,7 +86,7 @@ const Cart: React.FC = () => {
                   />
                   <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                     <div className="mt-3 sm:mt-0">
-                      <p className="capitalize text-gray-700 capitalize title-font text-md font-thin">
+                      <p className="capitalize text-gray-700 title-font text-md font-thin">
                         {product.branch}
                       </p>
                       <h2 className="text-xl capitalize font-bold text-primary-01">
@@ -93,7 +95,7 @@ const Cart: React.FC = () => {
                       <p
                         className={`mt-1 font-semibold text-md ${
                           product.discount && product.discount.is_discount
-                            ? "text-[#FC6736]"
+                            ? "text-primary-03"
                             : "text-gray-700"
                         }`}
                       >
@@ -139,7 +141,7 @@ const Cart: React.FC = () => {
                         }
                         className="ml-12 transition-all duration-200"
                       >
-                        <FaTrashAlt className="text-primary-01 hover:text-[#FC6736] text-[20px] font-semibold" />
+                        <FaTrashAlt className="text-primary-01 hover:text-primary-03 text-[20px] font-semibold" />
                       </div>
                     </div>
                   </div>
@@ -147,14 +149,14 @@ const Cart: React.FC = () => {
               ))}
               <div className="flex items-center justify-between mt-4">
                 <Link to="/all-items">
-                  <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-primary-01 gap-2 font-semibold text-m leading-8 text-primary-01 shadow-sm shadow-transparent transition-all duration-200 hover:shadow-primary-01 hover:bg-[#FC6736] hover:text-white hover:border-none">
+                  <button className="flex items-center rounded-lg py-2 px-2 border-2 outline-0 border-primary-01 gap-2 font-semibold text-m leading-8 text-primary-01 shadow-sm shadow-transparent transition-all duration-200 hover:shadow-primary-01 hover:bg-primary-03 hover:text-white hover:border-none">
                     <IoIosArrowBack className="text-[20px]" />
                     Continue Shopping
                   </button>
                 </Link>
                 <button
                   onClick={() => dispatch(resetCart())}
-                  className="flex items-center px-3 py-2 gap-2 rounded border-none outline-0 font-medium text-lg leading-8 text-white shadow-sm shadow-transparent transition-all duration-200 hover:shadow-red-500 bg-primary-01 hover:bg-[#FC6736] hover:text-white"
+                  className="flex items-center px-3 py-2 gap-2 rounded border-none outline-0 font-medium text-lg leading-8 text-white shadow-sm shadow-transparent transition-all duration-200 hover:shadow-red-500 bg-primary-01 hover:bg-primary-03 hover:text-white"
                 >
                   Reset
                 </button>
@@ -174,7 +176,7 @@ const Cart: React.FC = () => {
                   <p className="text-md font-medium text-primary-01">
                     Discount
                   </p>
-                  <p className="font-bold text-[#FC6736]">
+                  <p className="font-bold text-primary-03">
                     {products[0].discount.price_discount}
                   </p>
                 </div>
@@ -190,7 +192,7 @@ const Cart: React.FC = () => {
                 </div>
               </div>
               <Link to="/payment">
-                <button className="mt-6 w-full transition-all duration-200 hover:scale-110 rounded-md bg-primary-01 py-1.5 font-medium text-blue-50 hover:bg-[#FC6736]">
+                <button className="mt-6 w-full transition-all duration-200 hover:scale-110 rounded-md bg-primary-01 py-1.5 font-medium text-blue-50 hover:bg-primary-03">
                   Check out
                 </button>
               </Link>

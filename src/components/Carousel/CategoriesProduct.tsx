@@ -14,6 +14,7 @@ const CategoriesProduct = () => {
     redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
+    itemId: number[];
   } = {
     images: [],
     title: "Category Products",
@@ -23,6 +24,7 @@ const CategoriesProduct = () => {
     redirectLinks: ["/home/electronics", "/home/cameras", "/home/smartphones"],
     blogDescriptions: [],
     id: 3,
+    itemId: [],
   };
   products.map((product) => {
     categoriesProductInfo.images.unshift(product.images_list[0]);
@@ -40,6 +42,7 @@ const CategoriesProduct = () => {
       title={categoriesProductInfo.title}
       id={categoriesProductInfo.id}
       blogDescription={categoriesProductInfo.blogDescriptions}
+      itemId={categoriesProductInfo.itemId}
     />
   );
 };

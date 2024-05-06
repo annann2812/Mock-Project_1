@@ -18,14 +18,14 @@ const SearchResult = () => {
     <Fragment>
       <Navbar />
       <div className="px-3 py-10 flex flex-col items-center">
-        <h2 className="text-4xl my-2 text-center capitalize text-[#FC6736] font-semibold tracking-normal">
+        <h2 className="text-4xl my-2 text-center capitalize text-primary-03 font-semibold tracking-normal">
           Search result
         </h2>
         <p className="text-center text-[16px] mb-4 font-thin">
           Lorem ipsum dolor sit amet consectetur.
         </p>
         {searchProducts.length === 0 ? (
-          <p className="mt-6 mb-12 text-[#FC6736]">
+          <p className="mt-6 mb-12 text-primary-03">
             OMG! No results for your search...
           </p>
         ) : (
@@ -76,7 +76,7 @@ const SearchResult = () => {
             })}
             {searchProducts.length > displayCount && (
               <button
-                className="mt-4 text-white uppercase font-medium text-[14px] bg-[#FC6736] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded-2xl"
+                className="mt-4 text-white uppercase font-medium text-[14px] bg-primary-03 border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded-2xl"
                 onClick={handleLoadMore}
               >
                 Load More...
