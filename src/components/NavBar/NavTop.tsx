@@ -6,7 +6,17 @@ import { FaHeart, FaSearch, FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../Redux/store";
 import { setProductSearch } from "../../Redux/ProductSlice";
-import { ShoppingBagIcon, Bars3Icon } from "@heroicons/react/20/solid";
+import {
+  ShoppingBagIcon,
+  Bars3Icon,
+  HomeIcon,
+} from "@heroicons/react/20/solid";
+import {
+  BanknotesIcon,
+  GiftIcon,
+  PhoneIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/16/solid";
 
 interface ProductProps {
   image: string | undefined;
@@ -40,13 +50,16 @@ const NavTop = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch: AppDispatch = useDispatch();
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownDivRef = useRef<HTMLDivElement>(null);
+  const dropdownInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        dropdownDivRef.current &&
+        dropdownInputRef.current &&
+        !dropdownDivRef.current.contains(event.target as Node) &&
+        !dropdownInputRef.current.contains(event.target as Node)
       ) {
         setIsDropdownOpen(false);
         setIsMenuOpen(false);
@@ -171,7 +184,7 @@ const NavTop = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-02 transition-all duration-500"
+                className="block w-full py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-03 transition-all duration-500"
                 placeholder="Search products..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -182,7 +195,7 @@ const NavTop = () => {
               <button
                 onClick={handleSearch}
                 type="button"
-                className="text-white flex items-center gap-3 absolute right-3 top-1/2 transform -translate-y-1/2 bg-primary-01 hover:bg-opacity-80 focus:ring-4 focus:ring-[#FC6736] font-medium rounded-lg text-sm px-3 py-2"
+                className="text-white flex items-center gap-3 absolute right-3 top-1/2 transform -translate-y-1/2 bg-primary-01 hover:bg-primary-03 focus:ring-2 focus:ring-primary-03 font-medium rounded-lg text-sm px-3 py-2 transition-all duration-300"
               >
                 <FaSearch />
                 <span className="hidden md:block">Search</span>
@@ -193,17 +206,17 @@ const NavTop = () => {
           <div className="flex items-center gap-5 relative">
             <div className="flex justify-center items-center">
               <button className="text-xl" onClick={toggleDropdown}>
-                <FaUserAlt className="hover:text-primary-02 transition-all duration-300" />
+                <FaUserAlt className="hover:text-primary-03 transition-all duration-300" />
               </button>
             </div>
             <div
               className={`z-20 absolute w-48 top-0 right-0 ${
                 isDropdownOpen
                   ? "translate-y-12 md:translate-y-[60px] opacity-100"
-                  : "-translate-y-60 opacity-0"
-              } bg-white  border-primary-01 border-2 rounded-lg shadow transition-all duration-500`}
+                  : "-translate-y-96 opacity-0"
+              } bg-white  border-primary-01 border-2 rounded-lg shadow transition-all duration-700`}
               id="user-dropdown"
-              ref={dropdownRef}
+              ref={dropdownDivRef}
             >
               <div className="px-4 py-3 border-b-2">
                 <span className="block text-sm text-gray-900">
@@ -247,9 +260,9 @@ const NavTop = () => {
 
             <Link to="/cart">
               <div className="relative">
-                <ShoppingBagIcon className="text-xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
+                <ShoppingBagIcon className="text-xl h-6 w-6 hover:text-primary-03 transition-all duration-300" />
                 {productCart.length > 0 && (
-                  <p className="absolute -top-1 right-1 bg-[#FC6736] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
+                  <p className="absolute -top-1 right-1 bg-primary-03 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
                     {productCart.length}
                   </p>
                 )}
@@ -257,9 +270,9 @@ const NavTop = () => {
             </Link>
             <Link to="/wishlist">
               <div className="relative">
-                <FaHeart className="text-2xl h-6 w-6 hover:text-primary-02 transition-all duration-300" />
+                <FaHeart className="text-2xl h-6 w-6 hover:text-primary-03 transition-all duration-300" />
                 {productsWishList.length > 0 && (
-                  <p className="absolute -top-1 right-1 bg-[#FC6736] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
+                  <p className="absolute -top-1 right-1 bg-primary-03 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold translate-x-3">
                     {productsWishList.length}
                   </p>
                 )}
@@ -267,10 +280,10 @@ const NavTop = () => {
             </Link>
             <form className="z-30 md:hidden block">
               <FaSearch
-                className="h-5 w-5 cursor-pointer hover:text-primary-02 transition-all duration-300"
+                className="h-5 w-5 cursor-pointer hover:text-primary-03 transition-all duration-300"
                 onClick={toggleSearch}
               />
-              <div ref={dropdownRef}>
+              <div ref={dropdownDivRef}>
                 <input
                   type="search"
                   id="default-search"
@@ -278,12 +291,13 @@ const NavTop = () => {
                     isSearchOpen
                       ? "translate-y-12 md:translate-y-[60px] opacity-100"
                       : "-translate-y-96 opacity-0"
-                  } py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-02 transition-all duration-500`}
+                  } py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-03 transition-all duration-700`}
                   placeholder="Search products..."
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyPress}
                   required
+                  ref={dropdownInputRef}
                 />
               </div>
             </form>
@@ -291,48 +305,64 @@ const NavTop = () => {
               className="flex justify-center items-center font-black md:hidden"
               onClick={toggleMenu}
             >
-              <Bars3Icon className="w-5 h-5 cursor-pointer hover:text-primary-02 transition-all duration-300" />
+              <Bars3Icon className="w-5 h-5 cursor-pointer hover:text-primary-03 transition-all duration-300" />
             </div>
             <div
-              ref={dropdownRef}
-              className={`text-primary-01 bg-white absolute z-30 right-0 top-0 min-w-48 rounded-lg border-primary-01 border-2 flex flex-col items-center justify-between mx-auto transition-all duration-500 ${
+              ref={dropdownDivRef}
+              className={`text-primary-01 bg-white absolute z-30 right-0 top-0 min-w-48 rounded-lg border-primary-01 border-2 flex flex-col items-center justify-between mx-auto transition-all duration-700 ${
                 isMenuOpen
                   ? "translate-y-12 md:translate-y-[60px] opacity-100"
                   : "-translate-y-96 opacity-0"
               }`}
             >
               <Link
-                to="/home"
-                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02 hover:rounded-t-lg"
+                to="/"
+                className="flex items-center text-lg gap-3 p-5 w-full text-primary-01 transition-all duration-300 hover:text-white hover:bg-primary-01 hover:rounded-t-md"
+                reloadDocument
               >
+                <span>
+                  <HomeIcon className="w-6 h-6" />
+                </span>{" "}
                 Home
               </Link>
 
               <Link
                 to="/all-items"
-                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+                className="flex items-center text-lg gap-3 p-5 w-full text-primary-01 transition-all duration-300 hover:text-white hover:bg-primary-01"
               >
+                <span>
+                  <ShoppingCartIcon className="w-6 h-6" />
+                </span>{" "}
                 Shop
               </Link>
 
               <Link
                 to="/sale"
-                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+                className="flex items-center text-lg gap-3 p-5 w-full text-primary-01 transition-all duration-300 hover:text-white hover:bg-primary-01"
               >
+                <span>
+                  <GiftIcon className="w-6 h-6" />
+                </span>{" "}
                 Sale
               </Link>
 
               <Link
                 to="/payment"
-                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+                className="flex items-center text-lg gap-3 p-5 w-full text-primary-01 transition-all duration-300 hover:text-white hover:bg-primary-01"
               >
+                <span>
+                  <BanknotesIcon className="w-6 h-6" />
+                </span>{" "}
                 Payment
               </Link>
 
               <Link
                 to="/contact"
-                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02 hover:rounded-b-lg"
+                className="flex items-center text-lg gap-3 p-5 w-full text-primary-01 transition-all duration-300 hover:text-white hover:bg-primary-01 hover:rounded-b-md"
               >
+                <span>
+                  <PhoneIcon className="w-6 h-6" />
+                </span>{" "}
                 Contact us
               </Link>
             </div>

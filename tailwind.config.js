@@ -12,7 +12,7 @@ module.exports = {
         primary: {
           "01": "#4D869C",
           "02": "#7AB2B2",
-          "03": "#70c0ff",
+          "03": "#FC6736",
         },
         secondary: {
           "01": "#ccc",

@@ -12,7 +12,6 @@ interface FormValues {
 }
 
 const Contact: React.FC = () => {
-
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -58,7 +57,7 @@ const Contact: React.FC = () => {
                 </h2>
                 <a
                   href="mailto: Loop@gmail.com"
-                  className="text-[#FC6736] leading-relaxed"
+                  className="text-primary-03 leading-relaxed"
                 >
                   Loop@email.com
                 </a>
@@ -80,7 +79,8 @@ const Contact: React.FC = () => {
               Feedback
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, ab!
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusantium, ab!
             </p>
             <Formik
               initialValues={{ name: "", email: "", message: "" }}

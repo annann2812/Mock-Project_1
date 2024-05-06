@@ -126,7 +126,7 @@ const ProductCard = () => {
                   )}
                 </h1>
                 <div className="flex mb-4 max-lg:justify-center">
-                  <span className="text-[#FC6736] flex items-center ">
+                  <span className="text-primary-03 flex items-center ">
                     <FaStar />
                     <FaStar />
                     <FaStar />
@@ -185,7 +185,7 @@ const ProductCard = () => {
                       </button>
                       <button
                         onClick={() => dispatch(handleWishList)}
-                        className="max-md:absolute max-md:right-2 rounded-full min-w-10 min-h-10 bg-primary-01 hover:scale-110 transition-all duration-300 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg md:ml-4"
+                        className="max-md:absolute max-md:right-2 rounded-full min-w-10 min-h-10 bg-primary-01 hover:scale-110 transition-all duration-300 hover:bg-primary-03 p-0 border-0 inline-flex items-center justify-center text-light text-lg md:ml-4"
                       >
                         <BsFillSuitHeartFill className=" text-white" />
                       </button>
@@ -195,7 +195,7 @@ const ProductCard = () => {
                 <div className="py-2 mt-3 flex max-lg:justify-center">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
-                    className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-primary-01 border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
+                    className="text-white font-semibold hover:bg-primary-03 w-[50%] bg-primary-01 border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
                   >
                     Add to Cart
                   </button>
@@ -204,11 +204,11 @@ const ProductCard = () => {
                 <div className="mt-3 font-semibold rounded">
                   <div className="py-2 flex flex-col">
                     <p className="uppercase text-[15px] mt-2">
-                      Hurry! Only <span className="text-[#FC6736]">4</span>{" "}
+                      Hurry! Only <span className="text-primary-03">4</span>{" "}
                       items left in stock.
                     </p>
                     <div className="w-full bg-primary-01 h-[13px] rounded-xl">
-                      <input className="bg-[#FC6736] h-[100%] w-1/3 rounded-xl"></input>
+                      <input className="bg-primary-03 h-[100%] w-1/3 rounded-xl"></input>
                     </div>
                   </div>
                 </div>

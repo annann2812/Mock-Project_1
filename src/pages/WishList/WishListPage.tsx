@@ -30,7 +30,7 @@ const WishListPage = () => {
           <section className="text-gray-600 body-font">
             <div className="py-1 mx-auto">
               {favProduct.length === 0 ? (
-                <p className="mt-6 text-center font-semibold mb-12 text-[14px] text-[#FC6736]">
+                <p className="mt-6 text-center font-semibold mb-12 text-[14px] text-primary-03">
                   Your wishlist is empty now!
                 </p>
               ) : (
@@ -50,7 +50,7 @@ const WishListPage = () => {
                             />
                             {product.discount &&
                               product.discount.is_discount && (
-                                <div className="absolute m-2 top-0 left-0 bg-[#FC6736] rounded-lg text-[12px] text-white px-1 py-1">
+                                <div className="absolute m-2 top-0 left-0 bg-primary-03 rounded-lg text-[12px] text-white px-1 py-1">
                                   {product.discount.price_discount}
                                 </div>
                               )}
@@ -81,7 +81,7 @@ const WishListPage = () => {
               {displayCount < favProduct.length && (
                 <div className="text-center mt-4">
                   <button
-                    className="mt-4 text-white uppercase font-medium text-[14px] bg-[#FC6736] border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded-2xl"
+                    className="mt-4 text-white uppercase font-medium text-[14px] bg-primary-03 border-0 py-2 px-6 focus:outline-none hover:bg-opacity-90 rounded-2xl"
                     onClick={handleLoadMore}
                   >
                     Load More

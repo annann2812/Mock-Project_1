@@ -163,21 +163,21 @@ const PayPage = () => {
       <form onSubmit={handleSubmit}>
         <ToastContainer autoClose={3000} />
         <Link to="/" className="block sm:px-10 lg:px-20 xl:px-32 mt-16">
-          <FaArrowLeft className="text-[28px] hover:text-[#FC6736] hover:scale-110" />
+          <FaArrowLeft className="text-[28px] hover:text-primary-03 hover:scale-110" />
         </Link>
         <div className="grid mb-16 sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
           <div className="px-4 pt-8">
             <p className="text-xl font-medium">Order Summary</p>
             <p className="text-gray-400">
               Check your{" "}
-              <span className="font-bold text-[#FC6736] text-[20px]">
+              <span className="font-bold text-primary-03 text-[20px]">
                 {products.length}
               </span>{" "}
               items. And select a suitable shipping method.
             </p>
             <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6 overflow-y-auto md:h-[300px]">
               {products.length === 0 ? (
-                <p className="mt-6 mb-12 text-center text-[#FC6736] text-[20px] font-semibold">
+                <p className="mt-6 mb-12 text-center text-primary-03 text-[20px] font-semibold">
                   No product in your cart...
                 </p>
               ) : (
@@ -200,7 +200,7 @@ const PayPage = () => {
                         <p
                           className={`mt-1 font-semibold text-md ${
                             product.discount && product.discount.is_discount
-                              ? "text-[#FC6736]"
+                              ? "text-primary-03"
                               : "text-gray-700"
                           }`}
                         >
@@ -416,7 +416,7 @@ const PayPage = () => {
                     <p className="text-sm font-medium text-gray-900">
                       Discount
                     </p>
-                    <p className="font-bold text-[#FC6736]">
+                    <p className="font-bold text-primary-03">
                       {products[0].discount.price_discount}
                     </p>
                   </div>
@@ -431,7 +431,7 @@ const PayPage = () => {
             </div>
             <button
               type="submit"
-              className="mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-primary-01 hover:bg-[#FC6736] px-6 py-3 font-medium text-white"
+              className="mt-4 transition ease-in-out duration-200 hover:scale-105 mb-8 w-full rounded-md bg-primary-01 hover:bg-primary-03 px-6 py-3 font-medium text-white"
             >
               Place Order
             </button>

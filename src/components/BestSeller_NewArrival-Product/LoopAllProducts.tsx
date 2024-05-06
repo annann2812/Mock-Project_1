@@ -66,10 +66,8 @@ const LoopAllProducts: React.FC<Product> = () => {
       const itemsPerPage = 9;
       const newCounterNextPageMax = counterNextPageMax - itemsPerPage;
       const newCounterNextPageMin = counterNextPageMin - itemsPerPage;
-
       setCounterNextPageMax(newCounterNextPageMax);
       setCounterNextPageMin(newCounterNextPageMin);
-
       setCurrentPage((prevPage) => prevPage - 1);
     }
   };
@@ -240,16 +238,16 @@ const LoopAllProducts: React.FC<Product> = () => {
             <h3 className="sr-only">Categories</h3>
             <Disclosure
               as="div"
-              className="border-b border-gray-200 py-6 flex flex-row lg:flex-col gap-4"
+              className="border-b border-gray-200 py-6 flex flex-col gap-4"
             >
-              <div className="lg:border-b lg:border-gray-200 w-1/3 sm:w-1/2 md:w-full max-md:border-r-[1px] max-md:border-secondary-01">
+              <div className="lg:border-b lg:border-gray-200 w-full  max-md:border-secondary-01">
                 <h3 className="my-2 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Branch
                   </span>
                 </h3>
                 <div className="py-4" id="filter-section-0">
-                  <div className="flex flex-col gap-4">
+                  <div className="flex md:flex-col gap-4 max-md:justify-around">
                     <div className="flex items-center">
                       <input
                         type="checkbox"
@@ -331,13 +329,13 @@ const LoopAllProducts: React.FC<Product> = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-2/3 sm:w-1/2 md:w-full">
+              <div className="w-full">
                 <h3 className="my-2 md:my-3 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Price
                   </span>
                 </h3>
-                <Box sx={{ width: "100%" }}>
+                <Box sx={{ width: "90%", margin: "auto" }}>
                   <Slider
                     sx={{
                       height: 10,
@@ -413,12 +411,12 @@ const LoopAllProducts: React.FC<Product> = () => {
                                     <div className="capitialize relative">
                                       <img
                                         alt={product.name}
-                                        className="object-contain object-center w-full h-full"
+                                        className="object-cover object-center w-full h-full"
                                         src={product.images_list[0]}
                                       />
                                       {product.discount &&
                                         product.discount.is_discount && (
-                                          <div className="absolute m-2 top-0 left-0 bg-[#FC6736] rounded-lg text-[12px] text-white px-1 py-1">
+                                          <div className="absolute m-2 top-0 left-0 bg-primary-03 rounded-lg text-[12px] text-white px-1 py-1">
                                             {product.discount.price_discount}
                                           </div>
                                         )}
@@ -444,13 +442,13 @@ const LoopAllProducts: React.FC<Product> = () => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-primary-01 mr-2 p-2 rounded-xl transition-all duration-200 text-white hover:bg-[#FC6736]"
+                          className="bg-primary-01 mr-2 p-2 rounded-xl transition-all duration-200 text-white hover:bg-primary-03"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
                         <button
-                          className="bg-primary-01 p-2 rounded-xl transition-all duration-200 text-white hover:bg-[#FC6736]"
+                          className="bg-primary-01 p-2 rounded-xl transition-all duration-200 text-white hover:bg-primary-03"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />
@@ -514,7 +512,7 @@ const LoopAllProducts: React.FC<Product> = () => {
                                           </p>
                                           <Link
                                             to={`/products/${product.id}`}
-                                            className="flex text-center w-fit justify-center mt-2 text-white font-medium bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded max-md:mx-auto"
+                                            className="flex text-center w-fit justify-center mt-2 text-white font-medium bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-primary-03 hover:text-white rounded max-md:mx-auto"
                                           >
                                             View Details
                                           </Link>
@@ -528,14 +526,13 @@ const LoopAllProducts: React.FC<Product> = () => {
                           })}
                       <Grid item xs={12} textAlign="right">
                         <button
-                          className="bg-primary-01 mr-2 p-2 transition-all duration-200 rounded-xl hover:bg-[#FC6736] text-white"
+                          className="bg-primary-01 mr-2 p-2 transition-all duration-200 rounded-xl hover:bg-primary-03 text-white"
                           onClick={handleChangePreviousPage}
                         >
                           <BsCaretLeftFill />
                         </button>
-                        {/* <span className="mx-2 text-xl">{currentPage}</span> */}
                         <button
-                          className="bg-primary-01 p-2 transition-all duration-200 rounded-xl hover:bg-[#FC6736] text-white"
+                          className="bg-primary-01 p-2 transition-all duration-200 rounded-xl hover:bg-primary-03 text-white"
                           onClick={handleChangeNextPage}
                         >
                           <BsCaretRightFill />

@@ -77,7 +77,7 @@ const CarouselDefault = ({
               <div key={index} className="relative hidden min-[850px]:block">
                 <Link
                   to={redirectLinks[index]}
-                  className="text-xs lg:text-sm no-underline tracking-wider hover:text-primary-02 py-0 px-4 md:px-8 relative flex items-center after:block after:absolute after:w-[1px] after:h-[15px] after:my-[auto] after:right-0 after:top-0 after:bottom-0 after:bg-white"
+                  className="text-xs lg:text-sm no-underline tracking-wider hover:text-primary-03 py-0 px-4 md:px-8 relative flex items-center after:block after:absolute after:w-[1px] after:h-[15px] after:my-[auto] after:right-0 after:top-0 after:bottom-0 after:bg-white transition-all duration-300"
                 >
                   {item}
                 </Link>
@@ -86,13 +86,13 @@ const CarouselDefault = ({
           <div className="flex gap-2 ml-4 md:ml-8">
             <button
               id={`prev-btn-${id}`}
-              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500`}
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-primary-03 disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-300`}
             >
               <ChevronLeftIcon />
             </button>
             <button
               id={`next-btn-${id}`}
-              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-gray-600 hover:text-white disabled:hover:bg-transparent text-white disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-500`}
+              className={`w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center border-2 border-secondary-03 rounded-md hover:bg-primary-03 hover:text-white disabled:hover:bg-transparent text-white disabled:bg-secondary-02 hover:disabled:bg-secondary-02 transition-all duration-300`}
             >
               <ChevronRightIcon />
             </button>
@@ -115,7 +115,7 @@ const CarouselDefault = ({
               <span
                 class="${className}"
                 style="background-color: ${
-                  index !== id ? "#76885b" : "#76885b"
+                  index !== id ? "#4D869C" : "#4D869C"
                 }"
               ></span>
             `;
@@ -130,7 +130,7 @@ const CarouselDefault = ({
               <img
                 src={images[index]}
                 alt={title[index]}
-                className={`object-contain ${
+                className={`object-contain rounded-lg ${
                   title === "Lastest Blogs" && "h-[400px]"
                 }`}
               />
@@ -152,7 +152,7 @@ const CarouselDefault = ({
                   to={`/products/${itemId[index]}`}
                   className={`${
                     title === "Lastest Blogs" && "hidden"
-                  } border-2 border-primary-01 w-fit mx-auto mt-2 px-5 py-1 rounded-lg text-white bg-primary-01 hover:opacity-90 transition-all duration-300`}
+                  } border-2 border-primary-01 w-fit mx-auto mt-2 px-5 py-1 rounded-lg text-white bg-primary-01 hover:bg-primary-03 hover:border-primary-03 hover:opacity-90 transition-all duration-300`}
                 >
                   View
                 </Link>
