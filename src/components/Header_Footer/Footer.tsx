@@ -65,8 +65,8 @@ const Footer = () => {
   return (
     <Fragment>
       <div className="bg-primary-01 mt-20">
-        <div className=" flex flex-col gap-8 lg:flex-row w-full xl:w-[1280px] px-4 py-5 justify-between mx-auto">
-          <div className="w-3/5 lg:w-[30%] mx-auto p-4 lg:lg-10 bg-white flex flex-col gap-3 rounded-lg">
+        <div className=" flex flex-col gap-8 lg:flex-row w-full xl:w-[90%] px-1 sm:px-5 py-5 justify-between mx-auto">
+          <div className="w-[90%] sm:w-3/5 lg:w-[30%] max-lg:mx-auto p-4 lg:lg-10 bg-white flex flex-col gap-3 rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01 min-h-20">
               <GlobeAmericasIcon className="w-16 h-16 text-primary-01" />
               <p className="text-uppercase text-3xl font-bold text-primary-01">
@@ -86,7 +86,7 @@ const Footer = () => {
               <p className="break-words">Sales@Company.com</p>
             </div>
           </div>
-          <div className="w-3/5 lg:w-[30%] mx-auto p-4 bg-white flex flex-col gap-3 rounded-lg">
+          <div className="w-[90%] sm:w-3/5 lg:w-[30%] max-lg:mx-auto p-4 bg-white flex flex-col gap-3 rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01 min-h-20">
               <EnvelopeIcon className="w-16 h-16 text-primary-01" />
               <p className="text-uppercase text-3xl font-bold text-primary-01 w-fit">
@@ -106,11 +106,11 @@ const Footer = () => {
                 <button onClick={emailInfo}>
                   <PaperAirplaneIcon className="w-5 h-5 text-primary-01 hover:text-primary-02" />
                 </button>
-                <ToastContainer autoClose={1200}/>
+                <ToastContainer autoClose={1200} />
               </div>
             </div>
           </div>
-          <div className="w-3/5 lg:w-[30%] mx-auto p-4 gap-3 bg-white flex flex-col rounded-lg">
+          <div className="w-[90%] sm:w-3/5 lg:w-[30%] max-lg:mx-auto p-4 gap-3 bg-white flex flex-col rounded-lg">
             <div className="flex gap-4 items-center border-b-2 pb-2 border-b-primary-01">
               <MegaphoneIcon className="w-16 h-16 text-primary-01" />
               <p className="text-uppercase text-3xl font-bold text-primary-01 w-fit">
@@ -130,16 +130,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-wrap xl:w-[1280px] px-4 py-5 mx-auto">
+      <div className="flex w-full flex-wrap xl:w-[90%] px-1 sm:px-5 py-5 mx-auto">
         {Array.from({ length: footerInfo.length }, (_, index) => (
           <div
             key={index}
-            className="w-1/2 lg:w-1/4 px-3 [&:nth-child(2n+1)]:border-r-2 lg:[&:not(:nth-last-child(-n+1))]:border-r-[2px] mb-4"
+            className="w-full md:w-1/2 lg:w-1/4 max-sm:mx-6 max-md:mx-12 max-md:border-b-2 max-md:border-b-secondary-01 md:[&:nth-child(2n+1)]:border-r-2 lg:[&:not(:nth-last-child(-n+1))]:border-r-[2px] mb-4"
           >
             <p className="font-semibold text-2xl">{footerInfo[index].name}</p>
             <div className="py-3 flex flex-col gap-2">
               {footerInfo[index].lists.map((item, index) => (
-                <p key={index} className="font-italic">
+                <p key={index} className="italic">
                   {item}
                 </p>
               ))}
@@ -148,7 +148,7 @@ const Footer = () => {
         ))}
       </div>
       <div className="bg-gray-100">
-        <div className="flex flex-col lg:flex-row gap-8 justify-between w-full xl:w-[1280px] mx-auto px-4 py-5 items-center relative">
+        <div className="flex flex-col lg:flex-row gap-8 justify-between w-full xl:w-[90%] mx-auto px-5 py-5 items-center relative">
           <div className="flex text-white">
             <a
               href="/"

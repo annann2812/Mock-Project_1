@@ -13,6 +13,7 @@ const CarouselDefault = ({
   prices,
   redirectButtons,
   redirectLinks,
+  itemId,
   id,
   blogDescription,
 }: CarouselProps) => {
@@ -43,8 +44,10 @@ const CarouselDefault = ({
           setSlidesPerView(5);
         } else if (windowWidth > 876) {
           setSlidesPerView(4);
-        } else {
+        } else if (windowWidth > 576) {
           setSlidesPerView(3);
+        } else {
+          setSlidesPerView(2);
         }
       }
     };
@@ -132,20 +135,36 @@ const CarouselDefault = ({
                 }`}
               />
               <div className="flex flex-col pt-2 sm:pt-4 px-1 text-center gap-1 text-black">
-                <Link
-                  to={`/products/${index + 1}`}
-                  className="hover:no-underline text-md font-medium text-black hover:text-primary-01 truncate"
+                <div
+                  className={`hover:no-underline ${
+                    title === "Lastest Blogs" ? "text-2xl" : "text-sm"
+                  } text-black truncate cursor-default`}
                 >
                   {itemNames[index]}
-                </Link>
-
+                </div>
                 <p>
                   <span className={`${title === "Lastest Blogs" && "hidden"}`}>
                     $
                   </span>
                   {prices[index]}
                 </p>
-                <p>{blogDescription[index]}</p>
+                <Link
+                  to={`/products/${itemId[index]}`}
+                  className={`${
+                    title === "Lastest Blogs" && "hidden"
+                  } border-2 border-primary-01 w-fit mx-auto mt-2 px-5 py-1 rounded-lg text-white bg-primary-01 hover:opacity-90 transition-all duration-300`}
+                >
+                  View
+                </Link>
+                <p
+                  className={`text-justify text-sm leading-6 px-3 ${
+                    title !== "Lastest Blogs" && "hidden"
+                  }`}
+                >
+                  {blogDescription[index] &&
+                    blogDescription[index].slice(0, 200)}{" "}
+                  <span className="tracking-widest">...</span>
+                </p>
               </div>
             </div>
           </SwiperSlide>

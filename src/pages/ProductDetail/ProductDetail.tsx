@@ -97,17 +97,17 @@ const ProductCard = () => {
       <NavBar />
       <div className="flex gap-3 px-5 py-12 md:flex md:space-x-6 xl:px-0">
         <section className="w-full text-gray-600 body-font overflow-hidden">
-          <div className="px-10">
-            <div className="w-full md:w-[90%] mx-auto flex gap-5 flex-col lg:flex-row items-center">
+          <div className="md:px-10">
+            <div className="w-full flex gap-5 flex-col lg:flex-row items-center">
               <img
                 src={product.images_list[0]}
                 className="object-contain max-[1024px]:max-h-96"
               />
               <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-4xl font-medium text-primary-01 tracking-wide uppercase">
+                <h2 className="text-3xl font-semibold text-primary-01 tracking-widest uppercase text-center lg:text-left">
                   {product.name}
                 </h2>
-                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium">
+                <h1 className="capitalize text-gray-900 my-3 text-3xl mb-3 title-font font-medium text-center lg:text-left">
                   {product.discount && product.discount.is_discount ? (
                     <Fragment>
                       <span className="line-through text-gray-400 mr-3">
@@ -125,8 +125,8 @@ const ProductCard = () => {
                     `$${product.price}`
                   )}
                 </h1>
-                <div className="flex mb-4">
-                  <span className="text-[#FC6736] flex items-center">
+                <div className="flex mb-4 max-lg:justify-center">
+                  <span className="text-[#FC6736] flex items-center ">
                     <FaStar />
                     <FaStar />
                     <FaStar />
@@ -161,9 +161,9 @@ const ProductCard = () => {
                     </Link>
                   </span>
                 </div>
-                <p className="leading-9">{product?.decription}</p>
+                <p className="leading-9 text-justify">{product?.decription}</p>
                 {product && (
-                  <div className="flex mt-3 gap-5 items-center ">
+                  <div className="flex flex-col mt-3 gap-5 items-center max-lg:justify-center relative">
                     <div className="title-font font-medium text-xl text-gray-700">
                       Quantity:
                     </div>
@@ -183,16 +183,16 @@ const ProductCard = () => {
                       >
                         <AiOutlinePlus className="w-[22px] h-[22px]" />
                       </button>
+                      <button
+                        onClick={() => dispatch(handleWishList)}
+                        className="max-md:absolute max-md:right-2 rounded-full min-w-10 min-h-10 bg-primary-01 hover:scale-110 transition-all duration-300 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg md:ml-4"
+                      >
+                        <BsFillSuitHeartFill className=" text-white" />
+                      </button>
                     </div>
-                    <button
-                      onClick={() => dispatch(handleWishList)}
-                      className="rounded-full w-10 h-10 bg-primary-01 hover:scale-110 transition-all duration-200 hover:bg-[#FC6736] p-0 border-0 inline-flex items-center justify-center text-light text-lg ml-4"
-                    >
-                      <BsFillSuitHeartFill className="hover:text-primary-01 text-white" />
-                    </button>
                   </div>
                 )}
-                <div className="py-2 mt-3">
+                <div className="py-2 mt-3 flex max-lg:justify-center">
                   <button
                     onClick={() => dispatch(handleAddToCart)}
                     className="text-white font-semibold hover:bg-[#FC6736] w-[50%] bg-primary-01 border-0 py-2 px-1 focus:outline-none hover:scale-110 transition-all duration-200 rounded-2xl text-lg uppercase"
@@ -201,7 +201,17 @@ const ProductCard = () => {
                   </button>
                   <ToastContainer autoClose={1000} />
                 </div>
-
+                <div className="mt-3 font-semibold rounded">
+                  <div className="py-2 flex flex-col">
+                    <p className="uppercase text-[15px] mt-2">
+                      Hurry! Only <span className="text-[#FC6736]">4</span>{" "}
+                      items left in stock.
+                    </p>
+                    <div className="w-full bg-primary-01 h-[13px] rounded-xl">
+                      <input className="bg-[#FC6736] h-[100%] w-1/3 rounded-xl"></input>
+                    </div>
+                  </div>
+                </div>
                 <div className="mt-3 font-semibold border rounded">
                   <div className="py-2 px-3 border bg-gray-200 gap-4 flex items-center">
                     <FaTruck className="text-[29px]" />

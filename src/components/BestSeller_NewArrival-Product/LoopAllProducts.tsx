@@ -23,15 +23,15 @@ const sortOptions = [
   { name: "Name: Z to A", href: "#", current: false, value: "name-desc" },
 ];
 
-const LoopAllProducts: React.FC<Product> = (props) => {
+const LoopAllProducts: React.FC<Product> = () => {
   const { products } = useSelector((state: RootState) => state.loopStore);
 
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(8);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(0);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState<string | null>(null);
 
   const [sortOrder, setSortOrder] = useState("");
 
@@ -144,7 +144,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
   const [selectedRolex, setSelectedRolex] = React.useState(false);
   const [selectedApple, setSelectedApple] = React.useState(false);
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex md:items-center justify-between border-b border-gray-200 py-6 flex-col md:flex-row gap-6 md:gap-0">
         <h1 className="text-4xl text-primary-01 font-bold tracking-tight">
           Loop's Watches
@@ -242,7 +242,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
               as="div"
               className="border-b border-gray-200 py-6 flex flex-row lg:flex-col gap-4"
             >
-              <div className="lg:border-b lg:border-gray-200 w-1/2 md:w-full">
+              <div className="lg:border-b lg:border-gray-200 w-1/3 sm:w-1/2 md:w-full max-md:border-r-[1px] max-md:border-secondary-01">
                 <h3 className="my-2 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Branch
@@ -331,8 +331,8 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 md:w-full">
-                <h3 className="my-3 flow-root">
+              <div className="w-2/3 sm:w-1/2 md:w-full">
+                <h3 className="my-2 md:my-3 flow-root">
                   <span className="font-medium text-[20px] text-gray-900 uppercase">
                     Price
                   </span>
@@ -378,7 +378,7 @@ const LoopAllProducts: React.FC<Product> = (props) => {
           <div className="lg:col-span-3 sm:col-span-2">
             <section className="text-gray-600 body-font">
               <div className="py-4 lg:py-10">
-                <Grid container spacing={4} width="100%" margin="auto">
+                <Grid container width="100%" margin="auto">
                   {gridProduct ? (
                     <Fragment>
                       {productFilter &&
@@ -486,22 +486,22 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                 <section className="text-gray-600 body-font overflow-hidden">
                                   <div className="lg:px-5 py-10 mx-auto border-b border-gray-200">
                                     <div className="-my-8 divide-y-2 divide-gray-100">
-                                      <div className="py-8 flex items-center gap-6 md:gap-12">
+                                      <div className="py-8 flex flex-col md:flex-row items-center gap-6 md:gap-12">
                                         <div className="flex capitalize relative h-48 rounded overflow-hidden items-center">
                                           <img
                                             alt={product.name}
-                                            className="object-contain w-[200px] object-center block"
+                                            className="object-contain max-md:h-full md:w-[200px] object-center block"
                                             src={product.images_list[0]}
                                           />
                                         </div>
                                         <div className="md:flex-grow">
-                                          <h5 className="capitalize font-thin text-xl text-gray-900 title-font mb-2">
+                                          <h5 className="capitalize font-thin text-xl text-gray-900 title-font mb-2 max-md:text-center">
                                             {product.branch}
                                           </h5>
-                                          <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2">
+                                          <h5 className="capitalize text-xl font-medium text-gray-900 title-font mb-2 max-md:text-center">
                                             {product.name}
                                           </h5>
-                                          <p className="text-md font-medium text-gray-900 title-font mb-2">
+                                          <p className="text-md font-medium text-gray-900 title-font mb-2 text-justify max-md:px-4">
                                             {product.decription.length > 90
                                               ? product.decription.substring(
                                                   0,
@@ -509,12 +509,12 @@ const LoopAllProducts: React.FC<Product> = (props) => {
                                                 ) + "..."
                                               : product.decription}
                                           </p>
-                                          <p className="text-xl font-medium text-primary-01 leading-relaxed">
+                                          <p className="text-xl font-medium text-primary-01 leading-relaxed max-md:text-center">
                                             $ {product.price}
                                           </p>
                                           <Link
                                             to={`/products/${product.id}`}
-                                            className="inline-flex text-center w-[40%] justify-center mt-2 text-white font-medium bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded"
+                                            className="flex text-center w-fit justify-center mt-2 text-white font-medium bg-primary-01 border-0 py-2 px-6 focus:outline-none hover:bg-[#FC6736] hover:text-white rounded max-md:mx-auto"
                                           >
                                             View Details
                                           </Link>

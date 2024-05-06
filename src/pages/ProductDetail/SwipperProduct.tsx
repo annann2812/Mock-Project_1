@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -12,18 +11,13 @@ import "../../index.css";
 import slide_image_1 from "../../assets/image/BannerSale_1.jpeg";
 import slide_image_2 from "../../assets/image/BannerSale_2.jpeg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useSelector } from "react-redux";
-import { RootState } from "../../Redux/store";
-import { Product } from "../../ApiServices/types";
 
 function SwiperComponent() {
-  const { products } = useSelector((state: RootState) => state.loopStore);
   return (
     <div className="container my-20">
       <h1 className="heading text-center">
         Other products in the same category
       </h1>
-      {/* <img src={slide_image_1} alt="" /> */}
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -40,7 +34,6 @@ function SwiperComponent() {
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-          clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"

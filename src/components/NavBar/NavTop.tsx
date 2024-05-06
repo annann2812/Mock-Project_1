@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import Newsletter from "../Newsletter/Newsletter";
 import { Link, useNavigate } from "react-router-dom";
 import logoLoop from "../../assets/image/LOOP-logo (2).png";
@@ -6,7 +6,7 @@ import { FaHeart, FaSearch, FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../Redux/store";
 import { setProductSearch } from "../../Redux/ProductSlice";
-import { ShoppingBagIcon } from "@heroicons/react/20/solid";
+import { ShoppingBagIcon, Bars3Icon } from "@heroicons/react/20/solid";
 
 interface ProductProps {
   image: string | undefined;
@@ -37,13 +37,50 @@ const NavTop = () => {
     (state: RootState) => state.loopStore.addToWishlist
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch: AppDispatch = useDispatch();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const toggleDropdown = () => {
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+        setIsMenuOpen(false);
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
+  const toggleDropdown = (event: React.MouseEvent) => {
+    event.stopPropagation();
     setIsDropdownOpen(!isDropdownOpen);
+    setIsSearchOpen(false);
+    setIsMenuOpen(false);
   };
 
-  // new
+  const toggleSearch = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setIsSearchOpen(!isSearchOpen);
+    setIsDropdownOpen(false);
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+    setIsDropdownOpen(false);
+    setIsSearchOpen(false);
+  };
 
   const navigate = useNavigate();
   // console.log(renderUser);
@@ -75,7 +112,6 @@ const NavTop = () => {
   const handleSignup = () => {
     navigate("/signup");
   };
-  // hieu
 
   // search
   const [inputValue, setInputValue] = useState("");
@@ -124,7 +160,7 @@ const NavTop = () => {
               alt=""
             />
           </Link>
-          <form className="w-[40%] md:w-1/2">
+          <form className="hidden md:block md:w-1/2">
             <label
               id="default-search"
               className="mb-2 text-sm font-medium text-gray-900 sr-only"
@@ -154,20 +190,20 @@ const NavTop = () => {
             </div>
           </form>
 
-          <div className="flex items-center gap-3 md:gap-5 relative">
+          <div className="flex items-center gap-5 relative">
             <div className="flex justify-center items-center">
               <button className="text-xl" onClick={toggleDropdown}>
                 <FaUserAlt className="hover:text-primary-02 transition-all duration-300" />
               </button>
             </div>
-
             <div
-              className={`z-20 absolute w-48 top-0 ${
+              className={`z-20 absolute w-48 top-0 right-0 ${
                 isDropdownOpen
-                  ? "translate-y-10 opacity-100"
+                  ? "translate-y-12 md:translate-y-[60px] opacity-100"
                   : "-translate-y-60 opacity-0"
-              } right-0 bg-white rounded-lg shadow transition-all duration-500`}
+              } bg-white  border-primary-01 border-2 rounded-lg shadow transition-all duration-500`}
               id="user-dropdown"
+              ref={dropdownRef}
             >
               <div className="px-4 py-3 border-b-2">
                 <span className="block text-sm text-gray-900">
@@ -229,6 +265,77 @@ const NavTop = () => {
                 )}
               </div>
             </Link>
+            <form className="z-30 md:hidden block">
+              <FaSearch
+                className="h-5 w-5 cursor-pointer hover:text-primary-02 transition-all duration-300"
+                onClick={toggleSearch}
+              />
+              <div ref={dropdownRef}>
+                <input
+                  type="search"
+                  id="default-search"
+                  className={`block absolute top-0 right-0 ${
+                    isSearchOpen
+                      ? "translate-y-12 md:translate-y-[60px] opacity-100"
+                      : "-translate-y-96 opacity-0"
+                  } py-3 md:py-4 px-3 text-sm text-gray-900 border-2 border-primary-01 rounded-lg bg-gray-50 outline-none focus:border-primary-02 transition-all duration-500`}
+                  placeholder="Search products..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={handleKeyPress}
+                  required
+                />
+              </div>
+            </form>
+            <div
+              className="flex justify-center items-center font-black md:hidden"
+              onClick={toggleMenu}
+            >
+              <Bars3Icon className="w-5 h-5 cursor-pointer hover:text-primary-02 transition-all duration-300" />
+            </div>
+            <div
+              ref={dropdownRef}
+              className={`text-primary-01 bg-white absolute z-30 right-0 top-0 min-w-48 rounded-lg border-primary-01 border-2 flex flex-col items-center justify-between mx-auto transition-all duration-500 ${
+                isMenuOpen
+                  ? "translate-y-12 md:translate-y-[60px] opacity-100"
+                  : "-translate-y-96 opacity-0"
+              }`}
+            >
+              <Link
+                to="/home"
+                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02 hover:rounded-t-lg"
+              >
+                Home
+              </Link>
+
+              <Link
+                to="/all-items"
+                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+              >
+                Shop
+              </Link>
+
+              <Link
+                to="/sale"
+                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+              >
+                Sale
+              </Link>
+
+              <Link
+                to="/payment"
+                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02"
+              >
+                Payment
+              </Link>
+
+              <Link
+                to="/contact"
+                className="block p-5 w-full text-primary-01 transition-all duration-300 hover:text-primary-02 hover:bg-secondary-02 hover:rounded-b-lg"
+              >
+                Contact us
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

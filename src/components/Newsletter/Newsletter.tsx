@@ -11,8 +11,8 @@ const Newsletter = () => {
       />
       <div className="relative z-10 w-full lg:w-[90%] flex px-5 py-2 justify-between font-medium text-white mx-auto transition-all duration-300">
         <Link to="/signup" className="text-md text-white">
-          <span className="hidden md:inline-block">Welcome - </span> Sign Up
-          Now & Get 25% Off
+          <span className="hidden md:inline-block">Welcome - </span> Sign Up Now
+          & Get 25% Off
         </Link>
         <p className="text-md text-white">
           <a href="tel: +123456789" className="hover:text-white">

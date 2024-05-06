@@ -26,16 +26,15 @@ a:hover {
   /* color: #ff9800; */
 }
 
-.search-input {
+/* .search-input {
   position: absolute;
   top: calc(100% + 10px);
 
   left: 0;
-  width: 100%; /* Full width */
+  width: 100%;
   background-color: #ffffff;
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 8px;
   z-index: 999;
-}
-
+} */

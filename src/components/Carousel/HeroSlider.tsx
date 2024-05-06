@@ -12,8 +12,7 @@ const slides = [
     preTitle: "Our best",
     description: "apple watch series 1",
     title2: "At $99 - Only for today",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque."
-
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque.",
   },
   {
     imgSrc: Hero2,
@@ -22,7 +21,7 @@ const slides = [
     preTitle: "Our best",
     description: "apple watch series 7",
     title2: "Make a rich life",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque."
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque.",
   },
   {
     imgSrc: Hero3,
@@ -31,8 +30,7 @@ const slides = [
     preTitle: "Our best",
     description: "apple watch series 6",
     title2: "Starting at $99.99",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque."
-
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore alias tenetur neque.",
   },
 ];
 

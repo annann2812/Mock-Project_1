@@ -14,6 +14,7 @@ const BestSellerItem = () => {
     redirectLinks: string[];
     blogDescriptions: string[];
     id: number;
+    itemId: number[];
   } = {
     images: [],
     title: "Best Seller Item",
@@ -23,11 +24,13 @@ const BestSellerItem = () => {
     redirectLinks: [],
     blogDescriptions: [],
     id: 1,
+    itemId: [],
   };
   products.map((product) => {
     bestSellerInfo.images.push(product.images_list[0]);
     bestSellerInfo.itemNames.push(product.name);
     bestSellerInfo.prices.push(product.price);
+    bestSellerInfo.itemId.push(Number(product.id));
   });
   // console.log(bestSellerInfo);
   return (
@@ -40,6 +43,7 @@ const BestSellerItem = () => {
       title={bestSellerInfo.title}
       id={bestSellerInfo.id}
       blogDescription={bestSellerInfo.blogDescriptions}
+      itemId={bestSellerInfo.itemId}
     />
   );
 };

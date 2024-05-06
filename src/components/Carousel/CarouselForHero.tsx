@@ -22,7 +22,6 @@ interface SliderHeroProps {
 }
 
 const SliderHero: React.FC<SliderHeroProps> = ({ slides }) => {
-  const { products } = useSelector((state: RootState) => state.loopStore);
   const settings = {
     dots: false,
     infinite: true,
@@ -37,22 +36,32 @@ const SliderHero: React.FC<SliderHeroProps> = ({ slides }) => {
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
-        <div key={index} className="relative transition-all">
+        <div key={index} className="relative transition-all overflow-x-hidden">
           <img
             src={slide.imgSrc}
             alt={slide.altText}
             className="w-full object-cover"
           />
           <div className="absolute bottom-0 w-[50%] left-0 p-8 px-20 text-white flex flex-col gap-3">
-            <p className="text-xl text-gray-900 text-primary-01 uppercase">{slide.preTitle}</p>
-            <p className="text-4xl font-medium text-gray-900 uppercase">{slide.description}</p>
+            <p className="text-xl text-gray-900 text-primary-01 uppercase">
+              {slide.preTitle}
+            </p>
+            <p className="text-4xl font-medium text-gray-900 uppercase">
+              {slide.description}
+            </p>
             <p className="text-lg text-gray-700">{slide.desc}</p>
             <h2 className="text-[70px] ease-in-out duration-300 font-semibold text-primary-01 ">
               {slide.title}
             </h2>
             {/* <p className="text-2xl font-thin text-gray-900">{slide.title2}</p> */}
 
-            <Link to = "/sale" className=" font-thin hover:font-medium hover:translate-x-3 delay-200 duration-150 text-[#FC6736] flex items-center"><MdPlayArrow className="mr-2"/>See more</Link>
+            <Link
+              to="/sale"
+              className=" font-thin hover:font-medium hover:translate-x-3 delay-200 duration-150 text-[#FC6736] flex items-center"
+            >
+              <MdPlayArrow className="mr-2" />
+              See more
+            </Link>
           </div>
         </div>
       ))}

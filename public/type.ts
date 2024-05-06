@@ -39,6 +39,7 @@ export interface CarouselProps {
   redirectLinks: string[];
   blogDescription: string[];
   id: number;
+  itemId: number[];
 }
 
 export interface ProductsSaleProps {

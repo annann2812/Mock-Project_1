@@ -20,8 +20,13 @@ const Home = () => {
       <NavBar />
       <HomeIntro />
       <Hero />
-      <div className="xl:w-[90%] mx-auto px-5">
-        <div className="flex gap-6 justify-between my-16 w-full items-center">
+      <div className="max-w-full xl:w-[90%] mx-auto px-1 sm:px-5">
+        {/* <Filter />  */}
+        <div className="flex gap-6 justify-between my-4 w-full items-center">
+          <BestSellerItem />
+        </div>
+        <TrendingProduct />
+        <div className="flex gap-2 sm:gap-8 lg:gap-16 w-full mb-8 overflow-hidden">
           <AdsBannerPC />
           <BestSellerItem />
           <AdsBannerCamera />
