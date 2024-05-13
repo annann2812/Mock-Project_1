@@ -10,7 +10,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
-import { Product } from "../../ApiServices/types";
+import { Product } from "../../ApiServices/Types";
 
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";

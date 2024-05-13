@@ -5,21 +5,21 @@ const AdsWatchesSale = () => {
   const [countdown, setCountdown] = useState(12000);
   const [dealEnded, setDealEnded] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCountdown((prevCountdown) => {
-  //       if (prevCountdown > 0) {
-  //         return prevCountdown - 1;
-  //       } else {
-  //         clearInterval(timer);
-  //         setDealEnded(true);
-  //         return 0;
-  //       }
-  //     });
-  //   }, 1000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prevCountdown) => {
+        if (prevCountdown > 0) {
+          return prevCountdown - 1;
+        } else {
+          clearInterval(timer);
+          setDealEnded(true);
+          return 0;
+        }
+      });
+    }, 1000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   const formatTime = (time: number) => {
     const hours = Math.floor(time / 3600);

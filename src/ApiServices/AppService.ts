@@ -1,4 +1,4 @@
-import { Product } from './types';
+import { Product } from './Types';
 import ApiService from './ApiService';
 
 const API_URL = "http://localhost:8888/products";

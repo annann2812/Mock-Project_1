@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import emptyCart from "../../assets/image/emptyCart.png";
@@ -15,7 +15,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Header_Footer/Footer";
 import { FaTrashAlt } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
-import { Product } from "../../ApiServices/types";
+import { Product } from "../../ApiServices/Types";
 
 const Cart: React.FC = () => {
   const products = useSelector((state: RootState) => state.loopStore.addToCart);

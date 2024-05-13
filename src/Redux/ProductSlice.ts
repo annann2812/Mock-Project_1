@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 
@@ -41,6 +41,16 @@ interface ProductCart {
   shipping?: boolean;
 }
 
+interface ProductReview {
+  productId: number;
+  userId: number;
+  rating: number;
+  comment: string;
+  avatar: string;
+  time: string;
+  name: string;
+}
+
 interface BlogProps {
   postId: number;
   imgUrl: string;
@@ -53,6 +63,7 @@ interface ProductState {
   searchProducts: Product[];
   addToCart: ProductCart[];
   addToWishlist: Product[];
+  reviews: ProductReview[];
   loading: boolean;
   error: string | null;
   product: Product | null;
@@ -70,7 +81,9 @@ const initialState: ProductState = {
   product: null,
   shipping: false,
   blogs: [],
+  reviews: []
 };
+
 
 const productSlice = createSlice({
   name: "loopStore",
@@ -88,6 +101,11 @@ const productSlice = createSlice({
       state.loading = false;
       state.blogs = action.payload;
     },
+    setReview: (state, action: PayloadAction<ProductReview[]>) => {
+      state.loading = false;
+      state.reviews = action.payload;
+    },
+
     addToCart: (state, action: PayloadAction<ProductCart>) => {
       const { id, quantity } = action.payload;
       const existingProduct = state.addToCart.find(
@@ -169,5 +187,6 @@ export const {
   addToWishList,
   setBlogs,
   setProductSearch,
+  setReview
 } = productSlice.actions;
 export default productSlice.reducer;

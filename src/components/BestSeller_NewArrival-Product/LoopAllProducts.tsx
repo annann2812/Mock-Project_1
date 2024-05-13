@@ -5,7 +5,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
-import { Product } from "../../ApiServices/types";
+import { Product } from "../../ApiServices/Types";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/store";
 import Box from "@mui/material/Box";
@@ -29,7 +29,7 @@ const LoopAllProducts: React.FC<Product> = () => {
   const [gridProduct, setGridProduct] = useState<boolean>(true);
   const [counterNextPageMax, setCounterNextPageMax] = useState<number>(8);
   const [counterNextPageMin, setCounterNextPageMin] = useState<number>(0);
-  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   // const [loading, setLoading] = useState(true);
   // const [error, setError] = useState<string | null>(null);
 
@@ -130,6 +130,13 @@ const LoopAllProducts: React.FC<Product> = () => {
     });
     return filtered;
   };
+
+  const handleChangePage = (page: number) => {
+    setCurrentPage(page);
+    setCounterNextPageMin((page - 1) * 9);
+    setCounterNextPageMax(page * 9 - 1);
+  };
+
   useEffect(() => {
     const filterData = FilterProducts(filter);
     setProductFilter(filterData);
@@ -228,7 +235,7 @@ const LoopAllProducts: React.FC<Product> = () => {
         </div>
       </div>
 
-      <section aria-labelledby="products-heading" className="pb-24 pt-6">
+      <section aria-labelledby="products-heading" className="pb-12 pt-6">
         <h2 id="products-heading" className="sr-only ">
           Products
         </h2>
@@ -375,7 +382,14 @@ const LoopAllProducts: React.FC<Product> = () => {
           </div>
           <div className="lg:col-span-3 sm:col-span-2">
             <section className="text-gray-600 body-font">
-              <div className="py-4 lg:py-10">
+              <div className="py-4">
+                <p className="text-md ml-2">
+                  There are{" "}
+                  <span className="text-primary-03">
+                    {productFilter.length}
+                  </span>{" "}
+                  products.
+                </p>
                 <Grid container width="100%" margin="auto">
                   {gridProduct ? (
                     <Fragment>
@@ -441,18 +455,24 @@ const LoopAllProducts: React.FC<Product> = () => {
                             }
                           })}
                       <Grid item xs={12} textAlign="right">
-                        <button
-                          className="bg-primary-01 mr-2 p-2 rounded-xl transition-all duration-200 text-white hover:bg-primary-03"
-                          onClick={handleChangePreviousPage}
-                        >
-                          <BsCaretLeftFill />
-                        </button>
-                        <button
-                          className="bg-primary-01 p-2 rounded-xl transition-all duration-200 text-white hover:bg-primary-03"
-                          onClick={handleChangeNextPage}
-                        >
-                          <BsCaretRightFill />
-                        </button>
+                        <div className="flex justify-center max-sm:justify-center space-x-4 mt-12">
+                          {Array.from({
+                            length: Math.ceil(productFilter.length / 9),
+                          }).map((_, index) => (
+                            <button
+                              key={index + 1}
+                              onClick={() => handleChangePage(index + 1)}
+                              disabled={currentPage === index + 1}
+                              className={`px-3 py-2 rounded-md transition-colors duration-300 ${
+                                currentPage === index + 1
+                                  ? "bg-primary-01 text-white"
+                                  : "bg-gray-200 text-gray-700 hover:bg-primary-01 hover:text-white"
+                              }`}
+                            >
+                              {index + 1}
+                            </button>
+                          ))}
+                        </div>
                       </Grid>
                     </Fragment>
                   ) : (
@@ -525,18 +545,24 @@ const LoopAllProducts: React.FC<Product> = () => {
                             }
                           })}
                       <Grid item xs={12} textAlign="right">
-                        <button
-                          className="bg-primary-01 mr-2 p-2 transition-all duration-200 rounded-xl hover:bg-primary-03 text-white"
-                          onClick={handleChangePreviousPage}
-                        >
-                          <BsCaretLeftFill />
-                        </button>
-                        <button
-                          className="bg-primary-01 p-2 transition-all duration-200 rounded-xl hover:bg-primary-03 text-white"
-                          onClick={handleChangeNextPage}
-                        >
-                          <BsCaretRightFill />
-                        </button>
+                        <div className="flex justify-center max-sm:justify-center space-x-4 mt-12">
+                          {Array.from({
+                            length: Math.ceil(productFilter.length / 9),
+                          }).map((_, index) => (
+                            <button
+                              key={index + 1}
+                              onClick={() => handleChangePage(index + 1)}
+                              disabled={currentPage === index + 1}
+                              className={`px-3 py-2 rounded-md transition-colors duration-300 ${
+                                currentPage === index + 1
+                                  ? "bg-primary-01 text-white"
+                                  : "bg-gray-200 text-gray-700 hover:bg-primary-01 hover:text-white"
+                              }`}
+                            >
+                              {index + 1}
+                            </button>
+                          ))}
+                        </div>
                       </Grid>
                     </Fragment>
                   )}

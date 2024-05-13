@@ -37,7 +37,7 @@ const WishListPage = () => {
                 <Grid container spacing={6} width="80%" margin="auto">
                   <Fragment>
                     {favProduct.slice(0, displayCount).map((product, index) => (
-                      <Grid xs={12} sm={6} md={3} key={index}>
+                      <Grid item xs={12} sm={6} md={3} key={index}>
                         <Link
                           to={`/products/${product.id}`}
                           className="w-full border-primary-01 text-center mb-2 cursor-pointer p-3 block"
