@@ -17,7 +17,7 @@ module.exports = {
         secondary: {
           "01": "#ccc",
           "02": "#CDE8E5",
-          "03": "#FC6736",
+          "03": "#eee",
         },
       },
     },

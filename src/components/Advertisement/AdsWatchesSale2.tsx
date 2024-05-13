@@ -5,21 +5,21 @@ const AdsWatchesSale2 = () => {
   const [countdown, setCountdown] = useState(4500);
   const [dealEnded, setDealEnded] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCountdown((prevCountdown) => {
-  //       if (prevCountdown > 0) {
-  //         return prevCountdown - 1;
-  //       } else {
-  //         clearInterval(timer);
-  //         setDealEnded(true);
-  //         return 0;
-  //       }
-  //     });
-  //   }, 1000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prevCountdown) => {
+        if (prevCountdown > 0) {
+          return prevCountdown - 1;
+        } else {
+          clearInterval(timer);
+          setDealEnded(true);
+          return 0;
+        }
+      });
+    }, 1000);
 
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   const formatTime = (time: number) => {
     const hours = Math.floor(time / 3600);
@@ -48,7 +48,7 @@ const AdsWatchesSale2 = () => {
             <h2 className="text-xl md:text-3xl mb-4 md:mb-16 font-medium tracking-wide text-nowrap">
               Samsung Galaxy Watch 6
             </h2>
-            <h2 className="uppercase md:text-6xl font-light text-nowrap">
+            <h2 className="uppercase md:text-6xl font-light hover:scale-110 text-nowrap">
               Flash sale
             </h2>
             <p className="mt-3 text-xl md:text-3xl tracking-wider">
@@ -56,7 +56,7 @@ const AdsWatchesSale2 = () => {
             </p>
             <Link
               to="/products/22"
-              className="bg-primary-01 block text-[#EEF7FF] rounded-md py-2 px-8 w-fit hover:bg-primary-03 transition-all duration-300 mx-auto tracking-wider mt-3 text-xl capitalize font-light"
+              className="bg-primary-01 block hover:scale-110 transition text-[#EEF7FF] rounded-md py-2 px-8 w-fit hover:bg-primary-03 transition-all duration-300 mx-auto tracking-wider mt-3 text-xl capitalize font-light"
             >
               See more
             </Link>

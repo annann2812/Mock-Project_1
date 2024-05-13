@@ -11,18 +11,20 @@ import Login from "./components/Account/LogIn";
 import PayPage from "./pages/PayPage/PayPage";
 // import SpecialCase from "./components/SpecialCase";
 import SignUp from "./components/Account/SignUp";
-import NewArrivalPage from "./pages/NewArrival/NewArrivalPage";
+import NewArrivalPage from "./pages/NewArrival/Products";
 import ProductCard from "./pages/ProductDetail/ProductDetail";
 import SearchResult from "./pages/SearchResult/SearchResult";
 
 import { useDispatch } from "react-redux";
-import { setBlogs, setProductList } from "./Redux/ProductSlice";
+import { setBlogs, setProductList, setReview } from "./Redux/ProductSlice";
 import LoginWithGG from "./components/Account/LoginWithGG";
 
 import SwiperComponent from "./pages/ProductDetail/SwipperProduct";
 import Store from "./pages/Store/Store";
 
 import WishListPage from "./pages/WishList/WishListPage";
+import SpecialCase from "./components/SpecialCase";
+import Success from "./pages/PayResult/Success";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -34,9 +36,14 @@ const App = () => {
       const { data } = await instance.get("/blog");
       dispatch(setBlogs(data));
     })();
+    (async () => {
+      const { data } = await instance.get("/review");
+      dispatch(setReview(data));
+    })();
   }, []);
   return (
     <Fragment>
+      <SpecialCase/>
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/sale" element={<BestSellers />} />
@@ -53,6 +60,7 @@ const App = () => {
         <Route path="/abc" element={<Store />} />
         <Route path="/wishlist" element={<WishListPage />} />
         <Route path="/search" element={<SearchResult />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
     </Fragment>
   );

@@ -1,3 +1,4 @@
+
 import React, { Fragment, useState } from "react";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
@@ -7,6 +8,7 @@ import { User } from "../../../projectLogin/src/interface/user";
 import instance from "../../../projectLogin/src/service";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 import { FaArrowLeft } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
 
 const initialValues: FormValues = {
   username: "",
@@ -21,7 +23,6 @@ const validationSchema = Yup.object({
     .email("Invalid Email Address")
     .required("Email is required!"),
   password: Yup.string()
-    .min(8, "Password is too short - should be 8 characters minimum.")
     .required("Password is required!"),
 });
 
@@ -34,10 +35,10 @@ const Login: React.FC = () => {
         if (data.user) {
           sessionStorage.setItem("accessToken", data.accessToken);
           sessionStorage.setItem("username", data.user.username);
-          const isConfirm = confirm("Login successfully switch home page ?");
-          if (isConfirm) {
+          toast("Login successfully! Welcome to Loop Store!");
+          setTimeout(() => {
             navigate("/");
-          }
+          }, 2000);
         }
       } catch (error) {
         alert("Please enter correct email, username and password.");
@@ -48,6 +49,7 @@ const Login: React.FC = () => {
   return (
     <Fragment>
       <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
+        <ToastContainer autoClose={1500}/>
         <div className="flex justify-center items-center w-full">
           <div className="flex w-9/12 h-full lg:w-10/12 text-[18px] font-semibold flex-col px-4 gap-2 text-white relative">
             <Link
@@ -71,8 +73,8 @@ const Login: React.FC = () => {
                       initialValues={initialValues}
                       onSubmit={onSubmit}
                       validationSchema={validationSchema}
-                      validateOnChange={false}
-                      validateOnBlur={false}
+                      // validateOnChange={false}
+                      // validateOnBlur={false}
                     >
                       <Form className="text-gray-500">
                         <h3 className="mb-3 text-primary-01 font-medium text-xl tracking-wider">
@@ -113,13 +115,8 @@ const Login: React.FC = () => {
                             className="bg-secondary-03 border-0 py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Username"
                           />
-                          <ErrorMessage name="username">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage name="username" component="div" className="text-red-600 pt-2 text-sm"/>
+
                         </div>
 
                         <div className="form-outline mb-4">
@@ -130,13 +127,8 @@ const Login: React.FC = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Email"
                           />
-                          <ErrorMessage name="email">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage name="email" component="div" className="text-red-600 pt-2 text-sm"/>
+
                         </div>
 
                         <div className="form-outline mb-4">
@@ -147,13 +139,8 @@ const Login: React.FC = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-75 focus:bg-white"
                             placeholder="Enter Your Password"
                           />
-                          <ErrorMessage name="password">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage name="password" component="div" className="text-red-600 pt-2 text-sm"/>
+
                         </div>
 
                         <div className="flex justify-center text-white">

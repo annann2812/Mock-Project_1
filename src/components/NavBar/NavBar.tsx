@@ -46,7 +46,7 @@ const NavBar = () => {
                 to="/contact"
                 className="block py-6 px-8 text-primary-01 rounded hover:rounded-none transition-all duration-300 hover:text-white hover:bg-primary-01"
               >
-                Contact us
+                Contact
               </Link>
             </li>
           </ul>

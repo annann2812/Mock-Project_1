@@ -9,29 +9,43 @@ import { useNavigate } from "react-router-dom";
 
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 import { FaArrowLeft } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+
+const initialValues: FormValues = {
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
+
+const validationSchema = Yup.object({
+  username: Yup.string().required("UserName is Required"),
+  email: Yup.string()
+    .matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, "Invalid email")
+    .required("Email is required"),
+  password: Yup.string()
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+      "Password contains at least one lowercase letter, one uppercase letter, one digit, and is at least 8 characters long"
+    )
+    .required("Password is required!"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), undefined], "Passwords must match")
+    .required("Confirm Password is required"),
+});
 
 const SignUp = () => {
-  const [showErrorMessages, setShowErrorMessages] = useState(false);
   const navigate = useNavigate();
-
-  const initialValues: FormValues = {
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  };
 
   const onSubmit = (user: User) => {
     if (user.password === user.confirmPassword) {
       (async () => {
         const { data } = await instance.post(`/register`, user);
         if (data.user) {
-          const isConfirm = confirm(
-            "Register successfully switch login page ?"
-          );
-          if (isConfirm) {
+          toast("Register successfully! Please login first!");
+          setTimeout(() => {
             navigate("/login");
-          }
+          }, 2000);
         }
       })();
     } else {
@@ -40,22 +54,10 @@ const SignUp = () => {
     }
   };
 
-  const validationSchema = Yup.object({
-    username: Yup.string().required("UserName is Required"),
-    email: Yup.string()
-      .email("InValid Email Address")
-      .required("Email is Required"),
-    password: Yup.string()
-      .min(8, "Password is too short - should be 8 chars minimum.")
-      .required("Password is Required"),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password"), undefined], "Passwords must match") // Check if confirm password matches password
-      .required("Confirm Password is required"),
-  });
-
   return (
     <Fragment>
       <div className="h-screen flex items-center bg-primary-01 bg-gradient-to-r from-[#e2e2e2] to-primary-01">
+        <ToastContainer autoClose={1500} />
         <div className="flex justify-center items-center w-full">
           <div className="flex w-9/12 md:w-10/12 h-full flex-col p-4 gap-2 text-white relative transition-all duration-300">
             <Link
@@ -79,8 +81,6 @@ const SignUp = () => {
                       initialValues={initialValues}
                       onSubmit={onSubmit}
                       validationSchema={validationSchema}
-                      validateOnChange={false}
-                      validateOnBlur={false}
                     >
                       <Form className="text-black text-opacity-80">
                         <h3 className="mb-3 text-primary-01 font-medium text-xl tracking-wider">
@@ -123,13 +123,11 @@ const SignUp = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-150 focus:bg-white"
                             placeholder="Enter Your Username"
                           />
-                          <ErrorMessage name="username">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage
+                            name="username"
+                            component="div"
+                            className="text-red-600 pt-2 text-sm"
+                          />
                         </div>
 
                         <div className="mb-4">
@@ -140,13 +138,11 @@ const SignUp = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-150 focus:bg-white"
                             placeholder="Enter Your Email"
                           />
-                          <ErrorMessage name="email">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage
+                            name="email"
+                            component="div"
+                            className="text-red-600 pt-2 text-sm"
+                          />
                         </div>
 
                         <div className="mb-4">
@@ -157,13 +153,11 @@ const SignUp = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-150 focus:bg-white"
                             placeholder="Enter Your Password"
                           />
-                          <ErrorMessage name="password">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage
+                            name="password"
+                            component="div"
+                            className="text-red-600 pt-2 text-sm"
+                          />
                         </div>
 
                         <div className="mb-4">
@@ -174,13 +168,11 @@ const SignUp = () => {
                             className="bg-secondary-03 border-none py-[10px] px-[15px] outline-none rounded-[12px] w-full focus:outline-primary-01 focus:outline-[3px] transition-all duration-150 focus:bg-white"
                             placeholder="Confirm Your Password"
                           />
-                          <ErrorMessage name="password">
-                            {(errMsg) => (
-                              <div className="text-red-600 pt-2 text-sm">
-                                {errMsg}
-                              </div>
-                            )}
-                          </ErrorMessage>
+                          <ErrorMessage
+                            name="confirmPassword"
+                            component="div"
+                            className="text-red-600 pt-2 text-sm"
+                          />
                         </div>
 
                         <div className="flex justify-center text-white">

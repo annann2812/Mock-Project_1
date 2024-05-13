@@ -22,7 +22,7 @@ const Home = () => {
         <div className="flex gap-6 justify-between my-4 w-full items-center">
           <BestSellerItem />
         </div>
-        <TrendingProduct />
+        {/* <TrendingProduct /> */}
         <div className="flex mb-8 max-lg:gap-4 gap-6 max-sm:px-2">
           <AdsBannerPC />
           <AdsBannerCamera />
@@ -30,7 +30,7 @@ const Home = () => {
         <div className="flex gap-2 sm:gap-8 lg:gap-16 w-full mb-8 overflow-hidden">
           <BestSellerItem />
         </div>
-        <TrendingProduct />
+        {/* <TrendingProduct /> */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 my-12">
           <AdsWatchesSale />
           <AdsWatchesSale2 />
